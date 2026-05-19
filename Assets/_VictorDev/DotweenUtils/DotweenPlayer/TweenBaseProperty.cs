@@ -1,0 +1,12 @@
+﻿using System;
+using DG.Tweening;
+
+namespace _VictorDev.DebugUtils
+{
+    [Serializable]
+    public class TweenBaseProperty
+    {
+        public float duration = 0.5f, delay;
+        public Ease ease = Ease.OutQuad;
+    }
+}
