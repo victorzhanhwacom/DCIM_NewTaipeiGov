@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5221993887428022687
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9281809b5e3da1b459e7df095be3ddf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89da47caa0f5e4d4c907b47d5c889596, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -115,9 +115,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1451865727741219704, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624290547317523215, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978742663802135286, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978742663802135286, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2197231114328256262, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -173,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883677823903036041, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: isHideOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4939540066838696834, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: m_Color.a
@@ -285,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190575178079470888, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6361140482577747765, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       propertyPath: m_AnchorMax.y
