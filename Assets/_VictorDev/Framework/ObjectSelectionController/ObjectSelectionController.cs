@@ -57,7 +57,7 @@ namespace _VictorDev.DebugUtils
         {
             if (isBorderFollowTarget && currentSelectTarget != null)
             {
-                selectionBorder.FollowTarget(currentSelectTarget);
+                selectionBorder.SetPositionAndRotation(currentSelectTarget.position, currentSelectTarget.rotation);
             }
         }
 

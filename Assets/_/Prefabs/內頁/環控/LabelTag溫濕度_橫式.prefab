@@ -1107,7 +1107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5608774122618672087}
-  - component: {fileID: 5297483623410897229}
+  - component: {fileID: 7464003179277868018}
   m_Layer: 5
   m_Name: "LabelTag\u6EAB\u6FD5\u5EA6_\u6A6B\u5F0F"
   m_TagString: Untagged
@@ -1136,22 +1136,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5297483623410897229
+--- !u!114 &7464003179277868018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6841099720419884819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9930b58d3a481741900125890d28c8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 787aca439a1ce9040a10a72406393337, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_VictorDev.Framework.PositionTo2DPoint
+  m_EditorClassIdentifier: VzDev::_VictorDev.Framework.UIAnchorFollower
   target3DObject: {fileID: 0}
-  alignAxisY: 0
   offsetPos: {x: 0, y: 0.1, z: 0}
-  visibleRange: 200
+  visibleInRange: 20
   mainCamera: {fileID: 0}
   rectTrans: {fileID: 5608774122618672087}
   canvasRect: {fileID: 0}
