@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using _VictorDev.ApiExtensions;
-using _VictorDev.DebugUtils;
+using VzDev.ApiExtensions;
+using VzDev.DebugUtils;
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
 namespace VictorDev.Managers
 {

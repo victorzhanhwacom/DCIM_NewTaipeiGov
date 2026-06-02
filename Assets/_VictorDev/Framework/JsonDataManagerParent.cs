@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.DebugUtils;
-using _VictorDev.InterfaceUtils;
+using VzDev.DebugUtils;
+using VzDev.InterfaceUtils;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Events;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     /// JSON解析資料接收器
     /// <para>+ 僅接收解析後的JSON資料</para>

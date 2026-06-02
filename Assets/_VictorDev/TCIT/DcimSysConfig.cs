@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ApiExtensions;
-using _VictorDev.Configs;
-using _VictorDev.DebugUtils;
-using _VictorDev.FileUtils;
+using VzDev.ApiExtensions;
+using VzDev.Configs;
+using VzDev.DebugUtils;
+using VzDev.FileUtils;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.TCIT.DCIM
+namespace VzDev.TCIT.DCIM
 {
     /// DCIM App設定檔
     public class DcimSysConfig : SingletonMonoBehaviour<DcimSysConfig>

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.TextUtils;
+using VzDev.TextUtils;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -8,7 +8,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace _VictorDev.Framework.ScrollRectUtils
+namespace VzDev.ObjectUtils.ScrollRectUtils
 {
     /// [框架：ScrollRect列表] ScrollList ListItem
     public abstract class BaseScrollRectListItem<TData> : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler

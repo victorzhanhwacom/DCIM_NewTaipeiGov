@@ -4,7 +4,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.DotweenUtils
+namespace VzDev.DotweenUtils
 {
     
     [RequireComponent(typeof(CanvasGroup))]

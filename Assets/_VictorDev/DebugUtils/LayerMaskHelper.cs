@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     public static class LayerMaskHelper
     {

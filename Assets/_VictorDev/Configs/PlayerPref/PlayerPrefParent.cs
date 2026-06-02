@@ -3,7 +3,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.Configs
+namespace VzDev.Configs
 {
     /// PlayerPref資料存儲處理
     public abstract class PlayerPrefParent<T> : MonoBehaviour

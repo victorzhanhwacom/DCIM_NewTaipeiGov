@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Sequence = DG.Tweening.Sequence;
 
-namespace _VictorDev.DotweenUtils
+namespace VzDev.DotweenUtils
 {
     public class DoTweenHandler : MonoBehaviour
     {

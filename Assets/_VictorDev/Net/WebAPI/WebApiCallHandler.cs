@@ -1,9 +1,9 @@
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 
-namespace _VictorDev.Net.WebAPI
+namespace VzDev.Net.WebAPI
 {
     public class WebApiCallHandler : MonoBehaviour
     {

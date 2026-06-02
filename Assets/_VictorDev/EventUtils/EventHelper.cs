@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     /// 事件處理
     public static class EventHelper

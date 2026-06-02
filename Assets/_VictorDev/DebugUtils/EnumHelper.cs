@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ApiExtensions;
-using _VictorDev.Configs;
+using VzDev.ApiExtensions;
+using VzDev.Configs;
 using UnityEngine;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     public static class EnumHelper
     {

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// [Extended] TMP_Dropdown功能控制
     [RequireComponent(typeof(TMP_Dropdown))]

@@ -1,9 +1,9 @@
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.TextUtils
+namespace VzDev.TextUtils
 {
     /// 檢查string並轉換成超鏈結
     public class TextHyperLinkChecker : MonoBehaviour

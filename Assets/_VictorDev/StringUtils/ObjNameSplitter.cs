@@ -3,7 +3,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.StringUtils
+namespace VzDev.StringUtils
 {
     public class ObjNameSplitter : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using VzDev.UnityAPI.Extensions;
 
-namespace _VictorDev.TextUtils
+namespace VzDev.TextUtils
 {
     /// TAB/Enter鍵切換到下一個InputField
     public class TabNavigationManager : MonoBehaviour

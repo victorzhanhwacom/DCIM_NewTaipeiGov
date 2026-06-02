@@ -1,10 +1,10 @@
-using _VictorDev.ApiExtensions;
-using _VictorDev.ObjectUtils;
+using VzDev.ApiExtensions;
+using VzDev.ObjectUtils;
 using NaughtyAttributes;
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.Advanced
+namespace VzDev.Advanced
 {
     /// 把3D模型Pivot跟隨鼠標移動
     public class FollowMouse3D : MonoBehaviour

@@ -5,9 +5,9 @@ using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 命令控制台
     public class CommandConsole : MonoBehaviour

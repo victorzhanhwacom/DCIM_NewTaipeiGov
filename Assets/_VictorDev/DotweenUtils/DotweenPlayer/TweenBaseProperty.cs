@@ -1,7 +1,7 @@
 ﻿using System;
 using DG.Tweening;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     [Serializable]
     public class TweenBaseProperty

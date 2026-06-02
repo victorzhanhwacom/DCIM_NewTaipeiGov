@@ -1,7 +1,7 @@
 ﻿using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     public class TweenEffectBase : MonoBehaviour
     {

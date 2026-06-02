@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace _VictorDev.Configs
+namespace VzDev.Configs
 {
     /// 語系類別
     [Serializable]

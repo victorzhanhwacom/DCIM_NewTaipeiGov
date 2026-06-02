@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Reflection;
-using _VictorDev.DebugUtils;
-using Debug = _VictorDev.DebugUtils.Debug;
+using VzDev.DebugUtils;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 原API類別功能擴充
     public static class ClassExtension

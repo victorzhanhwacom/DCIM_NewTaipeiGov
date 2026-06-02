@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace _VictorDev.TextUtils
+namespace VzDev.TextUtils
 {
     /// 偵測TMP裡有link標籤的超鏈結，允許點擊並開啟URL
     public class ClickableTMPLink : MonoBehaviour, IPointerClickHandler

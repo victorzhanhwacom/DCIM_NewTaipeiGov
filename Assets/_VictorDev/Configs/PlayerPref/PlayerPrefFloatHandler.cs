@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _VictorDev.Configs
+namespace VzDev.Configs
 {
     public class PlayerPrefFloatHandler : PlayerPrefParent<float>
     {

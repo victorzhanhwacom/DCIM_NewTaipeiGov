@@ -1,10 +1,10 @@
-using _VictorDev.InterfaceUtils;
+using VzDev.InterfaceUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using _VictorDev.Configs;
+using VzDev.Configs;
 
-namespace _VictorDev.ScrollRectUtils
+namespace VzDev.ScrollRectUtils
 {
     /// 僅判斷對像物件(IUnLockable)的Unlock狀態，來Invoke相對像的事件
     public abstract class BaseListItemUnlockChecker<TItem, TData>: MonoBehaviour, IReceiveData<TItem>

@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using _VictorDev.Configs;
+using VzDev.Configs;
 using _VictorDEV.DateTimeUtils;
-using _VictorDev.DebugUtils;
-using _VictorDev.MediatorUtils;
+using VzDev.DebugUtils;
+using VzDev.MediatorUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.DateTimeUtils
+namespace VzDev.DateTimeUtils
 {
     /// 計時器 (Coroutine制)
     public class Timer : MonoBehaviour

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.MaterialUtils
+namespace VzDev.MaterialUtils
 {
     public static class MaterialHelper
     {
@@ -45,6 +45,12 @@ namespace _VictorDev.MaterialUtils
         public static void ReplaceMaterial(List<Transform> targets, Material replaceMaterial) =>
             targets.ForEach(target => ReplaceMaterial(target, replaceMaterial));
 
+        /// <summary>
+        /// 替換Targets(陣列)為指定材質，並排除特定對象（及其子物件）
+        /// </summary>
+        public static void ReplaceMaterial(List<Transform> targets, Material replaceMaterial, List<Transform> excludeTargets = null) =>
+        targets.ForEach(target => ReplaceMaterial(target, replaceMaterial, excludeTargets));
+
         /// 將目前模型的材質，替換為指定材質
         public static void ReplaceMaterial(Transform target, Material replaceMaterial)
         {
@@ -57,7 +63,7 @@ namespace _VictorDev.MaterialUtils
                 Transform childTrans = childRenderer.transform;
                 // 若沒有存過原始材質，才存（避免重複覆蓋）
                 originalMaterials.TryAdd(childTrans, childRenderer.sharedMaterials);
-                
+
                 if (childRenderer.sharedMaterials.Length > 1)
                 {
                     //若有多個Material
@@ -72,6 +78,42 @@ namespace _VictorDev.MaterialUtils
                     childRenderer.material = replaceMaterial;
             }
         }
+
+        /// <summary>
+        /// 將目前模型的材質，替換為指定材質，並排除特定對象（及其子物件）
+        /// </summary>
+        public static void ReplaceMaterial(Transform target, Material replaceMaterial, List<Transform> excludeTargets)
+        {
+            if (target == null) return;
+            // 尋找所有子物件身上的 Renderer（包含 inactive）
+            Renderer[] result = target.GetComponentsInChildren<Renderer>(includeInactive: true);
+
+            foreach (Renderer childRenderer in result)
+            {
+                // 如果該子物件在排除名單內，則跳過
+                if (excludeTargets != null && excludeTargets.Contains(childRenderer.transform))
+                {
+                    continue;
+                }
+                Transform childTrans = childRenderer.transform;
+                // 若沒有存過原始材質，才存（避免重複覆蓋）
+                originalMaterials.TryAdd(childTrans, childRenderer.sharedMaterials);
+
+                if (childRenderer.sharedMaterials.Length > 1)
+                {
+                    //若有多個Material
+                    Material[] newMaterials = new Material[childRenderer.sharedMaterials.Length];
+                    for (int i = 0; i < newMaterials.Length; i++)
+                    {
+                        newMaterials[i] = replaceMaterial;
+                    }
+                    childRenderer.materials = newMaterials;
+                }
+                else
+                    childRenderer.material = replaceMaterial;
+            }
+        }
+
 
         #endregion
 
@@ -92,7 +134,7 @@ namespace _VictorDev.MaterialUtils
         /// 復原對像的原始材質，並從Dictionary裡移除
         public static void RestoreMaterial(Transform target)
         {
-            if(target == null) return;
+            if (target == null) return;
             // 尋找所有子物件身上的 Renderer（包含 inactive）
             Renderer[] childRenderer = target.GetComponentsInChildren<Renderer>(includeInactive: true);
 

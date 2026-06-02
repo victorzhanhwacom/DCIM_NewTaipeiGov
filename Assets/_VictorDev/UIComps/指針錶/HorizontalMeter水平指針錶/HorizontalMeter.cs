@@ -2,7 +2,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.UIComps
+namespace VzDev.UIComps
 {
     public class HorizontalMeter : MonoBehaviour
     {

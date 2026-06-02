@@ -6,12 +6,12 @@ using System.Net.Http.Headers;
 using System.Text;
 using NaughtyAttributes;
 using UnityEngine;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using VictorDev.Net;
 using VictorDev.Net.WebAPI;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.Net.WebAPI
+namespace VzDev.Net.WebAPI
 {
     /// WebAPI Requst資料包
     [CreateAssetMenu(fileName = "WebApiRequest", menuName = "VictorDev/Net/WebApiRequest")]

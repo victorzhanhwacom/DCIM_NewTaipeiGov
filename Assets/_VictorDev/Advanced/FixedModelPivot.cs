@@ -1,7 +1,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.Advanced
+namespace VzDev.Advanced
 {
     public class FixedModelPivot : MonoBehaviour
     {

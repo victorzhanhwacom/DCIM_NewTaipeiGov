@@ -1,9 +1,9 @@
-using _VictorDev.MathUtils;
+using VzDev.MathUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     /// [Mediator] - 數值轉接器
     public class ValueMediator : MonoBehaviour

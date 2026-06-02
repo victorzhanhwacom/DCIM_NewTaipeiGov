@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using _VictorDev.DebugUtils;
+using VzDev.DebugUtils;
 using UnityEngine;
 
-namespace _VictorDev.TCIT.DCIM
+namespace VzDev.TCIT.DCIM
 {
     /// DCIM相關處理
     ///                         0       1    2    3   4   5          6

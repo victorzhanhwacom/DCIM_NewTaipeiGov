@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.String
+namespace VzDev.String
 {
     /// 檢查Text組件的值是否為空值
     public class StringBoolMediator : MonoBehaviour

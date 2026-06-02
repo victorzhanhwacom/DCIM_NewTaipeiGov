@@ -1,8 +1,8 @@
-using _VictorDev.InterfaceUtils;
+using VzDev.InterfaceUtils;
 using UnityEngine;
-using _VictorDev.Configs;
+using VzDev.Configs;
 
-namespace _VictorDev.ScrollRectUtils
+namespace VzDev.ScrollRectUtils
 {
     /// 樣版：詳細頁面
     public abstract class BaseDetailPage<TItem, TData> : MonoBehaviour, IReceiveData<TItem>

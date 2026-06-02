@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace _VictorDev.Managers
+namespace VzDev.Managers
 {
     /// Coroutine分區段
     public static class CoroutineChunkRunner

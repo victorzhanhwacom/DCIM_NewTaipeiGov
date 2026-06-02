@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// [Extended] 原API類別功能擴充
     public static class VectorExtension

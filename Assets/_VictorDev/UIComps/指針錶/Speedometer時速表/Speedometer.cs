@@ -1,11 +1,11 @@
 using System;
-using _VictorDev.DebugUtils;
-using _VictorDev.ImageUtils;
+using VzDev.DebugUtils;
+using VzDev.ImageUtils;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.UIComps
+namespace VzDev.UIComps
 {
     public class Speedometer : MonoBehaviour
     {

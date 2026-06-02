@@ -2,7 +2,7 @@ using System;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.CameraUtils
+namespace VzDev.CameraUtils
 {
     public class LookAtCamera : MonoBehaviour
     {

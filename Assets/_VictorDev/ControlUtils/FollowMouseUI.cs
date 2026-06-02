@@ -1,10 +1,10 @@
-using _VictorDev.ObjectUtils;
+using VzDev.ObjectUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Profiling;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.ControlUtils
+namespace VzDev.ControlUtils
 {
     /// <summary>
     /// Follows the mouse position within a UI Canvas.

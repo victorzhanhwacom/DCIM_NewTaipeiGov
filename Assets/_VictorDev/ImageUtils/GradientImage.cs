@@ -1,11 +1,11 @@
-using _VictorDev.ApiExtensions;
-using _VictorDev.FileUtils;
+using VzDev.ApiExtensions;
+using VzDev.FileUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace _VictorDev.ImageUtils
+namespace VzDev.ImageUtils
 {
     /// 產生漸層圖像，並Invoke Texture2D/Sprite
     public class GradientImage : MonoBehaviour

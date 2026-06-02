@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.Configs;
-using _VictorDev.DebugUtils;
-using _VictorDev.InterfaceUtils;
+using VzDev.Configs;
+using VzDev.DebugUtils;
+using VzDev.InterfaceUtils;
 using Newtonsoft.Json;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 原API類別功能擴充
     public static class ListExtension

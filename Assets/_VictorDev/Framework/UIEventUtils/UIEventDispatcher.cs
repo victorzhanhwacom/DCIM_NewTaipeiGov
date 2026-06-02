@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.Framework.UIEventUtils
+namespace VzDev.ObjectUtils.UIEventUtils
 {
     public class UIEventDispatcher : MonoBehaviour
     {

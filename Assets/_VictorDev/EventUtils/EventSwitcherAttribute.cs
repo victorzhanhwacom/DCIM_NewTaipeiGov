@@ -1,7 +1,7 @@
 using System;
 using UnityEngine.Events;
 
-namespace _VictorDev.EventUtils
+namespace VzDev.EventUtils
 {
     /// 處理Toggle.IsOn狀態事件Invoke
     [Serializable]

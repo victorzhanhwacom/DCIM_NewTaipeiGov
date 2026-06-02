@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 供像Dictionary需要Inspector視覺化的使用
     /// <para>+ 夾帶Key與其值 </para>

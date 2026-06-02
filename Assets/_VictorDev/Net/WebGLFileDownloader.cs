@@ -1,9 +1,9 @@
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 #if UNITY_WEBGL && !UNITY_EDITOR
 using System.Runtime.InteropServices;
 #endif
 
-namespace _VictorDev.FileUtils
+namespace VzDev.FileUtils
 {
     /// 檔案下載 For WebGL
     public static class WebGLFileDownloader

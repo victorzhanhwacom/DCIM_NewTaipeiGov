@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using _VictorDev.ApiExtensions;
-using _VictorDev.DebugUtils;
+using VzDev.ApiExtensions;
+using VzDev.DebugUtils;
 
 namespace VictorDev.Async
 {

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using _VictorDev.ApiExtensions;
-using _VictorDev.CameraUtils;
+using VzDev.ApiExtensions;
+using VzDev.CameraUtils;
 using TMPro;
 using UnityEngine;
 

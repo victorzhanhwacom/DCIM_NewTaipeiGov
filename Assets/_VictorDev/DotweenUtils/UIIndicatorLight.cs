@@ -1,11 +1,11 @@
 using System;
-using _VictorDev.Configs;
+using VzDev.Configs;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.DoTweenUtils
+namespace VzDev.DoTweenUtils
 {
     /// UI 指示燈特效
     public class UIIndicatorLight : MonoBehaviour

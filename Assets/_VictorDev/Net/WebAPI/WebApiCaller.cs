@@ -2,14 +2,14 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using _VictorDev.ApiExtensions;
-using _VictorDev.FileUtils;
+using VzDev.ApiExtensions;
+using VzDev.FileUtils;
 using Unity.VisualScripting;
 using UnityEngine;
 using VictorDev.Managers;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.Net.WebAPI
+namespace VzDev.Net.WebAPI
 {
     public static class WebApiCaller
     {

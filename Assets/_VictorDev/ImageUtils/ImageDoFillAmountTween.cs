@@ -1,10 +1,10 @@
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.ImageUtils
+namespace VzDev.ImageUtils
 {
     [RequireComponent(typeof(Image))]
     public class ImageDoFillAmountTween : MonoBehaviour

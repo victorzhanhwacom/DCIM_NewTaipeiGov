@@ -1,5 +1,5 @@
 /// 各類Enum的設定
-namespace _VictorDev.Configs
+namespace VzDev.Configs
 {
     #region XYZ座標
     /// X軸 - 靠左、置中、靠右

@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.MediatorUtils
+namespace VzDev.MediatorUtils
 {
     /// [Mediator] - 字串
     public class ValueMediator : MonoBehaviour

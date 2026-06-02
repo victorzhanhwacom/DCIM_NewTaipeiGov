@@ -1,9 +1,9 @@
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.FileUtils
+namespace VzDev.FileUtils
 {
     /// [Editor] - 讀取StreamingAssets資料夾裡的機櫃Json檔
     public class TextFileLoader : MonoBehaviour

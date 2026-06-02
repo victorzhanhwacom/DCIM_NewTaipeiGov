@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using _VictorDev.FileUtils;
+using VzDev.FileUtils;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// LOG檔案管理
     public class LogFileManager : MonoBehaviour

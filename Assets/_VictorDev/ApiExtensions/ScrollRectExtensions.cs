@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     public static class ScrollRectExtensions
     {

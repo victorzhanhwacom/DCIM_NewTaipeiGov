@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using _VictorDev.ApiExtensions;
+using VzDev.ApiExtensions;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     /// Index值處理事件仲介
     public class IndexValueMediator : MonoBehaviour

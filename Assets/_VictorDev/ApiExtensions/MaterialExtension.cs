@@ -1,7 +1,7 @@
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 原API類別功能擴充
     public static class MaterialExtension

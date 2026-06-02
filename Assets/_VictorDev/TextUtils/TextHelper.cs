@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using _VictorDev.DebugUtils;
-using _VictorDev.DoTweenUtils;
+using VzDev.DebugUtils;
+using VzDev.DoTweenUtils;
 using TMPro;
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.TextUtils
+namespace VzDev.TextUtils
 {
     public static class TextHelper
     {

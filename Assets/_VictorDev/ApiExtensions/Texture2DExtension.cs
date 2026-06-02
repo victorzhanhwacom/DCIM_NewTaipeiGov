@@ -1,7 +1,7 @@
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     /// 原API類別功能擴充
     public static class Texture2DExtension
@@ -11,7 +11,7 @@ namespace _VictorDev.ApiExtensions
         {
             if(self == null)
             {
-                global::_VictorDev.DebugUtils.Debug.LogError("❌ Texture2D is null!");
+                global::VzDev.DebugUtils.Debug.LogError("❌ Texture2D is null!");
                 return null;
             }
             return Sprite.Create(self, new Rect(0,0,self.width,self.height), new Vector2(pivotX, pivotY));

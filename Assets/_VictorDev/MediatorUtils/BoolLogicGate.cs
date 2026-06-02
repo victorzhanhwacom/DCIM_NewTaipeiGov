@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace _VictorDev.MediatorUtils
+namespace VzDev.MediatorUtils
 {
     /// Bool邏輯閘
     public class BoolLogicGate : MonoBehaviour

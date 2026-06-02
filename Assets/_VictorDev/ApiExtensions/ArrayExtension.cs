@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     public static class ArrayExtension
     {

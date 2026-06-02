@@ -5,16 +5,16 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using _VictorDev.Configs;
+using VzDev.Configs;
 using _VictorDEV.DateTimeUtils;
-using _VictorDev.Net.WebAPI;
+using VzDev.Net.WebAPI;
 using JetBrains.Annotations;
 //using SFB;
 using UnityEditor;
 using UnityEngine;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.FileUtils
+namespace VzDev.FileUtils
 {
     public static class FileHelper
     {

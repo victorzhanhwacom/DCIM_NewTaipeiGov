@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using _VictorDev.InterfaceUtils;
+using VzDev.InterfaceUtils;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using _VictorDev.Configs;
+using VzDev.Configs;
 
-namespace _VictorDev.ScrollRectUtils.OLD
+namespace VzDev.ScrollRectUtils.OLD
 {
     /// 樣版：ScrollRect
     public abstract class BaseScrollRectList<TData, TItem> : MonoBehaviour, IReceiveData<List<TData>>

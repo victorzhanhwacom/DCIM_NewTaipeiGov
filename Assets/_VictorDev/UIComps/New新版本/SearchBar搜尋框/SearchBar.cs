@@ -1,11 +1,11 @@
-using _VictorDev.Framework.ScrollRectUtils;
+using VzDev.ObjectUtils.ScrollRectUtils;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace _VictorDev.UIComps
+namespace VzDev.UIComps
 {
     public abstract class SearchBar<TData> : BaseScrollRectList<TData>, IPointerEnterHandler, IPointerExitHandler
     {

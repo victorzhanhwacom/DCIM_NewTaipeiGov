@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.MediatorUtils
+namespace VzDev.MediatorUtils
 {
     /// [Mediator] - 百分比
     public class PercentageMediator : MonoBehaviour

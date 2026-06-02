@@ -1,4 +1,4 @@
-using _VictorDev.Net.WebAPI;
+using VzDev.Net.WebAPI;
 using NaughtyAttributes;
 using UnityEngine;
 

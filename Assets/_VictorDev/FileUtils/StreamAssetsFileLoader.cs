@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Text;
-using _VictorDev.DebugUtils;
+using VzDev.DebugUtils;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.FileUtils
+namespace VzDev.FileUtils
 {
     ///  StreamAssets資料夾裡的檔案讀取
     ///  <para> + 資料是未打包的，適用於影片、JSON、文字檔</para>

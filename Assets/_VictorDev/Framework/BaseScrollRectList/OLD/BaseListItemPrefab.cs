@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace _VictorDev.ScrollRectUtils
+namespace VzDev.ScrollRectUtils
 {
     /// 樣版：ScrollRect的ListItem
     public abstract class BaseListItemPrefab<TData> : MonoBehaviour where TData : class

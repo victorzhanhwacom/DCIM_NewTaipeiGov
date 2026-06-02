@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ColorUtils;
+using VzDev.ColorUtils;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
-namespace _VictorDev.ImageUtils
+namespace VzDev.ImageUtils
 {
     /// 設定Image Fill Amount與階級變色
     [RequireComponent(typeof(Image))]

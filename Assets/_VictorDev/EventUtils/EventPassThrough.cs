@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace _VictorDev.EventUtils
+namespace VzDev.EventUtils
 {
     /// 將滑鼠事件傳給上一層UI
     /// <para>+ 需跟互動類型的UI組件放在一起</para>

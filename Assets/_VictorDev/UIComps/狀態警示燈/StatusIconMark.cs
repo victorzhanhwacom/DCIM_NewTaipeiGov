@@ -1,9 +1,9 @@
-using _VictorDev.Configs;
+using VzDev.Configs;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.UIComps
+namespace VzDev.UIComps
 {
     public class StatusIconMark : MonoBehaviour
     {

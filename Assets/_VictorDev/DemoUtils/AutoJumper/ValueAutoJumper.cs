@@ -2,11 +2,11 @@ using System.Collections;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using _VictorDev.DebugUtils;
-using Debug = _VictorDev.DebugUtils.Debug;
+using VzDev.DebugUtils;
+using Debug = VzDev.DebugUtils.Debug;
 using Random = UnityEngine.Random;
 
-namespace _VictorDev.DemoUtils.AutoJumper
+namespace VzDev.DemoUtils.AutoJumper
 {
     /// 自動亂數跳值 - 數值
     public class ValueAutoJumper : MonoBehaviour, IAutoJumper

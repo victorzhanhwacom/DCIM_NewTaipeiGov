@@ -2,10 +2,10 @@ using System;
 using _VictorDEV.DateTimeUtils;
 using TMPro;
 using UnityEngine;
-using _VictorDev.DebugUtils;
-using static _VictorDev.DateTimeUtils.Clock;
+using VzDev.DebugUtils;
+using static VzDev.DateTimeUtils.Clock;
 
-namespace _VictorDev.DateTimeUtils
+namespace VzDev.DateTimeUtils
 {
     /// <summary>
     /// ����ɶ���ܾ�

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace _VictorDev.ShaderUtils
+namespace VzDev.ShaderUtils
 {
     public class ObjectHighlighter : MonoBehaviour
     {

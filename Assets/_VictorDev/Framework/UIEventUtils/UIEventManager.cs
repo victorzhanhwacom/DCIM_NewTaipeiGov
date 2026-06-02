@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using _VictorDev.ApiExtensions;
-using _VictorDev.DebugUtils;
+using VzDev.ApiExtensions;
+using VzDev.DebugUtils;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Debug = _VictorDev.DebugUtils.Debug;
+using Debug = VzDev.DebugUtils.Debug;
 
-namespace _VictorDev.Framework.UIEventUtils
+namespace VzDev.ObjectUtils.UIEventUtils
 {
     /// UI組件事件管理器
     /// <para>+ 管理關鍵按鈕所觸發的行為事件</para>

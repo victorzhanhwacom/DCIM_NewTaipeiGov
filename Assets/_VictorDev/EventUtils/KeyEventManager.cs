@@ -4,7 +4,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.EventUtils
+namespace VzDev.EventUtils
 {
     /// 偵測按鍵以觸發事件
     public class KeyEventManager : MonoBehaviour

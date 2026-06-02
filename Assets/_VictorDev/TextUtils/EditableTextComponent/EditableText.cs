@@ -4,7 +4,7 @@ using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 
-namespace _VictorDev.TextUtils.EditableTextComponent
+namespace VzDev.TextUtils.EditableTextComponent
 {
     /// 可編輯文字項
     public class EditableText : MonoBehaviour

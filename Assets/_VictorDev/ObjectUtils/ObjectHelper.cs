@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using _VictorDev.MediatorUtils;
+using VzDev.MediatorUtils;
 using IngameDebugConsole;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-namespace _VictorDev.DebugUtils
+namespace VzDev.DebugUtils
 {
     /// GameObject物件處理
     public static class ObjectHelper

@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.EditorUtils
+namespace VzDev.EditorUtils
 {
     public class UICleaner
     {

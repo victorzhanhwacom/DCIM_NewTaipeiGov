@@ -4,7 +4,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.DoTweenUtils
+namespace VzDev.DoTweenUtils
 {
     /// 對Graphic組件 (Image/TextmeshProUGUI) 進行DOColor
     public class ColorDotweener : _DotweenerBase

@@ -1,7 +1,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.ControlUtils
+namespace VzDev.ControlUtils
 {
     /// 管理浮動物件，面向目標物件
     public class FaceTargetManager : MonoBehaviour

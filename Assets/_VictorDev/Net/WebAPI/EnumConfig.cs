@@ -1,5 +1,5 @@
 
-namespace _VictorDev.Net.WebAPI
+namespace VzDev.Net.WebAPI
 {
     public enum EnumAuthorizationType
     {

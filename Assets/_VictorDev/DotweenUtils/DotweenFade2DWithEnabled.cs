@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-namespace _VictorDev.DoTweenUtils
+namespace VzDev.DoTweenUtils
 {
     public class DotweenFade2DWithEnabled : MonoBehaviour
     {

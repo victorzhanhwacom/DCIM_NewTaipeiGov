@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _VictorDev.UIComps.ProgressBarUtils
+namespace VzDev.UIComps.ProgressBarUtils
 {
     [RequireComponent(typeof(Image))]
     public class ProgressBarIconFollower : MonoBehaviour

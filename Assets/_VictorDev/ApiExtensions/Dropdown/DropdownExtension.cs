@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     public static class DropdownExtension
     {

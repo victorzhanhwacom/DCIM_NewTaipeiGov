@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _VictorDev.TextUtils
+namespace VzDev.TextUtils
 {
     public class TextValueFormatter : MonoBehaviour
     {

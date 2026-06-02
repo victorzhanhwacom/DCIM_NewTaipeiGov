@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _VictorDev.ApiExtensions
+namespace VzDev.ApiExtensions
 {
     public static class CoroutineExtension
     {

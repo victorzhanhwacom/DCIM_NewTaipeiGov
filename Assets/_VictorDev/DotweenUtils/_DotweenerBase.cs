@@ -2,7 +2,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _VictorDev.DoTweenUtils
+namespace VzDev.DoTweenUtils
 {
     /// Dotweener基底, 設定duration與ease效果
     public abstract class _DotweenerBase : MonoBehaviour
