@@ -54102,26 +54102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63ca1d43c6f43e4ea88bc261f1d27cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeatSource
-  temperature: 1
+  temperature: 10.2
   radius: 0.15
   falloff: 2
   isActive: 1
-  animateTemperature: 0
-  tempBase: 0.5
-  tempAmplitude: 0.3
-  tempFrequency: 1
-  tempPhase: 0
-  animatePosition: 0
-  orbitCenter: {x: 0, y: 0, z: 0}
-  orbitAxis: {x: 0, y: 1, z: 0}
-  orbitRadius: 0.2
-  orbitSpeed: 1
-  orbitPhase: 0
-  animateRadius: 0
-  radiusBase: 0.15
-  radiusAmplitude: 0.05
-  radiusFrequency: 1.5
-  radiusPhase: 0
 --- !u!4 &211456242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7905542456697978049, guid: b4422f8241dd2bc4f833f94336e1fe50, type: 3}
@@ -239105,6 +239089,7 @@ GameObject:
   - component: {fileID: 1249059336}
   - component: {fileID: 1249059338}
   - component: {fileID: 1249059337}
+  - component: {fileID: 1249059339}
   - component: {fileID: 1249059335}
   - component: {fileID: 1249059334}
   m_Layer: 0
@@ -239223,6 +239208,23 @@ MonoBehaviour:
   autoFindSources: 1
   heatSources: []
   maxAccumulatedDensity: 1.5
+--- !u!114 &1249059339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249059332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b97bdcb0941db48a69397a35748833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeatmapAnimationController
+  riseSpeed: 0.3
+  turbulenceScale: 3
+  turbulenceStrength: 0.08
+  swayAmount: 0.04
+  heightFalloff: 2
 --- !u!4 &1249062882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3853893966071762749, guid: b4422f8241dd2bc4f833f94336e1fe50, type: 3}
@@ -348348,26 +348350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63ca1d43c6f43e4ea88bc261f1d27cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeatSource
-  temperature: 1
+  temperature: 25.2
   radius: 0.15
   falloff: 2
   isActive: 1
-  animateTemperature: 0
-  tempBase: 0.5
-  tempAmplitude: 0.3
-  tempFrequency: 1
-  tempPhase: 0
-  animatePosition: 0
-  orbitCenter: {x: 0, y: 0, z: 0}
-  orbitAxis: {x: 0, y: 1, z: 0}
-  orbitRadius: 0.2
-  orbitSpeed: 1
-  orbitPhase: 0
-  animateRadius: 0
-  radiusBase: 0.15
-  radiusAmplitude: 0.05
-  radiusFrequency: 1.5
-  radiusPhase: 0
 --- !u!4 &1392404908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9074310381990338066, guid: 8dee70e2ac48c3e449bf2fd5bc7b3bb7, type: 3}
