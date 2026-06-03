@@ -114,7 +114,7 @@ namespace VictorDev.Managers
         /// 取消所有任務
         public static void CancelAll()
         {
-            Instance._runningTasks.CloneValuesAsList().ForEach(trackedTask =>
+           /*  Instance._runningTasks.CloneValuesAsList().ForEach(trackedTask =>
             {
                 if (trackedTask == null)
                 {
@@ -124,7 +124,7 @@ namespace VictorDev.Managers
                 {
                     Cancel(trackedTask.Tag);
                 }
-            });
+            }); */
         }
 
         /// 指定的 Tag 是否正在執行任務
