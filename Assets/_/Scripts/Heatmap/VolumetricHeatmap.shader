@@ -16,6 +16,9 @@ Shader "Custom/VolumetricHeatmap"
         _TurbulenceStrength ("Turbulence Str",  Range(0.0, 0.3))  = 0.08
         _SwayAmount       ("Sway Amount",       Range(0.0, 0.2))  = 0.04
         _HeightFalloff    ("Height Falloff",    Range(0.0, 5.0))  = 2.0
+
+        _RampBias    ("Ramp Bias（往紅端推）",  Range(1.0, 4.0)) = 1.5
+        _RampContrast("Ramp Contrast（拉開層次）", Range(0.5, 3.0)) = 1.0
     }
 
     SubShader
@@ -45,6 +48,9 @@ Shader "Custom/VolumetricHeatmap"
             float _SwayAmount;
             float _HeightFalloff;
 
+            float _RampBias;
+            float _RampContrast;
+            
             struct appdata { float4 vertex : POSITION; };
             struct v2f
             {
@@ -62,8 +68,8 @@ Shader "Custom/VolumetricHeatmap"
 
             // ── AABB ────────────────────────────────────────────
             bool RayAABB(float3 ro, float3 rd,
-                         float3 bmin, float3 bmax,
-                         out float tNear, out float tFar)
+            float3 bmin, float3 bmax,
+            out float tNear, out float tFar)
             {
                 float3 invDir = 1.0 / rd;
                 float3 t0 = (bmin - ro) * invDir;
@@ -92,15 +98,15 @@ Shader "Custom/VolumetricHeatmap"
                 float3 u = f * f * (3.0 - 2.0 * f);
 
                 return lerp(
-                    lerp(
-                        lerp(hash33(i).x,               hash33(i + float3(1,0,0)).x, u.x),
-                        lerp(hash33(i + float3(0,1,0)).x, hash33(i + float3(1,1,0)).x, u.x),
-                        u.y),
-                    lerp(
-                        lerp(hash33(i + float3(0,0,1)).x, hash33(i + float3(1,0,1)).x, u.x),
-                        lerp(hash33(i + float3(0,1,1)).x, hash33(i + float3(1,1,1)).x, u.x),
-                        u.y),
-                    u.z);
+                lerp(
+                lerp(hash33(i).x,               hash33(i + float3(1,0,0)).x, u.x),
+                lerp(hash33(i + float3(0,1,0)).x, hash33(i + float3(1,1,0)).x, u.x),
+                u.y),
+                lerp(
+                lerp(hash33(i + float3(0,0,1)).x, hash33(i + float3(1,0,1)).x, u.x),
+                lerp(hash33(i + float3(0,1,1)).x, hash33(i + float3(1,1,1)).x, u.x),
+                u.y),
+                u.z);
             }
 
             // ── FBM（分形疊加，2 層即夠，保持效能）─────────────
@@ -124,26 +130,34 @@ Shader "Custom/VolumetricHeatmap"
                 float dFx_dy = (fbm(p + float3(0, eps, 0)) - fbm(p - float3(0, eps, 0)));
                 float dFx_dz = (fbm(p + float3(0, 0, eps)) - fbm(p - float3(0, 0, eps)));
                 float dFy_dz = (fbm(p + float3(0, 0, eps) + float3(31.4, 0, 0))
-                              - fbm(p - float3(0, 0, eps) + float3(31.4, 0, 0)));
+                - fbm(p - float3(0, 0, eps) + float3(31.4, 0, 0)));
                 float dFy_dx = (fbm(p + float3(eps, 0, 0) + float3(31.4, 0, 0))
-                              - fbm(p - float3(eps, 0, 0) + float3(31.4, 0, 0)));
+                - fbm(p - float3(eps, 0, 0) + float3(31.4, 0, 0)));
                 float dFz_dx = (fbm(p + float3(eps, 0, 0) + float3(0, 17.8, 0))
-                              - fbm(p - float3(eps, 0, 0) + float3(0, 17.8, 0)));
+                - fbm(p - float3(eps, 0, 0) + float3(0, 17.8, 0)));
                 float dFz_dy = (fbm(p + float3(0, eps, 0) + float3(0, 17.8, 0))
-                              - fbm(p - float3(0, eps, 0) + float3(0, 17.8, 0)));
+                - fbm(p - float3(0, eps, 0) + float3(0, 17.8, 0)));
 
                 return float3(
-                    dFx_dy - dFx_dz,
-                    dFy_dz - dFy_dx,
-                    dFz_dx - dFz_dy
+                dFx_dy - dFx_dz,
+                dFy_dz - dFy_dx,
+                dFz_dx - dFz_dy
                 ) / (2.0 * eps);
             }
 
             // ── Transfer Function ────────────────────────────────
             float4 TransferFunction(float density)
             {
-                float4 color = tex2D(_HeatRamp, float2(saturate(density), 0.5));
-                color.a = saturate(density * density);
+                // 1. Contrast：拉開中低密度的層次
+                float d = saturate(pow(density, 1.0 / _RampContrast));
+
+                // 2. Bias：整體往高端偏移，讓中心更容易到紅色
+                d = saturate(pow(d, 1.0 / _RampBias));
+
+                float4 color = tex2D(_HeatRamp, float2(d, 0.5));
+
+                // 3. Alpha 也用調整後的 d，避免高溫區域透明
+                color.a = saturate(d * d);
                 return color;
             }
 
@@ -158,7 +172,7 @@ Shader "Custom/VolumetricHeatmap"
 
                 float tNear, tFar;
                 if (!RayAABB(rayOrigin, rayDir, wMin, wMax, tNear, tFar))
-                    discard;
+                discard;
 
                 tNear = max(tNear, 0.0);
 
@@ -168,7 +182,7 @@ Shader "Custom/VolumetricHeatmap"
 
                 // Jitter：消除步進環狀 artifact
                 float jitter = frac(sin(dot(i.clipPos.xy,
-                               float2(12.9898, 78.233))) * 43758.5453);
+                float2(12.9898, 78.233))) * 43758.5453);
 
                 float t = tNear + jitter * stepLen;
 
@@ -197,10 +211,10 @@ Shader "Custom/VolumetricHeatmap"
                     // 水平渦旋 + 側向搖擺，Y 方向不加（避免破壞上升感）
                     float3 offset;
                     offset.x = curl.x * _TurbulenceStrength
-                               + sin(time * 1.3 + uv.z * 4.0) * _SwayAmount;
+                    + sin(time * 1.3 + uv.z * 4.0) * _SwayAmount;
                     offset.y = 0.0;   // Y 不加 curl，保持向上乾淨
                     offset.z = curl.z * _TurbulenceStrength
-                               + cos(time * 0.9 + uv.x * 4.0) * _SwayAmount;
+                    + cos(time * 0.9 + uv.x * 4.0) * _SwayAmount;
 
                     // 越高飄動越強
                     float3 sampleUV = saturate(uv + offset * heightFactor);
