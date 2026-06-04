@@ -232,13 +232,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2382494830579274836, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 506039572329439395}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6841099720419884819, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 847863708175572466}
   m_SourcePrefab: {fileID: 100100000, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
 --- !u!224 &3849513783977791542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2382494830579274836, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
   m_PrefabInstance: {fileID: 1476171364558079074}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5371701422652930929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6841099720419884819, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
+  m_PrefabInstance: {fileID: 1476171364558079074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &847863708175572466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5371701422652930929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b856260483d11449b986ac50c844819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointTag_RTRH
+  heatSource: {fileID: 0}
+  txtValue: {fileID: 0}
+  normalColor: {r: 0, g: 1, b: 0, a: 1}
+  warningColor: {r: 1, g: 0, b: 0, a: 1}
+  img: {fileID: 0}
 --- !u!224 &6461034141671511989 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5608774122618672087, guid: d985767417139414f826cf5a6f2c1e5a, type: 3}
