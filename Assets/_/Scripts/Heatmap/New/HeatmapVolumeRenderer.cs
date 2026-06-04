@@ -2,168 +2,240 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 // ---------------------------------------------------------------------------
 // Temperature Color Stop
 // ---------------------------------------------------------------------------
 
-/// <summary>
-/// One stop on the temperature→color gradient.
-/// Temperature is specified in raw units (e.g. Celsius).
-/// The renderer normalises them automatically against TempMin/TempMax.
-/// </summary>
 [Serializable]
 public class TempColorStop
 {
     [Tooltip("Temperature at this stop (same units as TempMin / TempMax)")]
     public float temperature = 0f;
-
     [ColorUsage(false, true)]
     public Color color = Color.blue;
-
     public TempColorStop() { }
-    public TempColorStop(float temp, Color col)
-    {
-        temperature = temp;
-        color       = col;
-    }
+    public TempColorStop(float temp, Color col) { temperature = temp; color = col; }
 }
 
 // ---------------------------------------------------------------------------
 // HeatmapVolumeRenderer
 // ---------------------------------------------------------------------------
 
-/// <summary>
-/// Main controller that lives on the Volume GameObject.
-/// It owns the Material, collects HeatSource children, and drives all
-/// shader parameters every frame — including the packed constant buffer
-/// that WebGL-safe HLSL reads through arrays.
-/// </summary>
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 [ExecuteAlways]
 public class HeatmapVolumeRenderer : MonoBehaviour
 {
-    // ------------------------------------------------------------------ //
-    //  Inspector                                                           //
-    // ------------------------------------------------------------------ //
+    // ── Inspector ────────────────────────────────────────────────────── //
 
     [Header("Shader")]
-    [Tooltip("Assign the HeatmapVolume shader asset here.")]
     public Shader volumeShader;
 
     [Header("Temperature Range")]
-    [Tooltip("Temperature that maps to the first color stop (normalised 0).")]
     public float tempMin = 0f;
-    [Tooltip("Temperature that maps to the last color stop (normalised 1).")]
     public float tempMax = 100f;
 
     [Header("Color Gradient (2–8 stops, sorted by temperature)")]
     public List<TempColorStop> colorStops = new List<TempColorStop>
     {
-        new TempColorStop(  0f, new Color(0.00f, 0.00f, 1.00f)),   // blue
-        new TempColorStop( 20f, new Color(0.00f, 1.00f, 1.00f)),   // cyan
-        new TempColorStop( 40f, new Color(0.00f, 1.00f, 0.00f)),   // green
-        new TempColorStop( 60f, new Color(1.00f, 1.00f, 0.00f)),   // yellow
-        new TempColorStop( 80f, new Color(1.00f, 0.45f, 0.00f)),   // orange
-        new TempColorStop(100f, new Color(1.00f, 0.00f, 0.00f)),   // red
+        new TempColorStop(  0f, new Color(0.00f, 0.00f, 1.00f)),
+        new TempColorStop( 20f, new Color(0.00f, 1.00f, 1.00f)),
+        new TempColorStop( 40f, new Color(0.00f, 1.00f, 0.00f)),
+        new TempColorStop( 60f, new Color(1.00f, 1.00f, 0.00f)),
+        new TempColorStop( 80f, new Color(1.00f, 0.45f, 0.00f)),
+        new TempColorStop(100f, new Color(1.00f, 0.00f, 0.00f)),
     };
 
     [Header("Raymarching Quality")]
-    [Range(16, 128)]
-    public int stepCount = 64;
-    [Range(0.001f, 0.1f)]
-    public float stepSize = 0.02f;
+    [Range(16, 128)] public int stepCount = 64;
 
     [Header("Volume Appearance")]
-    [Range(0f, 5f)]
-    public float density = 1.5f;
+    [Range(0f, 5f)]  public float density        = 1.5f;
+    [Range(0f, 1f)]  public float alphaThreshold = 0.01f;
+
+    [Header("Edge Flow / Turbulence")]
+    [Tooltip("Animation speed. 0 = frozen.")]
+    [Range(0f, 5f)]  public float flowSpeed    = 0.6f;
+
+    [Tooltip("Displacement magnitude in world units. 0 = no visible effect.")]
+    [Range(0f, 2f)]  public float flowStrength = 0.35f;
+
+    [Tooltip("Spatial frequency of the noise. High = small swirls.")]
+    [Range(0.1f, 8f)] public float flowScale   = 2f;
+
+    [Tooltip("FBM octaves (1-4). More = richer detail, more GPU cost.")]
+    [Range(1, 4)]    public int   flowOctaves  = 3;
+
+    [Tooltip("How far inward the turbulence reaches from the edge. 0 = surface only.")]
+    [Range(0f, 1f)]  public float edgeBand     = 0.4f;
+
+    [Tooltip("Main drift direction. Y=1 simulates natural heat-rise.")]
+    public Vector3 flowDirection = new Vector3(0.2f, 1f, 0.1f);
+
+    [Header("Base Temperature (background fill)")]
+    [Tooltip("Temperature of the volume where no HeatSource is present. " +
+             "Set within [TempMin, TempMax] — e.g. 50 for the green mid-point of a 0-100 range.")]
+    public float baseTemperature = 50f;
+
+    [Tooltip("Density multiplier for base-temperature regions (0 = invisible, 1 = full density). " +
+             "Keep low (0.2–0.5) so hot spots stand out clearly.")]
     [Range(0f, 1f)]
-    public float alphaThreshold = 0.01f;
+    public float baseDensityScale = 0.3f;
 
     [Header("Heat Source Discovery")]
-    [Tooltip("If true, automatically gathers all HeatSource children every frame (good for editor). "
-           + "Disable for large scenes and call RefreshHeatSources() manually.")]
     public bool autoRefreshSources = true;
 
-    // ------------------------------------------------------------------ //
-    //  Private                                                             //
-    // ------------------------------------------------------------------ //
+    // ── Private ──────────────────────────────────────────────────────── //
 
-    private Material       _material;
-    private MeshRenderer   _renderer;
-    private HeatSource[]   _sources = Array.Empty<HeatSource>();
+    private Material     _mat;
+    private MeshRenderer _rend;
+    private HeatSource[] _sources = Array.Empty<HeatSource>();
 
-    // Shader property IDs
-    private static readonly int ID_StepCount        = Shader.PropertyToID("_StepCount");
-    private static readonly int ID_StepSize         = Shader.PropertyToID("_StepSize");
-    private static readonly int ID_Density          = Shader.PropertyToID("_Density");
-    private static readonly int ID_AlphaThreshold   = Shader.PropertyToID("_AlphaThreshold");
-    private static readonly int ID_TempMin          = Shader.PropertyToID("_TempMin");
-    private static readonly int ID_TempMax          = Shader.PropertyToID("_TempMax");
-    private static readonly int ID_ActiveStops      = Shader.PropertyToID("_ActiveStops");
-    private static readonly int ID_HeatSourceCount  = Shader.PropertyToID("_HeatSourceCount");
+    // Wall-clock based timer — works in Editor AND WebGL build
+    // -1 means uninitialised; set on OnEnable or first FlowTime() call.
+    // Stored as double so sub-millisecond precision survives long Editor sessions.
+    [NonSerialized] private double _startRealtime = -1;
 
-    // Pre-baked per-stop IDs
-    private static readonly int[] ID_TempColor = {
+    // Cached shader property IDs
+    private static readonly int ID_RaymarchPack  = Shader.PropertyToID("_RaymarchPack");
+    private static readonly int ID_TempRangePack = Shader.PropertyToID("_TempRangePack");
+    private static readonly int ID_FlowPack      = Shader.PropertyToID("_FlowPack");
+    private static readonly int ID_FlowPack2     = Shader.PropertyToID("_FlowPack2");
+    private static readonly int ID_FlowDir       = Shader.PropertyToID("_FlowDirection");
+    private static readonly int ID_StopPack0     = Shader.PropertyToID("_TempStopPack0");
+    private static readonly int ID_StopPack1     = Shader.PropertyToID("_TempStopPack1");
+    private static readonly int ID_SrcCountPack  = Shader.PropertyToID("_HeatSourceCountPack");
+    private static readonly int ID_BaseTempPack  = Shader.PropertyToID("_BaseTempPack");
+
+    private static readonly int[] ID_TempColor =
+    {
         Shader.PropertyToID("_TempColor0"), Shader.PropertyToID("_TempColor1"),
         Shader.PropertyToID("_TempColor2"), Shader.PropertyToID("_TempColor3"),
         Shader.PropertyToID("_TempColor4"), Shader.PropertyToID("_TempColor5"),
         Shader.PropertyToID("_TempColor6"), Shader.PropertyToID("_TempColor7"),
     };
-    private static readonly int[] ID_TempStop = {
-        Shader.PropertyToID("_TempStop0"), Shader.PropertyToID("_TempStop1"),
-        Shader.PropertyToID("_TempStop2"), Shader.PropertyToID("_TempStop3"),
-        Shader.PropertyToID("_TempStop4"), Shader.PropertyToID("_TempStop5"),
-        Shader.PropertyToID("_TempStop6"), Shader.PropertyToID("_TempStop7"),
-    };
 
-    // Per-source arrays fed to the constant buffer
-    private readonly Vector4[] _srcPositions = new Vector4[32]; // xyz=pos, w=temp
-    private readonly Vector4[] _srcParams    = new Vector4[32]; // x=radius, y=falloff
+    private readonly Vector4[] _srcPos    = new Vector4[32];
+    private readonly Vector4[] _srcParams = new Vector4[32];
 
-    // ------------------------------------------------------------------ //
-    //  Lifecycle                                                           //
-    // ------------------------------------------------------------------ //
+    // ── Lifecycle ─────────────────────────────────────────────────────── //
 
     private void OnEnable()
     {
+        // Record wall-clock start so elapsed time is always valid
+        _startRealtime = GetRealtime();
+
         EnsureComponents();
         RefreshHeatSources();
-    }
 
-    private void Update()
-    {
-        if (autoRefreshSources)
-            RefreshHeatSources();
-
-        UploadAllParameters();
+#if UNITY_EDITOR
+        // Hook into Editor's update loop so the volume animates
+        // even when NOT in Play Mode and the Scene view is idle.
+        EditorApplication.update -= EditorTick;
+        EditorApplication.update += EditorTick;
+#endif
     }
 
     private void OnDisable()
     {
-        if (_material != null && !Application.isPlaying)
-            DestroyImmediate(_material);
+#if UNITY_EDITOR
+        EditorApplication.update -= EditorTick;
+#endif
+        if (_mat != null && !Application.isPlaying)
+            DestroyImmediate(_mat);
     }
 
-    // ------------------------------------------------------------------ //
-    //  Public API                                                          //
-    // ------------------------------------------------------------------ //
+#if UNITY_EDITOR
+    // Called by EditorApplication.update — fires every Editor frame (~100 fps)
+    // regardless of whether the Scene view has focus or is being interacted with.
+    private void EditorTick()
+    {
+        if (this == null || !enabled || !gameObject.activeInHierarchy)
+        {
+            EditorApplication.update -= EditorTick;
+            return;
+        }
+        if (Application.isPlaying) return; // Play Mode uses Update() below
 
-    /// <summary>Rebuild the list of HeatSource children.</summary>
+        if (autoRefreshSources) RefreshHeatSources();
+        UploadAllParameters();
+
+        // QueuePlayerLoopUpdate makes Unity run one player-loop tick so
+        // [ExecuteAlways] components actually see the new material properties.
+        // RepaintAll then asks every Scene/Game view to redraw.
+        EditorApplication.QueuePlayerLoopUpdate();
+        SceneView.RepaintAll();
+    }
+#endif
+
+    // Update() handles Play Mode (and WebGL build where EditorApplication doesn't exist)
+    private void Update()
+    {
+#if UNITY_EDITOR
+        if (!Application.isPlaying) return; // Editor handled by EditorTick
+#endif
+        if (autoRefreshSources) RefreshHeatSources();
+        UploadAllParameters();
+    }
+
+    // ── Public API ────────────────────────────────────────────────────── //
+
     public void RefreshHeatSources()
     {
-        _sources = GetComponentsInChildren<HeatSource>(false);
+        // Build the volume's world-space AABB from the renderer bounds.
+        // Works for any scale/rotation; no Physics or layer setup required.
+        Bounds worldBounds = GetComponent<MeshRenderer>().bounds;
+
+#if UNITY_2023_1_OR_NEWER
+        var all = FindObjectsByType<HeatSource>(FindObjectsSortMode.None);
+#else
+        var all = FindObjectsOfType<HeatSource>();
+#endif
+        // Count first to allocate exactly once.
+        int count = 0;
+        foreach (var hs in all)
+            if (worldBounds.Contains(hs.WorldPosition)) count++;
+
+        if (_sources == null || _sources.Length != count)
+            _sources = new HeatSource[count];
+
+        int idx = 0;
+        foreach (var hs in all)
+            if (worldBounds.Contains(hs.WorldPosition))
+                _sources[idx++] = hs;
     }
 
-    // ------------------------------------------------------------------ //
-    //  Internal                                                            //
-    // ------------------------------------------------------------------ //
+    public void ResetFlowTime()
+        => _startRealtime = GetRealtime();
+
+    // ── Internal ──────────────────────────────────────────────────────── //
+
+    // Platform-safe wall-clock elapsed seconds
+    // Works in Editor, Play Mode, and WebGL build
+    private float FlowTime()
+    {
+        if (_startRealtime < 0) _startRealtime = GetRealtime();
+        return (float)(GetRealtime() - _startRealtime);
+    }
+
+    private static double GetRealtime()
+    {
+#if UNITY_EDITOR
+        // EditorApplication.timeSinceStartup advances even when not playing
+        return EditorApplication.timeSinceStartup;
+#else
+        return Time.realtimeSinceStartupAsDouble;
+#endif
+    }
 
     private void EnsureComponents()
     {
-        _renderer = GetComponent<MeshRenderer>();
+        _rend = GetComponent<MeshRenderer>();
 
-        // Build or reuse material
-        if (_material == null)
+        if (_mat == null)
         {
             Shader sh = volumeShader != null
                 ? volumeShader
@@ -171,100 +243,83 @@ public class HeatmapVolumeRenderer : MonoBehaviour
 
             if (sh == null)
             {
-                Debug.LogError("[HeatmapVolumeRenderer] Could not find 'Custom/HeatmapVolume' shader. "
-                             + "Assign it in the inspector.");
+                Debug.LogError("[HeatmapVolumeRenderer] Shader 'Custom/HeatmapVolume' not found.");
                 enabled = false;
                 return;
             }
-            _material = new Material(sh) { name = "HeatmapVolume_Mat" };
-            _renderer.sharedMaterial = _material;
+            _mat = new Material(sh) { name = "HeatmapVolume_Mat" };
+            _rend.sharedMaterial = _mat;
         }
 
-        // Ensure a cube mesh
-        MeshFilter mf = GetComponent<MeshFilter>();
-        if (mf.sharedMesh == null)
-            mf.sharedMesh = BuildUnitCube();
+        var mf = GetComponent<MeshFilter>();
+        if (mf.sharedMesh == null) mf.sharedMesh = BuildUnitCube();
     }
 
     private void UploadAllParameters()
     {
-        if (_material == null) return;
+        if (_mat == null) { EnsureComponents(); return; }
 
-        // -- Raymarching params --
-        _material.SetFloat(ID_StepCount,      stepCount);
-        _material.SetFloat(ID_StepSize,       stepSize);
-        _material.SetFloat(ID_Density,        density);
-        _material.SetFloat(ID_AlphaThreshold, alphaThreshold);
-        _material.SetFloat(ID_TempMin,        tempMin);
-        _material.SetFloat(ID_TempMax,        tempMax);
+        float ft = FlowTime();
 
-        // -- Color stops (sort + clamp to 8) --
+        // ── Raymarching ─────────────────────────────────────────────────
+        _mat.SetVector(ID_RaymarchPack, new Vector4(stepCount, density, alphaThreshold, 0f));
+
+        // ── Temperature range ────────────────────────────────────────────
         var sorted = new List<TempColorStop>(colorStops);
         sorted.Sort((a, b) => a.temperature.CompareTo(b.temperature));
-
         int n = Mathf.Clamp(sorted.Count, 2, 8);
-        _material.SetFloat(ID_ActiveStops, n);
+        _mat.SetVector(ID_TempRangePack, new Vector4(tempMin, tempMax, n, 0f));
 
+        // ── Flow — FlowTime from wall-clock, guaranteed to advance ───────
+        _mat.SetVector(ID_FlowPack,  new Vector4(ft, flowSpeed, flowStrength, flowScale));
+        _mat.SetVector(ID_FlowPack2, new Vector4(flowOctaves, edgeBand, 0f, 0f));
+        _mat.SetVector(ID_FlowDir,   new Vector4(flowDirection.x, flowDirection.y,
+                                                  flowDirection.z, 0f));
+
+        // ── Colour stops ─────────────────────────────────────────────────
         float range = Mathf.Max(tempMax - tempMin, 0.0001f);
+        float[] ns  = new float[8];
         for (int i = 0; i < 8; i++)
         {
-            if (i < n)
-            {
-                float normT = Mathf.Clamp01((sorted[i].temperature - tempMin) / range);
-                _material.SetColor(ID_TempColor[i], sorted[i].color);
-                _material.SetFloat(ID_TempStop[i], normT);
-            }
-            else
-            {
-                // Pad remaining slots with last stop
-                float normT = Mathf.Clamp01((sorted[n-1].temperature - tempMin) / range);
-                _material.SetColor(ID_TempColor[i], sorted[n-1].color);
-                _material.SetFloat(ID_TempStop[i], normT);
-            }
+            int si = Mathf.Min(i, n - 1);
+            ns[i] = Mathf.Clamp01((sorted[si].temperature - tempMin) / range);
+            _mat.SetColor(ID_TempColor[i], sorted[si].color);
         }
+        _mat.SetVector(ID_StopPack0, new Vector4(ns[0], ns[1], ns[2], ns[3]));
+        _mat.SetVector(ID_StopPack1, new Vector4(ns[4], ns[5], ns[6], ns[7]));
 
-        // -- Heat sources --
-        int count = Mathf.Min(_sources.Length, 32);
-        _material.SetInt(ID_HeatSourceCount, count);
+        // ── Base temperature ──────────────────────────────────────────────
+        _mat.SetVector(ID_BaseTempPack, new Vector4(baseTemperature, baseDensityScale, 0f, 0f));
 
-        for (int i = 0; i < count; i++)
+        // ── Heat sources ──────────────────────────────────────────────────
+        int cnt = Mathf.Min(_sources.Length, 32);
+        _mat.SetVector(ID_SrcCountPack, new Vector4(cnt, 0f, 0f, 0f));
+        for (int i = 0; i < cnt; i++)
         {
-            HeatSource src = _sources[i];
-            Vector3 wp = src.WorldPosition;
-            _srcPositions[i] = new Vector4(wp.x, wp.y, wp.z, src.temperature);
-            _srcParams[i]    = new Vector4(src.radius, src.falloff, 0f, 0f);
+            var wp = _sources[i].WorldPosition;
+            _srcPos[i]    = new Vector4(wp.x, wp.y, wp.z, _sources[i].temperature);
+            _srcParams[i] = new Vector4(_sources[i].radius, _sources[i].falloff, 0f, 0f);
         }
-
-        _material.SetVectorArray("_HeatSourcePositions", _srcPositions);
-        _material.SetVectorArray("_HeatSourceParams",    _srcParams);
+        _mat.SetVectorArray("_HeatSourcePositions", _srcPos);
+        _mat.SetVectorArray("_HeatSourceParams",    _srcParams);
     }
-
-    // ------------------------------------------------------------------ //
-    //  Mesh builder (unit cube, inward normals for Cull Front)             //
-    // ------------------------------------------------------------------ //
 
     private static Mesh BuildUnitCube()
     {
-        Mesh m = new Mesh { name = "HeatmapVolumeCube" };
-
-        Vector3[] verts = {
-            new Vector3(-0.5f,-0.5f,-0.5f), new Vector3( 0.5f,-0.5f,-0.5f),
-            new Vector3( 0.5f, 0.5f,-0.5f), new Vector3(-0.5f, 0.5f,-0.5f),
-            new Vector3(-0.5f, 0.5f, 0.5f), new Vector3( 0.5f, 0.5f, 0.5f),
-            new Vector3( 0.5f,-0.5f, 0.5f), new Vector3(-0.5f,-0.5f, 0.5f),
+        var m = new Mesh { name = "HeatmapVolumeCube" };
+        m.vertices = new Vector3[]
+        {
+            new(-0.5f,-0.5f,-0.5f), new(0.5f,-0.5f,-0.5f),
+            new(0.5f, 0.5f,-0.5f), new(-0.5f, 0.5f,-0.5f),
+            new(-0.5f, 0.5f, 0.5f), new(0.5f, 0.5f, 0.5f),
+            new(0.5f,-0.5f, 0.5f), new(-0.5f,-0.5f, 0.5f),
         };
-        m.vertices = verts;
-
-        // Inward (reversed) triangles
-        int[] tris = {
-            0,2,1, 0,3,2,   // front  (Z-)
-            2,3,4, 2,4,5,   // top
-            1,2,5, 1,5,6,   // right
-            0,7,4, 0,4,3,   // left
-            5,4,7, 5,7,6,   // back   (Z+)
-            0,6,7, 0,1,6,   // bottom
+        m.triangles = new int[]
+        {
+            0,2,1, 0,3,2,   2,3,4, 2,4,5,
+            1,2,5, 1,5,6,   0,7,4, 0,4,3,
+            5,4,7, 5,7,6,   0,6,7, 0,1,6,
         };
-        m.triangles = tris;
         m.RecalculateNormals();
         m.RecalculateBounds();
         return m;
@@ -272,8 +327,14 @@ public class HeatmapVolumeRenderer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = new Color(1f, 0.6f, 0.1f, 0.25f);
+        Gizmos.color  = new Color(1f, 0.6f, 0.1f, 0.25f);
         Gizmos.matrix = transform.localToWorldMatrix;
         Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
+        Gizmos.color  = new Color(0.4f, 0.9f, 1f, 0.7f);
+        Gizmos.matrix = Matrix4x4.identity;
+        Vector3 c = transform.position;
+        Vector3 d = flowDirection.normalized * 0.8f;
+        Gizmos.DrawLine(c, c + d);
+        Gizmos.DrawSphere(c + d, 0.08f);
     }
 }

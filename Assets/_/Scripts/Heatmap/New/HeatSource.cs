@@ -54,4 +54,6 @@ public class HeatSource : MonoBehaviour
         );
 #endif
     }
+
+    public void SetTemperature(float temp) => temperature = Mathf.Max(0f, temp);
 }
