@@ -85,6 +85,12 @@ public class HeatmapVolumeRenderer : MonoBehaviour
     [Range(0f, 1f)]
     public float baseDensityScale = 0.3f;
 
+    [Header("Temperature Smoothing")]
+    [Tooltip("How fast displayed temperature chases the target value (degrees per second). " +
+             "0 = instant snap, higher = slower transition.")]
+    [Min(0f)]
+    public float tempSmoothSpeed = 10f;
+
     [Header("Heat Source Discovery")]
     public bool autoRefreshSources = true;
 
@@ -120,6 +126,11 @@ public class HeatmapVolumeRenderer : MonoBehaviour
 
     private readonly Vector4[] _srcPos    = new Vector4[32];
     private readonly Vector4[] _srcParams = new Vector4[32];
+
+    // Smoothed display temperature for each heat source.
+    // Key = HeatSource instance, Value = current interpolated temperature.
+    private readonly Dictionary<HeatSource, float> _smoothedTemp
+        = new Dictionary<HeatSource, float>();
 
     // ── Lifecycle ─────────────────────────────────────────────────────── //
 
@@ -294,12 +305,39 @@ public class HeatmapVolumeRenderer : MonoBehaviour
         // ── Heat sources ──────────────────────────────────────────────────
         int cnt = Mathf.Min(_sources.Length, 32);
         _mat.SetVector(ID_SrcCountPack, new Vector4(cnt, 0f, 0f, 0f));
+
+        float dt = Application.isPlaying ? Time.deltaTime : (float)(1.0 / 60.0);
+
         for (int i = 0; i < cnt; i++)
         {
-            var wp = _sources[i].WorldPosition;
-            _srcPos[i]    = new Vector4(wp.x, wp.y, wp.z, _sources[i].temperature);
-            _srcParams[i] = new Vector4(_sources[i].radius, _sources[i].falloff, 0f, 0f);
+            var hs = _sources[i];
+            var wp = hs.WorldPosition;
+
+            // Initialise smoothed temp on first sight of this source.
+            if (!_smoothedTemp.TryGetValue(hs, out float current))
+                current = hs.temperature;
+
+            // Smooth towards the target temperature.
+            float smoothed = (tempSmoothSpeed <= 0f)
+                ? hs.temperature
+                : Mathf.MoveTowards(current, hs.temperature, tempSmoothSpeed * dt);
+
+            _smoothedTemp[hs] = smoothed;
+
+            _srcPos[i]    = new Vector4(wp.x, wp.y, wp.z, smoothed);
+            _srcParams[i] = new Vector4(hs.radius, hs.falloff, 0f, 0f);
         }
+
+        // Remove stale entries (sources that left the volume this frame).
+        if (_smoothedTemp.Count > cnt)
+        {
+            var active = new System.Collections.Generic.HashSet<HeatSource>(_sources);
+            var toRemove = new System.Collections.Generic.List<HeatSource>();
+            foreach (var key in _smoothedTemp.Keys)
+                if (!active.Contains(key)) toRemove.Add(key);
+            foreach (var key in toRemove) _smoothedTemp.Remove(key);
+        }
+
         _mat.SetVectorArray("_HeatSourcePositions", _srcPos);
         _mat.SetVectorArray("_HeatSourceParams",    _srcParams);
     }

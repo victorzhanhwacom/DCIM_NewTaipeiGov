@@ -77,8 +77,8 @@ Shader "Custom/HeatmapVolume"
                 // pack 2 — temperature range
                 float4 _TempRangePack;  // x=TempMin  y=TempMax  z=ActiveStops  w=unused
 
-                // pack 3 — flow scalars
-                float4 _FlowPack;       // x=FlowTime  y=FlowSpeed  z=FlowStrength  w=FlowScale
+                // pack 3 — flow scalars (FlowTime is global, not in CBUFFER)
+                float4 _FlowPack;       // x=unused(was FlowTime)  y=FlowSpeed  z=FlowStrength  w=FlowScale
 
                 // pack 4 — flow octaves / edge
                 float4 _FlowPack2;      // x=FlowOctaves  y=EdgeBand  zw=unused
@@ -99,6 +99,11 @@ Shader "Custom/HeatmapVolume"
                 float4 _BaseTempPack;
             CBUFFER_END
 
+            // _FlowTime is declared OUTSIDE UnityPerMaterial so Shader.SetGlobalFloat
+            // bypasses the SRP Batcher cache — the only reliable way to animate
+            // per-frame values in URP WebGL without the batcher swallowing updates.
+            float _FlowTime;
+
             // Accessors — keeps rest of code readable
             #define _StepCount       _RaymarchPack.x
             #define _Density         _RaymarchPack.y
@@ -109,7 +114,7 @@ Shader "Custom/HeatmapVolume"
             #define _TempMax         _TempRangePack.y
             #define _ActiveStops     _TempRangePack.z
 
-            #define _FlowTime        _FlowPack.x
+            // _FlowTime is a standalone global (see declaration above)
             #define _FlowSpeed       _FlowPack.y
             #define _FlowStrength    _FlowPack.z
             #define _FlowScale       _FlowPack.w
@@ -235,16 +240,29 @@ Shader "Custom/HeatmapVolume"
 
             void SampleField(float3 wsPos, out float totalTemp, out float maxInf)
             {
-                totalTemp = 0.0; maxInf = 0.0;
+                // Weighted average: each source contributes temperature proportional
+                // to its influence. The strongest nearby source dominates instead of
+                // all sources summing and diluting each other.
+                float weightedSum = 0.0;
+                float totalWeight = 0.0;
+                maxInf = 0.0;
+
                 for (int i = 0; i < _HeatSourceCount && i < MAX_HEAT_SOURCES; i++)
                 {
                     float inf = SourceInfluence(i, wsPos);
-                    totalTemp   += _HeatSourcePositions[i].w * inf;
-                    maxInf       = max(maxInf, inf);
+                    weightedSum  += _HeatSourcePositions[i].w * inf;
+                    totalWeight  += inf;
+                    maxInf        = max(maxInf, inf);
                 }
-                // Blend: areas with no heat source influence fall back to BaseTemp.
-                // maxInf==0 → pure base; maxInf==1 → pure heat-source temperature.
-                totalTemp = lerp(_BaseTemp, totalTemp, saturate(maxInf));
+
+                // Weighted average: gives the "dominant" temperature at this point.
+                // When totalWeight == 0 (no source nearby) fall back to baseTemp.
+                // We do NOT lerp with baseTemp again here — that would double-attenuate
+                // the temperature and wash out colours away from the core.
+                // maxInf is returned separately so the caller can drive alpha/density.
+                totalTemp = (totalWeight > 0.0001)
+                    ? weightedSum / totalWeight
+                    : _BaseTemp;
             }
 
             float NormalizeTemp(float t)
@@ -324,18 +342,23 @@ Shader "Custom/HeatmapVolume"
 
                     float normTemp = NormalizeTemp(rawTemp);
 
-                    // Edge mask: 1 at boundary, 0 at core
+                    // flowMask: strongest at heat-source edges, fades toward core and zero.
+                    // _EdgeBand controls how far inward from the influence boundary the
+                    // turbulence reaches.  edgePeak = 1 at the outer rim, 0 at core.
                     float eb       = max(_EdgeBand, 0.01);
-                    float edgeMask = (1.0 - smoothstep(0.0, eb, maxInf))
-                                   * smoothstep(0.0, 0.05, normTemp);
+                    float edgePeak = 1.0 - smoothstep(0.0, eb, maxInf); // 1=rim, 0=core
+                    // flowMask is non-zero wherever the source has any influence,
+                    // peaking at the edge and tapering off so the core stays stable.
+                    float flowMask = smoothstep(0.0, 0.05, maxInf)   // fade in from zero
+                                  * (0.3 + 0.7 * edgePeak);          // edge boost, core floor
 
                     // Flow displacement + re-sample
-                    float3 displaced = wsPos + FlowDisplacement(wsPos, edgeMask);
+                    float3 displaced = wsPos + FlowDisplacement(wsPos, flowMask);
                     float dispTemp, dispInf;
                     SampleField(displaced, dispTemp, dispInf);
                     float dispNorm = NormalizeTemp(dispTemp);
 
-                    float blended = lerp(normTemp, dispNorm, edgeMask);
+                    float blended = lerp(normTemp, dispNorm, flowMask);
 
                     float4 col   = TempToColor(blended);
                     // Beer-Lambert volumetric integral:
