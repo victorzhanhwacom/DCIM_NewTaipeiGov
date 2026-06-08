@@ -17,13 +17,11 @@ public class PointTag_RTRH : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("PointTag_RTRH Start");
         if(uIAnchorFollower.Target3DObject.TryGetComponent(out ValueAutoJumper autoJumper))
             autoJumper.onValueChangedFloat.AddListener(SetHeatSource);
 
         if(uIAnchorFollower.Target3DObject.TryGetComponent<HeatSource>(out HeatSource heat))
             SetHeatSource(heat.temperature);
-
     }
 
     public void SetHeatSource(float value)
