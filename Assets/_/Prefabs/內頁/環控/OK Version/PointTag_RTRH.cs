@@ -28,7 +28,6 @@ public class PointTag_RTRH : MonoBehaviour
 
     public void SetHeatSource(float value)
     {
-        Debug.Log($"SetHeatSource: {value}");
         txtValue.SetText(value.ToString());
         foreach (var range in colorRanges)
         {
