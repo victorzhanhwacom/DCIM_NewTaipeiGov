@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 namespace VzDev.DemoUtils.AutoJumper
 {
     /// 自動亂數跳值 - 數值
-    public class ValueAutoJumper : MonoBehaviour, IAutoJumper
+    public class ValueAutoJumper1 : MonoBehaviour, IAutoJumper
     {
         #region Variables
 
@@ -34,6 +34,7 @@ namespace VzDev.DemoUtils.AutoJumper
 
         /// NaughtAttribute使用Application.isPlaying會有Warning
         private bool IsPlaying => Application.isPlaying;
+        private bool IsStarted;
 
         private bool IsHaveAnyEventListeners =>
             EventHelper.IsHaveAnyEventListeners(onValueChangedString, onValueChangedInt, onValueChangedFloat);
@@ -41,9 +42,15 @@ namespace VzDev.DemoUtils.AutoJumper
         #endregion
 
         #region Initialized
+        private void Start()
+        {
+            IsStarted = true;
+            if (isStartInEnabled) StartJump();
+        }
+
         private void OnEnable()
         {
-            if (isStartInEnabled) StartJump();
+            if (IsStarted) StartJump();
         }
 
         private void OnDisable() => StopJump();

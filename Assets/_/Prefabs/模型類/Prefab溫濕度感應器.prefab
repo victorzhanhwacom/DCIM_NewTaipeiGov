@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 275211819856104404}
   - component: {fileID: 110219023314296359}
-  - component: {fileID: 5818945446438223748}
   - component: {fileID: 7859353716100184818}
   - component: {fileID: 7128684728835851999}
+  - component: {fileID: 110769834042080183}
   m_Layer: 0
   m_Name: "Prefab\u6EAB\u6FD5\u5EA6\u611F\u61C9\u5668"
   m_TagString: Untagged
@@ -52,49 +52,6 @@ MonoBehaviour:
   falloff: 1
   showGizmo: 1
   gizmoColor: {r: 1, g: 0.4, b: 0, a: 0.35}
---- !u!114 &5818945446438223748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7369122670113091632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f31339de2ff4a458f08462a480743a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.DemoUtils.AutoJumper.ValueAutoJumper
-  onValueChangedString:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChangedInt:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChangedFloat:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 110219023314296359}
-        m_TargetAssemblyTypeName: HeatSource, Assembly-CSharp
-        m_MethodName: SetTemperature
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  onValueChangedFloat01:
-    m_PersistentCalls:
-      m_Calls: []
-  isStartInEnabled: 1
-  intervalSec: 10
-  afterDotNumber: 1
-  minValue: 18
-  maxValue: 32
-  isClamp: 0
-  clampRange: {x: 0, y: 0}
 --- !u!33 &7859353716100184818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -152,3 +109,46 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &110769834042080183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369122670113091632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687a86a311199654facee3611a4bd9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DemoUtils.AutoJumper.ValueAutoJumper
+  onValueChangedString:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChangedInt:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChangedFloat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 110219023314296359}
+        m_TargetAssemblyTypeName: HeatSource, VzDev
+        m_MethodName: SetTemperature
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onValueChangedFloat01:
+    m_PersistentCalls:
+      m_Calls: []
+  isStartInEnabled: 1
+  intervalSec: 10
+  afterDotNumber: 1
+  minValue: 15
+  maxValue: 30
+  isClamp: 0
+  clampRange: {x: 0, y: 0}

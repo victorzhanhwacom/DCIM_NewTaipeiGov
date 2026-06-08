@@ -1,3 +1,4 @@
+using System;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -8,7 +9,7 @@ using VzDev.ObjectUtils;
 public class PointTag_RTRH : MonoBehaviour
 {
    [SerializeField, ReadOnly] private HeatSource heatSource;
-   [Foldout("[Settings]"), SerializeField] private Color normalColor = Color.green, alarmColor = Color.yellow, warningColor = Color.red;
+   [Foldout("[Settings]"), SerializeField] private ColorRange[] colorRanges;
    [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtValue;
    [Foldout("[Components]"), SerializeField] private UIAnchorFollower uIAnchorFollower;
    [Foldout("[Components]"), SerializeField] private Image img;
@@ -16,7 +17,8 @@ public class PointTag_RTRH : MonoBehaviour
 
     private void Start()
     {
-        if(uIAnchorFollower.Target3DObject.TryGetComponent<ValueAutoJumper>(out ValueAutoJumper autoJumper))
+        Debug.Log("PointTag_RTRH Start");
+        if(uIAnchorFollower.Target3DObject.TryGetComponent(out ValueAutoJumper autoJumper))
             autoJumper.onValueChangedFloat.AddListener(SetHeatSource);
 
         if(uIAnchorFollower.Target3DObject.TryGetComponent<HeatSource>(out HeatSource heat))
@@ -26,12 +28,22 @@ public class PointTag_RTRH : MonoBehaviour
 
     public void SetHeatSource(float value)
     {
+        Debug.Log($"SetHeatSource: {value}");
         txtValue.SetText(value.ToString());
-        if(value > 27f || value < 18f)
-            img.color = warningColor;
-        else if(value > 25f)
-            img.color = alarmColor;
-        else
-            img.color = normalColor;
+        foreach (var range in colorRanges)
+        {
+            if (value >= range.threshold)
+            {
+                img.color = range.color;
+                break;
+            }
+        }
+    }
+
+    [Serializable]
+    public struct ColorRange
+    {
+        public float threshold;
+        public Color color;
     }
 }
