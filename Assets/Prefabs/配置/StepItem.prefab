@@ -212,8 +212,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289110433
-  m_fontColor: {r: 0.6313726, g: 0.6313726, b: 0.6509804, a: 1}
+    rgba: 4288780437
+  m_fontColor: {r: 0.58431375, g: 0.59607846, b: 0.6313726, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4713f51ed851a4498c85921745d897a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.ToolUtils.ThemeUtils.ThemedText
-  colorToken: 10
+  colorToken: 9
   _fontToken: 0
 --- !u!1 &824437963695526771
 GameObject:
@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 5756639371013118971}
   - component: {fileID: 382824056048941857}
   - component: {fileID: 3637991000048608317}
+  - component: {fileID: 5909316866809863363}
   m_Layer: 5
   m_Name: ImgDone (1)
   m_TagString: Untagged
@@ -347,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.068870306, a: 1}
+  m_Color: {r: 0.054901965, g: 0.47450984, b: 0.9686275, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -364,6 +365,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5909316866809863363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824437963695526771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a450d773595c108488550eb41d0f1b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.ToolUtils.ThemeUtils.ThemedImage
+  colorToken: 0
 --- !u!1 &1879126407281138888
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +529,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294440437
-  m_fontColor: {r: 0.9607843, g: 0.9607843, b: 0.96862745, a: 1}
+    rgba: 4294374386
+  m_fontColor: {r: 0.9490197, g: 0.95294124, b: 0.96470594, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -533,7 +547,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 20
   m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -590,8 +604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4713f51ed851a4498c85921745d897a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.ToolUtils.ThemeUtils.ThemedText
-  colorToken: 9
-  _fontToken: 2
+  colorToken: 8
+  _fontToken: 3
 --- !u!1 &6369846720554996076
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +617,8 @@ GameObject:
   - component: {fileID: 2721230022521763752}
   - component: {fileID: 5037469058805597131}
   - component: {fileID: 7123358903639641642}
+  - component: {fileID: 3020852120602493942}
+  - component: {fileID: 4727918035694244160}
   m_Layer: 5
   m_Name: ImgNumber
   m_TagString: Untagged
@@ -652,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.019607844, g: 0.5411765, b: 0.9921569, a: 1}
+  m_Color: {r: 0.40392157, g: 0.40392157, b: 0.40392157, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -669,6 +685,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3020852120602493942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369846720554996076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a450d773595c108488550eb41d0f1b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.ToolUtils.ThemeUtils.ThemedImage
+  colorToken: 0
+--- !u!114 &4727918035694244160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369846720554996076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a450d773595c108488550eb41d0f1b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.ToolUtils.ThemeUtils.ThemedImage
+  colorToken: 12
 --- !u!1 &6824383052757621644
 GameObject:
   m_ObjectHideFlags: 0
