@@ -3,9 +3,10 @@ namespace VzDev.DCIM.Deployment
     /// <summary>
     /// 設備資產資料 (DCS專用) - 伺服主機
     /// </summary>
-    public class DCS_Asset : RackEquipment_AssetBase
+    public class DCS_Asset : EquipmentAssetBase
     {
-        ///未來有IP&Port類別
+        public EquipmentPowerInfo equipmentInfo;
+        ///未來會有IP&Port類別
     }
 }
 
