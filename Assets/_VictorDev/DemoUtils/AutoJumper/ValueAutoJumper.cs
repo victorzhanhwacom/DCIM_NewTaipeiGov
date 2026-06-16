@@ -3,7 +3,6 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using VzDev.DebugUtils;
-using Debug = VzDev.DebugUtils.Debug;
 using Random = UnityEngine.Random;
 
 namespace VzDev.DemoUtils.AutoJumper

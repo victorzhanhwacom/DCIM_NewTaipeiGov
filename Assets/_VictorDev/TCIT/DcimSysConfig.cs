@@ -6,6 +6,7 @@ using VzDev.DebugUtils;
 using VzDev.FileUtils;
 using NaughtyAttributes;
 using UnityEngine;
+using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.TCIT.DCIM
 {

@@ -7,6 +7,7 @@ using VzDev.InterfaceUtils;
 using Newtonsoft.Json;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using VzDev.NetLibrary.Extensions;
 
 namespace VzDev.ApiExtensions
 {

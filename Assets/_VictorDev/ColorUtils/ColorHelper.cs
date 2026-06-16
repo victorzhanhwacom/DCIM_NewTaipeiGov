@@ -7,7 +7,6 @@ using VzDev.MathUtils;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.ColorUtils
 {
@@ -31,7 +30,7 @@ namespace VzDev.ColorUtils
         {
             bool isValid = MathHelper.IsInRange(r) && MathHelper.IsInRange(g) && MathHelper.IsInRange(b) && MathHelper.IsInRange(a);
             color = isValid? new Color(r, g, b, a): null;
-            if(isValid == false) Debug.LogWarning("RGBA值超出0~1範圍，無法建立Color", nameof(ColorHelper), EmojiEnum.Warning);
+            if(isValid == false) Debug.LogWarning("RGBA值超出0~1範圍，無法建立Color");
             return isValid;
         }
 
@@ -41,7 +40,7 @@ namespace VzDev.ColorUtils
             if(colorCode.StartsWith("#") == false) colorCode = "#" + colorCode;
             bool isSuccess = ColorUtility.TryParseHtmlString(colorCode, out Color result);
             color = isSuccess ? result : null;
-            if(isSuccess == false) Debug.LogWarning("colorCode內容有誤，無法建立Color", nameof(ColorHelper), EmojiEnum.Warning);
+            if(isSuccess == false) Debug.LogWarning("colorCode內容有誤，無法建立Color");
             return isSuccess;
         }
         

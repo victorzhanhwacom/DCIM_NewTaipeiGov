@@ -1,4 +1,4 @@
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 #if UNITY_WEBGL && !UNITY_EDITOR
 using System.Runtime.InteropServices;
 #endif

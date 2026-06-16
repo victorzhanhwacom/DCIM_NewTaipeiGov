@@ -4,6 +4,7 @@ using VzDev.ApiExtensions;
 using VzDev.CameraUtils;
 using TMPro;
 using UnityEngine;
+using VzDev.NetLibrary.Extensions;
 
 public class AreaSelector : MonoBehaviour
 {

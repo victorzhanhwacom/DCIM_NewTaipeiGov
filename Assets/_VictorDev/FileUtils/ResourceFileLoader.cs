@@ -3,7 +3,7 @@ using System.Collections;
 using VzDev.ApiExtensions;
 using VzDev.DebugUtils;
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
+using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.FileUtils
 {
@@ -14,12 +14,12 @@ namespace VzDev.FileUtils
         /// <para>+ 例如: myJsonData</para>
         public static Coroutine LoadJsonFile(string path, Action<string> onSuccess, Action<string> onFailed=null)
         {
-            Debug.Log($"LoadJsonFile... {path}", Instance, EmojiEnum.Monitor);
+            Debug.Log($"LoadJsonFile... {path}");
             void LoadFile()
             {
                 // 加載 JSON 文件
                 TextAsset jsonFile = Resources.Load<TextAsset>(path.Trim());
-                Debug.Log($"LoadJsonFile... Done!\n{jsonFile.text.ToJsonFormat()}", Instance, EmojiEnum.DataBox);
+                Debug.Log($"LoadJsonFile... Done!\n{jsonFile.text.ToJsonFormat()}");
                 if (jsonFile != null) onSuccess?.Invoke(jsonFile.text);
                 else onFailed?.Invoke("JSON 文件讀取失敗！");
                 

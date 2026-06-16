@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 //using SFB;
 using UnityEditor;
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VzDev.FileUtils
 {
@@ -145,7 +145,7 @@ namespace VzDev.FileUtils
             fileFullName ??= $"DownloadFile-{DateTime.Today.ToString(DateTimeHelper.FullDateFormat)}";
             string filePath = Path.Combine(folderPath, fileFullName);
             File.WriteAllBytes(filePath, fileData);
-            Debug.Log($"檔案已儲存至:{filePath}", typeof(FileHelper), EmojiEnum.Download);
+            Debug.Log($"檔案已儲存至:{filePath}");
 
             if (isAutoOpen)
             {
@@ -250,7 +250,7 @@ namespace VzDev.FileUtils
             catch (Exception e)
             {
                 // 若寫檔失敗，別再用 File.AppendAllText (避免遞迴)；改用 Unity 的 console 提示
-                Debug.LogWarning($"寫入失敗: {e.Message}", "FileHelper");
+                Debug.LogWarning($"寫入失敗: {e.Message}");
             }
         }
     }

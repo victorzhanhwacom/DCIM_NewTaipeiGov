@@ -10,6 +10,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VzDev.DebugUtils
 {
@@ -103,14 +104,14 @@ namespace VzDev.DebugUtils
             Renderer targetRenderer;
             if (target.TryGetComponent(out targetRenderer) == false)
             {
-                Debug.LogWarning($"{targetRenderer.name} 沒有 Renderer", nameof(This), EmojiEnum.Error);
+                Debug.LogWarning($"{targetRenderer.name} 沒有 Renderer");
                 return;
             }
             
             Renderer refRenderer;
             if (reference.TryGetComponent(out refRenderer) == false)
             {
-                Debug.LogWarning($"{reference.name} 沒有 Renderer", nameof(This), EmojiEnum.Error);
+                Debug.LogWarning($"{reference.name} 沒有 Renderer");
                 return;
             }
 

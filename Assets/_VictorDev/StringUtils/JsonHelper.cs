@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using VzDev.DebugUtils;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.StringUtils
 {

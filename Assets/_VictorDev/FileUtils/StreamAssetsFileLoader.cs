@@ -6,7 +6,6 @@ using VzDev.DebugUtils;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.FileUtils
 {
@@ -59,7 +58,7 @@ namespace VzDev.FileUtils
             IEnumerator LoadTextFileAsync()
             {
                 filePath = Path.Combine(Application.streamingAssetsPath, filePath).Replace("\\", "/");
-                Debug.Log($"讀取StreamAssets文字檔: {filePath}", Instance, EmojiEnum.Download);
+                Debug.Log($"讀取StreamAssets文字檔: {filePath}");
 
                 string result = "";
                 if (Application.platform == RuntimePlatform.Android ||

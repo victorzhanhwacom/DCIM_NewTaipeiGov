@@ -1,5 +1,4 @@
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.ApiExtensions
 {
@@ -11,7 +10,7 @@ namespace VzDev.ApiExtensions
         {
             if(self == null)
             {
-                global::VzDev.DebugUtils.Debug.LogError("❌ Texture2D is null!");
+                Debug.LogError("❌ Texture2D is null!");
                 return null;
             }
             return Sprite.Create(self, new Rect(0,0,self.width,self.height), new Vector2(pivotX, pivotY));

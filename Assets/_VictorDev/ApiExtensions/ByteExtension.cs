@@ -1,5 +1,5 @@
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VzDev.ApiExtensions
 {
@@ -11,19 +11,19 @@ namespace VzDev.ApiExtensions
         {
             if (self == null || self.Length == 0)
             {
-                global::VzDev.DebugUtils.Debug.LogError("❌ Byte array is null or empty.");
+                Debug.LogError("❌ Byte array is null or empty.");
                 return null;
             }
 
             Texture2D tex = new Texture2D(2, 2);
             if (tex.LoadImage(self)) //LoadImage會自動調整 Texture 尺寸成原圖大小
             {
-                global::VzDev.DebugUtils.Debug.Log("✅ Texture2D loaded successfully!");
+                Debug.Log("✅ Texture2D loaded successfully!");
                 return tex;
             }
             else
             {
-                global::VzDev.DebugUtils.Debug.LogError("❌ Failed to load Texture2D from byte array.");
+                Debug.LogError("❌ Failed to load Texture2D from byte array.");
                 Object.Destroy(tex); // 避免浪費記憶體
                 return null;
             }

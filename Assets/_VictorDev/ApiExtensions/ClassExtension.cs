@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
-using VzDev.DebugUtils;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VzDev.ApiExtensions
 {
@@ -34,7 +33,7 @@ namespace VzDev.ApiExtensions
         {
             bool isNull = target == null;
             if (isNull)
-                Debug.LogError($"[{variableName.Trim()}] is null.", nameof(ClassExtension), EmojiEnum.Warning);
+                Debug.LogError($"[{variableName.Trim()}] is null.");
             return isNull;
         }
     }

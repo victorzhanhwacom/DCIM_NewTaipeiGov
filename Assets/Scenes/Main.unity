@@ -60857,6 +60857,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2444026806733192283, guid: 8dee70e2ac48c3e449bf2fd5bc7b3bb7, type: 3}
   m_PrefabInstance: {fileID: 152894295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &668694071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668694073}
+  - component: {fileID: 668694072}
+  m_Layer: 0
+  m_Name: TextLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &668694072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668694071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06a75c59c8d44d90fde5f0cec29cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LoaderUtils.TextLoader
+  onLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  onFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  enumLoadPath: 1
+  fileName: data.json
+--- !u!4 &668694073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668694071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &669167803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4495250658240661252, guid: 8dee70e2ac48c3e449bf2fd5bc7b3bb7, type: 3}
@@ -198259,6 +198311,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1561289395}
     m_Modifications:
+    - target: {fileID: 5421989969091500414, guid: 3ed5046fab834b74ca6c7272622b62e3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 103675260931706632, guid: bb0b0e682a0808848861166229613d07, type: 3}
       propertyPath: m_text
       value: Dell EMC
@@ -198466,10 +198522,6 @@ PrefabInstance:
     - target: {fileID: 7432636451571862393, guid: bb0b0e682a0808848861166229613d07, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421989969091500414, guid: 3ed5046fab834b74ca6c7272622b62e3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -237304,3 +237356,4 @@ SceneRoots:
   - {fileID: 2110087562}
   - {fileID: 1939036584}
   - {fileID: 1465698168}
+  - {fileID: 668694073}

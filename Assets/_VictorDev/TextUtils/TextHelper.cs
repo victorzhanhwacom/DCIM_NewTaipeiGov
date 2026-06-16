@@ -6,7 +6,6 @@ using VzDev.DebugUtils;
 using VzDev.DoTweenUtils;
 using TMPro;
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.TextUtils
 {

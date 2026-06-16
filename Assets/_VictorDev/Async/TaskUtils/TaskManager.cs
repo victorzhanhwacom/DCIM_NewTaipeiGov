@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using VzDev.ApiExtensions;
 using VzDev.DebugUtils;
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VictorDev.Managers
 {
@@ -39,7 +38,7 @@ namespace VictorDev.Managers
             }
             catch (Exception ex)
             {
-                Debug.LogWarning($"[TaskManager] Failed to start task with tag '{newTask.Tag}': {ex}", Instance, EmojiEnum.Warning);
+                Debug.LogWarning($"[TaskManager] Failed to start task with tag '{newTask.Tag}': {ex}");
                 Instance._runningTasks.Remove(newTask.Tag);
                 yield break;
             }
@@ -49,11 +48,11 @@ namespace VictorDev.Managers
 
             if (newTask.Task.IsCanceled || newTask.Cts.IsCancellationRequested)
             {
-                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' was cancelled by timeout.", Instance, EmojiEnum.Warning);
+                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' was cancelled by timeout.");
             }
             else if (newTask.Task.IsFaulted)
             {
-                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' threw exception: {newTask.Task.Exception}", Instance, EmojiEnum.Warning);
+                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' threw exception: {newTask.Task.Exception}");
             }
 
             if (Instance._runningTasks.TryGetValue(newTask.Tag, out var current) && current == newTask)
@@ -71,14 +70,11 @@ namespace VictorDev.Managers
             catch (OperationCanceledException) when (newTask.Cts.IsCancellationRequested)
             {
                 Debug.LogWarning(
-                    $"[TaskManager] Task with tag '{newTask.Tag}' was cancelled by timeout {timeoutSeconds} seconds.",
-                    nameof(TaskManager), EmojiEnum.Warning);
+                    $"[TaskManager] Task with tag '{newTask.Tag}' was cancelled by timeout {timeoutSeconds} seconds.");
             }
             catch (Exception ex)
             {
-                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' threw exception: {ex}",
-                    nameof(TaskManager),
-                    EmojiEnum.Warning);
+                Debug.LogWarning($"[TaskManager] Task with tag '{newTask.Tag}' threw exception: {ex}");
             }
             finally
             {
@@ -118,7 +114,7 @@ namespace VictorDev.Managers
             {
                 if (trackedTask == null)
                 {
-                    Debug.LogWarning("[TaskManager] CancelAll 中發現 null TrackedTask.", Instance, EmojiEnum.Warning);
+                    Debug.LogWarning("[TaskManager] CancelAll 中發現 null TrackedTask.");
                 }
                 else
                 {

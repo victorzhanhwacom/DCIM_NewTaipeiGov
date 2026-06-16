@@ -1,5 +1,4 @@
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.ApiExtensions
 {

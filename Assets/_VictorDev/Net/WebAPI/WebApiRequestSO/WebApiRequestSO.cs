@@ -9,7 +9,7 @@ using UnityEngine;
 using VzDev.ApiExtensions;
 using VictorDev.Net;
 using VictorDev.Net.WebAPI;
-using Debug = VzDev.DebugUtils.Debug;
+using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.Net.WebAPI
 {
@@ -161,7 +161,7 @@ namespace VzDev.Net.WebAPI
         {
             if (bodyType != target)
             {
-                Debug.LogWarning($"{name} is not {target} type.", this, EmojiEnum.Warning);
+                Debug.LogWarning($"{name} is not {target} type.");
                 return false;
             }
 
@@ -190,7 +190,7 @@ namespace VzDev.Net.WebAPI
         {
             if (data == null)
             {
-                Debug.LogWarning($"SetQueryParams: data is null.", this, EmojiEnum.Warning);
+                Debug.LogWarning($"SetQueryParams: data is null.");
                 return;
             }
             queryParams = data;
@@ -215,7 +215,7 @@ namespace VzDev.Net.WebAPI
         [Button]
         private void CallAPI() => CallAPI(null);
         [Button]
-        private void LogURL() => Debug.Log($"URL:  {URL}", this, EmojiEnum.Robot);
+        private void LogURL() => Debug.Log($"URL:  {URL}");
         
         #region Variables
         [Label("[IP Config設定 (選填)]")]

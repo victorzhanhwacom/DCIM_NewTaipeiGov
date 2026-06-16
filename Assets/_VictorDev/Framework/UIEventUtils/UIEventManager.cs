@@ -7,7 +7,6 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Debug = VzDev.DebugUtils.Debug;
 
 namespace VzDev.ObjectUtils.UIEventUtils
 {

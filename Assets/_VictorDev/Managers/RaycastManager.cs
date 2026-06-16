@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using VzDev.ApiExtensions;
 using UnityEngine.EventSystems;
-using Debug = VzDev.DebugUtils.Debug;
+using Gizmos = VzDev.Extensions.Gizmos;
 
 namespace VzDev.Managers
 {
@@ -123,7 +123,7 @@ namespace VzDev.Managers
         }
 
         /// Debug畫線, default即可代表“使用目前滑鼠位置”
-        private void DebugDrawLineCheck(Ray ray = default) => Debug.DrawRay(ray, rayDistance, Color.red, 1f);
+        private void DebugDrawLineCheck(Ray ray = default) => Gizmos.DrawRay(ray, rayDistance, Color.red, 1f);
 
         private void Awake() => _mainCamera = Camera.main;
 

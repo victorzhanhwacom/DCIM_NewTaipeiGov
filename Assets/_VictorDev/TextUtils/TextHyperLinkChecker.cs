@@ -2,6 +2,7 @@ using VzDev.ApiExtensions;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.TextUtils
 {

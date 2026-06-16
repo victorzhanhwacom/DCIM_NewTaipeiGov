@@ -1,7 +1,7 @@
 using VzDev.Net.WebAPI;
 using NaughtyAttributes;
 using UnityEngine;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VictorDev.Net
 {
@@ -29,6 +29,6 @@ namespace VictorDev.Net
         }
 
         [Button]
-        private void LogURL() => Debug.Log($"URL:  {URL}", this, EmojiEnum.Robot);
+        private void LogURL() => Debug.Log($"URL:  {URL}");
     }
 }

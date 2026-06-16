@@ -1,0 +1,1663 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &126342734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126342736}
+  - component: {fileID: 126342735}
+  - component: {fileID: 126342737}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &126342735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126342734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06a75c59c8d44d90fde5f0cec29cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LoaderUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 545215076}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 126342737}
+        m_TargetAssemblyTypeName: VzDev.JsonUtils.JsonNodeExtractor, VzDev
+        m_MethodName: Extract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onFailed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1464327674}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  enumLoadPath: 0
+  fileName: (DEMO) DCIM_EquipmentAsset.json
+--- !u!4 &126342736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126342734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.01585, y: 2.22048, z: -5.64824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &126342737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126342734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb9c5af406925146a1b38b3782b8a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.JsonUtils.JsonNodeExtractor
+  onExtracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1464327674}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  nodePath: vendors
+  formatting: 1
+--- !u!1 &203844586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203844589}
+  - component: {fileID: 203844588}
+  - component: {fileID: 203844587}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &203844587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &203844588
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 10, y: 10}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &203844589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &314957560
+GameObject:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314957562}
+  - component: {fileID: 314957561}
+  m_Layer: 0
+  m_Name: Prefab Indexer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &314957561
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314957560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a7c62fccbafd342991629222351294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityPlayModeSaver::Framework.Utils.UnityPlayModeSaverSceneUtils
+  _scenePrefabInstances: []
+--- !u!4 &314957562
+Transform:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314957560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545215076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545215077}
+  - component: {fileID: 545215079}
+  - component: {fileID: 545215078}
+  - component: {fileID: 545215080}
+  m_Layer: 5
+  m_Name: Progress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &545215077
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545215076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1255300445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &545215078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545215076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 684a2e011bc40f448aaeee9d46f47865, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &545215079
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545215076}
+  m_CullTransparentMesh: 1
+--- !u!114 &545215080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545215076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726bef883a42e7d4c9b8ab105beacf8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.SimpleSpinner.SimpleSpinner
+  Rotation: 1
+  RotationSpeed: 1
+  RotationAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Rainbow: 1
+  RainbowSpeed: 0.5
+  RainbowSaturation: 1
+  RainbowAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RandomPeriod: 1
+--- !u!1 &578274588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578274589}
+  - component: {fileID: 578274591}
+  - component: {fileID: 578274590}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &578274589
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578274588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2056748191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &578274590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578274588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9f63a78c5411d234fb4ee21fc01cf210, type: 2}
+  m_sharedMaterial: {fileID: -3758166231712576370, guid: 9f63a78c5411d234fb4ee21fc01cf210, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 10
+  m_fontSizeMax: 40
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &578274591
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578274588}
+  m_CullTransparentMesh: 1
+--- !u!1 &700807678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 700807681}
+  - component: {fileID: 700807680}
+  - component: {fileID: 700807679}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &700807679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700807678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &700807680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700807678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &700807681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700807678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &961739749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961739753}
+  - component: {fileID: 961739752}
+  - component: {fileID: 961739751}
+  - component: {fileID: 961739750}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &961739750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!81 &961739751
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+--- !u!20 &961739752
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &961739753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1255300441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255300445}
+  - component: {fileID: 1255300444}
+  - component: {fileID: 1255300443}
+  - component: {fileID: 1255300442}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1255300442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255300441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1255300443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255300441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1255300444
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255300441}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1255300445
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255300441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1464327673}
+  - {fileID: 2056748191}
+  - {fileID: 545215077}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1464327672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464327673}
+  - component: {fileID: 1464327675}
+  - component: {fileID: 1464327674}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1464327673
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464327672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1255300445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1464327674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464327672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "{\r\n  \"Dell\": {\r\n    \"vendor_full_name\": \"Dell Technologies\",\r\n   
+    \"website\": \"https://www.dell.com\",\r\n    \"devices\": {\r\n      \"Server\":
+    [\r\n        {\r\n          \"model\": \"PowerEdge R250\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 9.9,\r\n          \"max_power_watts\": 350,\r\n         
+    \"typical_power_watts\": 150,\r\n          \"cpu_sockets\": 1,\r\n          \"max_ram_gb\":
+    64,\r\n          \"description\": \"\u5165\u9580\u7D1A\u55AE\u8DEF\u6A5F\u67B6\u5F0F\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerEdge R350\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 12.5,\r\n          \"max_power_watts\": 600,\r\n         
+    \"typical_power_watts\": 200,\r\n          \"cpu_sockets\": 1,\r\n          \"max_ram_gb\":
+    128,\r\n          \"description\": \"\u4E2D\u968E\u55AE\u8DEF\u6A5F\u67B6\u5F0F\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerEdge R450\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 18.6,\r\n          \"max_power_watts\": 800,\r\n         
+    \"typical_power_watts\": 300,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\":
+    1024,\r\n          \"description\": \"\u96D9\u8DEF 1U \u6A5F\u67B6\u5F0F\u4F3A\u670D\u5668\uFF0C\u9069\u5408\u5BC6\u96C6\u904B\u7B97\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerEdge R550\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n          \"height_u\":
+    2,\r\n          \"weight_kg\": 23.1,\r\n          \"max_power_watts\": 1100,\r\n         
+    \"typical_power_watts\": 400,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\":
+    2048,\r\n          \"description\": \"\u96D9\u8DEF 2U \u6A5F\u67B6\u5F0F\u4F3A\u670D\u5668\uFF0C\u9AD8\u64F4\u5145\u6027\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerEdge R650\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 19.4,\r\n          \"max_power_watts\": 1400,\r\n         
+    \"typical_power_watts\": 500,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\":
+    4096,\r\n          \"description\": \"\u9AD8\u6548\u80FD\u96D9\u8DEF 1U \u4F3A\u670D\u5668\uFF0C\u652F\u63F4
+    PCIe Gen4\"\r\n        },\r\n        {\r\n          \"model\": \"PowerEdge R750\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 28.6,\r\n          \"max_power_watts\":
+    1400,\r\n          \"typical_power_watts\": 550,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 4096,\r\n          \"description\": \"\u4E3B\u6D41\u96D9\u8DEF
+    2U \u901A\u7528\u578B\u4F3A\u670D\u5668\"\r\n        },\r\n        {\r\n         
+    \"model\": \"PowerEdge R750xa\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\":
+    30.8,\r\n          \"max_power_watts\": 2400,\r\n          \"typical_power_watts\":
+    900,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 4096,\r\n         
+    \"description\": \"GPU \u52A0\u901F\u578B 2U \u4F3A\u670D\u5668\uFF0C\u652F\u63F4
+    4x GPU\"\r\n        },\r\n        {\r\n          \"model\": \"PowerEdge R860\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 35.2,\r\n          \"max_power_watts\":
+    2800,\r\n          \"typical_power_watts\": 1000,\r\n          \"cpu_sockets\":
+    4,\r\n          \"max_ram_gb\": 12288,\r\n          \"description\": \"\u56DB\u8DEF
+    2U \u9AD8\u6548\u80FD\u904B\u7B97\u4F3A\u670D\u5668\"\r\n        },\r\n       
+    {\r\n          \"model\": \"PowerEdge R960\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"3U Rack\",\r\n          \"height_u\": 3,\r\n          \"weight_kg\":
+    48.5,\r\n          \"max_power_watts\": 3200,\r\n          \"typical_power_watts\":
+    1200,\r\n          \"cpu_sockets\": 4,\r\n          \"max_ram_gb\": 24576,\r\n         
+    \"description\": \"\u56DB\u8DEF 3U \u65D7\u8266\u7D1A\u4F3A\u670D\u5668\uFF0C\u6700\u5927\u8A18\u61B6\u9AD4\u64F4\u5145\"\r\n       
+    }\r\n      ],\r\n      \"Switch\": [\r\n        {\r\n          \"model\": \"PowerSwitch
+    S5248F-ON\",\r\n          \"category\": \"Switch\",\r\n          \"form_factor\":
+    \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\": 7.5,\r\n         
+    \"max_power_watts\": 260,\r\n          \"typical_power_watts\": 120,\r\n         
+    \"port_count\": 48,\r\n          \"port_speed\": \"25GbE\",\r\n          \"uplink_ports\":
+    \"6x 100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 3.6,\r\n         
+    \"description\": \"ToR 25GbE \u63A5\u5165\u5C64\u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerSwitch S5296F-ON\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 8.2,\r\n          \"max_power_watts\":
+    300,\r\n          \"typical_power_watts\": 140,\r\n          \"port_count\":
+    96,\r\n          \"port_speed\": \"25GbE\",\r\n          \"uplink_ports\": \"8x
+    100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 6.4,\r\n         
+    \"description\": \"\u9AD8\u5BC6\u5EA6 25GbE ToR \u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"PowerSwitch Z9264F-ON\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 16.5,\r\n          \"max_power_watts\":
+    750,\r\n          \"typical_power_watts\": 400,\r\n          \"port_count\":
+    64,\r\n          \"port_speed\": \"100GbE\",\r\n          \"uplink_ports\": \"2x
+    400GbE QSFP-DD\",\r\n          \"switching_capacity_tbps\": 12.8,\r\n         
+    \"description\": \"\u6838\u5FC3/\u532F\u805A\u5C64 100GbE \u4EA4\u63DB\u6A5F\"\r\n       
+    }\r\n      ]\r\n    }\r\n  },\r\n  \"HPE\": {\r\n    \"vendor_full_name\": \"Hewlett
+    Packard Enterprise\",\r\n    \"website\": \"https://www.hpe.com\",\r\n    \"devices\":
+    {\r\n      \"Server\": [\r\n        {\r\n          \"model\": \"ProLiant DL20
+    Gen10 Plus\",\r\n          \"category\": \"Server\",\r\n          \"form_factor\":
+    \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\": 7.8,\r\n         
+    \"max_power_watts\": 290,\r\n          \"typical_power_watts\": 120,\r\n         
+    \"cpu_sockets\": 1,\r\n          \"max_ram_gb\": 64,\r\n          \"description\":
+    \"\u8F15\u91CF\u5165\u9580\u7D1A 1U \u55AE\u8DEF\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ProLiant DL360 Gen10 Plus\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 17.3,\r\n          \"max_power_watts\":
+    800,\r\n          \"typical_power_watts\": 300,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 3072,\r\n          \"description\": \"\u9AD8\u5BC6\u5EA6\u96D9\u8DEF
+    1U \u901A\u7528\u578B\u4F3A\u670D\u5668\"\r\n        },\r\n        {\r\n         
+    \"model\": \"ProLiant DL380 Gen10 Plus\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\":
+    29.5,\r\n          \"max_power_watts\": 1000,\r\n          \"typical_power_watts\":
+    420,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 3072,\r\n         
+    \"description\": \"\u4E3B\u6D41\u96D9\u8DEF 2U \u901A\u7528\u4F3A\u670D\u5668\uFF0C\u5E02\u4F54\u7387\u6975\u9AD8\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ProLiant DL385 Gen10 Plus v2\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 28.9,\r\n          \"max_power_watts\":
+    1000,\r\n          \"typical_power_watts\": 400,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 4096,\r\n          \"description\": \"AMD EPYC
+    \u96D9\u8DEF 2U \u9AD8\u6548\u80FD\u4F3A\u670D\u5668\"\r\n        },\r\n       
+    {\r\n          \"model\": \"ProLiant DL560 Gen10\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n          \"height_u\":
+    2,\r\n          \"weight_kg\": 40.0,\r\n          \"max_power_watts\": 2000,\r\n         
+    \"typical_power_watts\": 800,\r\n          \"cpu_sockets\": 4,\r\n          \"max_ram_gb\":
+    6144,\r\n          \"description\": \"\u56DB\u8DEF 2U \u9AD8\u6548\u80FD\u904B\u7B97\u5E73\u53F0\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ProLiant DL580 Gen10\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"4U Rack\",\r\n         
+    \"height_u\": 4,\r\n          \"weight_kg\": 62.5,\r\n          \"max_power_watts\":
+    4000,\r\n          \"typical_power_watts\": 1500,\r\n          \"cpu_sockets\":
+    4,\r\n          \"max_ram_gb\": 12288,\r\n          \"description\": \"\u65D7\u8266\u56DB\u8DEF
+    4U \u8A18\u61B6\u9AD4\u5BC6\u96C6\u578B\u4F3A\u670D\u5668\"\r\n        }\r\n     
+    ],\r\n      \"Switch\": [\r\n        {\r\n          \"model\": \"Aruba 6300M
+    24SFP+\",\r\n          \"category\": \"Switch\",\r\n          \"form_factor\":
+    \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\": 4.6,\r\n         
+    \"max_power_watts\": 150,\r\n          \"typical_power_watts\": 60,\r\n         
+    \"port_count\": 24,\r\n          \"port_speed\": \"10GbE SFP+\",\r\n         
+    \"uplink_ports\": \"4x 25GbE SFP28\",\r\n          \"switching_capacity_tbps\":
+    0.56,\r\n          \"description\": \"\u4F01\u696D\u63A5\u5165\u5C64 10GbE \u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"Aruba 6400 6-slot\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"7U Rack\",\r\n          \"height_u\":
+    7,\r\n          \"weight_kg\": 38.5,\r\n          \"max_power_watts\": 2400,\r\n         
+    \"typical_power_watts\": 900,\r\n          \"port_count\": 384,\r\n         
+    \"port_speed\": \"10GbE\",\r\n          \"uplink_ports\": \"6x 100GbE\",\r\n         
+    \"switching_capacity_tbps\": 25.6,\r\n          \"description\": \"\u6A21\u7D44\u5316\u6838\u5FC3\u532F\u805A\u5C64\u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"Aruba CX 8360-48XT4C\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 11.2,\r\n          \"max_power_watts\":
+    480,\r\n          \"typical_power_watts\": 200,\r\n          \"port_count\":
+    48,\r\n          \"port_speed\": \"10GbE\",\r\n          \"uplink_ports\": \"4x
+    100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 1.76,\r\n         
+    \"description\": \"\u9AD8\u6548\u80FD\u63A5\u5165/\u532F\u805A\u5C64\u4EA4\u63DB\u6A5F\uFF0C\u652F\u63F4
+    VSX\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"Cisco\": {\r\n    \"vendor_full_name\":
+    \"Cisco Systems\",\r\n    \"website\": \"https://www.cisco.com\",\r\n    \"devices\":
+    {\r\n      \"Server\": [\r\n        {\r\n          \"model\": \"UCS C220 M6\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 17.2,\r\n          \"max_power_watts\":
+    1050,\r\n          \"typical_power_watts\": 380,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 3072,\r\n          \"description\": \"UCS \u7CFB\u5217\u96D9\u8DEF
+    1U \u901A\u7528\u578B\u4F3A\u670D\u5668\"\r\n        },\r\n        {\r\n         
+    \"model\": \"UCS C240 M6\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\":
+    31.5,\r\n          \"max_power_watts\": 1600,\r\n          \"typical_power_watts\":
+    600,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 6144,\r\n         
+    \"description\": \"UCS \u7CFB\u5217\u96D9\u8DEF 2U \u5132\u5B58/\u904B\u7B97\u578B\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"UCS C480 M5\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"4U Rack\",\r\n          \"height_u\":
+    4,\r\n          \"weight_kg\": 78.0,\r\n          \"max_power_watts\": 3200,\r\n         
+    \"typical_power_watts\": 1400,\r\n          \"cpu_sockets\": 4,\r\n         
+    \"max_ram_gb\": 6144,\r\n          \"description\": \"UCS \u7CFB\u5217\u56DB\u8DEF
+    4U \u9AD8\u6548\u80FD AI/ML \u4F3A\u670D\u5668\"\r\n        }\r\n      ],\r\n     
+    \"Switch\": [\r\n        {\r\n          \"model\": \"Nexus 93180YC-FX\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 9.0,\r\n          \"max_power_watts\":
+    400,\r\n          \"typical_power_watts\": 180,\r\n          \"port_count\":
+    48,\r\n          \"port_speed\": \"25GbE SFP28\",\r\n          \"uplink_ports\":
+    \"6x 100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 3.6,\r\n         
+    \"description\": \"\u8CC7\u6599\u4E2D\u5FC3 ToR 25GbE \u63A5\u5165\u5C64\u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"Nexus 9336C-FX2\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 12.0,\r\n          \"max_power_watts\": 650,\r\n         
+    \"typical_power_watts\": 280,\r\n          \"port_count\": 36,\r\n          \"port_speed\":
+    \"100GbE QSFP28\",\r\n          \"uplink_ports\": \"Native 100GbE\",\r\n         
+    \"switching_capacity_tbps\": 7.2,\r\n          \"description\": \"\u8CC7\u6599\u4E2D\u5FC3
+    Spine/\u532F\u805A\u5C64 100GbE \u4EA4\u63DB\u6A5F\"\r\n        },\r\n       
+    {\r\n          \"model\": \"Nexus 9364C-GX\",\r\n          \"category\": \"Switch\",\r\n         
+    \"form_factor\": \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\":
+    24.0,\r\n          \"max_power_watts\": 1200,\r\n          \"typical_power_watts\":
+    600,\r\n          \"port_count\": 64,\r\n          \"port_speed\": \"400GbE QSFP-DD\",\r\n         
+    \"uplink_ports\": \"Native 400GbE\",\r\n          \"switching_capacity_tbps\":
+    51.2,\r\n          \"description\": \"\u8D85\u5927\u898F\u6A21 Spine \u5C64 400GbE
+    \u6838\u5FC3\u4EA4\u63DB\u6A5F\"\r\n        },\r\n        {\r\n          \"model\":
+    \"Nexus 9500 (N9K-C9508)\",\r\n          \"category\": \"Switch\",\r\n         
+    \"form_factor\": \"13U Rack\",\r\n          \"height_u\": 13,\r\n          \"weight_kg\":
+    109.0,\r\n          \"max_power_watts\": 6000,\r\n          \"typical_power_watts\":
+    2500,\r\n          \"port_count\": 384,\r\n          \"port_speed\": \"100GbE\",\r\n         
+    \"uplink_ports\": \"8-slot modular chassis\",\r\n          \"switching_capacity_tbps\":
+    92.16,\r\n          \"description\": \"\u6A21\u7D44\u5316\u6838\u5FC3\u4EA4\u63DB\u6A5F\uFF0C8
+    \u69FD Chassis \u5E73\u53F0\"\r\n        }\r\n      ],\r\n      \"Router\": [\r\n       
+    {\r\n          \"model\": \"ASR 1001-X\",\r\n          \"category\": \"Router\",\r\n         
+    \"form_factor\": \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\":
+    7.2,\r\n          \"max_power_watts\": 250,\r\n          \"typical_power_watts\":
+    100,\r\n          \"max_throughput_gbps\": 20,\r\n          \"wan_ports\": \"6x
+    GbE / 2x SFP+\",\r\n          \"description\": \"\u4F01\u696D/DC \u908A\u754C\u8DEF\u7531\u5668\uFF0C\u96C6\u6210\u786C\u9AD4\u52A0\u901F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ASR 1002-HX\",\r\n          \"category\":
+    \"Router\",\r\n          \"form_factor\": \"2U Rack\",\r\n          \"height_u\":
+    2,\r\n          \"weight_kg\": 15.0,\r\n          \"max_power_watts\": 400,\r\n         
+    \"typical_power_watts\": 180,\r\n          \"max_throughput_gbps\": 100,\r\n         
+    \"wan_ports\": \"4x 10GbE SFP+\",\r\n          \"description\": \"\u9AD8\u6548\u80FD\u56FA\u5B9A\u578B\u8DEF\u7531\u5668\uFF0C\u9069\u5408
+    DC \u51FA\u53E3\"\r\n        },\r\n        {\r\n          \"model\": \"ASR 9001\",\r\n         
+    \"category\": \"Router\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 23.0,\r\n          \"max_power_watts\":
+    850,\r\n          \"typical_power_watts\": 400,\r\n          \"max_throughput_gbps\":
+    440,\r\n          \"wan_ports\": \"\u652F\u63F4\u591A\u7A2E\u7DDA\u5361\u7D44\u5408\",\r\n         
+    \"description\": \"\u96FB\u4FE1/DC \u6838\u5FC3\u908A\u754C\u8DEF\u7531\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ASR 9006\",\r\n          \"category\":
+    \"Router\",\r\n          \"form_factor\": \"7U Rack\",\r\n          \"height_u\":
+    7,\r\n          \"weight_kg\": 86.0,\r\n          \"max_power_watts\": 3800,\r\n         
+    \"typical_power_watts\": 1600,\r\n          \"max_throughput_gbps\": 6400,\r\n         
+    \"wan_ports\": \"6-slot modular chassis\",\r\n          \"description\": \"\u6A21\u7D44\u5316\u6838\u5FC3\u8DEF\u7531\u5668\uFF0C6
+    \u69FD Chassis\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"Juniper\": {\r\n   
+    \"vendor_full_name\": \"Juniper Networks\",\r\n    \"website\": \"https://www.juniper.net\",\r\n   
+    \"devices\": {\r\n      \"Switch\": [\r\n        {\r\n          \"model\": \"EX4300-48P\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 7.5,\r\n          \"max_power_watts\":
+    1000,\r\n          \"typical_power_watts\": 180,\r\n          \"port_count\":
+    48,\r\n          \"port_speed\": \"1GbE PoE+\",\r\n          \"uplink_ports\":
+    \"4x 40GbE QSFP+\",\r\n          \"switching_capacity_tbps\": 0.176,\r\n         
+    \"description\": \"\u4F01\u696D PoE+ \u63A5\u5165\u5C64\u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"QFX5120-48Y\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 10.8,\r\n          \"max_power_watts\": 550,\r\n         
+    \"typical_power_watts\": 220,\r\n          \"port_count\": 48,\r\n          \"port_speed\":
+    \"25GbE SFP28\",\r\n          \"uplink_ports\": \"8x 100GbE QSFP28\",\r\n         
+    \"switching_capacity_tbps\": 4.8,\r\n          \"description\": \"\u8CC7\u6599\u4E2D\u5FC3
+    ToR 25GbE \u63A5\u5165\u5C64\u4EA4\u63DB\u6A5F\"\r\n        },\r\n        {\r\n         
+    \"model\": \"QFX5200-32C\",\r\n          \"category\": \"Switch\",\r\n         
+    \"form_factor\": \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\":
+    13.5,\r\n          \"max_power_watts\": 620,\r\n          \"typical_power_watts\":
+    280,\r\n          \"port_count\": 32,\r\n          \"port_speed\": \"100GbE QSFP28\",\r\n         
+    \"uplink_ports\": \"Native 100GbE\",\r\n          \"switching_capacity_tbps\":
+    6.4,\r\n          \"description\": \"\u8CC7\u6599\u4E2D\u5FC3 Spine \u5C64 100GbE
+    \u4EA4\u63DB\u6A5F\"\r\n        },\r\n        {\r\n          \"model\": \"QFX10002-36Q\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 19.0,\r\n          \"max_power_watts\":
+    1200,\r\n          \"typical_power_watts\": 500,\r\n          \"port_count\":
+    36,\r\n          \"port_speed\": \"40GbE QSFP+\",\r\n          \"uplink_ports\":
+    \"\u53EF\u5347\u7D1A\u81F3 100GbE\",\r\n          \"switching_capacity_tbps\":
+    2.88,\r\n          \"description\": \"DC Spine/\u6838\u5FC3\u5C64\u9AD8\u6548\u80FD\u4EA4\u63DB\u6A5F\"\r\n       
+    }\r\n      ],\r\n      \"Router\": [\r\n        {\r\n          \"model\": \"SRX300\",\r\n         
+    \"category\": \"Router\",\r\n          \"form_factor\": \"Desktop/1U\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 2.3,\r\n          \"max_power_watts\":
+    40,\r\n          \"typical_power_watts\": 20,\r\n          \"max_throughput_gbps\":
+    1,\r\n          \"wan_ports\": \"8x GbE\",\r\n          \"description\": \"\u5C0F\u578B\u5206\u652F\u6A5F\u69CB\u9632\u706B\u7246/\u8DEF\u7531\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"SRX4600\",\r\n          \"category\":
+    \"Router\",\r\n          \"form_factor\": \"2U Rack\",\r\n          \"height_u\":
+    2,\r\n          \"weight_kg\": 21.0,\r\n          \"max_power_watts\": 850,\r\n         
+    \"typical_power_watts\": 350,\r\n          \"max_throughput_gbps\": 100,\r\n         
+    \"wan_ports\": \"4x 100GbE QSFP28\",\r\n          \"description\": \"DC \u908A\u754C\u9632\u706B\u7246/\u8DEF\u7531\u5668\uFF0C\u9AD8\u6548\u80FD
+    IPSec\"\r\n        },\r\n        {\r\n          \"model\": \"MX204\",\r\n         
+    \"category\": \"Router\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 11.7,\r\n          \"max_power_watts\":
+    500,\r\n          \"typical_power_watts\": 220,\r\n          \"max_throughput_gbps\":
+    400,\r\n          \"wan_ports\": \"4x 100GbE QSFP28 + 8x 10GbE SFP+\",\r\n         
+    \"description\": \"\u56FA\u5B9A\u578B\u6838\u5FC3\u8DEF\u7531\u5668\uFF0CTrio
+    \u6676\u7247\u7D44\"\r\n        },\r\n        {\r\n          \"model\": \"MX480\",\r\n         
+    \"category\": \"Router\",\r\n          \"form_factor\": \"7U Rack\",\r\n         
+    \"height_u\": 7,\r\n          \"weight_kg\": 82.0,\r\n          \"max_power_watts\":
+    4000,\r\n          \"typical_power_watts\": 1800,\r\n          \"max_throughput_gbps\":
+    11800,\r\n          \"wan_ports\": \"8-slot modular chassis\",\r\n          \"description\":
+    \"\u96FB\u4FE1/DC \u6838\u5FC3\u8DEF\u7531\u5668\uFF0C8 \u69FD\u6A21\u7D44\u5316\u5E73\u53F0\"\r\n       
+    }\r\n      ]\r\n    }\r\n  },\r\n  \"Arista\": {\r\n    \"vendor_full_name\":
+    \"Arista Networks\",\r\n    \"website\": \"https://www.arista.com\",\r\n    \"devices\":
+    {\r\n      \"Switch\": [\r\n        {\r\n          \"model\": \"7050CX3-32S\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 9.5,\r\n          \"max_power_watts\":
+    480,\r\n          \"typical_power_watts\": 200,\r\n          \"port_count\":
+    32,\r\n          \"port_speed\": \"100GbE QSFP28\",\r\n          \"uplink_ports\":
+    \"2x 100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 6.4,\r\n         
+    \"description\": \"\u4F4E\u5EF6\u9072 Spine \u5C64 100GbE \u4EA4\u63DB\u6A5F\uFF0C\u91D1\u878D/HPC
+    \u5E38\u7528\"\r\n        },\r\n        {\r\n          \"model\": \"7060CX2-32S\",\r\n         
+    \"category\": \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 12.3,\r\n          \"max_power_watts\":
+    700,\r\n          \"typical_power_watts\": 300,\r\n          \"port_count\":
+    32,\r\n          \"port_speed\": \"100GbE QSFP28\",\r\n          \"uplink_ports\":
+    \"2x 100GbE QSFP28\",\r\n          \"switching_capacity_tbps\": 6.4,\r\n         
+    \"description\": \"\u8CC7\u6599\u4E2D\u5FC3 Spine/ToR 100GbE \u4EA4\u63DB\u6A5F\"\r\n       
+    },\r\n        {\r\n          \"model\": \"7280CR3-96\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"2U Rack\",\r\n          \"height_u\":
+    2,\r\n          \"weight_kg\": 22.0,\r\n          \"max_power_watts\": 1100,\r\n         
+    \"typical_power_watts\": 500,\r\n          \"port_count\": 96,\r\n          \"port_speed\":
+    \"100GbE QSFP28\",\r\n          \"uplink_ports\": \"8x 400GbE QSFP-DD\",\r\n         
+    \"switching_capacity_tbps\": 28.8,\r\n          \"description\": \"\u8D85\u9AD8\u5BC6\u5EA6
+    DC Spine \u4EA4\u63DB\u6A5F\uFF0C\u652F\u63F4\u6DF1\u5EA6\u7DE9\u885D\"\r\n       
+    },\r\n        {\r\n          \"model\": \"7800R3 (8-slot)\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"14U Rack\",\r\n          \"height_u\":
+    14,\r\n          \"weight_kg\": 136.0,\r\n          \"max_power_watts\": 8000,\r\n         
+    \"typical_power_watts\": 3500,\r\n          \"port_count\": 576,\r\n         
+    \"port_speed\": \"400GbE\",\r\n          \"uplink_ports\": \"8-slot modular chassis\",\r\n         
+    \"switching_capacity_tbps\": 230.4,\r\n          \"description\": \"\u8D85\u5927\u898F\u6A21\u6838\u5FC3\u6A21\u7D44\u5316\u4EA4\u63DB\u6A5F\u5E73\u53F0\"\r\n       
+    }\r\n      ],\r\n      \"Router\": [\r\n        {\r\n          \"model\": \"7500R3
+    (4-slot)\",\r\n          \"category\": \"Router\",\r\n          \"form_factor\":
+    \"7U Rack\",\r\n          \"height_u\": 7,\r\n          \"weight_kg\": 72.0,\r\n         
+    \"max_power_watts\": 4000,\r\n          \"typical_power_watts\": 1800,\r\n         
+    \"max_throughput_gbps\": 3200,\r\n          \"wan_ports\": \"4-slot modular chassis\",\r\n         
+    \"description\": \"\u6A21\u7D44\u5316\u8DEF\u7531\u5668/\u6838\u5FC3\u4EA4\u63DB\u6A5F\uFF0C\u652F\u63F4
+    MPLS/BGP\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"Lenovo\": {\r\n   
+    \"vendor_full_name\": \"Lenovo Infrastructure Solutions Group\",\r\n    \"website\":
+    \"https://www.lenovo.com/servers\",\r\n    \"devices\": {\r\n      \"Server\":
+    [\r\n        {\r\n          \"model\": \"ThinkSystem SR250 V3\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n         
+    \"height_u\": 1,\r\n          \"weight_kg\": 10.0,\r\n          \"max_power_watts\":
+    450,\r\n          \"typical_power_watts\": 150,\r\n          \"cpu_sockets\":
+    1,\r\n          \"max_ram_gb\": 128,\r\n          \"description\": \"\u5165\u9580\u55AE\u8DEF
+    1U \u6A5F\u67B6\u4F3A\u670D\u5668\"\r\n        },\r\n        {\r\n          \"model\":
+    \"ThinkSystem SR630 V3\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\":
+    18.2,\r\n          \"max_power_watts\": 1800,\r\n          \"typical_power_watts\":
+    500,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 4096,\r\n         
+    \"description\": \"\u96D9\u8DEF 1U \u9AD8\u5BC6\u5EA6\u901A\u7528\u578B\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ThinkSystem SR650 V3\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 29.8,\r\n          \"max_power_watts\":
+    1800,\r\n          \"typical_power_watts\": 600,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 4096,\r\n          \"description\": \"\u96D9\u8DEF
+    2U \u901A\u7528\u4F3A\u670D\u5668\uFF0C\u9AD8\u5132\u5B58\u64F4\u5145\u80FD\u529B\"\r\n       
+    },\r\n        {\r\n          \"model\": \"ThinkSystem SR850 V3\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 41.0,\r\n          \"max_power_watts\":
+    3000,\r\n          \"typical_power_watts\": 1100,\r\n          \"cpu_sockets\":
+    4,\r\n          \"max_ram_gb\": 24576,\r\n          \"description\": \"\u56DB\u8DEF
+    2U \u9AD8\u6548\u80FD\u904B\u7B97\u4F3A\u670D\u5668\"\r\n        },\r\n       
+    {\r\n          \"model\": \"ThinkSystem SR950 V3\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"4U Rack\",\r\n          \"height_u\":
+    4,\r\n          \"weight_kg\": 68.0,\r\n          \"max_power_watts\": 4000,\r\n         
+    \"typical_power_watts\": 1600,\r\n          \"cpu_sockets\": 8,\r\n         
+    \"max_ram_gb\": 24576,\r\n          \"description\": \"\u516B\u8DEF 4U \u65D7\u8266\u4F3A\u670D\u5668\uFF0CSAP
+    HANA \u8A8D\u8B49\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"Supermicro\":
+    {\r\n    \"vendor_full_name\": \"Super Micro Computer\",\r\n    \"website\":
+    \"https://www.supermicro.com\",\r\n    \"devices\": {\r\n      \"Server\": [\r\n       
+    {\r\n          \"model\": \"SuperServer 1029P-WTR\",\r\n          \"category\":
+    \"Server\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 15.9,\r\n          \"max_power_watts\": 750,\r\n         
+    \"typical_power_watts\": 280,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\":
+    1536,\r\n          \"description\": \"\u96D9\u8DEF 1U \u9AD8\u5BC6\u5EA6\u4F3A\u670D\u5668\uFF0C\u9AD8
+    CP \u503C\"\r\n        },\r\n        {\r\n          \"model\": \"SuperServer
+    2029P-C1RT\",\r\n          \"category\": \"Server\",\r\n          \"form_factor\":
+    \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\": 25.4,\r\n         
+    \"max_power_watts\": 1200,\r\n          \"typical_power_watts\": 450,\r\n         
+    \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 3072,\r\n          \"description\":
+    \"\u96D9\u8DEF 2U \u9AD8\u6548\u80FD\u5132\u5B58\u4F3A\u670D\u5668\"\r\n       
+    },\r\n        {\r\n          \"model\": \"SuperServer 4029GP-TRT2\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"4U Rack\",\r\n         
+    \"height_u\": 4,\r\n          \"weight_kg\": 48.0,\r\n          \"max_power_watts\":
+    3000,\r\n          \"typical_power_watts\": 1500,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 3072,\r\n          \"description\": \"GPU \u5BC6\u96C6\u578B
+    4U \u4F3A\u670D\u5668\uFF0C\u652F\u63F4 10x GPU\"\r\n        },\r\n        {\r\n         
+    \"model\": \"AS-4124GS-TNR (A+ AMD)\",\r\n          \"category\": \"Server\",\r\n         
+    \"form_factor\": \"4U Rack\",\r\n          \"height_u\": 4,\r\n          \"weight_kg\":
+    44.0,\r\n          \"max_power_watts\": 3000,\r\n          \"typical_power_watts\":
+    1200,\r\n          \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 4096,\r\n         
+    \"description\": \"AMD EPYC GPU \u4F3A\u670D\u5668\uFF0C8x PCIe GPU \u63D2\u69FD\"\r\n       
+    }\r\n      ]\r\n    }\r\n  },\r\n  \"H3C\": {\r\n    \"vendor_full_name\": \"H3C
+    Technologies (\u65B0\u83EF\u4E09)\",\r\n    \"website\": \"https://www.h3c.com\",\r\n   
+    \"devices\": {\r\n      \"Server\": [\r\n        {\r\n          \"model\": \"UniServer
+    R4300 G5\",\r\n          \"category\": \"Server\",\r\n          \"form_factor\":
+    \"1U Rack\",\r\n          \"height_u\": 1,\r\n          \"weight_kg\": 16.5,\r\n         
+    \"max_power_watts\": 800,\r\n          \"typical_power_watts\": 300,\r\n         
+    \"cpu_sockets\": 2,\r\n          \"max_ram_gb\": 2048,\r\n          \"description\":
+    \"\u96D9\u8DEF 1U \u901A\u7528\u578B\u4F3A\u670D\u5668\uFF0C\u4E9E\u6D32\u5E02\u5834\u4E3B\u6D41\"\r\n       
+    },\r\n        {\r\n          \"model\": \"UniServer R4900 G5\",\r\n         
+    \"category\": \"Server\",\r\n          \"form_factor\": \"2U Rack\",\r\n         
+    \"height_u\": 2,\r\n          \"weight_kg\": 28.0,\r\n          \"max_power_watts\":
+    1600,\r\n          \"typical_power_watts\": 550,\r\n          \"cpu_sockets\":
+    2,\r\n          \"max_ram_gb\": 4096,\r\n          \"description\": \"\u96D9\u8DEF
+    2U \u4E3B\u529B\u4F3A\u670D\u5668\"\r\n        }\r\n      ],\r\n      \"Switch\":
+    [\r\n        {\r\n          \"model\": \"S6800-54QT\",\r\n          \"category\":
+    \"Switch\",\r\n          \"form_factor\": \"1U Rack\",\r\n          \"height_u\":
+    1,\r\n          \"weight_kg\": 9.8,\r\n          \"max_power_watts\": 350,\r\n         
+    \"typical_power_watts\": 150,\r\n          \"port_count\": 48,\r\n          \"port_speed\":
+    \"10GbE SFP+\",\r\n          \"uplink_ports\": \"6x 40GbE QSFP+\",\r\n         
+    \"switching_capacity_tbps\": 1.44,\r\n          \"description\": \"DC ToR 10GbE
+    \u63A5\u5165\u5C64\u4EA4\u63DB\u6A5F\"\r\n        },\r\n        {\r\n         
+    \"model\": \"S12500X-AF\",\r\n          \"category\": \"Switch\",\r\n         
+    \"form_factor\": \"10U Rack\",\r\n          \"height_u\": 10,\r\n          \"weight_kg\":
+    95.0,\r\n          \"max_power_watts\": 5000,\r\n          \"typical_power_watts\":
+    2000,\r\n          \"port_count\": 256,\r\n          \"port_speed\": \"100GbE\",\r\n         
+    \"uplink_ports\": \"Modular chassis\",\r\n          \"switching_capacity_tbps\":
+    51.2,\r\n          \"description\": \"\u5927\u578B\u6838\u5FC3\u4EA4\u63DB\u6A5F\uFF0C\u6A21\u7D44\u5316
+    Chassis \u5E73\u53F0\"\r\n        }\r\n      ],\r\n      \"Router\": [\r\n       
+    {\r\n          \"model\": \"MSR3600-28-X1\",\r\n          \"category\": \"Router\",\r\n         
+    \"form_factor\": \"2U Rack\",\r\n          \"height_u\": 2,\r\n          \"weight_kg\":
+    12.0,\r\n          \"max_power_watts\": 300,\r\n          \"typical_power_watts\":
+    120,\r\n          \"max_throughput_gbps\": 10,\r\n          \"wan_ports\": \"4x
+    GbE + \u53EF\u64F4\u5145\u6A21\u7D44\",\r\n          \"description\": \"\u4F01\u696D/DC
+    \u51FA\u53E3\u8DEF\u7531\u5668\uFF0C\u652F\u63F4 MPLS VPN\"\r\n        }\r\n     
+    ]\r\n    }\r\n  }\r\n}"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9f63a78c5411d234fb4ee21fc01cf210, type: 2}
+  m_sharedMaterial: {fileID: -3758166231712576370, guid: 9f63a78c5411d234fb4ee21fc01cf210, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 10
+  m_fontSizeMax: 40
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1464327675
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464327672}
+  m_CullTransparentMesh: 1
+--- !u!1 &2056748190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056748191}
+  - component: {fileID: 2056748194}
+  - component: {fileID: 2056748193}
+  - component: {fileID: 2056748192}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2056748191
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056748190}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 578274589}
+  m_Father: {fileID: 1255300445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 40}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &2056748192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056748190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2056748193}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 126342735}
+        m_TargetAssemblyTypeName: VzDev.LoaderUtils.TextFileLoader, VzDev
+        m_MethodName: LoadFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2056748193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056748190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2056748194
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056748190}
+  m_CullTransparentMesh: 1
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 961739753}
+  - {fileID: 203844589}
+  - {fileID: 314957562}
+  - {fileID: 1255300445}
+  - {fileID: 700807681}
+  - {fileID: 126342736}

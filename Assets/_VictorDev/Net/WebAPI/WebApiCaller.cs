@@ -7,7 +7,9 @@ using VzDev.FileUtils;
 using Unity.VisualScripting;
 using UnityEngine;
 using VictorDev.Managers;
-using Debug = VzDev.DebugUtils.Debug;
+using VzDev.UnityAPI.Extensions;
+using Debug = VzDev.Extensions.Debug;
+
 
 namespace VzDev.Net.WebAPI
 {
@@ -34,14 +36,13 @@ namespace VzDev.Net.WebAPI
         {
             if (apiRequestSo == null)
             {
-                Debug.LogWarning($"WebApiRequest is null", typeof(This), EmojiEnum.Warning);
+                Debug.LogWarning($"WebApiRequest is null");
                 return;
             }
 
             onFailed ??= DefaultOnFailed;
 
-            Debug.Log($"{apiRequestSo.name}: [{apiRequestSo.EnumHttpMethod}] {apiRequestSo.URL}", nameof(WebApiRequestSO),
-                EmojiEnum.Upload);
+            Debug.Log($"{apiRequestSo.name}: [{apiRequestSo.EnumHttpMethod}] {apiRequestSo.URL}");
 
             TaskManager.Run($"SendRequest_{apiRequestSo.name}", RunTask);
             
@@ -52,8 +53,7 @@ namespace VzDev.Net.WebAPI
                 if (apiRequestSo.EnumHttpMethod == EnumHttpMethod.PATCH)
                 {
                     string result = await SendPatchByUnityWebRequest(apiRequestSo, token);
-                    Debug.Log($"SendRequest Success (PATCH)\n{result}",
-                        nameof(WebApiRequestSO), EmojiEnum.Success);
+                    Debug.Log($"SendRequest Success (PATCH)\n{result}");
                     onSuccess?.Invoke(result);
                     return;
                 }
@@ -82,12 +82,12 @@ namespace VzDev.Net.WebAPI
                             break;
                     }
                     
-                    Debug.Log($"SendRequest Success: [{(int)response.StatusCode}]\n{responseContent}",nameof(WebApiRequestSO), EmojiEnum.Success);
+                    Debug.Log($"SendRequest Success: [{(int)response.StatusCode}]\n{responseContent}");
                     onSuccess?.Invoke(responseContent);
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"SendRequest Exception: {ex.Message}", nameof(WebApiCallHandler), EmojiEnum.Warning);
+                    Debug.LogError($"SendRequest Exception: {ex.Message}");
                     onFailed?.Invoke(ex.Message);
                 }
             }
@@ -154,7 +154,7 @@ namespace VzDev.Net.WebAPI
       
 
         /// 預設的OnFail事件處理
-        private static void DefaultOnFailed(string msg) => Debug.LogWarning($"DefaultOnFailed! \n{msg}", nameof(WebApiCallHandler), EmojiEnum.Warning);
+        private static void DefaultOnFailed(string msg) => Debug.LogWarning($"DefaultOnFailed! \n{msg}");
         private static readonly HttpClient Client = new();
     }
 }

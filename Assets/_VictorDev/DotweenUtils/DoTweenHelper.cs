@@ -5,7 +5,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
+
 
 namespace VzDev.DoTweenUtils
 {
@@ -76,7 +77,7 @@ namespace VzDev.DoTweenUtils
             }
             else
             {
-                global::VzDev.DebugUtils.Debug.LogWarning("Target does not have a renderer", typeof(This), EmojiEnum.Warning);
+                Debug.LogWarning("Target does not have a renderer");
                 return null;
             }
         }

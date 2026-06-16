@@ -1,7 +1,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using Debug = VzDev.DebugUtils.Debug;
+using Debug = VzDev.Extensions.Debug;
 
 namespace VzDev.FileUtils
 {
@@ -12,9 +12,9 @@ namespace VzDev.FileUtils
         [Button]
         private void CreateStreamingAssetsFolder()
         {
-            Debug.Log("CreateStreamingAssetsFolder...", this, EmojiEnum.Folder);
+            Debug.Log("CreateStreamingAssetsFolder...");
             StreamAssetsFileLoader.CheckStreamingAssetsFolder();
-            Debug.Log("CreateStreamingAssetsFolder... OK!", this, EmojiEnum.Done);
+            Debug.Log("CreateStreamingAssetsFolder... OK!");
         }
 
         /// 讀取Json檔案
@@ -25,14 +25,14 @@ namespace VzDev.FileUtils
             jsonString = string.Empty;
             if (string.IsNullOrEmpty(streamAssetfilePath)) streamAssetfilePath = path;
             streamAssetfilePath = streamAssetfilePath.Trim();
-            Debug.Log("LoadJsonFile...", this, EmojiEnum.Download);
+            Debug.Log("LoadJsonFile...");
             StreamAssetsFileLoader.LoadJsonFile(streamAssetfilePath, OnSuccessHandler);
         }
 
         private void OnSuccessHandler(string data)
         {
             jsonString = data;
-            Debug.Log($"LoadJsonFile... OK!\n{jsonString}", this, EmojiEnum.Done);
+            Debug.Log($"LoadJsonFile... OK!\n{jsonString}");
             InvokeJsonString();
         }
 
