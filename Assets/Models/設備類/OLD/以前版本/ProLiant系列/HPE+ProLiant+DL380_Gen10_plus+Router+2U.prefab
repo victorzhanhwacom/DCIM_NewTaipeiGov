@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6870824257467097259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006299667930346612}
+  - component: {fileID: 342061690159211663}
+  - component: {fileID: 6354752058669107570}
+  - component: {fileID: 8967920088546411053}
+  m_Layer: 0
+  m_Name: HPE+ProLiant+DL380_Gen10_plus+Router+2U
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2006299667930346612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870824257467097259}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8546255, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &342061690159211663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870824257467097259}
+  m_Mesh: {fileID: -3754638631490314024, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+--- !u!23 &6354752058669107570
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870824257467097259}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -9209310799112779041, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: -3310484079793700174, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: 4377066110856253545, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: 7738564194034729722, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: 5024203181364198330, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: 1720777876446978451, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  - {fileID: 233055516450997433, guid: 5f3a5f94325f5604bb6d3f67e91c48d9, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8967920088546411053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870824257467097259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55aabd833d334eb586814430e5bfafe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_VictorDev.TCIT.DCIM.RevitAssetDataHolder
+  rackRevitAssetData:
+    <DevicePath>k__BackingField: 
+    <Model>k__BackingField: {fileID: 0}
+    <Information>k__BackingField:
+      height: 0
+      heightU: 0
+      watt: 0
+      weight: 0
+      component_description: 
+      component_assetIdentifier: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyEndDate: 
+      component_serialNumber: 
+      component_warrantyStartDate: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_accessibilityPerformance: 
+      type_replacementCost: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      equipment_supplier: 
+    <CompanyAssetNo>k__BackingField: 
+    RevitAssetKind: 0
+    DeviceKindZh: 
+    DeviceName: 
+    DeviceNameAndCode: 
+    Manufacturer: 
+    <Containers>k__BackingField: []
+    RackNo: 
+  deviceRevitAssetData:
+    <DevicePath>k__BackingField: 
+    <Model>k__BackingField: {fileID: 0}
+    <Information>k__BackingField:
+      height: 0
+      heightU: 0
+      watt: 0
+      weight: 0
+      component_description: 
+      component_assetIdentifier: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyEndDate: 
+      component_serialNumber: 
+      component_warrantyStartDate: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_accessibilityPerformance: 
+      type_replacementCost: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      equipment_supplier: 
+    <CompanyAssetNo>k__BackingField: 
+    RevitAssetKind: 0
+    DeviceKindZh: 
+    DeviceName: 
+    DeviceNameAndCode: 
+    Manufacturer: 
+    <RackDevicePath>k__BackingField: 
+    <RackLocation>k__BackingField: 0
