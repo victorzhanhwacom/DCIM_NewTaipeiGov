@@ -17,7 +17,7 @@ public class PointTag_RTRH : MonoBehaviour
 
     private void Start()
     {
-        if(uIAnchorFollower.Target3DObject.TryGetComponent(out ValueAutoJumper autoJumper))
+        if(uIAnchorFollower.Target3DObject.TryGetComponent(out ValueAutoJumper1 autoJumper))
             autoJumper.onValueChangedFloat.AddListener(SetHeatSource);
 
         if(uIAnchorFollower.Target3DObject.TryGetComponent<HeatSource>(out HeatSource heat))
