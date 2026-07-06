@@ -39,6 +39,19 @@ function flushPendingMessages() {
 // 送出訊息給 Unity端 ===============================
 const UnityObjName = "WebGLBridge";
 const UnityMethodName = "OnReceiveFromJS";
+/**
+ * sendToUnity(數字string);
+ * sendToUnityByCustom("WebGLBridge", "OnReceiveFromJS", 數字string);
+ * [切換主選單的頁籤]
+ * 0: 能源管理
+ * 1: 環境管理
+ * 2: CCTV
+ * 3: 門禁
+ * 4: BMS
+ * 5: ICT
+ * 6: 配置管理
+ * 7: 告警管理
+ */
 
 /**
  * 送出訊息給預設的 Unity 物件/方法 (UnityObjName / UnityMethodName)。
@@ -70,7 +83,7 @@ function sendToUnityByCustom(gameObjectName, methodName, payload) {
 
   try {
     window.unityInstance.SendMessage(gameObjectName, methodName, data);
-    console.log("[UnityBridge] SendMessage -> " + gameObjectName + "." + methodName, data);
+    console.log("[UnityBridge] SendMessage To Unity -> " + gameObjectName + "." + methodName, data);
   } catch (e) {
     console.error("[UnityBridge] SendMessage 失敗:", e);
   }

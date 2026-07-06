@@ -10,8 +10,13 @@
 // 因為 core 檔案已經先建立過 window.UnityBridge,這裡用 Object.assign 疊加,
 // 避免不管載入順序先後,都不會整包覆蓋掉。
 Object.assign(window.UnityBridge, {
-  OnClickModel: function (deviceId) {
-    console.log("[OnClickModel] deviceId:", deviceId);
+  //點擊模型傳入deviceCode
+  OnClickModel: function (deviceCode) {
+    console.log("[OnClickModel] deviceCode:", deviceCode);
+  },
+  //接收載入完成訊息
+  OnUnityReady: function (isReady) {
+    console.log("[OnUnityReady] isReady:", isReady);
   },
 
   // 之後新增其他接收函式,例如:

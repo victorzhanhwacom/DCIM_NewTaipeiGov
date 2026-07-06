@@ -13,6 +13,18 @@ function sendRandomPayloadToUnity() {
   });
 }
 
+// 傳送使用者 Token 給 Unity
+function sendUserTokenToUnity(){
+  userToken = "Loing User Token: " + Math.floor(Math.random() * 1000);
+  sendToUnityByCustom("WebGLBridge_User", "SetUserToken", userToken);
+}
+
+// 傳送環控子選單索引給 Unity
+function sendEnvSubMenuToUnity() {
+  subMenuIndex = Math.floor(Math.random() * 3).toString(); // 隨機生成 0、1 或 2 的字串
+  sendToUnityByCustom("WebGLBridge_Env", "SetSubMenu", subMenuIndex);
+}
+
 function createTestButton() {
   var btn = document.createElement("button");
   btn.id = "test-send-btn";
@@ -33,6 +45,8 @@ function createTestButton() {
   btn.addEventListener("click", function (e) {
     try {
       sendRandomPayloadToUnity();
+      sendUserTokenToUnity();
+      sendEnvSubMenuToUnity();
     } catch (err) {
       console.error("[UnityBridge] click handler 發生例外:", err);
     }
