@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using VictorDev.Managers;
 using VzDev.UnityAPI.Extensions;
-using Debug = VzDev.Extensions.Debug;
+using Debug = VzDev.ToolUtils.Debug;
 
 
 namespace VzDev.Net.WebAPI

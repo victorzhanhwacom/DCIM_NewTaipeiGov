@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using VzDev.DebugUtils;
 using UnityEngine;
-using Debug = VzDev.Extensions.Debug;
+using Debug = VzDev.ToolUtils.Debug;
 
 namespace VictorDev.Managers
 {

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using VzDev.ApiExtensions;
 using UnityEngine.EventSystems;
-using Gizmos = VzDev.Extensions.Gizmos;
+using Gizmos = VzDev.ToolUtils.Gizmos;
 
 namespace VzDev.Managers
 {

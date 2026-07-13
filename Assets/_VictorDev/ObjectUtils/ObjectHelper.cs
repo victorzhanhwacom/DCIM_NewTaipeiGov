@@ -10,7 +10,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
-using Debug = VzDev.Extensions.Debug;
+using Debug = VzDev.ToolUtils.Debug;
 
 namespace VzDev.DebugUtils
 {
