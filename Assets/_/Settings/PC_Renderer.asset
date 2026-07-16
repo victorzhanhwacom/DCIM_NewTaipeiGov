@@ -42,7 +42,8 @@ MonoBehaviour:
   - {fileID: 7833122117494664109}
   - {fileID: 5508686656943291950}
   - {fileID: 1126744590892098442}
-  m_RendererFeatureMap: ad6b866f10d7b46c2efe090654c9724c8a63b7543c00a30f
+  - {fileID: 8446977514199210086}
+  m_RendererFeatureMap: ad6b866f10d7b46c2efe090654c9724c8a63b7543c00a30f66588e8f4bb13975
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -162,3 +163,22 @@ MonoBehaviour:
     BlurQuality: 0
     Falloff: 100
     SampleCount: -1
+--- !u!114 &8446977514199210086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbd163eb174407458a3b27e3310e161, type: 3}
+  m_Name: OutlineRendererFeature
+  m_EditorClassIdentifier: VzDev::VzDev.RenderingUtils.Outline.OutlineRendererFeature
+  m_Active: 1
+  settings:
+    maskShader: {fileID: 4800000, guid: 81254b92456c4b5468ca2b7274b59cf1, type: 3}
+    compositeShader: {fileID: 4800000, guid: a3105df4a99112740a62bdd82c81b735, type: 3}
+    outlineColor: {r: 0.18798926, g: 0.3048873, b: 0.74901974, a: 1}
+    selectedColor: {r: 0, g: 43.416557, b: 47.93726, a: 1}
+    thickness: 2
