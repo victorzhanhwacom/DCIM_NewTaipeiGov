@@ -53,6 +53,14 @@ const UnityMethodName = "OnReceiveFromJS";
  * 7: 告警管理
  */
 
+/** JS to Unity 送出訊息的範例
+ * sendToUnityByCustom("WebGLBridge_User", "SetUserToken", Token string);         //使用者 Token
+ * sendToUnityByCustom("WebGLBridge_MainMenu", "SetMainMenu", 數字string);        //主選單索引
+ * sendToUnityByCustom("WebGLBridge_Env", "SetSubMenu", 數字string);              //環控子選單索引
+ * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_CCTV", deviceCode);  //攝影機焦點切換_CCTV
+ * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_DOOR", deviceCode);  //攝影機焦點切換_DOOR
+ */
+
 /**
  * 送出訊息給預設的 Unity 物件/方法 (UnityObjName / UnityMethodName)。
  * @param {object|string} payload 任意物件(會自動 JSON.stringify)或字串

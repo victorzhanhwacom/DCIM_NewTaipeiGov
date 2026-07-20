@@ -18,6 +18,11 @@ function sendUserTokenToUnity(){
   userToken = "Loing User Token: " + Math.floor(Math.random() * 1000);
   sendToUnityByCustom("WebGLBridge_User", "SetUserToken", userToken);
 }
+// 傳送主選單索引給 Unity
+function sendMainMenuToUnity() {
+  mainMenuIndex = Math.floor(Math.random() * 7).toString(); // 隨機生成 0~6 的字串
+  sendToUnityByCustom("WebGLBridge_MainMenu", "SetMainMenu", mainMenuIndex);
+}
 
 // 傳送環控子選單索引給 Unity
 function sendEnvSubMenuToUnity() {
@@ -44,9 +49,10 @@ function createTestButton() {
 
   btn.addEventListener("click", function (e) {
     try {
-      sendRandomPayloadToUnity();
-      sendUserTokenToUnity();
-      sendEnvSubMenuToUnity();
+      //sendRandomPayloadToUnity();
+      //sendUserTokenToUnity();
+      sendMainMenuToUnity();
+      //sendEnvSubMenuToUnity();
     } catch (err) {
       console.error("[UnityBridge] click handler 發生例外:", err);
     }
