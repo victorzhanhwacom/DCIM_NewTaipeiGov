@@ -9,31 +9,25 @@ public class FloorMenu : MonoBehaviour
     #region Fileds
     [Foldout("[Events]")] public UnityEvent<Transform, float> onFloorSelected;
     [SerializeField] private List<FloorAnchorItem> floorItems;
-    [Foldout("[Settings]"), SerializeField] private float distance = 30f;
     #endregion
 
     public void SwitchToFollor(string floor)
     {
         bool isTargetFloor;
-        for(int i = 0; i < floorItems.Count; i++)
+        for (int i = 0; i < floorItems.Count; i++)
         {
             isTargetFloor = floorItems[i].floor.Trim() == floor.Trim();
             if (isTargetFloor)
             {
+                floorItems[i].onSelected?.Invoke();
                 Transform anchor = floorItems[i].anchor;
                 if (anchor != null)
                 {
-                    onFloorSelected?.Invoke(anchor, distance);
+                    onFloorSelected?.Invoke(anchor, floorItems[i].distance);
                 }
             }
-            floorItems[i].floorObjects?.ForEach(obj => obj.gameObject.SetActive(isTargetFloor));
+            floorItems[i].isSelected?.Invoke(isTargetFloor);
         }
-
-        /* Transform anchor = floorItems.Find(item => item.floor.Trim() == floor.Trim()).anchor;
-        if (anchor != null)
-        {
-            onFloorSelected?.Invoke(anchor, distance);
-        } */
     }
 
     [Serializable]
@@ -41,6 +35,9 @@ public class FloorMenu : MonoBehaviour
     {
         public string floor;
         public Transform anchor;
-        public List<Transform> floorObjects;
+        public float distance;
+
+        public UnityEvent onSelected;
+        public UnityEvent<bool> isSelected;
     }
 }
