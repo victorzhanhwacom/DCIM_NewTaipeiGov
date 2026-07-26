@@ -32,7 +32,7 @@ public class MainMenuMediator : MonoBehaviour
                 materialReplacerMediator.SetACModelVisible(true);
                 break;
             case 5:
-                materialReplacerMediator.SetCabinetModelVisible(true);
+                materialReplacerMediator.SetRackModelVisible(true);
                 break;
         }
     }
