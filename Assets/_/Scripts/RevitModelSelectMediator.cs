@@ -16,17 +16,13 @@ public class RevitModelSelectMediator : MonoBehaviour
     {
         lastSelectedModel = model;
         string deviceCode = lastSelectedModel.name.GetStringBetweenMarks("[", "]");
-
         GetDataFromWebAPI(deviceCode);
-      
     }
 
 
     public void GetDataFromWebAPI(string deviceCode)
     {
-        // Call the web API to get data based on the device code
-        // This is a placeholder for the actual implementation
-        Debug.Log($"Fetching data for device code: {deviceCode}");
+        //Debug.Log($"Fetching data by device code from WebAPI...  {deviceCode}");
         CheckTypeToInvoke(deviceCode);
         
     }
