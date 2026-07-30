@@ -59,9 +59,14 @@ const UnityMethodName = "OnReceiveFromJS";
  * sendToUnityByCustom("WebGLBridge_Env", "SetSubMenu", 數字string);              //環控子選單索引
  * 
  * 攝影機焦點切換 ///
- * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_Floor", 樓層string);  //攝影機焦點切換_樓層：All / RF / 15F / B1
+ * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_Floor", 樓層字串);  //攝影機焦點切換_樓層：All / RF / 15F / B1F
  * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_CCTV", deviceCode);  //攝影機焦點切換_CCTV
  * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_Door", deviceCode);  //攝影機焦點切換_門禁
+ * 
+ * 模型點位標籤Toggle切換 ///
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetCctvToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetDoorToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetAcSystemToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
  */
 
 /**
