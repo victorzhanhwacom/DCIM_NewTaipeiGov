@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-using VzDev.DCIM.Deployment;
+using VzDev.DCIM.RevitAssetDataStructure;
 using VzDev.UnityAPI.Extensions;
 
 public class RevitModelSelectMediator : MonoBehaviour
@@ -24,15 +24,15 @@ public class RevitModelSelectMediator : MonoBehaviour
     {
         //Debug.Log($"Fetching data by device code from WebAPI...  {deviceCode}");
         CheckTypeToInvoke(deviceCode);
-        
+
     }
 
     private void CheckTypeToInvoke(string deviceCode)
     {
-        if(deviceCode.Contains("UPS")) OnUpsSelected?.Invoke(lastSelectedModel, new DCR_Asset { assetInfo = new AssetInfo { deviceCode = deviceCode } });
-        else if(deviceCode.Contains("THS")) OnRtRhSelected?.Invoke(lastSelectedModel, new DCR_Asset { assetInfo = new AssetInfo { deviceCode = deviceCode } });
-        else if(deviceCode.Contains("Leak")) OnLeakSelected?.Invoke(lastSelectedModel, new DCR_Asset { assetInfo = new AssetInfo { deviceCode = deviceCode } });
-        else if(deviceCode.Contains("DCR")) OnRackSelected?.Invoke(lastSelectedModel, new DCR_Asset { assetInfo = new AssetInfo { deviceCode = deviceCode } });
+        if (deviceCode.Contains("UPS")) OnUpsSelected?.Invoke(lastSelectedModel, new DCR_Asset { deviceCode = deviceCode });
+        else if (deviceCode.Contains("THS")) OnRtRhSelected?.Invoke(lastSelectedModel, new DCR_Asset { deviceCode = deviceCode });
+        else if (deviceCode.Contains("Leak")) OnLeakSelected?.Invoke(lastSelectedModel, new DCR_Asset { deviceCode = deviceCode });
+        else if (deviceCode.Contains("DCR")) OnRackSelected?.Invoke(lastSelectedModel, new DCR_Asset { deviceCode = deviceCode });
     }
 
     public void DelectedModel(Transform model)

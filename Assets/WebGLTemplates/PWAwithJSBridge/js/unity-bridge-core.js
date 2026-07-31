@@ -64,9 +64,12 @@ const UnityMethodName = "OnReceiveFromJS";
  * sendToUnityByCustom("WebGLBridge_Camera", "SetCameraFocus_Door", deviceCode);  //攝影機焦點切換_門禁
  * 
  * 模型點位標籤Toggle切換 ///
- * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetCctvToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
- * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetDoorToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
- * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetAcSystemToggleOn", deviceCode, bool字串);  //bool字串: "true" / "false"
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetCctvToggleOn", deviceCode);
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetCctvToggleOff", deviceCode);
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetDoorToggleOn", deviceCode);
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetDoorToggleOff", deviceCode);
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetAcSystemToggleOn", deviceCode);
+ * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetAcSystemToggleOff", deviceCode);
  */
 
 /**
