@@ -1184,7 +1184,7 @@ MonoBehaviour:
   previewColor_NotDeployable: {r: 1, g: 0, b: 0, a: 1}
   boundsPadding: 0.001
   rackForwardIsPositiveZ: 0
-  deviceForwardIsPositiveZ: 1
+  deviceForwardIsPositiveZ: 0
 --- !u!4 &293654884
 Transform:
   m_ObjectHideFlags: 0
@@ -2222,6 +2222,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779815588}
   m_CullTransparentMesh: 1
+--- !u!1001 &807834770
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.772776
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000012769918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.660035
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454125197630802331, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      propertyPath: m_Name
+      value: "\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+--- !u!1 &807834771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6454125197630802331, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+  m_PrefabInstance: {fileID: 807834770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &831762518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3498,7 +3560,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 302647983542661200, guid: fe98b7cdb96800346a62f295808ef54b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.7709084
+      value: 4.768483
       objectReference: {fileID: 0}
     - target: {fileID: 302647983542661200, guid: fe98b7cdb96800346a62f295808ef54b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3506,7 +3568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 302647983542661200, guid: fe98b7cdb96800346a62f295808ef54b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.239929
+      value: -5.7800694
       objectReference: {fileID: 0}
     - target: {fileID: 302647983542661200, guid: fe98b7cdb96800346a62f295808ef54b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3600,7 +3662,7 @@ GameObject:
   - component: {fileID: 1215927710}
   - component: {fileID: 1215927709}
   m_Layer: 16
-  m_Name: Cube
+  m_Name: RackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6333,6 +6395,8 @@ MonoBehaviour:
     _prefab: Packages/com.vz.dev/Runtime/Prefabs/Buttons/BtnIcon.prefab
   - _gameObject: {fileID: 115556063}
     _prefab: Packages/com.vz.dev/Runtime/Prefabs/_Templates/DCIM/Template-1/PanelTitle&ICON.prefab
+  - _gameObject: {fileID: 807834771}
+    _prefab: "Assets/ExtractedModels/\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U/\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U.prefab"
 --- !u!4 &2038224426
 Transform:
   m_ObjectHideFlags: 11
@@ -6769,3 +6833,4 @@ SceneRoots:
   - {fileID: 910229028}
   - {fileID: 293654884}
   - {fileID: 859427192}
+  - {fileID: 807834770}
