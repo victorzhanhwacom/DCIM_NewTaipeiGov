@@ -705,6 +705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RackUsageFilter
       objectReference: {fileID: 0}
+    - target: {fileID: 5869922965839507093, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -790,6 +794,7 @@ MonoBehaviour:
       type_material: 
     modelInfo:
       modelTarget: {fileID: 0}
+      modelName: 
     category: 0
     companyPropertyInfo:
       propertyName: 
@@ -812,39 +817,6 @@ MonoBehaviour:
   togglePower: {fileID: 520483965}
   toggleWeight: {fileID: 1055465207}
   toggleUSpacer: {fileID: 1571770653}
---- !u!1 &507804319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 507804320}
-  m_Layer: 0
-  m_Name: "\u6A5F\u6AC3\u8CC7\u6599\u8A2D\u7F6E"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &507804320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507804319}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 957404098}
-  - {fileID: 904730392}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &520483962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -975,6 +947,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1413159993}
     m_Modifications:
+    - target: {fileID: 1325776171748064797, guid: 1b858ea91acf00842a0e0fc75b360b53, type: 3}
+      propertyPath: logClickEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5242099457797980343, guid: 1b858ea91acf00842a0e0fc75b360b53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1247,6 +1223,87 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7022487280810355512, guid: 21c6740b54b409b448c47cdf8f99debc, type: 3}
   m_PrefabInstance: {fileID: 699604737}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &711245152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711245154}
+  - component: {fileID: 711245153}
+  m_Layer: 0
+  m_Name: EquipmentComponentSetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &711245153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711245152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67157cb35ffa5784c82b3b3f1fe9f8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.EquipmentComponentSetter
+  modelClickEnabled: 1
+  isSubscribedEvents: 0
+  models: []
+  dcimAssetDatas: []
+  modelComponents: []
+  OnSetComponentsCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  equipmentModels:
+  - {fileID: 3494649503401342257, guid: f66631293b8d77b4f87a71c0d43b4968, type: 3}
+  - {fileID: 3954410751757225549, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
+  - {fileID: 1875951716660874798, guid: b6ae2f8bbff2a8b4ea4b305cd1a23717, type: 3}
+  - {fileID: 4323247522018675213, guid: 1050970a442f40b4f87c5e173dea01a7, type: 3}
+  - {fileID: 6458280409108424438, guid: 30575cdf0ab691a47aa4a4d239520185, type: 3}
+  - {fileID: 5153929530486535351, guid: 54b0dd9b3e7ca86498bb66a130cf6ed0, type: 3}
+  - {fileID: 9200063308747989778, guid: eaf23abbf2bef144c90de0ecfe3fd65e, type: 3}
+  - {fileID: 1938584657548019116, guid: a5c13a753004e864997723e411d6e7fb, type: 3}
+  - {fileID: 3419421237220051618, guid: a5954eec4afe90a409a313335bce5898, type: 3}
+  - {fileID: 1320537684280367651, guid: 382e11b663a97ba40bec2269c4511490, type: 3}
+  - {fileID: 7666275172849973456, guid: 6cc277489fb629149baa56d08ed80434, type: 3}
+  - {fileID: 3130033663186041048, guid: 283481e5d4cad084e87bd87199d3ba3d, type: 3}
+  - {fileID: 2211727760809529981, guid: 6e16c5e49c690004c8f9a89e87befe33, type: 3}
+  - {fileID: 1594721034085621896, guid: 04afc76e836376d46b39a9505cf44290, type: 3}
+  - {fileID: 689463050723113116, guid: df6a916527c849644a29a6525e29dfc6, type: 3}
+  - {fileID: 3068651849671365309, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
+  - {fileID: 8448052323099687062, guid: 91908451fa74be748b06b3d0c6f151b4, type: 3}
+  - {fileID: 7031775253760629495, guid: 568daff7f9142414e9f29df1ff66b0b9, type: 3}
+  - {fileID: 100355641523941114, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
+  - {fileID: 795850882840484142, guid: e5de2f5c674c5a54780a00745e94ae65, type: 3}
+  - {fileID: 7655554790781377710, guid: b77b3a4b07d98944f8f81ade37970c46, type: 3}
+  - {fileID: 6472475254984399605, guid: c47276617b611c649a5c0c25f905db24, type: 3}
+  - {fileID: 7621556206378566872, guid: ff24c035674ed024db22c633b0187b45, type: 3}
+  - {fileID: 626858413623164006, guid: 152e4ea800ddc0f42b8d8109dd27b70b, type: 3}
+  - {fileID: 3207266598821841523, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+  - {fileID: 6454125197630802331, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+  - {fileID: 5980138625580845255, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
+  rackComponents: []
+--- !u!4 &711245154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711245152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.24658, y: -3.96992, z: -12.6004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779815588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1462,7 @@ MonoBehaviour:
       type_material: 
     modelInfo:
       modelTarget: {fileID: 0}
+      modelName: 
     category: 1
     companyPropertyInfo:
       propertyName: 
@@ -1415,6 +1473,20 @@ MonoBehaviour:
     weight_kg_Max: 0
     u_height_Max: 0
     container: []
+    usageInfo:
+      <totalPowerWatt>k__BackingField: 0
+      <totalWeightKG>k__BackingField: 0
+      <totalHeightU>k__BackingField: 0
+      <remainPowerWatt>k__BackingField: 0
+      <remainWeightKG>k__BackingField: 0
+      <remainHeightU>k__BackingField: 0
+      <totalPowerPercent>k__BackingField: 0
+      <totalWeightPercent>k__BackingField: 0
+      <totalHeightUPercent>k__BackingField: 0
+      <remainPowerPercent>k__BackingField: 0
+      <remainWeightPercent>k__BackingField: 0
+      <remainHeightUPercent>k__BackingField: 0
+      freeUSlots: []
   currentUIndex: -1
 --- !u!4 &859427192
 Transform:
@@ -1461,10 +1533,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.RackComponentSetter
   modelClickEnabled: 1
-  isSubscribedEvents: 0
+  isSubscribedEvents: 1
   models: []
   dcimAssetDatas: []
-  components: []
+  modelComponents: []
+  OnSetComponentsCompletedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 711245153}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.EquipmentComponentSetter,
+          VzDev
+        m_MethodName: SetRackComponents
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   equipmentDeployCollider: {fileID: 3845085718563779649, guid: fac73dfd0c36ec04a869520fc38c400a, type: 3}
 --- !u!4 &904730392
 Transform:
@@ -1479,7 +1567,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 507804320}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &910229026
 GameObject:
@@ -1492,7 +1580,6 @@ GameObject:
   - component: {fileID: 910229028}
   - component: {fileID: 910229027}
   - component: {fileID: 910229029}
-  - component: {fileID: 910229030}
   m_Layer: 0
   m_Name: WebAPIManager
   m_TagString: Untagged
@@ -1512,34 +1599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea4f43670181634db6e81f5b2b312d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.WebAPIManager
---- !u!4 &910229028
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910229026}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &910229029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910229026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d6f60716f9ea4242af9e262517ff753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.Demo.DemoGenerator_DeployEquipmentData
-  equipmentAssets: []
+  source: 1
+  jsonFileName: "\u6A5F\u623F\u4E00Data.json"
   equipmentModels:
   - {fileID: 3494649503401342257, guid: f66631293b8d77b4f87a71c0d43b4968, type: 3}
   - {fileID: 3954410751757225549, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
@@ -1559,7 +1620,6 @@ MonoBehaviour:
   - {fileID: 3068651849671365309, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
   - {fileID: 8448052323099687062, guid: 91908451fa74be748b06b3d0c6f151b4, type: 3}
   - {fileID: 7031775253760629495, guid: 568daff7f9142414e9f29df1ff66b0b9, type: 3}
-  - {fileID: 8008341318500205177, guid: 3ad3eabcc9455424a929a9d396144a9b, type: 3}
   - {fileID: 100355641523941114, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
   - {fileID: 795850882840484142, guid: e5de2f5c674c5a54780a00745e94ae65, type: 3}
   - {fileID: 7655554790781377710, guid: b77b3a4b07d98944f8f81ade37970c46, type: 3}
@@ -1569,12 +1629,13 @@ MonoBehaviour:
   - {fileID: 3207266598821841523, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
   - {fileID: 6454125197630802331, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
   - {fileID: 5980138625580845255, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
-  OnGetDeployEquipmentAssets:
+  OnGetEquipmentModelsEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 910229027}
-        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
-        m_MethodName: SetDeployEquipmentData
+      - m_Target: {fileID: 1479704933}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.EquipmentAssetInStockHandler,
+          VzDev
+        m_MethodName: SetEquipmentModels
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1583,8 +1644,69 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &910229030
+        m_CallState: 1
+      - m_Target: {fileID: 711245153}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.EquipmentComponentSetter,
+          VzDev
+        m_MethodName: SetEquipmentModels
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  OnGetEquipmentAssetInStockEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1479704933}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.EquipmentAssetInStockHandler,
+          VzDev
+        m_MethodName: SetEquipmentAssetInStock
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  OnGetRackListInformationEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 904730391}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.RackComponentSetter,
+          VzDev
+        m_MethodName: ParseRackListInformation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!4 &910229028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910229026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1327201848}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910229029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1602,10 +1724,33 @@ MonoBehaviour:
   onStartEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 910229029}
-        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.Demo.DemoGenerator_DeployEquipmentData,
-          VzDev
-        m_MethodName: GenerateDeployEquipmentAssetsForDemo
+      - m_Target: {fileID: 910229027}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetEquipmentAssetInStock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 910229027}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetEquipmentModels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 910229027}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetRackListInformation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1852,6 +1997,7 @@ MonoBehaviour:
       type_material: 
     modelInfo:
       modelTarget: {fileID: 0}
+      modelName: 
     category: 0
     companyPropertyInfo:
       propertyName: 
@@ -1871,52 +2017,6 @@ MonoBehaviour:
   txtPowerWatt: {fileID: 151434180}
   txtWeightKG: {fileID: 2140656628}
   txtCategory: {fileID: 1064964008}
---- !u!1 &957404097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 957404098}
-  - component: {fileID: 957404099}
-  m_Layer: 0
-  m_Name: WebAPI_GetRackList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &957404098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957404097}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 507804320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &957404099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957404097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66705a6a9262b124cb1d992b84715d06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::WebAPI_GetRackList
-  dcrAssetList: []
-  jsonFileName: "\u6A5F\u623F\u4E00.json"
 --- !u!1 &961571570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,202 +2327,6 @@ MonoBehaviour:
   <IsEnableRotate>k__BackingField: 1
   <IsEnableZoom>k__BackingField: 1
   defaultFlyDistance: 2
---- !u!1 &1027063281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1027063283}
-  - component: {fileID: 1027063282}
-  m_Layer: 0
-  m_Name: RackComponentSetter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1027063282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027063281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e80e26b3335634c9b73b5c7220d83f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.RackComponentSetter
-  modelClickEnabled: 1
-  isSubscribedEvents: 0
-  models:
-  - {fileID: 1674199226}
-  - {fileID: 1674199225}
-  - {fileID: 1674199224}
-  - {fileID: 1674199223}
-  - {fileID: 1674199222}
-  - {fileID: 1674199221}
-  - {fileID: 1674199220}
-  - {fileID: 1674199219}
-  - {fileID: 1674199218}
-  - {fileID: 1674199217}
-  - {fileID: 1674199216}
-  - {fileID: 1674199215}
-  - {fileID: 1674199214}
-  - {fileID: 1674199213}
-  - {fileID: 1674199212}
-  - {fileID: 1674199211}
-  - {fileID: 1674199210}
-  - {fileID: 1674199209}
-  - {fileID: 1674199208}
-  - {fileID: 1674199207}
-  - {fileID: 1674199206}
-  - {fileID: 1674199205}
-  - {fileID: 1674199204}
-  - {fileID: 1674199203}
-  - {fileID: 1674199202}
-  - {fileID: 1674199201}
-  - {fileID: 1674199200}
-  - {fileID: 1674199199}
-  - {fileID: 1674199198}
-  - {fileID: 1674199197}
-  - {fileID: 1674199196}
-  - {fileID: 1674199195}
-  - {fileID: 1674199194}
-  - {fileID: 1674199193}
-  - {fileID: 1674199192}
-  - {fileID: 1674199191}
-  - {fileID: 1674199190}
-  - {fileID: 1674199189}
-  - {fileID: 1674199188}
-  - {fileID: 1674199187}
-  - {fileID: 1674199186}
-  - {fileID: 1674199185}
-  - {fileID: 1674199184}
-  - {fileID: 1674199183}
-  - {fileID: 1674199182}
-  - {fileID: 1674199181}
-  - {fileID: 1674199180}
-  - {fileID: 1674199179}
-  - {fileID: 1674199178}
-  - {fileID: 1674199177}
-  - {fileID: 1674199176}
-  - {fileID: 1674199175}
-  - {fileID: 1674199174}
-  - {fileID: 1674199173}
-  - {fileID: 1674199172}
-  - {fileID: 1674199171}
-  - {fileID: 1674199170}
-  - {fileID: 1674199169}
-  - {fileID: 1674199168}
-  - {fileID: 1674199167}
-  - {fileID: 1674199166}
-  - {fileID: 1674199165}
-  - {fileID: 1674199164}
-  - {fileID: 1674199163}
-  - {fileID: 1674199162}
-  - {fileID: 1674199161}
-  - {fileID: 1674199160}
-  - {fileID: 1674199159}
-  - {fileID: 1674199158}
-  - {fileID: 1674199157}
-  - {fileID: 1674199156}
-  - {fileID: 1674199155}
-  - {fileID: 1674199154}
-  - {fileID: 1674199153}
-  - {fileID: 1674199152}
-  - {fileID: 1674199151}
-  - {fileID: 1674199150}
-  - {fileID: 1674199149}
-  - {fileID: 1674199148}
-  - {fileID: 1674199147}
-  - {fileID: 1674199146}
-  - {fileID: 1674199145}
-  - {fileID: 1674199144}
-  - {fileID: 1674199143}
-  - {fileID: 1674199142}
-  - {fileID: 1674199141}
-  - {fileID: 1674199140}
-  - {fileID: 1674199139}
-  - {fileID: 1674199138}
-  - {fileID: 1674199137}
-  - {fileID: 1674199136}
-  - {fileID: 1674199135}
-  - {fileID: 1674199134}
-  - {fileID: 1674199133}
-  - {fileID: 1674199132}
-  - {fileID: 1674199131}
-  - {fileID: 1674199130}
-  - {fileID: 1674199129}
-  - {fileID: 1674199128}
-  - {fileID: 1674199127}
-  - {fileID: 1674199126}
-  - {fileID: 1674199125}
-  - {fileID: 1674199124}
-  - {fileID: 1674199123}
-  - {fileID: 1674199122}
-  - {fileID: 1674199121}
-  - {fileID: 1674199120}
-  - {fileID: 1674199119}
-  - {fileID: 1674199118}
-  - {fileID: 1674199117}
-  - {fileID: 1674199116}
-  - {fileID: 1674199115}
-  - {fileID: 1674199114}
-  - {fileID: 1674199113}
-  - {fileID: 1674199112}
-  - {fileID: 1674199111}
-  - {fileID: 1674199110}
-  - {fileID: 1674199109}
-  - {fileID: 1674199108}
-  - {fileID: 1674199107}
-  - {fileID: 1674199106}
-  - {fileID: 1674199105}
-  - {fileID: 1674199104}
-  - {fileID: 1674199103}
-  - {fileID: 1674199102}
-  - {fileID: 1674199101}
-  - {fileID: 1674199100}
-  - {fileID: 1674199099}
-  - {fileID: 1674199098}
-  - {fileID: 1674199097}
-  - {fileID: 1674199096}
-  - {fileID: 1674199095}
-  - {fileID: 1674199094}
-  - {fileID: 1674199093}
-  - {fileID: 1674199092}
-  - {fileID: 1674199091}
-  - {fileID: 1674199090}
-  - {fileID: 1674199089}
-  - {fileID: 1674199088}
-  - {fileID: 1674199087}
-  - {fileID: 1674199086}
-  - {fileID: 1674199085}
-  - {fileID: 1674199084}
-  - {fileID: 1674199083}
-  - {fileID: 1674199082}
-  - {fileID: 1674199081}
-  dcimAssetDatas: []
-  components: []
-  equipmentDeployCollider: {fileID: 0}
---- !u!4 &1027063283
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027063281}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1804119020}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035411245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,13 +2667,13 @@ GameObject:
   - component: {fileID: 1116203759}
   - component: {fileID: 1116203758}
   m_Layer: 0
-  m_Name: "\u96FB\u6C23\u8A2D\u5099_Schneider-ER8222_Schneider-ER8222_7[TG+TPE+IDC+15F+\u6A5F\u623F\u4E00+DCR+Schneider-ER8222:
+  m_Name: "\u96FB\u6C23\u8A2D\u5099_Schneider-ER8222_Schneider-ER8222_7[TG+TPE+IDC+15F+\u6A5F\u623F\u4E00+\\+Schneider-ER8222:
     Schneider-ER8222+118] (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1116203757
 Transform:
   m_ObjectHideFlags: 0
@@ -3098,6 +3002,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 150833f14312df143aa9c4b9ec8f73f0, type: 3}
+--- !u!1 &1327201847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1327201848}
+  - component: {fileID: 1327201849}
+  m_Layer: 0
+  m_Name: DemoGenerator_EquipmentToRackContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1327201848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327201847}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 910229028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1327201849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327201847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcafedf2a17aac348ba2dc25573d58d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.Demo.DemoGenerator_EquipmentToRackContainer
+  isGenerateDemoData: 0
+  createEquipmentAssets: []
+  equipmentAssets: []
+  rackComponents: []
+  generateAmountRange: {x: 1, y: 20}
+  frontFaceIsLocalPositiveZ: 0
+  exportJsonPath: "Exported/\u6A5F\u623F\u4E00(\u6709\u8A2D\u5099).json"
 --- !u!1 &1393119894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6053152521180001199, guid: 150833f14312df143aa9c4b9ec8f73f0, type: 3}
@@ -3149,7 +3104,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 918041515}
-  - {fileID: 1804119020}
   - {fileID: 1539658702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3217,6 +3171,1844 @@ Transform:
   m_Children: []
   m_Father: {fileID: 201886226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1479704930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479704931}
+  - component: {fileID: 1479704933}
+  m_Layer: 0
+  m_Name: EquipmentAssetInStockHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1479704931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479704930}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479704933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479704930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6f60716f9ea4242af9e262517ff753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.Demo.DemoGenerator_DeployEquipmentData
+  isGenerateDemoData: 1
+  demoDataCount: 30
+  equipmentAssetsInStock:
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U+7040"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U+7040"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U+7040"
+      propertyNumber: NTCGO-83645285
+      note: "\u901A\u4FE1\u88DD\u7F6E_Switch_Brocade-FCX624S-F-Switch-1U+7040 in
+        stock"
+    equipmentUsageInfo:
+      power_watt: 826
+      weight_kg: 80.93758
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11_\u9762\u677F_-Switch-2U+9569"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 5898260745901379090, guid: 6e16c5e49c690004c8f9a89e87befe33, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11_\u9762\u677F_-Switch-2U+9569"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11_\u9762\u677F_-Switch-2U+9569"
+      propertyNumber: NTCGO-75117235
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11_\u9762\u677F_-Switch-2U+9569
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 373
+      weight_kg: 76.465836
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+2712"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 4337263712237461980, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+2712"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+2712"
+      propertyNumber: NTCGO-97484238
+      note: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+2712
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 484
+      weight_kg: 61.623535
+      heightU: 6
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL560_Gen10-Switch-2U+6188"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 5024209504337418643, guid: 04afc76e836376d46b39a9505cf44290, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL560_Gen10-Switch-2U+6188"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL560_Gen10-Switch-2U+6188"
+      propertyNumber: NTCGO-66510192
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL560_Gen10-Switch-2U+6188 in
+        stock"
+    equipmentUsageInfo:
+      power_watt: 785
+      weight_kg: 51.361664
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+2853"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6147181373944673454, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+2853"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+2853"
+      propertyNumber: NTCGO-88611999
+      note: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+2853
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 152
+      weight_kg: 58.503624
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+1652"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2421868058577942224, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+1652"
+    category: 2
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+1652"
+      propertyNumber: NTCGO-72373492
+      note: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+1652 in stock"
+    equipmentUsageInfo:
+      power_watt: 881
+      weight_kg: 33.32117
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Synology-SA3200D_12-Bay-RackStation-2U+9412"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2010767516546192750, guid: 568daff7f9142414e9f29df1ff66b0b9, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Synology-SA3200D_12-Bay-RackStation-2U+9412"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Synology-SA3200D_12-Bay-RackStation-2U+9412"
+      propertyNumber: NTCGO-27436142
+      note: "\u4E00\u822C\u6A21\u578B_Synology-SA3200D_12-Bay-RackStation-2U+9412
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 873
+      weight_kg: 36.01516
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u8CC7\u6599\u88DD\u7F6E_Server_BrocadeX7-4-sim-8U+6725"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 204251218497857349, guid: e5de2f5c674c5a54780a00745e94ae65, type: 3}
+      modelName: "\u8CC7\u6599\u88DD\u7F6E_Server_BrocadeX7-4-sim-8U+6725"
+    category: 2
+    companyPropertyInfo:
+      propertyName: "\u8CC7\u6599\u88DD\u7F6E_Server_BrocadeX7-4-sim-8U+6725"
+      propertyNumber: NTCGO-97858039
+      note: "\u8CC7\u6599\u88DD\u7F6E_Server_BrocadeX7-4-sim-8U+6725 in stock"
+    equipmentUsageInfo:
+      power_watt: 100
+      weight_kg: 33.45032
+      heightU: 8
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+2898"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 9032054337324764834, guid: 382e11b663a97ba40bec2269c4511490, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+2898"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+2898"
+      propertyNumber: NTCGO-48809337
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+2898
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 166
+      weight_kg: 73.011536
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Router_Brocade-CER_2024C-4X-Router-1U+8678"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 9157285670755304676, guid: 152e4ea800ddc0f42b8d8109dd27b70b, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Router_Brocade-CER_2024C-4X-Router-1U+8678"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Router_Brocade-CER_2024C-4X-Router-1U+8678"
+      propertyNumber: NTCGO-94474831
+      note: "\u901A\u4FE1\u88DD\u7F6E_Router_Brocade-CER_2024C-4X-Router-1U+8678
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 421
+      weight_kg: 71.526764
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+8207"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 4337263712237461980, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+8207"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+8207"
+      propertyNumber: NTCGO-52500099
+      note: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+8207
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 189
+      weight_kg: 99.253555
+      heightU: 6
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+3595"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 8578087899239510788, guid: 283481e5d4cad084e87bd87199d3ba3d, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+3595"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+3595"
+      propertyNumber: NTCGO-56347645
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+3595 in
+        stock"
+    equipmentUsageInfo:
+      power_watt: 499
+      weight_kg: 14.806894
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+6949"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6435324108533472853, guid: a5954eec4afe90a409a313335bce5898, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+6949"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+6949"
+      propertyNumber: NTCGO-81028891
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+6949
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 789
+      weight_kg: 56.829433
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX4650_48Y-Switch-1U+8023"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 252925510194077318, guid: ff24c035674ed024db22c633b0187b45, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX4650_48Y-Switch-1U+8023"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX4650_48Y-Switch-1U+8023"
+      propertyNumber: NTCGO-97663898
+      note: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX4650_48Y-Switch-1U+8023
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 630
+      weight_kg: 84.23319
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+5144"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2065417472996861529, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+5144"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+5144"
+      propertyNumber: NTCGO-43112013
+      note: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+5144 in stock"
+    equipmentUsageInfo:
+      power_watt: 469
+      weight_kg: 24.426262
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Cisco-Catalyst_WS_C3850_48XS-Switch-1U+1541"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 921067537690184080, guid: f66631293b8d77b4f87a71c0d43b4968, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Cisco-Catalyst_WS_C3850_48XS-Switch-1U+1541"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Cisco-Catalyst_WS_C3850_48XS-Switch-1U+1541"
+      propertyNumber: NTCGO-76348807
+      note: "\u4E00\u822C\u6A21\u578B_Cisco-Catalyst_WS_C3850_48XS-Switch-1U+1541
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 779
+      weight_kg: 38.334377
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+7813"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 4337263712237461980, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+7813"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+7813"
+      propertyNumber: NTCGO-80490119
+      note: "\u901A\u4FE1\u88DD\u7F6E_Switch_Dell-PowerSwitch_S\u7CFB\u5217-10GbE-6U+7813
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 261
+      weight_kg: 69.693565
+      heightU: 6
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-Compute_DL384_Gen12-Switch-2U+1251"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6905363778656425398, guid: 30575cdf0ab691a47aa4a4d239520185, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-Compute_DL384_Gen12-Switch-2U+1251"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-Compute_DL384_Gen12-Switch-2U+1251"
+      propertyNumber: NTCGO-65264584
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-Compute_DL384_Gen12-Switch-2U+1251
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 328
+      weight_kg: 70.455864
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+9569"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 8578087899239510788, guid: 283481e5d4cad084e87bd87199d3ba3d, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+9569"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+9569"
+      propertyNumber: NTCGO-01746619
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen11-Switch-2U+9569 in
+        stock"
+    equipmentUsageInfo:
+      power_watt: 587
+      weight_kg: 62.31598
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX2300_48P-Switch-1U+4450"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 638262658492938920, guid: b77b3a4b07d98944f8f81ade37970c46, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX2300_48P-Switch-1U+4450"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX2300_48P-Switch-1U+4450"
+      propertyNumber: NTCGO-51912291
+      note: "\u901A\u4FE1\u88DD\u7F6E_Juniper-NETWORKS_EX2300_48P-Switch-1U+4450
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 556
+      weight_kg: 57.336586
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+5232"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6147181373944673454, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+5232"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+5232"
+      propertyNumber: NTCGO-65510397
+      note: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+5232
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 194
+      weight_kg: 79.659424
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+8250"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2729919253384410399, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
+      modelName: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+8250"
+    category: 2
+    companyPropertyInfo:
+      propertyName: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+8250"
+      propertyNumber: NTCGO-46011287
+      note: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+8250 in stock"
+    equipmentUsageInfo:
+      power_watt: 430
+      weight_kg: 64.70903
+      heightU: 14
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLian-_DL110_Gen10_Plus_\u96FB\u4FE1\u4F3A\u670D\u5668-Switch-1U+5207"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 4531249074230443571, guid: 1050970a442f40b4f87c5e173dea01a7, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLian-_DL110_Gen10_Plus_\u96FB\u4FE1\u4F3A\u670D\u5668-Switch-1U+5207"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLian-_DL110_Gen10_Plus_\u96FB\u4FE1\u4F3A\u670D\u5668-Switch-1U+5207"
+      propertyNumber: NTCGO-98881324
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLian-_DL110_Gen10_Plus_\u96FB\u4FE1\u4F3A\u670D\u5668-Switch-1U+5207
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 516
+      weight_kg: 43.01625
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+4844"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2065417472996861529, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+4844"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+4844"
+      propertyNumber: NTCGO-03064637
+      note: "\u4E00\u822C\u6A21\u578B_Panduit-FRE2UBL--ODF-2U+4844 in stock"
+    equipmentUsageInfo:
+      power_watt: 558
+      weight_kg: 54.528343
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+2584"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6435324108533472853, guid: a5954eec4afe90a409a313335bce5898, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+2584"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+2584"
+      propertyNumber: NTCGO-42040019
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus-Switch-2U+2584
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 650
+      weight_kg: 94.619995
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+4749"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 6147181373944673454, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+      modelName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+4749"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+4749"
+      propertyNumber: NTCGO-72500955
+      note: "\u901A\u4FE1\u88DD\u7F6E_Router_Juniper-Cloud_Metro_ACX7024-Router-1U+4749
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 268
+      weight_kg: 21.462399
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+9638"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2421868058577942224, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+9638"
+    category: 2
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+9638"
+      propertyNumber: NTCGO-74017047
+      note: "\u4E00\u822C\u6A21\u578B_Dell-PowerEdge_R360-Server-1U+9638 in stock"
+    equipmentUsageInfo:
+      power_watt: 564
+      weight_kg: 81.93245
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL360_Gen10_plus-Switch-1U+2334"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 7670615808583597585, guid: eaf23abbf2bef144c90de0ecfe3fd65e, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL360_Gen10_plus-Switch-1U+2334"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL360_Gen10_plus-Switch-1U+2334"
+      propertyNumber: NTCGO-60550536
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL360_Gen10_plus-Switch-1U+2334
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 428
+      weight_kg: 36.85423
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+2654"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 2729919253384410399, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
+      modelName: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+2654"
+    category: 2
+    companyPropertyInfo:
+      propertyName: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+2654"
+      propertyNumber: NTCGO-51633511
+      note: "\u8CC7\u6599\u88DD\u7F6E_Server_Brocade-7X-8-sim-14U+2654 in stock"
+    equipmentUsageInfo:
+      power_watt: 477
+      weight_kg: 48.018333
+      heightU: 14
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+3308"
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 9032054337324764834, guid: 382e11b663a97ba40bec2269c4511490, type: 3}
+      modelName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+3308"
+    category: 3
+    companyPropertyInfo:
+      propertyName: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+3308"
+      propertyNumber: NTCGO-91495265
+      note: "\u4E00\u822C\u6A21\u578B_HPE-ProLiant-DL380_Gen10_plus_Lff_-Switch-2U+3308
+        in stock"
+    equipmentUsageInfo:
+      power_watt: 794
+      weight_kg: 99.405655
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  equipmentModels:
+  - {fileID: 3494649503401342257, guid: f66631293b8d77b4f87a71c0d43b4968, type: 3}
+  - {fileID: 3954410751757225549, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
+  - {fileID: 1875951716660874798, guid: b6ae2f8bbff2a8b4ea4b305cd1a23717, type: 3}
+  - {fileID: 4323247522018675213, guid: 1050970a442f40b4f87c5e173dea01a7, type: 3}
+  - {fileID: 6458280409108424438, guid: 30575cdf0ab691a47aa4a4d239520185, type: 3}
+  - {fileID: 5153929530486535351, guid: 54b0dd9b3e7ca86498bb66a130cf6ed0, type: 3}
+  - {fileID: 9200063308747989778, guid: eaf23abbf2bef144c90de0ecfe3fd65e, type: 3}
+  - {fileID: 1938584657548019116, guid: a5c13a753004e864997723e411d6e7fb, type: 3}
+  - {fileID: 3419421237220051618, guid: a5954eec4afe90a409a313335bce5898, type: 3}
+  - {fileID: 1320537684280367651, guid: 382e11b663a97ba40bec2269c4511490, type: 3}
+  - {fileID: 7666275172849973456, guid: 6cc277489fb629149baa56d08ed80434, type: 3}
+  - {fileID: 3130033663186041048, guid: 283481e5d4cad084e87bd87199d3ba3d, type: 3}
+  - {fileID: 2211727760809529981, guid: 6e16c5e49c690004c8f9a89e87befe33, type: 3}
+  - {fileID: 1594721034085621896, guid: 04afc76e836376d46b39a9505cf44290, type: 3}
+  - {fileID: 689463050723113116, guid: df6a916527c849644a29a6525e29dfc6, type: 3}
+  - {fileID: 3068651849671365309, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
+  - {fileID: 8448052323099687062, guid: 91908451fa74be748b06b3d0c6f151b4, type: 3}
+  - {fileID: 7031775253760629495, guid: 568daff7f9142414e9f29df1ff66b0b9, type: 3}
+  - {fileID: 100355641523941114, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
+  - {fileID: 795850882840484142, guid: e5de2f5c674c5a54780a00745e94ae65, type: 3}
+  - {fileID: 7655554790781377710, guid: b77b3a4b07d98944f8f81ade37970c46, type: 3}
+  - {fileID: 6472475254984399605, guid: c47276617b611c649a5c0c25f905db24, type: 3}
+  - {fileID: 7621556206378566872, guid: ff24c035674ed024db22c633b0187b45, type: 3}
+  - {fileID: 626858413623164006, guid: 152e4ea800ddc0f42b8d8109dd27b70b, type: 3}
+  - {fileID: 3207266598821841523, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+  - {fileID: 6454125197630802331, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+  - {fileID: 5980138625580845255, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
 --- !u!1001 &1509432222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3243,7 +5035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3897739662032116319, guid: 37b73c3f7a4965e4b98d14a8cfba2454, type: 3}
       propertyPath: m_Name
-      value: DeployEquipmentList
+      value: EquipmentStockList
       objectReference: {fileID: 0}
     - target: {fileID: 3897739662032116319, guid: 37b73c3f7a4965e4b98d14a8cfba2454, type: 3}
       propertyPath: m_IsActive
@@ -3858,6 +5650,10 @@ PrefabInstance:
     - target: {fileID: -9214354319482588733, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9156201955375732796, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -9112762826744200008, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
       propertyPath: m_IsActive
@@ -4498,736 +6294,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
   m_PrefabInstance: {fileID: 1674199078}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199081 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7050913791816927922, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199082 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1197070068201163259, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199083 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5151077700797028757, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199084 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3104874069358143312, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199085 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4655541040852077684, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199086 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4838728507008074221, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199087 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8878642124857582954, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199088 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1476040240012469995, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199089 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8279135122590808797, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199090 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2646791895966978183, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199091 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5321961420388311903, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199092 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 653478203528747723, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199093 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7900830310782930097, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199094 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8245632960938377047, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1956015637617811561, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199096 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3600918163445140873, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199097 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8672683826789186107, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199098 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8552454966401537035, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199099 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4163991872892521632, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199100 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4852324974356210966, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199101 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4128437244019046238, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2366677737414721472, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199103 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7686872863325375483, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199104 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5734228963779238080, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7423620758782257715, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199106 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8674612011475855790, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199107 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4013204533424424002, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199108 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3171146911930800930, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2156462904964908107, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7050665503075427779, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199111 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2872499105281776264, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199112 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9201975711098742784, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199113 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2132250903859827791, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199114 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5348100133049171040, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199115 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8892006639426393743, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199116 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8135399336420220325, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199117 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1890027347187848815, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199118 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8911723083366700758, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -226063502643073775, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199120 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1363007024615330202, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199121 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4740841654793863042, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199122 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4214188643757367111, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199123 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3879566470752857071, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199124 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3331896315121149789, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199125 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6405712204212247026, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6313364096560238034, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199127 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7034625013276266847, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199128 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5812875469883497887, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1767674583728435838, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199130 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2482363075784611750, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199131 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7954407744721764957, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199132 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8395401333892932184, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199133 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4284083479805631324, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199134 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5052213092450512698, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199135 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6400046890702026702, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199136 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2164195789495613070, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199137 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -9205549824236524447, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199138 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -9095686217358063637, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5164637859909616188, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199140 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6756123313571021161, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199141 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3627529252371014071, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199142 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3426049484179268698, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6614692673254463956, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199144 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4981803841714073122, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199145 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6748544574128297261, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199146 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8700960569712899245, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199147 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8935098486811679588, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199148 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2073598329435141274, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199149 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1707303472920440696, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199150 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3111532238085132042, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199151 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8085145228722425673, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199152 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3416853233590974453, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199153 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1176957873935861105, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -474727388552003982, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199155 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3843611430240318057, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199156 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4231919037338708355, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199157 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8045934501187284989, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3648108753748901445, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199159 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4697822237224478323, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199160 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7791995327740633397, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199161 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6513348677141748285, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199162 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5352609840547111471, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199163 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5338309832994016064, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199164 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5444804900064038805, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199165 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -259732751811254686, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199166 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8018792625283175144, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199167 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6432807240028282164, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199168 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -9192469643333067848, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199169 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6960638180517055202, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1686253105781570747, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199171 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8737035691614401617, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199172 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -29697194015083432, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8235196865905949969, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199174 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3308903183343896949, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199175 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3606449921908748624, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4938488753226280989, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199177 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8180751977296633232, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199178 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7461720327538386988, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199179 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6909761168388631944, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199180 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7225899135908338676, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199181 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6705531835640519445, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199182 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3084572632282681922, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199183 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7462928952212461791, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199184 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 434603450498181480, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2306232305840254240, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199186 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7367170751426703872, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199187 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2195351293024993097, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199188 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5253961196646426003, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199189 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3027365560269969639, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8328539648642819786, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199191 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -207385987196457353, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199192 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7201463271232087003, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199193 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -621374907178626114, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199194 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2583427303434933979, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1624232000288506754, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199196 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5932205139826372228, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199197 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8136995206203161203, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199198 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3384520543376283570, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199199 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1932118644878399498, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199200 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 311560091827590741, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199201 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1677593163838554530, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199202 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1710464216182520693, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199203 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3942228713612697564, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199204 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2529827912072751851, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199205 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7971087078107452883, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1452316501195904376, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199207 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7604950513248316208, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199208 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3723015428608029518, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199209 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4464794389527495041, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199210 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3159518107558914123, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3072646092805910624, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199212 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8737147328571730797, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199213 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4275472300097767909, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199214 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4070924678127284787, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199215 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 168734611045055978, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199216 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2367918702939775407, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199217 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4513399421721978199, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199218 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7338512844252348038, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199219 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2990220037455109225, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199220 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4610982050776907764, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199221 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7224529588209689593, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199222 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7515767315131322690, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199223 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7196379683193237887, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199224 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6001926877070223523, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199225 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5050765591411283818, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1674199226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1964082537879194276, guid: cfcd9a0cd860bf94292b907e626fd19a, type: 3}
-  m_PrefabInstance: {fileID: 1674199078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1744804883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5201621443739411216, guid: 37b73c3f7a4965e4b98d14a8cfba2454, type: 3}
@@ -5392,19 +6458,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.RackUsageFilter, VzDev
-        m_MethodName: SetRackModels
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
   targetModelsParent: {fileID: 1674199079}
   searchType: 0
   isIncludeInactive: 1
@@ -5428,280 +6482,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1797371253}
-        m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelFinder, VzDev
-        m_MethodName: FindModelsByKeywords
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 957404099}
-        m_TargetAssemblyTypeName: WebAPI_GetRackList, VzDev
-        m_MethodName: GetDataFromWebAPI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  isEnableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onEnableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onDisableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onDestroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  enableUpdateEvent: 0
-  onUpdateEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &1804119018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1804119020}
-  - component: {fileID: 1804119019}
-  - component: {fileID: 1804119021}
-  m_Layer: 0
-  m_Name: ModelFinder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1804119019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804119018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c118502b03c9fcc45b18414452f9bb5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.ModelFinder
-  logEnabled: 0
-  keywords:
-  - DCR
-  keyModels: []
-  foundModels:
-  - {fileID: 1674199226}
-  - {fileID: 1674199225}
-  - {fileID: 1674199224}
-  - {fileID: 1674199223}
-  - {fileID: 1674199222}
-  - {fileID: 1674199221}
-  - {fileID: 1674199220}
-  - {fileID: 1674199219}
-  - {fileID: 1674199218}
-  - {fileID: 1674199217}
-  - {fileID: 1674199216}
-  - {fileID: 1674199215}
-  - {fileID: 1674199214}
-  - {fileID: 1674199213}
-  - {fileID: 1674199212}
-  - {fileID: 1674199211}
-  - {fileID: 1674199210}
-  - {fileID: 1674199209}
-  - {fileID: 1674199208}
-  - {fileID: 1674199207}
-  - {fileID: 1674199206}
-  - {fileID: 1674199205}
-  - {fileID: 1674199204}
-  - {fileID: 1674199203}
-  - {fileID: 1674199202}
-  - {fileID: 1674199201}
-  - {fileID: 1674199200}
-  - {fileID: 1674199199}
-  - {fileID: 1674199198}
-  - {fileID: 1674199197}
-  - {fileID: 1674199196}
-  - {fileID: 1674199195}
-  - {fileID: 1674199194}
-  - {fileID: 1674199193}
-  - {fileID: 1674199192}
-  - {fileID: 1674199191}
-  - {fileID: 1674199190}
-  - {fileID: 1674199189}
-  - {fileID: 1674199188}
-  - {fileID: 1674199187}
-  - {fileID: 1674199186}
-  - {fileID: 1674199185}
-  - {fileID: 1674199184}
-  - {fileID: 1674199183}
-  - {fileID: 1674199182}
-  - {fileID: 1674199181}
-  - {fileID: 1674199180}
-  - {fileID: 1674199179}
-  - {fileID: 1674199178}
-  - {fileID: 1674199177}
-  - {fileID: 1674199176}
-  - {fileID: 1674199175}
-  - {fileID: 1674199174}
-  - {fileID: 1674199173}
-  - {fileID: 1674199172}
-  - {fileID: 1674199171}
-  - {fileID: 1674199170}
-  - {fileID: 1674199169}
-  - {fileID: 1674199168}
-  - {fileID: 1674199167}
-  - {fileID: 1674199166}
-  - {fileID: 1674199165}
-  - {fileID: 1674199164}
-  - {fileID: 1674199163}
-  - {fileID: 1674199162}
-  - {fileID: 1674199161}
-  - {fileID: 1674199160}
-  - {fileID: 1674199159}
-  - {fileID: 1674199158}
-  - {fileID: 1674199157}
-  - {fileID: 1674199156}
-  - {fileID: 1674199155}
-  - {fileID: 1674199154}
-  - {fileID: 1674199153}
-  - {fileID: 1674199152}
-  - {fileID: 1674199151}
-  - {fileID: 1674199150}
-  - {fileID: 1674199149}
-  - {fileID: 1674199148}
-  - {fileID: 1674199147}
-  - {fileID: 1674199146}
-  - {fileID: 1674199145}
-  - {fileID: 1674199144}
-  - {fileID: 1674199143}
-  - {fileID: 1674199142}
-  - {fileID: 1674199141}
-  - {fileID: 1674199140}
-  - {fileID: 1674199139}
-  - {fileID: 1674199138}
-  - {fileID: 1674199137}
-  - {fileID: 1674199136}
-  - {fileID: 1674199135}
-  - {fileID: 1674199134}
-  - {fileID: 1674199133}
-  - {fileID: 1674199132}
-  - {fileID: 1674199131}
-  - {fileID: 1674199130}
-  - {fileID: 1674199129}
-  - {fileID: 1674199128}
-  - {fileID: 1674199127}
-  - {fileID: 1674199126}
-  - {fileID: 1674199125}
-  - {fileID: 1674199124}
-  - {fileID: 1674199123}
-  - {fileID: 1674199122}
-  - {fileID: 1674199121}
-  - {fileID: 1674199120}
-  - {fileID: 1674199119}
-  - {fileID: 1674199118}
-  - {fileID: 1674199117}
-  - {fileID: 1674199116}
-  - {fileID: 1674199115}
-  - {fileID: 1674199114}
-  - {fileID: 1674199113}
-  - {fileID: 1674199112}
-  - {fileID: 1674199111}
-  - {fileID: 1674199110}
-  - {fileID: 1674199109}
-  - {fileID: 1674199108}
-  - {fileID: 1674199107}
-  - {fileID: 1674199106}
-  - {fileID: 1674199105}
-  - {fileID: 1674199104}
-  - {fileID: 1674199103}
-  - {fileID: 1674199102}
-  - {fileID: 1674199101}
-  - {fileID: 1674199100}
-  - {fileID: 1674199099}
-  - {fileID: 1674199098}
-  - {fileID: 1674199097}
-  - {fileID: 1674199096}
-  - {fileID: 1674199095}
-  - {fileID: 1674199094}
-  - {fileID: 1674199093}
-  - {fileID: 1674199092}
-  - {fileID: 1674199091}
-  - {fileID: 1674199090}
-  - {fileID: 1674199089}
-  - {fileID: 1674199088}
-  - {fileID: 1674199087}
-  - {fileID: 1674199086}
-  - {fileID: 1674199085}
-  - {fileID: 1674199084}
-  - {fileID: 1674199083}
-  - {fileID: 1674199082}
-  - {fileID: 1674199081}
-  onFoundModels:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1027063282}
-        m_TargetAssemblyTypeName: VzDev.RackComponentSetter, VzDev
-        m_MethodName: SetModels
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  targetModelsParent: {fileID: 1674199079}
-  searchType: 0
-  isIncludeInactive: 1
-  enumComponentType: 1
---- !u!4 &1804119020
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804119018}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1027063283}
-  m_Father: {fileID: 1413159993}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804119021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804119018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d51d4674bb6b6f4a95cdfa1ac08ce60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.Frameworks.LifecycleUtils.LifecycleInstance
-  onAwakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onStartEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1804119019}
         m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelFinder, VzDev
         m_MethodName: FindModelsByKeywords
         m_Mode: 1
@@ -6245,6 +7025,8 @@ SceneRoots:
   - {fileID: 1546420969}
   - {fileID: 1413159993}
   - {fileID: 1797371252}
-  - {fileID: 507804320}
-  - {fileID: 910229028}
   - {fileID: 1439158750}
+  - {fileID: 910229028}
+  - {fileID: 1479704931}
+  - {fileID: 904730392}
+  - {fileID: 711245154}

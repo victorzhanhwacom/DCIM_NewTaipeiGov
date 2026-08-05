@@ -1,0 +1,835 @@
+{
+  "catalog_version": "1.0.0",
+  "last_updated": "2026-06-16",
+  "description": "DCIM 配置管理設備目錄 - 包含 Server、Switch、Router 常用型號規格",
+  "vendors": {
+    "Dell": {
+      "vendor_full_name": "Dell Technologies",
+      "website": "https://www.dell.com",
+      "devices": {
+        "Server": [
+          {
+            "model": "PowerEdge R250",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 9.9,
+            "max_power_watts": 350,
+            "typical_power_watts": 150,
+            "cpu_sockets": 1,
+            "max_ram_gb": 64,
+            "description": "入門級單路機架式伺服器"
+          },
+          {
+            "model": "PowerEdge R350",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 12.5,
+            "max_power_watts": 600,
+            "typical_power_watts": 200,
+            "cpu_sockets": 1,
+            "max_ram_gb": 128,
+            "description": "中階單路機架式伺服器"
+          },
+          {
+            "model": "PowerEdge R450",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 18.6,
+            "max_power_watts": 800,
+            "typical_power_watts": 300,
+            "cpu_sockets": 2,
+            "max_ram_gb": 1024,
+            "description": "雙路 1U 機架式伺服器，適合密集運算"
+          },
+          {
+            "model": "PowerEdge R550",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 23.1,
+            "max_power_watts": 1100,
+            "typical_power_watts": 400,
+            "cpu_sockets": 2,
+            "max_ram_gb": 2048,
+            "description": "雙路 2U 機架式伺服器，高擴充性"
+          },
+          {
+            "model": "PowerEdge R650",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 19.4,
+            "max_power_watts": 1400,
+            "typical_power_watts": 500,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "高效能雙路 1U 伺服器，支援 PCIe Gen4"
+          },
+          {
+            "model": "PowerEdge R750",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 28.6,
+            "max_power_watts": 1400,
+            "typical_power_watts": 550,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "主流雙路 2U 通用型伺服器"
+          },
+          {
+            "model": "PowerEdge R750xa",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 30.8,
+            "max_power_watts": 2400,
+            "typical_power_watts": 900,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "GPU 加速型 2U 伺服器，支援 4x GPU"
+          },
+          {
+            "model": "PowerEdge R860",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 35.2,
+            "max_power_watts": 2800,
+            "typical_power_watts": 1000,
+            "cpu_sockets": 4,
+            "max_ram_gb": 12288,
+            "description": "四路 2U 高效能運算伺服器"
+          },
+          {
+            "model": "PowerEdge R960",
+            "category": "Server",
+            "form_factor": "3U Rack",
+            "height_u": 3,
+            "weight_kg": 48.5,
+            "max_power_watts": 3200,
+            "typical_power_watts": 1200,
+            "cpu_sockets": 4,
+            "max_ram_gb": 24576,
+            "description": "四路 3U 旗艦級伺服器，最大記憶體擴充"
+          }
+        ],
+        "Switch": [
+          {
+            "model": "PowerSwitch S5248F-ON",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 7.5,
+            "max_power_watts": 260,
+            "typical_power_watts": 120,
+            "port_count": 48,
+            "port_speed": "25GbE",
+            "uplink_ports": "6x 100GbE QSFP28",
+            "switching_capacity_tbps": 3.6,
+            "description": "ToR 25GbE 接入層交換機"
+          },
+          {
+            "model": "PowerSwitch S5296F-ON",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 8.2,
+            "max_power_watts": 300,
+            "typical_power_watts": 140,
+            "port_count": 96,
+            "port_speed": "25GbE",
+            "uplink_ports": "8x 100GbE QSFP28",
+            "switching_capacity_tbps": 6.4,
+            "description": "高密度 25GbE ToR 交換機"
+          },
+          {
+            "model": "PowerSwitch Z9264F-ON",
+            "category": "Switch",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 16.5,
+            "max_power_watts": 750,
+            "typical_power_watts": 400,
+            "port_count": 64,
+            "port_speed": "100GbE",
+            "uplink_ports": "2x 400GbE QSFP-DD",
+            "switching_capacity_tbps": 12.8,
+            "description": "核心/匯聚層 100GbE 交換機"
+          }
+        ]
+      }
+    },
+    "HPE": {
+      "vendor_full_name": "Hewlett Packard Enterprise",
+      "website": "https://www.hpe.com",
+      "devices": {
+        "Server": [
+          {
+            "model": "ProLiant DL20 Gen10 Plus",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 7.8,
+            "max_power_watts": 290,
+            "typical_power_watts": 120,
+            "cpu_sockets": 1,
+            "max_ram_gb": 64,
+            "description": "輕量入門級 1U 單路伺服器"
+          },
+          {
+            "model": "ProLiant DL360 Gen10 Plus",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 17.3,
+            "max_power_watts": 800,
+            "typical_power_watts": 300,
+            "cpu_sockets": 2,
+            "max_ram_gb": 3072,
+            "description": "高密度雙路 1U 通用型伺服器"
+          },
+          {
+            "model": "ProLiant DL380 Gen10 Plus",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 29.5,
+            "max_power_watts": 1000,
+            "typical_power_watts": 420,
+            "cpu_sockets": 2,
+            "max_ram_gb": 3072,
+            "description": "主流雙路 2U 通用伺服器，市佔率極高"
+          },
+          {
+            "model": "ProLiant DL385 Gen10 Plus v2",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 28.9,
+            "max_power_watts": 1000,
+            "typical_power_watts": 400,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "AMD EPYC 雙路 2U 高效能伺服器"
+          },
+          {
+            "model": "ProLiant DL560 Gen10",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 40.0,
+            "max_power_watts": 2000,
+            "typical_power_watts": 800,
+            "cpu_sockets": 4,
+            "max_ram_gb": 6144,
+            "description": "四路 2U 高效能運算平台"
+          },
+          {
+            "model": "ProLiant DL580 Gen10",
+            "category": "Server",
+            "form_factor": "4U Rack",
+            "height_u": 4,
+            "weight_kg": 62.5,
+            "max_power_watts": 4000,
+            "typical_power_watts": 1500,
+            "cpu_sockets": 4,
+            "max_ram_gb": 12288,
+            "description": "旗艦四路 4U 記憶體密集型伺服器"
+          }
+        ],
+        "Switch": [
+          {
+            "model": "Aruba 6300M 24SFP+",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 4.6,
+            "max_power_watts": 150,
+            "typical_power_watts": 60,
+            "port_count": 24,
+            "port_speed": "10GbE SFP+",
+            "uplink_ports": "4x 25GbE SFP28",
+            "switching_capacity_tbps": 0.56,
+            "description": "企業接入層 10GbE 交換機"
+          },
+          {
+            "model": "Aruba 6400 6-slot",
+            "category": "Switch",
+            "form_factor": "7U Rack",
+            "height_u": 7,
+            "weight_kg": 38.5,
+            "max_power_watts": 2400,
+            "typical_power_watts": 900,
+            "port_count": 384,
+            "port_speed": "10GbE",
+            "uplink_ports": "6x 100GbE",
+            "switching_capacity_tbps": 25.6,
+            "description": "模組化核心匯聚層交換機"
+          },
+          {
+            "model": "Aruba CX 8360-48XT4C",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 11.2,
+            "max_power_watts": 480,
+            "typical_power_watts": 200,
+            "port_count": 48,
+            "port_speed": "10GbE",
+            "uplink_ports": "4x 100GbE QSFP28",
+            "switching_capacity_tbps": 1.76,
+            "description": "高效能接入/匯聚層交換機，支援 VSX"
+          }
+        ]
+      }
+    },
+    "Cisco": {
+      "vendor_full_name": "Cisco Systems",
+      "website": "https://www.cisco.com",
+      "devices": {
+        "Server": [
+          {
+            "model": "UCS C220 M6",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 17.2,
+            "max_power_watts": 1050,
+            "typical_power_watts": 380,
+            "cpu_sockets": 2,
+            "max_ram_gb": 3072,
+            "description": "UCS 系列雙路 1U 通用型伺服器"
+          },
+          {
+            "model": "UCS C240 M6",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 31.5,
+            "max_power_watts": 1600,
+            "typical_power_watts": 600,
+            "cpu_sockets": 2,
+            "max_ram_gb": 6144,
+            "description": "UCS 系列雙路 2U 儲存/運算型伺服器"
+          },
+          {
+            "model": "UCS C480 M5",
+            "category": "Server",
+            "form_factor": "4U Rack",
+            "height_u": 4,
+            "weight_kg": 78.0,
+            "max_power_watts": 3200,
+            "typical_power_watts": 1400,
+            "cpu_sockets": 4,
+            "max_ram_gb": 6144,
+            "description": "UCS 系列四路 4U 高效能 AI/ML 伺服器"
+          }
+        ],
+        "Switch": [
+          {
+            "model": "Nexus 93180YC-FX",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 9.0,
+            "max_power_watts": 400,
+            "typical_power_watts": 180,
+            "port_count": 48,
+            "port_speed": "25GbE SFP28",
+            "uplink_ports": "6x 100GbE QSFP28",
+            "switching_capacity_tbps": 3.6,
+            "description": "資料中心 ToR 25GbE 接入層交換機"
+          },
+          {
+            "model": "Nexus 9336C-FX2",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 12.0,
+            "max_power_watts": 650,
+            "typical_power_watts": 280,
+            "port_count": 36,
+            "port_speed": "100GbE QSFP28",
+            "uplink_ports": "Native 100GbE",
+            "switching_capacity_tbps": 7.2,
+            "description": "資料中心 Spine/匯聚層 100GbE 交換機"
+          },
+          {
+            "model": "Nexus 9364C-GX",
+            "category": "Switch",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 24.0,
+            "max_power_watts": 1200,
+            "typical_power_watts": 600,
+            "port_count": 64,
+            "port_speed": "400GbE QSFP-DD",
+            "uplink_ports": "Native 400GbE",
+            "switching_capacity_tbps": 51.2,
+            "description": "超大規模 Spine 層 400GbE 核心交換機"
+          },
+          {
+            "model": "Nexus 9500 (N9K-C9508)",
+            "category": "Switch",
+            "form_factor": "13U Rack",
+            "height_u": 13,
+            "weight_kg": 109.0,
+            "max_power_watts": 6000,
+            "typical_power_watts": 2500,
+            "port_count": 384,
+            "port_speed": "100GbE",
+            "uplink_ports": "8-slot modular chassis",
+            "switching_capacity_tbps": 92.16,
+            "description": "模組化核心交換機，8 槽 Chassis 平台"
+          }
+        ],
+        "Router": [
+          {
+            "model": "ASR 1001-X",
+            "category": "Router",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 7.2,
+            "max_power_watts": 250,
+            "typical_power_watts": 100,
+            "max_throughput_gbps": 20,
+            "wan_ports": "6x GbE / 2x SFP+",
+            "description": "企業/DC 邊界路由器，集成硬體加速"
+          },
+          {
+            "model": "ASR 1002-HX",
+            "category": "Router",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 15.0,
+            "max_power_watts": 400,
+            "typical_power_watts": 180,
+            "max_throughput_gbps": 100,
+            "wan_ports": "4x 10GbE SFP+",
+            "description": "高效能固定型路由器，適合 DC 出口"
+          },
+          {
+            "model": "ASR 9001",
+            "category": "Router",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 23.0,
+            "max_power_watts": 850,
+            "typical_power_watts": 400,
+            "max_throughput_gbps": 440,
+            "wan_ports": "支援多種線卡組合",
+            "description": "電信/DC 核心邊界路由器"
+          },
+          {
+            "model": "ASR 9006",
+            "category": "Router",
+            "form_factor": "7U Rack",
+            "height_u": 7,
+            "weight_kg": 86.0,
+            "max_power_watts": 3800,
+            "typical_power_watts": 1600,
+            "max_throughput_gbps": 6400,
+            "wan_ports": "6-slot modular chassis",
+            "description": "模組化核心路由器，6 槽 Chassis"
+          }
+        ]
+      }
+    },
+    "Juniper": {
+      "vendor_full_name": "Juniper Networks",
+      "website": "https://www.juniper.net",
+      "devices": {
+        "Switch": [
+          {
+            "model": "EX4300-48P",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 7.5,
+            "max_power_watts": 1000,
+            "typical_power_watts": 180,
+            "port_count": 48,
+            "port_speed": "1GbE PoE+",
+            "uplink_ports": "4x 40GbE QSFP+",
+            "switching_capacity_tbps": 0.176,
+            "description": "企業 PoE+ 接入層交換機"
+          },
+          {
+            "model": "QFX5120-48Y",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 10.8,
+            "max_power_watts": 550,
+            "typical_power_watts": 220,
+            "port_count": 48,
+            "port_speed": "25GbE SFP28",
+            "uplink_ports": "8x 100GbE QSFP28",
+            "switching_capacity_tbps": 4.8,
+            "description": "資料中心 ToR 25GbE 接入層交換機"
+          },
+          {
+            "model": "QFX5200-32C",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 13.5,
+            "max_power_watts": 620,
+            "typical_power_watts": 280,
+            "port_count": 32,
+            "port_speed": "100GbE QSFP28",
+            "uplink_ports": "Native 100GbE",
+            "switching_capacity_tbps": 6.4,
+            "description": "資料中心 Spine 層 100GbE 交換機"
+          },
+          {
+            "model": "QFX10002-36Q",
+            "category": "Switch",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 19.0,
+            "max_power_watts": 1200,
+            "typical_power_watts": 500,
+            "port_count": 36,
+            "port_speed": "40GbE QSFP+",
+            "uplink_ports": "可升級至 100GbE",
+            "switching_capacity_tbps": 2.88,
+            "description": "DC Spine/核心層高效能交換機"
+          }
+        ],
+        "Router": [
+          {
+            "model": "SRX300",
+            "category": "Router",
+            "form_factor": "Desktop/1U",
+            "height_u": 1,
+            "weight_kg": 2.3,
+            "max_power_watts": 40,
+            "typical_power_watts": 20,
+            "max_throughput_gbps": 1,
+            "wan_ports": "8x GbE",
+            "description": "小型分支機構防火牆/路由器"
+          },
+          {
+            "model": "SRX4600",
+            "category": "Router",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 21.0,
+            "max_power_watts": 850,
+            "typical_power_watts": 350,
+            "max_throughput_gbps": 100,
+            "wan_ports": "4x 100GbE QSFP28",
+            "description": "DC 邊界防火牆/路由器，高效能 IPSec"
+          },
+          {
+            "model": "MX204",
+            "category": "Router",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 11.7,
+            "max_power_watts": 500,
+            "typical_power_watts": 220,
+            "max_throughput_gbps": 400,
+            "wan_ports": "4x 100GbE QSFP28 + 8x 10GbE SFP+",
+            "description": "固定型核心路由器，Trio 晶片組"
+          },
+          {
+            "model": "MX480",
+            "category": "Router",
+            "form_factor": "7U Rack",
+            "height_u": 7,
+            "weight_kg": 82.0,
+            "max_power_watts": 4000,
+            "typical_power_watts": 1800,
+            "max_throughput_gbps": 11800,
+            "wan_ports": "8-slot modular chassis",
+            "description": "電信/DC 核心路由器，8 槽模組化平台"
+          }
+        ]
+      }
+    },
+    "Arista": {
+      "vendor_full_name": "Arista Networks",
+      "website": "https://www.arista.com",
+      "devices": {
+        "Switch": [
+          {
+            "model": "7050CX3-32S",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 9.5,
+            "max_power_watts": 480,
+            "typical_power_watts": 200,
+            "port_count": 32,
+            "port_speed": "100GbE QSFP28",
+            "uplink_ports": "2x 100GbE QSFP28",
+            "switching_capacity_tbps": 6.4,
+            "description": "低延遲 Spine 層 100GbE 交換機，金融/HPC 常用"
+          },
+          {
+            "model": "7060CX2-32S",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 12.3,
+            "max_power_watts": 700,
+            "typical_power_watts": 300,
+            "port_count": 32,
+            "port_speed": "100GbE QSFP28",
+            "uplink_ports": "2x 100GbE QSFP28",
+            "switching_capacity_tbps": 6.4,
+            "description": "資料中心 Spine/ToR 100GbE 交換機"
+          },
+          {
+            "model": "7280CR3-96",
+            "category": "Switch",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 22.0,
+            "max_power_watts": 1100,
+            "typical_power_watts": 500,
+            "port_count": 96,
+            "port_speed": "100GbE QSFP28",
+            "uplink_ports": "8x 400GbE QSFP-DD",
+            "switching_capacity_tbps": 28.8,
+            "description": "超高密度 DC Spine 交換機，支援深度緩衝"
+          },
+          {
+            "model": "7800R3 (8-slot)",
+            "category": "Switch",
+            "form_factor": "14U Rack",
+            "height_u": 14,
+            "weight_kg": 136.0,
+            "max_power_watts": 8000,
+            "typical_power_watts": 3500,
+            "port_count": 576,
+            "port_speed": "400GbE",
+            "uplink_ports": "8-slot modular chassis",
+            "switching_capacity_tbps": 230.4,
+            "description": "超大規模核心模組化交換機平台"
+          }
+        ],
+        "Router": [
+          {
+            "model": "7500R3 (4-slot)",
+            "category": "Router",
+            "form_factor": "7U Rack",
+            "height_u": 7,
+            "weight_kg": 72.0,
+            "max_power_watts": 4000,
+            "typical_power_watts": 1800,
+            "max_throughput_gbps": 3200,
+            "wan_ports": "4-slot modular chassis",
+            "description": "模組化路由器/核心交換機，支援 MPLS/BGP"
+          }
+        ]
+      }
+    },
+    "Lenovo": {
+      "vendor_full_name": "Lenovo Infrastructure Solutions Group",
+      "website": "https://www.lenovo.com/servers",
+      "devices": {
+        "Server": [
+          {
+            "model": "ThinkSystem SR250 V3",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 10.0,
+            "max_power_watts": 450,
+            "typical_power_watts": 150,
+            "cpu_sockets": 1,
+            "max_ram_gb": 128,
+            "description": "入門單路 1U 機架伺服器"
+          },
+          {
+            "model": "ThinkSystem SR630 V3",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 18.2,
+            "max_power_watts": 1800,
+            "typical_power_watts": 500,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "雙路 1U 高密度通用型伺服器"
+          },
+          {
+            "model": "ThinkSystem SR650 V3",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 29.8,
+            "max_power_watts": 1800,
+            "typical_power_watts": 600,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "雙路 2U 通用伺服器，高儲存擴充能力"
+          },
+          {
+            "model": "ThinkSystem SR850 V3",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 41.0,
+            "max_power_watts": 3000,
+            "typical_power_watts": 1100,
+            "cpu_sockets": 4,
+            "max_ram_gb": 24576,
+            "description": "四路 2U 高效能運算伺服器"
+          },
+          {
+            "model": "ThinkSystem SR950 V3",
+            "category": "Server",
+            "form_factor": "4U Rack",
+            "height_u": 4,
+            "weight_kg": 68.0,
+            "max_power_watts": 4000,
+            "typical_power_watts": 1600,
+            "cpu_sockets": 8,
+            "max_ram_gb": 24576,
+            "description": "八路 4U 旗艦伺服器，SAP HANA 認證"
+          }
+        ]
+      }
+    },
+    "Supermicro": {
+      "vendor_full_name": "Super Micro Computer",
+      "website": "https://www.supermicro.com",
+      "devices": {
+        "Server": [
+          {
+            "model": "SuperServer 1029P-WTR",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 15.9,
+            "max_power_watts": 750,
+            "typical_power_watts": 280,
+            "cpu_sockets": 2,
+            "max_ram_gb": 1536,
+            "description": "雙路 1U 高密度伺服器，高 CP 值"
+          },
+          {
+            "model": "SuperServer 2029P-C1RT",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 25.4,
+            "max_power_watts": 1200,
+            "typical_power_watts": 450,
+            "cpu_sockets": 2,
+            "max_ram_gb": 3072,
+            "description": "雙路 2U 高效能儲存伺服器"
+          },
+          {
+            "model": "SuperServer 4029GP-TRT2",
+            "category": "Server",
+            "form_factor": "4U Rack",
+            "height_u": 4,
+            "weight_kg": 48.0,
+            "max_power_watts": 3000,
+            "typical_power_watts": 1500,
+            "cpu_sockets": 2,
+            "max_ram_gb": 3072,
+            "description": "GPU 密集型 4U 伺服器，支援 10x GPU"
+          },
+          {
+            "model": "AS-4124GS-TNR (A+ AMD)",
+            "category": "Server",
+            "form_factor": "4U Rack",
+            "height_u": 4,
+            "weight_kg": 44.0,
+            "max_power_watts": 3000,
+            "typical_power_watts": 1200,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "AMD EPYC GPU 伺服器，8x PCIe GPU 插槽"
+          }
+        ]
+      }
+    },
+    "H3C": {
+      "vendor_full_name": "H3C Technologies (新華三)",
+      "website": "https://www.h3c.com",
+      "devices": {
+        "Server": [
+          {
+            "model": "UniServer R4300 G5",
+            "category": "Server",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 16.5,
+            "max_power_watts": 800,
+            "typical_power_watts": 300,
+            "cpu_sockets": 2,
+            "max_ram_gb": 2048,
+            "description": "雙路 1U 通用型伺服器，亞洲市場主流"
+          },
+          {
+            "model": "UniServer R4900 G5",
+            "category": "Server",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 28.0,
+            "max_power_watts": 1600,
+            "typical_power_watts": 550,
+            "cpu_sockets": 2,
+            "max_ram_gb": 4096,
+            "description": "雙路 2U 主力伺服器"
+          }
+        ],
+        "Switch": [
+          {
+            "model": "S6800-54QT",
+            "category": "Switch",
+            "form_factor": "1U Rack",
+            "height_u": 1,
+            "weight_kg": 9.8,
+            "max_power_watts": 350,
+            "typical_power_watts": 150,
+            "port_count": 48,
+            "port_speed": "10GbE SFP+",
+            "uplink_ports": "6x 40GbE QSFP+",
+            "switching_capacity_tbps": 1.44,
+            "description": "DC ToR 10GbE 接入層交換機"
+          },
+          {
+            "model": "S12500X-AF",
+            "category": "Switch",
+            "form_factor": "10U Rack",
+            "height_u": 10,
+            "weight_kg": 95.0,
+            "max_power_watts": 5000,
+            "typical_power_watts": 2000,
+            "port_count": 256,
+            "port_speed": "100GbE",
+            "uplink_ports": "Modular chassis",
+            "switching_capacity_tbps": 51.2,
+            "description": "大型核心交換機，模組化 Chassis 平台"
+          }
+        ],
+        "Router": [
+          {
+            "model": "MSR3600-28-X1",
+            "category": "Router",
+            "form_factor": "2U Rack",
+            "height_u": 2,
+            "weight_kg": 12.0,
+            "max_power_watts": 300,
+            "typical_power_watts": 120,
+            "max_throughput_gbps": 10,
+            "wan_ports": "4x GbE + 可擴充模組",
+            "description": "企業/DC 出口路由器，支援 MPLS VPN"
+          }
+        ]
+      }
+    }
+  }
+}
