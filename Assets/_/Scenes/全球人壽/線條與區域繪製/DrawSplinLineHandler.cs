@@ -28,7 +28,6 @@ namespace VzDev.DrawUtils
 
         // 每兩個 Knot 之間固定分配這麼多段，跟總 Knot 數無關，只在 EvaluatePosition 模式下才有意義
         [Foldout("[Settings]"), SerializeField, ShowIf("isEvaluateMode")] private int segmentsPerKnotSpan = 20;
-        [Foldout("[Settings]"), SerializeField] private Material lineMaterial;
         [Foldout("[Settings]"), SerializeField] private float lineWidth = 0.02f;
         private bool isDrawing => lineRenderer.positionCount > 0;
         public bool isSplineEmpty => splineContainer.Spline.Count == 0;
@@ -53,7 +52,6 @@ namespace VzDev.DrawUtils
             lineRenderer.loop = isClosed;
             lineRenderer.startWidth = lineWidth;
             lineRenderer.endWidth = lineWidth;
-            lineRenderer.material = lineMaterial;
         }
 
         /// <summary>
@@ -118,15 +116,6 @@ namespace VzDev.DrawUtils
             }
         }
 
-        public void UpdateLineMaterial(Material newMaterial)
-        {
-            lineMaterial = newMaterial;
-            if (isDrawing)
-            {
-                lineRenderer.material = lineMaterial;
-            }
-        }
-
         private void OnValidate()
         {
             if (NullCheck())
@@ -138,7 +127,6 @@ namespace VzDev.DrawUtils
             if (isDrawing)
             {
                 UpdateLineWidth(lineWidth);
-                UpdateLineMaterial(lineMaterial);
             }
         }
 
