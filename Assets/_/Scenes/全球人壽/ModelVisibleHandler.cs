@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ModelVisibleHandler : MonoBehaviour
 {
-    [SerializeField, ReadOnly] private List<Transform> targetModels;
+    [SerializeField] private List<Transform> targetModels;
     private bool isHaveModels => targetModels != null && targetModels.Count > 0;
 
     public void SetTargetModels(List<Transform> models) => targetModels = models;
+    public void HideModels(List<Transform> models)
+    {
+        SetTargetModels(models);
+        SetVisible(false);
+    }
 
     [Button, ShowIf("isHaveModels")]
     public void ShowModels() => SetVisible(true);
@@ -26,4 +31,5 @@ public class ModelVisibleHandler : MonoBehaviour
             }
         }
     }
+
 }

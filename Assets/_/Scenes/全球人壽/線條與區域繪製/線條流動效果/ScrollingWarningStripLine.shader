@@ -4,6 +4,7 @@ Shader "VzDev/ScrollingWarningStrip"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _ScrollSpeed ("Scroll Speed", Float) = 1.0
+        [Enum(Forward,0,Reverse,1)] _Direction ("Flow Direction", Float) = 0
         [HDR]_Color ("Tint", Color) = (1,1,1,1)
     }
 
@@ -33,6 +34,7 @@ Shader "VzDev/ScrollingWarningStrip"
             CBUFFER_START(UnityPerMaterial)
                 float4 _MainTex_ST;
                 float _ScrollSpeed;
+                float _Direction;
                 float4 _Color;
             CBUFFER_END
 
@@ -61,7 +63,10 @@ Shader "VzDev/ScrollingWarningStrip"
 
             half4 frag(Varyings input) : SV_Target
             {
-                float2 scrolledUV = input.uv + float2(_Time.y * _ScrollSpeed, 0);
+                // _Direction: 0 = 正向, 1 = 反向。用 sign 轉成 +1/-1 乘上速度，
+                // 不用 if/branch，避免在 fragment 內產生分支開銷。
+                float directionSign = 1.0 - 2.0 * _Direction;
+                float2 scrolledUV = input.uv + float2(_Time.y * _ScrollSpeed * directionSign, 0);
                 half4 texColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, scrolledUV);
                 return texColor * _Color;
             }
