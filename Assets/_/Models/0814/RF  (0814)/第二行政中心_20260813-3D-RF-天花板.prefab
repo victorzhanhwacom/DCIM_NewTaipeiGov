@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8607451451082260029
 Transform:
   m_ObjectHideFlags: 0
@@ -118,11 +118,11 @@ Transform:
   m_GameObject: {fileID: 2880469882692870342}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 17.46009, y: 11.591593, z: -126.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7595419969219213976}
+  m_Father: {fileID: 4619853604372768239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3254694305437545161
 MeshFilter:
@@ -270,10 +270,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -4232815618869053782, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8607451451082260029}
-    - targetCorrespondingSourceObject: {fileID: 7797801090398808541, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6544434872681710245}
+    - targetCorrespondingSourceObject: {fileID: -4232815618869053782, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8607451451082260029}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -7817461759146588534, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
       insertIndex: -1
@@ -307,11 +307,6 @@ MonoBehaviour:
 --- !u!4 &4619853604372768239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4232815618869053782, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
-  m_PrefabInstance: {fileID: 387029186975880005}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7595419969219213976 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7797801090398808541, guid: 0424f07671c9dea4791ac0c4a414b864, type: 3}
   m_PrefabInstance: {fileID: 387029186975880005}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8766390262698830741 stripped
