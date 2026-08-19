@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-namespace _VictorDEV.DateTimeUtils
+namespace VzDev.DateTimeUtils
 {
     /// 依目前年份與日期，調整Options內容
     [RequireComponent(typeof(TMP_Dropdown))]

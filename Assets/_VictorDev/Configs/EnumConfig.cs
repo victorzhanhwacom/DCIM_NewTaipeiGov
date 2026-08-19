@@ -27,18 +27,6 @@ namespace VzDev.Configs
     }
     #endregion
     
-    #region 時間
-    public enum EnumTimeFormat
-    {
-        時分秒_12小時制, 時分秒_24小時制, 西元年月日, 星期, 星期_縮寫, 完整年月日時分秒_12小時制, 完整年月日時分秒_24小時制
-    }
-    
-    public enum EnumTime
-    {
-        時, 分, 秒
-    }
-    #endregion
-
     /// 搜尋類型
     public enum EnumSearchType
     {

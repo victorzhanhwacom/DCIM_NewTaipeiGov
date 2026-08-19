@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using VzDev.Configs;
-using _VictorDEV.DateTimeUtils;
+using VzDev.DateTimeUtils;
 using VzDev.Net.WebAPI;
 using JetBrains.Annotations;
 //using SFB;

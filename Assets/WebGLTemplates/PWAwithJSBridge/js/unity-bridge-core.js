@@ -37,8 +37,7 @@ function flushPendingMessages() {
 }
 
 // 送出訊息給 Unity端 ===============================
-const UnityObjName = "WebGLBridge";
-const UnityMethodName = "OnReceiveFromJS";
+
 /**
  * sendToUnity(數字string);
  * sendToUnityByCustom("WebGLBridge", "OnReceiveFromJS", 數字string);
@@ -72,12 +71,15 @@ const UnityMethodName = "OnReceiveFromJS";
  * sendToUnityByCustom("WebGLBridge_ModelToggleTag", "SetAcSystemToggleOff", deviceCode);
  */
 
+const UnityObjName = "WebGLBridge";
+const UnityMethodName = "ReceiveFromJS";
+
 /**
  * 送出訊息給預設的 Unity 物件/方法 (UnityObjName / UnityMethodName)。
  * @param {object|string} payload 任意物件(會自動 JSON.stringify)或字串
  */
-function sendToUnity(payload) {
-  sendToUnityByCustom(UnityObjName, UnityMethodName, payload);
+function SendToUnity(payload) {
+  SendToUnityByCustom(UnityObjName, UnityMethodName, payload);
 }
 
 /**
@@ -86,7 +88,7 @@ function sendToUnity(payload) {
  * @param {string} methodName 該物件上要呼叫的 public 方法
  * @param {object|string} payload 任意物件(會自動 JSON.stringify)或字串
  */
-function sendToUnityByCustom(gameObjectName, methodName, payload) {
+function SendToUnityByCustom(gameObjectName, methodName, payload) {
   if (typeof gameObjectName !== "string" || typeof methodName !== "string") {
     console.error("[UnityBridge] gameObjectName / methodName 必須是字串,實際收到:", gameObjectName, methodName);
     return;
