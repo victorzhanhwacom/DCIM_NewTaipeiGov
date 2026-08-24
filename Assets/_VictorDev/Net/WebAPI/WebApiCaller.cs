@@ -4,7 +4,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using VzDev.ApiExtensions;
 using VzDev.FileUtils;
-using Unity.VisualScripting;
 using UnityEngine;
 using VictorDev.Managers;
 using VzDev.UnityAPI.Extensions;
@@ -68,16 +67,16 @@ namespace VzDev.Net.WebAPI
                     // 依回傳資料型態進行資料處理
                     switch (FileHelper.GetResponseDataTypeFromHttpHeader(response.Content))
                     {
-                        case EnumResponseDataType.Json: // Json字串
+                        case (NetUtils.EnumResponseDataType)EnumResponseDataType.Json: // Json字串
                             responseContent = await response.Content.ReadAsStringAsync();
                             responseContent = responseContent.ToJsonFormat();
                             break;
-                        case EnumResponseDataType.Excel:
+                        case (NetUtils.EnumResponseDataType)EnumResponseDataType.Excel:
                             byte[] fileBytes = await response.Content.ReadAsByteArrayAsync();
                             string fileName = FileHelper.GetFileNameFromHttpHeader(response.Content);
                             //responseContent  = await FileHelper.SaveFileWithPopupWindow(fileBytes, fileName);
                             break;
-                        case EnumResponseDataType.Text:
+                        case (NetUtils.EnumResponseDataType)EnumResponseDataType.Text:
                             responseContent = await response.Content.ReadAsStringAsync();
                             break;
                     }
