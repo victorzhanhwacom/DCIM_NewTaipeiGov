@@ -2467,11 +2467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189801dd4df512f4dba893bc08f58ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.RackDcrAssetSetter
-  isRackClickable: 1
-  showList: 1
-  rackAssets: []
-  rackModels: []
-  equipmentModels: []
+  isRackSelectable: 1
+  isRackDeployable: 1
+  rackSlotColliderPrefab: {fileID: 3845085718563779649, guid: fac73dfd0c36ec04a869520fc38c400a, type: 3}
   rackDataModelBinders: []
 --- !u!4 &1010536244
 Transform:
@@ -3267,57 +3265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1 &1405289082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1405289084}
-  - component: {fileID: 1405289083}
-  m_Layer: 0
-  m_Name: PrefabInstantiater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1405289083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405289082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1550bf0a0ec6fb64fab8736f09312c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.PrefabInstantiater
-  visible: 1
-  targetModels: []
-  _instantiatedModels: []
-  OnPrefabsInstantiated:
-    m_PersistentCalls:
-      m_Calls: []
-  prefab: {fileID: 886080322853293104, guid: fac73dfd0c36ec04a869520fc38c400a, type: 3}
---- !u!4 &1405289084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405289082}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1797371252}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1413159992
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,8 +6118,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1405289084}
+  m_Children: []
   m_Father: {fileID: 910229028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1797371253
@@ -6199,18 +6145,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.RackDcrAssetSetter,
           VzDev
         m_MethodName: SetRackModels
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1405289083}
-        m_TargetAssemblyTypeName: VzDev.ObjectUtils.PrefabInstantiater, VzDev
-        m_MethodName: GeneratePrefabs
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6270,6 +6204,57 @@ MonoBehaviour:
   onUpdateEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1813889273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813889275}
+  - component: {fileID: 1813889274}
+  m_Layer: 0
+  m_Name: RackMountSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1813889274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813889273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eae7086adda68b41a0e0c84bf919553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.RackMountSlot
+  interiorCollider: {fileID: 0}
+  uHeight: 0.04445
+  totalU: 42
+  rackFrontIsPositiveZ: 1
+  debugEquipment: {fileID: 0}
+  debugStartU: 1
+  debugUSpan: 1
+--- !u!4 &1813889275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813889273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1854601288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,7 +6490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityPlayModeSaver::Framework.Utils.UnityPlayModeSaverSceneUtils
   _scenePrefabInstances:
   - _gameObject: {fileID: 1199053334}
-    _prefab: Packages/com.vz.dev/Runtime/Scripts/DCIMUtils/Deployment/EquipmentDeployColliderInRack.prefab
+    _prefab: Packages/com.vz.dev/Runtime/Scripts/DCIMUtils/Deployment/0822 New/RackSlotCollider.prefab
   - _gameObject: {fileID: 1509432225}
     _prefab: Packages/com.vz.dev/Runtime/Prefabs/_Templates/DCIM/Template-1/ComponentPanel.prefab
   - _gameObject: {fileID: 1509432224}
@@ -29969,6 +29954,7 @@ SceneRoots:
   - {fileID: 1413159993}
   - {fileID: 910229028}
   - {fileID: 1010536244}
+  - {fileID: 1813889275}
   - {fileID: 71024331}
   - {fileID: 1439158750}
   - {fileID: 1479704931}
