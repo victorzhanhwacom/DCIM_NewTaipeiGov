@@ -55,10 +55,10 @@ namespace VzDev.ImageUtils
         [Foldout("[設定]"), SerializeField, ShowIf(nameof(isLerpColor))]
         private List<ColorSet> colorLevels = new ()
         {
-            new ColorSet(0.4f, ColorHelper.HexToColor(0x7BFF69)),
-            new ColorSet(0.6f, ColorHelper.HexToColor(0xFFF532)),
-            new ColorSet(0.8f, ColorHelper.HexToColor(0xEF701A)),
-            new ColorSet(1f, ColorHelper.HexToColor(0x640000)),
+            new ColorSet(0.4f, ColorHelper_OLD.HexToColor(0x7BFF69)),
+            new ColorSet(0.6f, ColorHelper_OLD.HexToColor(0xFFF532)),
+            new ColorSet(0.8f, ColorHelper_OLD.HexToColor(0xEF701A)),
+            new ColorSet(1f, ColorHelper_OLD.HexToColor(0x640000)),
         };
         [Foldout("[設定]"), SerializeField] private Image imageFillTarget;
         [Foldout("[設定]"), SerializeField] private List<Graphic> doColorTargets;

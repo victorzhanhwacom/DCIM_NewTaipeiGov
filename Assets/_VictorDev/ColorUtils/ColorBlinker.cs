@@ -10,10 +10,10 @@ namespace VzDev.ColorUtils
         [SerializeField] private bool isBlinkOnAwake = true;
 
         [Header(">>>正常時顏色")]
-        [SerializeField] private Color normalColor = ColorHelper.HexToColor(0x74FF5A);
+        [SerializeField] private Color normalColor = ColorHelper_OLD.HexToColor(0x74FF5A);
 
         [Header(">>>告警時閃爍顏色")]
-        [SerializeField] public Color alarmColor1 = ColorHelper.HexToColor(0xFFAFAF);
+        [SerializeField] public Color alarmColor1 = ColorHelper_OLD.HexToColor(0xFFAFAF);
         [SerializeField] public Color alarmColor2 = Color.red;
 
         [Header(">>> 目標組件(Image/TextMeshProUGUI)，若null則抓本身的組件")]
@@ -49,7 +49,7 @@ namespace VzDev.ColorUtils
         public void ToBlink()
         {
             blink?.Kill();
-            blink = ColorHelper.ToBlink(target, alarmColor1, alarmColor2, duration, ease);
+            blink = ColorHelper_OLD.ToBlink(target, alarmColor1, alarmColor2, duration, ease);
         }
 
         [ContextMenu("ToNormal")]

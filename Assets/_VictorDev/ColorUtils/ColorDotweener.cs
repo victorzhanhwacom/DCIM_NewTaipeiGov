@@ -19,10 +19,10 @@ namespace VzDev.ColorUtils
         [Foldout("[設定by百分比]"), ReadOnly, SerializeField, ShowIf(nameof(isSetByPercentage01))] private float percentage01;
         [Foldout("[設定by百分比]"), SerializeField, ShowIf(nameof(isSetByPercentage01))] private List<ColorSet> colorSet = new ()
         {
-            new ColorSet(0.4f, ColorHelper.HexToColor(0x7BFF69)),
-            new ColorSet(0.6f, ColorHelper.HexToColor(0xFFF532)),
-            new ColorSet(0.8f, ColorHelper.HexToColor(0xEF701A)),
-            new ColorSet(1f, ColorHelper.HexToColor(0x640000)),
+            new ColorSet(0.4f, ColorHelper_OLD.HexToColor(0x7BFF69)),
+            new ColorSet(0.6f, ColorHelper_OLD.HexToColor(0xFFF532)),
+            new ColorSet(0.8f, ColorHelper_OLD.HexToColor(0xEF701A)),
+            new ColorSet(1f, ColorHelper_OLD.HexToColor(0x640000)),
         };
         [Foldout("[設定by百分比]"), SerializeField, ShowIf(nameof(isSetByPercentage01))] private float maxValue = 100;
         

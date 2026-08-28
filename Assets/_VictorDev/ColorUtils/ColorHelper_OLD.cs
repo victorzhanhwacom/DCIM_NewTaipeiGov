@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace VzDev.ColorUtils
 {
-    public class ColorHelper : SingletonMonoBehaviour<ColorHelper>
+    public class ColorHelper_OLD : SingletonMonoBehaviour<ColorHelper_OLD>
     {
         /// 將字串(16進制)轉成Color
         public static Color StringToColor(string colorString, Color? onFailed = null)
