@@ -335,6 +335,8 @@ GameObject:
   - component: {fileID: 107180373}
   - component: {fileID: 107180374}
   - component: {fileID: 107180375}
+  - component: {fileID: 107180377}
+  - component: {fileID: 107180376}
   m_Layer: 0
   m_Name: "\u5EAB\u5B58\u8A2D\u5099\u6E05\u55AE\u8207\u9078\u53D6"
   m_TagString: Untagged
@@ -444,6 +446,198 @@ MonoBehaviour:
       heightU: 0
     deploymentStatus: 0
     startUIndex: 0
+  selectedRackAsset:
+    deviceCode: 
+    deviceName: 
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 1
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    location: 
+    weight_kg: 0
+    power_watt_Max: 0
+    weight_kg_Max: 0
+    u_height_Max: 42
+    container: []
+    usageInfo:
+      <totalPowerWatt>k__BackingField: 0
+      <totalWeightKG>k__BackingField: 0
+      <totalHeightU>k__BackingField: 0
+      <remainPowerWatt>k__BackingField: 0
+      <remainWeightKG>k__BackingField: 0
+      <remainHeightU>k__BackingField: 0
+      <totalPowerPercent>k__BackingField: 0
+      <totalWeightPercent>k__BackingField: 0
+      <totalHeightUPercent>k__BackingField: 0
+      <remainPowerPercent>k__BackingField: 0
+      <remainWeightPercent>k__BackingField: 0
+      <remainHeightUPercent>k__BackingField: 0
+      emptyUSlots: []
+--- !u!114 &107180376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107180372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e169f39e973094b469ef730464885349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.DeployEquipmentIndicator
+  mainCamera: {fileID: 961739752}
+  placementHeight: 1.9
+  minRayDirectionY: 0.001
+  stagingBoundingBoxShader: {fileID: 4800000, guid: 1818b01bd155f8a4e9f5f8d725a05957, type: 3}
+  previewColor_Deployable: {r: 0, g: 1, b: 0, a: 1}
+  previewColor_NotDeployable: {r: 1, g: 0, b: 0, a: 1}
+  boundsPadding: 0.001
+  rackForwardIsPositiveZ: 0
+  deviceForwardIsPositiveZ: 0
+--- !u!114 &107180377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107180372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb2d17f74982d046ba630e9700e3815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.RackUSlotHoverDetector
+  mainCamera: {fileID: 961739752}
+  rackLayer:
+    serializedVersion: 2
+    m_Bits: 65536
+  maxRayDistance: 100
+  isDuplicate: 0
+  currentRackAsset:
+    deviceCode: 
+    deviceName: 
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 1
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    location: 
+    weight_kg: 0
+    power_watt_Max: 0
+    weight_kg_Max: 0
+    u_height_Max: 42
+    container: []
+    usageInfo:
+      <totalPowerWatt>k__BackingField: 0
+      <totalWeightKG>k__BackingField: 0
+      <totalHeightU>k__BackingField: 0
+      <remainPowerWatt>k__BackingField: 0
+      <remainWeightKG>k__BackingField: 0
+      <remainHeightU>k__BackingField: 0
+      <totalPowerPercent>k__BackingField: 0
+      <totalWeightPercent>k__BackingField: 0
+      <totalHeightUPercent>k__BackingField: 0
+      <remainPowerPercent>k__BackingField: 0
+      <remainWeightPercent>k__BackingField: 0
+      <remainHeightUPercent>k__BackingField: 0
+      emptyUSlots: []
+  currentUIndex: -1
   selectedRackAsset:
     deviceCode: 
     deviceName: 
