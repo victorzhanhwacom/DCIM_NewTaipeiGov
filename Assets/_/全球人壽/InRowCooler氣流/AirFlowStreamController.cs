@@ -2,7 +2,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using DG.Tweening;
 
-namespace VzDev.RenderingUtils.AirFlow
+namespace VzDev.ColorUtils.AirFlow
 {
     /// <summary>
     /// 掛載於「獨立氣流路徑物件」——從 InRowCooler 機身延伸出去的一段 Mesh，
