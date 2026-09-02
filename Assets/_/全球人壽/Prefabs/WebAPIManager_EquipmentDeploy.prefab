@@ -1,0 +1,370 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1016885290014411343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432623680979060258}
+  - component: {fileID: 3767468883714976585}
+  - component: {fileID: 5463735609024760088}
+  m_Layer: 0
+  m_Name: "ModelFinder_\u6A5F\u6AC3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432623680979060258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016885290014411343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6284800456071729526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3767468883714976585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016885290014411343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c118502b03c9fcc45b18414452f9bb5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.ModelFinder
+  logEnabled: 0
+  keywords:
+  - DCR
+  keyModels: []
+  foundModels: []
+  onFoundModels:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.RackDcrAssetSetter,
+          VzDev
+        m_MethodName: SetRackModels
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  targetModelsParent: {fileID: 0}
+  searchType: 0
+  isIncludeInactive: 1
+  enumComponentType: 1
+--- !u!114 &5463735609024760088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016885290014411343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d51d4674bb6b6f4a95cdfa1ac08ce60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.Frameworks.LifecycleUtils.LifecycleInstance
+  onAwakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3767468883714976585}
+        m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelFinder, VzDev
+        m_MethodName: FindModelsByKeywords
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDisableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enableUpdateEvent: 0
+  onUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4032293065476785381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6284800456071729526}
+  - component: {fileID: 8618197732730153943}
+  - component: {fileID: 2891153929089077434}
+  m_Layer: 0
+  m_Name: WebAPIManager_EquipmentDeploy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6284800456071729526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032293065476785381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5432623680979060258}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8618197732730153943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032293065476785381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea4f43670181634db6e81f5b2b312d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.Deployment.WebAPIManager
+  forDemo:
+    jsonFileName_DCRList: "\u6A5F\u623F\u4E00data.json"
+    equipmentModels:
+    - {fileID: 921067537690184080, guid: f66631293b8d77b4f87a71c0d43b4968, type: 3}
+    - {fileID: 2421868058577942224, guid: b3dfef7cd400d12459430a29bed6ee00, type: 3}
+    - {fileID: 3467433026204020247, guid: b6ae2f8bbff2a8b4ea4b305cd1a23717, type: 3}
+    - {fileID: 4531249074230443571, guid: 1050970a442f40b4f87c5e173dea01a7, type: 3}
+    - {fileID: 6905363778656425398, guid: 30575cdf0ab691a47aa4a4d239520185, type: 3}
+    - {fileID: 2781396755465686506, guid: 54b0dd9b3e7ca86498bb66a130cf6ed0, type: 3}
+    - {fileID: 7670615808583597585, guid: eaf23abbf2bef144c90de0ecfe3fd65e, type: 3}
+    - {fileID: 6372764099772953862, guid: a5c13a753004e864997723e411d6e7fb, type: 3}
+    - {fileID: 6435324108533472853, guid: a5954eec4afe90a409a313335bce5898, type: 3}
+    - {fileID: 9032054337324764834, guid: 382e11b663a97ba40bec2269c4511490, type: 3}
+    - {fileID: 778716528624209340, guid: 6cc277489fb629149baa56d08ed80434, type: 3}
+    - {fileID: 8578087899239510788, guid: 283481e5d4cad084e87bd87199d3ba3d, type: 3}
+    - {fileID: 5898260745901379090, guid: 6e16c5e49c690004c8f9a89e87befe33, type: 3}
+    - {fileID: 5024209504337418643, guid: 04afc76e836376d46b39a9505cf44290, type: 3}
+    - {fileID: 2891576551307921578, guid: df6a916527c849644a29a6525e29dfc6, type: 3}
+    - {fileID: 2065417472996861529, guid: 8ce94a89136174b42afa42f0c35c150b, type: 3}
+    - {fileID: 8555003525228773496, guid: 91908451fa74be748b06b3d0c6f151b4, type: 3}
+    - {fileID: 2010767516546192750, guid: 568daff7f9142414e9f29df1ff66b0b9, type: 3}
+    - {fileID: 2729919253384410399, guid: b76a7f3c31867e24dba99b72d2fe6195, type: 3}
+    - {fileID: 204251218497857349, guid: e5de2f5c674c5a54780a00745e94ae65, type: 3}
+    - {fileID: 638262658492938920, guid: b77b3a4b07d98944f8f81ade37970c46, type: 3}
+    - {fileID: 6017810876922587889, guid: c47276617b611c649a5c0c25f905db24, type: 3}
+    - {fileID: 252925510194077318, guid: ff24c035674ed024db22c633b0187b45, type: 3}
+    - {fileID: 9157285670755304676, guid: 152e4ea800ddc0f42b8d8109dd27b70b, type: 3}
+    - {fileID: 6147181373944673454, guid: 8dc1a3c24dc7f4e4ab6086d32191f8aa, type: 3}
+    - {fileID: 6134805937383478186, guid: a1397c4038b69ce45a3f464f17138aae, type: 3}
+    - {fileID: 4337263712237461980, guid: e1dadd302300bc644bed3f1ccdac1fc6, type: 3}
+  forDemo_StockEquipment:
+    jsonFileName_StockEquipment: "\u5168\u7403\u4EBA\u58FD/\u5168\u7403\u4EBA\u58FD_\u8A2D\u5099\u578B\u865F\u6E05\u55AE.json"
+    stockEquipmentModels:
+    - {fileID: 9057448576950346061, guid: 573ea0b26c5fd7c4fbbdd229bb8755f6, type: 3}
+    - {fileID: 7429962065397633722, guid: 4b761c0b50b1e6841b120a28503fe12d, type: 3}
+    - {fileID: 4730393544910327156, guid: 8459a4367899d6c498e3943c7f083456, type: 3}
+    - {fileID: 7105348858461453304, guid: aafac485254e32d48a4f365be73a7cff, type: 3}
+    - {fileID: 158569767817148077, guid: 01973a22b00fef34ab27f4be8542b706, type: 3}
+    - {fileID: 5847214788058318877, guid: 93f7a7b8e1972854d96c4ce535a44366, type: 3}
+    - {fileID: 8322503092250584928, guid: 02bc7c0272dcd954b8334abd5c71ac51, type: 3}
+    - {fileID: 2262030689525145678, guid: 47efaece65abd484d9c9c5a7b182d91f, type: 3}
+    - {fileID: 4765844232044354673, guid: 619fe16447eeba14bb0b5a594b09affc, type: 3}
+    - {fileID: 5242076710811201277, guid: b64c0ab425c9b494eac2fcb17ba09b12, type: 3}
+    - {fileID: 6489114526648150208, guid: bfa927b24e968de49b45adffba61d4c8, type: 3}
+    - {fileID: 1085200643387317393, guid: 6c167c39526459746bbefbf01c4b7b77, type: 3}
+    - {fileID: 2293496942171202572, guid: 3f535d71d0ca6df4fa202ec660ce1cfc, type: 3}
+    - {fileID: 4712377536562704181, guid: e67ab0e94b15af64e9aeb6bd7955f36f, type: 3}
+    - {fileID: 2901903109605500814, guid: d573abe806e5e254ea9c3c06a9769713, type: 3}
+    - {fileID: 4704854454135002543, guid: 5052e2542b2ab2c44a4f2161a0881f8c, type: 3}
+    - {fileID: 700031265397517851, guid: 123957a2861f0a0489cd16c4016409ac, type: 3}
+    - {fileID: 8324741721832420848, guid: 84e98e1e9a5312f4498555d37cf11e3c, type: 3}
+    - {fileID: 2632141268162626124, guid: 5ca20a8982e3c924a96518248a6ecb3b, type: 3}
+    - {fileID: 3782657678110207213, guid: 97de657026425cc43ae320cb4c3a743e, type: 3}
+    - {fileID: 7454968002760360110, guid: 56465c3ebda9eca44bb5f1cb5fad453f, type: 3}
+    - {fileID: 8005163844167671688, guid: 52c8926647d32d74faa3ba9be18b9a88, type: 3}
+    - {fileID: 1062756580167052555, guid: 24e321eaa0b47e3429379abd6a72b3c5, type: 3}
+    - {fileID: 5204940771807549639, guid: 243cf978ebdab7a4d9d08641d56bd0f0, type: 3}
+    - {fileID: 5412877280101224492, guid: 53e2554b2b49884409b2a85df09fec99, type: 3}
+    - {fileID: 6462796047061720941, guid: fd0cece23bc9c5f4c8c0bfd6c3aaa512, type: 3}
+    - {fileID: 5610578382774124747, guid: b4014f3d6e6fd724c81be687ba6561be, type: 3}
+    - {fileID: 835480712813706134, guid: 9c0e353ae45c84c4c9b2dc84aca73913, type: 3}
+    - {fileID: 1560910743550380864, guid: c1531822ddbaab644bb9ef4a74f6ed71, type: 3}
+    - {fileID: 2170623404878409905, guid: fe03ff03fb0c04240bf216f6bef05e7a, type: 3}
+    - {fileID: 3181503256599354709, guid: 6dd50b0d5dffdf24d815d4544a547853, type: 3}
+    - {fileID: 48076849917082850, guid: 4fde7ed2adb8bd7408b8917470e3a688, type: 3}
+    - {fileID: 4615134695336479341, guid: c15fb67259c8b1c4d82eda4d980ece12, type: 3}
+    - {fileID: 8206251643188100361, guid: 9b626078bdf37034a918c9e83edf2992, type: 3}
+    - {fileID: 1593675960608471452, guid: 2c559848c02a13845848c8345b3489de, type: 3}
+    - {fileID: 7863025032289226516, guid: 52ca92e0fba790643b66dc8aa4e2a5bf, type: 3}
+    - {fileID: 349521120297395623, guid: b5b7c53cbbf937d49891f96b41432ee7, type: 3}
+    - {fileID: 7995388900317579287, guid: dc1837316f4210c448b9585410ded32b, type: 3}
+    - {fileID: 2701992326826320204, guid: 262f91faf1e0cee40a737451da5b0850, type: 3}
+    - {fileID: 4959348548705591146, guid: eefcb6f1d11ce1f4896032bf5b49986c, type: 3}
+    - {fileID: 7396014336353774148, guid: 6d5abf5e674145142884690e580cc039, type: 3}
+    - {fileID: 6435797360637673549, guid: 62486ffbfee0e804e968d9d01795e1bc, type: 3}
+    - {fileID: 906220825773465859, guid: a7830954fb850194d9201710c21e359e, type: 3}
+    - {fileID: 1165262044080852637, guid: 854d7b04de4af5f4db525ba7c0a10aa0, type: 3}
+    - {fileID: 5945873147288246320, guid: c7079d3902bfa7d4c8cbb15542e96757, type: 3}
+    - {fileID: 7224233330528038170, guid: 4070a0ab1133df74899fa1bb7e467a70, type: 3}
+    - {fileID: 7649165907588122757, guid: 6b61eee52b455e745b6b4daefa4fc511, type: 3}
+    - {fileID: 3646350450133555948, guid: 0511fecb43e1b9a438832fb3ecc94d92, type: 3}
+    - {fileID: 3986305420607699214, guid: 951cbd869863e5d448b116a7ed7a3bb3, type: 3}
+    - {fileID: 212296788843667999, guid: 7473618f2596cb448b1a3ec3e595d8a6, type: 3}
+    - {fileID: 8511036954774792728, guid: 162be4af0bed23b4eaa5907a3c0a90b6, type: 3}
+    - {fileID: 7805296977943379799, guid: d9bce0e9d659d6544b8fcecb5428b032, type: 3}
+    - {fileID: 4753827783097524851, guid: 86bca0afc417d1147b2ee909e04f19eb, type: 3}
+    - {fileID: 7246349796725396278, guid: 3f722ff7122e39840b8311cbd960196d, type: 3}
+    - {fileID: 8403222215537851686, guid: 3b446cc5a23417a4183d6a579b902103, type: 3}
+    - {fileID: 9188015069570559625, guid: 7eb26d3a0112b614abd146357165c971, type: 3}
+    - {fileID: 5045276076789750676, guid: e8563489ad23aca4986e984deb90bca5, type: 3}
+    - {fileID: 5799744992799808138, guid: a7eb6cbae809caa4bb144141b24ffb33, type: 3}
+    - {fileID: 6322847015513536884, guid: 1aa1309fb0238fe439f10f241e8541f8, type: 3}
+    - {fileID: 6047108960832007351, guid: 9e1b78d3e86e7e145a764781ed2a55f0, type: 3}
+    - {fileID: 7674313715064271138, guid: 7e75989b9b2e7a345a08ba5859ce5411, type: 3}
+    - {fileID: 6921399089956737056, guid: 3de1954b95f72e74e9e0f1d88f516ded, type: 3}
+    - {fileID: 642488572984810975, guid: 19cd2e3d06d50cd44aa9bd9d0df3dbc1, type: 3}
+    - {fileID: 4682865066618813868, guid: 882dcc5cea9708b46902b0986da9e6e1, type: 3}
+    - {fileID: 428960529632726253, guid: b7e1fdcd0f5ae6548a68f890b5c78790, type: 3}
+    - {fileID: 6170385780003276599, guid: c5f3e834d2468f847909b328b2c11882, type: 3}
+    - {fileID: 6882717996065948, guid: 2017212f0c36b14438729210897675e6, type: 3}
+    - {fileID: 683406960897166052, guid: 770aba77699028f4da8d2eeaa955beff, type: 3}
+    - {fileID: 275764587713189776, guid: 4e8b36bb632ccdd439b0465bb0b6b910, type: 3}
+    - {fileID: 1429400121310638218, guid: 2cfcf72665eaebd4c83f82f01725c9cd, type: 3}
+    - {fileID: 1474563706116198994, guid: c2041534fd6545346afc42130b118f5a, type: 3}
+    - {fileID: 2980085210303564820, guid: cd95bec885499c545b57dc0be6fc352c, type: 3}
+    - {fileID: 2290350070099367320, guid: a4d290fe47553824bb9c01b0c945952f, type: 3}
+    - {fileID: 4753160129017575914, guid: 3bb0934aa0a341749bff1079ccb35ff0, type: 3}
+    - {fileID: 4653071735576091906, guid: cd20f0d104d98a547bd6779ecc6ea68d, type: 3}
+    - {fileID: 8047349124006483387, guid: 7abbdb2fdba1e2a4584230c945a8d8b8, type: 3}
+    - {fileID: 1750821142687504357, guid: 62510737f4a336849a1c5cee91e4e680, type: 3}
+--- !u!114 &2891153929089077434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032293065476785381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d51d4674bb6b6f4a95cdfa1ac08ce60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.Frameworks.LifecycleUtils.LifecycleInstance
+  onAwakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8618197732730153943}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetRackListInformation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8618197732730153943}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetEquipmentAssetInStock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8618197732730153943}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.Deployment.WebAPIManager, VzDev
+        m_MethodName: GetEquipmentModels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8618197732730153943}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.WebAPIManager_EquipmentDeploy,
+          VzDev
+        m_MethodName: GetStockEquipmentList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8618197732730153943}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.WebAPIManager_EquipmentDeploy,
+          VzDev
+        m_MethodName: GetStockEquipmentModels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDisableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enableUpdateEvent: 0
+  onUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
