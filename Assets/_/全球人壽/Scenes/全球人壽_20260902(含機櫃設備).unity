@@ -377491,6 +377491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941838096}
   - component: {fileID: 1941838097}
+  - component: {fileID: 1941838098}
   m_Layer: 0
   m_Name: "\u901A\u77E5JS\u7AEFUnity\u5DF2\u521D\u59CB\u5316"
   m_TagString: Untagged
@@ -377531,7 +377532,7 @@ MonoBehaviour:
   onStartEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858075669}
+      - m_Target: {fileID: 1941838098}
         m_TargetAssemblyTypeName: VzDev.WebUtils.WebGLBridgeMediator, VzDev
         m_MethodName: SendValue
         m_Mode: 5
@@ -377559,6 +377560,48 @@ MonoBehaviour:
   onUpdateEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1941838098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941838095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699502167c01c3242adf5f3ef00393ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.WebUtils.WebGLBridgeMediator
+  receivedString: 
+  receivedInt: 0
+  receivedFloat: 0
+  receivedBool: 0
+  sendMessageString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 192136843}
+        m_TargetAssemblyTypeName: VzDev.WebUtils.WebGLBridge, VzDev
+        m_MethodName: SendToJS
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  sendMessageInt:
+    m_PersistentCalls:
+      m_Calls: []
+  sendMessageFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  sendMessageBool:
+    m_PersistentCalls:
+      m_Calls: []
+  sendDataType: 0
+  functionName: OnUnityReady
 --- !u!1 &1942462781
 GameObject:
   m_ObjectHideFlags: 0
