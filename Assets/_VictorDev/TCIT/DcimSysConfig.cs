@@ -8,7 +8,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using VzDev.UnityAPI.Extensions;
 
-namespace VzDev.DcimUtils.DCIM
+namespace VzDev.DCIMUtils.DCIM
 {
     /// DCIM App設定檔
     public class DcimSysConfig : SingletonMonoBehaviour<DcimSysConfig>
