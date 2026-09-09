@@ -119167,6 +119167,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7453558084594591048, guid: 864e9c90441e73b49bd902b15990faa5, type: 3}
   m_PrefabInstance: {fileID: 7216922313747950027}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &613067254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613067256}
+  - component: {fileID: 613067255}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &613067255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613067254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06a75c59c8d44d90fde5f0cec29cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LoaderUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadSuccessEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onFailedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumLoadPath: 0
+  fileName: TGL/TGL_StockEquipments.json
+--- !u!4 &613067256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613067254}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 524, y: 602.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &617625191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301826,6 +301881,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 453908854}
     m_Modifications:
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
+      propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onEnableEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -301855,7 +301914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -301874,12 +301933,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
+      propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetEquipmentModels
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
+      propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: GetStockEquipmentList
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
+      propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: GetStockEquipmentModels
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onEnableEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetStockEquipmentList
       objectReference: {fileID: 0}
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onEnableEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: GetStockEquipmentModels
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
+      propertyPath: onStartEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: VzDev.DCIMUtils.DeploymentUtils.WebAPIManager_EquipmentDeploy, VzDev
       objectReference: {fileID: 0}
     - target: {fileID: 2891153929089077434, guid: 41be45c0640c4bd41a8649ca135e9a59, type: 3}
       propertyPath: onEnableEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -448214,3 +448289,4 @@ SceneRoots:
   - {fileID: 1872931864}
   - {fileID: 573378567}
   - {fileID: 1939036584}
+  - {fileID: 613067256}
