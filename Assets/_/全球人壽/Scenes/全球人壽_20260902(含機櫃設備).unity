@@ -126643,6 +126643,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8112769136432940314, guid: 40f92aea937c94445af2bdf59c41d8e4, type: 3}
   m_PrefabInstance: {fileID: 645790242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &645790245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7415906411662590594, guid: 40f92aea937c94445af2bdf59c41d8e4, type: 3}
+  m_PrefabInstance: {fileID: 645790242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645790244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e169f39e973094b469ef730464885349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.DeployEquipmentIndicator
+--- !u!114 &645790247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2080965810190276391, guid: 40f92aea937c94445af2bdf59c41d8e4, type: 3}
+  m_PrefabInstance: {fileID: 645790242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645790244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd2123cc8a701d419e71825f20cee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.DeployToRackSelector
 --- !u!1 &648387260
 GameObject:
   m_ObjectHideFlags: 0
@@ -207903,6 +207925,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8914245681238426720, guid: 864e9c90441e73b49bd902b15990faa5, type: 3}
   m_PrefabInstance: {fileID: 7216922313747950027}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1039674637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1679620702770258716, guid: 62174c8870a08bc449bfdac416227f87, type: 3}
+  m_PrefabInstance: {fileID: 1922803840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922803845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d70c1d9360d1dc469118924d1f7d3c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.RackUsageFilter
 --- !u!4 &1040090537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 318214324887243596, guid: 864e9c90441e73b49bd902b15990faa5, type: 3}
@@ -230428,6 +230461,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125485735}
   m_CullTransparentMesh: 1
+--- !u!1 &1126209200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 516267291746245753, guid: b191af84fbe8ecc4ba55b32926c3f441, type: 3}
+  m_PrefabInstance: {fileID: 8779866705744901678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1127637703
 GameObject:
   m_ObjectHideFlags: 0
@@ -261434,7 +261472,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-  - systemMenu: 9
+  - systemMenu: 10
     onEvent:
       m_PersistentCalls:
         m_Calls:
@@ -262796,6 +262834,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7212145619231477795, guid: 7803edb9f86ba324e8288a164b4381a9, type: 3}
   m_PrefabInstance: {fileID: 1775814448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1315782452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8458905079406388613, guid: ed0a794cb8b464b489c06149da1b6a85, type: 3}
+  m_PrefabInstance: {fileID: 2794400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1fdc873ed7b34da39b53ef6d0e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DeploymentUtils.StockEquipmentList
 --- !u!4 &1316367586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8584472719357330481, guid: 864e9c90441e73b49bd902b15990faa5, type: 3}
@@ -402973,6 +403022,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1315782452}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.StockEquipmentList,
+          VzDev
+        m_MethodName: DeselectStockEquipmentItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1039674637}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.RackUsageFilter,
+          VzDev
+        m_MethodName: RecoverRackModelColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 645790247}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.DeployToRackSelector,
+          VzDev
+        m_MethodName: DeselectRackTarget_TEMP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 645790245}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.DeployEquipmentIndicator,
+          VzDev
+        m_MethodName: OnCancelDeployAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEnableEvent:
     m_PersistentCalls:
       m_Calls:
@@ -403003,7 +403104,68 @@ MonoBehaviour:
         m_CallState: 2
   onDisableEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039674637}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.DeploymentUtils.RackUsageFilter,
+          VzDev
+        m_MethodName: RecoverRackModelColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7706601338472348573}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1118896492}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1126209200}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1766195669}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDestroyEvent:
     m_PersistentCalls:
       m_Calls: []
