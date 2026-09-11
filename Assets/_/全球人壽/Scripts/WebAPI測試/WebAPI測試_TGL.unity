@@ -1,0 +1,846 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 2
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &217796277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217796279}
+  - component: {fileID: 217796278}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217796278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217796277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadResultEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706518887}
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_ConfigHandler, Assembly-CSharp
+        m_MethodName: ParseJson
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onFailedMsgEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumFilePath: 0
+  filePath: TGL\TGL_Config.json
+--- !u!4 &217796279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217796277}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1263134557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &305320506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305320507}
+  - component: {fileID: 305320508}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305320507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305320506}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722863280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305320508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305320506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadResultEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1533604646}
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_LoginUser, Assembly-CSharp
+        m_MethodName: ParseJson
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onFailedMsgEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumFilePath: 0
+  filePath: TGL\TGL_User.json
+--- !u!1 &530473186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530473187}
+  m_Layer: 0
+  m_Name: "\u5373\u6642\u8CC7\u8A0A - \u6EAB\u6FD5\u5EA6"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530473187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530473186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1897680976}
+  - {fileID: 1087436628}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &706518886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706518888}
+  - component: {fileID: 706518887}
+  m_Layer: 0
+  m_Name: TGL_Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &706518887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706518886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91bcf716f7586c44913f8a3debdd246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_ConfigParser
+  config:
+    <isDemo>k__BackingField: 0
+    <httpType>k__BackingField: http
+    <ip>k__BackingField: 10.0.34.192
+    <port>k__BackingField: 8001
+  ipConfig: {fileID: 11400000, guid: 33d205db505a86048a6ac645ff8b7e24, type: 2}
+--- !u!4 &706518888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706518886}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1263134557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &722863279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722863280}
+  m_Layer: 0
+  m_Name: "\u7528\u6236\u767B\u5165"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722863280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722863279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 305320507}
+  - {fileID: 1533604645}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &755239393
+GameObject:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755239395}
+  - component: {fileID: 755239394}
+  m_Layer: 0
+  m_Name: Prefab Indexer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &755239394
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755239393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a7c62fccbafd342991629222351294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityPlayModeSaver::Framework.Utils.UnityPlayModeSaverSceneUtils
+  _scenePrefabInstances: []
+--- !u!4 &755239395
+Transform:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755239393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1087436627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087436628}
+  - component: {fileID: 1087436629}
+  m_Layer: 0
+  m_Name: TGL_LoginUser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087436628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087436627}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 530473187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087436629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087436627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf9ce24a8de7a24aa6203ba31097896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_LoginUser
+  loginUserData:
+    <accessToken>k__BackingField: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGUzYWEyZC02ZDYzLTQ4YzYtOTg1NS04MzVhMDViODE1YjciLCJlbWFpbCI6ImNodW5nZGFyLnlhbmdAaHdhY29tLmNvbSIsImFjY291bnQiOiJhZG1pbiIsIm5hbWUiOiLns7vntbHnrqHnkIblk6EiLCJqdGkiOiIzMjlmYWI1OC1lNDhhLTQ0OGYtOTdhZC04OWM0Njc0ZjhkYTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTdXBlckFkbWluIiwibmJmIjoxNzg5MTA5NTI2LCJleHAiOjE3ODkxMzgzMjYsImlzcyI6IkRDSU06VEdMIiwiYXVkIjoiRENJTUNsaWVudHM6VEdMIn0.fOU6LVShgEe3f77qVm9qwKvd8I-h0TnIm9tlnXBCq8Y
+    <accessTokenExpiresAt>k__BackingField: 2026-09-11T14:52:06.6304491Z
+    <refreshToken>k__BackingField: Gs57MtpZY79iwL1q8qAjHxjF+nCK9gckeY0TDz8WyGVisBjY6Vko97gtPQ/WIpPEg9nFZbOS1EE4M4FCWRh3yA==
+    <refreshTokenExpiresAt>k__BackingField: 2026-09-18T06:52:06.4844977Z
+    <user>k__BackingField:
+      <userId>k__BackingField: ede3aa2d-6d63-48c6-9855-835a05b815b7
+      <account>k__BackingField: admin
+      <name>k__BackingField: "\u7CFB\u7D71\u7BA1\u7406\u54E1"
+      <isFirstLogin>k__BackingField: 0
+      <roles>k__BackingField:
+      - SuperAdmin
+      <permissions>k__BackingField:
+      - ACS:Create
+      - ACS:Delete
+      - ACS:Edit
+      - ACS:Query
+      - ACS:View
+      - Alarm:Ack
+      - Alarm:Config
+      - Alarm:Export
+      - Alarm:View
+      - Building:Create
+      - Building:Delete
+      - Building:Edit
+      - Building:View
+      - CCTV:Edit
+      - CCTV:View
+      - Chiller:Control
+      - Chiller:View
+      - DataSource:Manage
+      - Department:Create
+      - Department:Delete
+      - Department:Edit
+      - Doc:Create
+      - Doc:Delete
+      - Doc:Edit
+      - Doc:View
+      - Energy:Edit
+      - Energy:View
+      - ENV:View
+      - FAS:View
+      - HLM:Edit
+      - HLM:Export
+      - HLM:Query
+      - HLM:View
+      - ICT:Create
+      - ICT:Delete
+      - ICT:Edit
+      - ICT:Query
+      - ICT:View
+      - Notify:Create
+      - Notify:Delete
+      - Notify:Edit
+      - Notify:View
+      - Rack:Create
+      - Rack:Delete
+      - Rack:Edit
+      - Rack:Export
+      - Rack:Query
+      - Rack:View
+      - Role:Create
+      - Role:Delete
+      - Role:Edit
+      - Role:View
+      - Sys:Edit
+      - Sys:Export
+      - Sys:View
+      - User:Create
+      - User:Delete
+      - User:Edit
+      - User:Manage
+      - User:View
+      <deviceSystems>k__BackingField:
+      - <code>k__BackingField: EE
+        <name>k__BackingField: "\u96FB\u529B\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: HVAC
+        <name>k__BackingField: "\u7A7A\u8ABF\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: FS
+        <name>k__BackingField: "\u6D88\u9632\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: PS
+        <name>k__BackingField: "\u7D66\u6392\u6C34\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: WE
+        <name>k__BackingField: "\u5F31\u96FB\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCR
+        <name>k__BackingField: "\u6A5F\u6AC3\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCS
+        <name>k__BackingField: "\u4F3A\u670D\u5668\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCN
+        <name>k__BackingField: "\u7DB2\u901A\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCP
+        <name>k__BackingField: "\u6A5F\u623F\u96FB\u529B"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCE
+        <name>k__BackingField: "\u6A5F\u623F\u74B0\u63A7"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      <mustChangePassword>k__BackingField: 0
+    <step>k__BackingField: Captcha
+  webApiAuthorization: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+--- !u!1 &1263134556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1263134557}
+  m_Layer: 0
+  m_Name: "Config\u8A2D\u5B9A\u6A94"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1263134557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263134556}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 217796279}
+  - {fileID: 706518888}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1533604644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533604645}
+  - component: {fileID: 1533604646}
+  m_Layer: 0
+  m_Name: TGL_LoginUser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533604645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533604644}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722863280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533604646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533604644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf9ce24a8de7a24aa6203ba31097896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_LoginUser
+  loginUserData:
+    <accessToken>k__BackingField: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGUzYWEyZC02ZDYzLTQ4YzYtOTg1NS04MzVhMDViODE1YjciLCJlbWFpbCI6ImNodW5nZGFyLnlhbmdAaHdhY29tLmNvbSIsImFjY291bnQiOiJhZG1pbiIsIm5hbWUiOiLns7vntbHnrqHnkIblk6EiLCJqdGkiOiIzMjlmYWI1OC1lNDhhLTQ0OGYtOTdhZC04OWM0Njc0ZjhkYTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTdXBlckFkbWluIiwibmJmIjoxNzg5MTA5NTI2LCJleHAiOjE3ODkxMzgzMjYsImlzcyI6IkRDSU06VEdMIiwiYXVkIjoiRENJTUNsaWVudHM6VEdMIn0.fOU6LVShgEe3f77qVm9qwKvd8I-h0TnIm9tlnXBCq8Y
+    <accessTokenExpiresAt>k__BackingField: 2026-09-11T14:52:06.6304491Z
+    <refreshToken>k__BackingField: Gs57MtpZY79iwL1q8qAjHxjF+nCK9gckeY0TDz8WyGVisBjY6Vko97gtPQ/WIpPEg9nFZbOS1EE4M4FCWRh3yA==
+    <refreshTokenExpiresAt>k__BackingField: 2026-09-18T06:52:06.4844977Z
+    <user>k__BackingField:
+      <userId>k__BackingField: ede3aa2d-6d63-48c6-9855-835a05b815b7
+      <account>k__BackingField: admin
+      <name>k__BackingField: "\u7CFB\u7D71\u7BA1\u7406\u54E1"
+      <isFirstLogin>k__BackingField: 0
+      <roles>k__BackingField:
+      - SuperAdmin
+      <permissions>k__BackingField:
+      - ACS:Create
+      - ACS:Delete
+      - ACS:Edit
+      - ACS:Query
+      - ACS:View
+      - Alarm:Ack
+      - Alarm:Config
+      - Alarm:Export
+      - Alarm:View
+      - Building:Create
+      - Building:Delete
+      - Building:Edit
+      - Building:View
+      - CCTV:Edit
+      - CCTV:View
+      - Chiller:Control
+      - Chiller:View
+      - DataSource:Manage
+      - Department:Create
+      - Department:Delete
+      - Department:Edit
+      - Doc:Create
+      - Doc:Delete
+      - Doc:Edit
+      - Doc:View
+      - Energy:Edit
+      - Energy:View
+      - ENV:View
+      - FAS:View
+      - HLM:Edit
+      - HLM:Export
+      - HLM:Query
+      - HLM:View
+      - ICT:Create
+      - ICT:Delete
+      - ICT:Edit
+      - ICT:Query
+      - ICT:View
+      - Notify:Create
+      - Notify:Delete
+      - Notify:Edit
+      - Notify:View
+      - Rack:Create
+      - Rack:Delete
+      - Rack:Edit
+      - Rack:Export
+      - Rack:Query
+      - Rack:View
+      - Role:Create
+      - Role:Delete
+      - Role:Edit
+      - Role:View
+      - Sys:Edit
+      - Sys:Export
+      - Sys:View
+      - User:Create
+      - User:Delete
+      - User:Edit
+      - User:Manage
+      - User:View
+      <deviceSystems>k__BackingField:
+      - <code>k__BackingField: EE
+        <name>k__BackingField: "\u96FB\u529B\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: HVAC
+        <name>k__BackingField: "\u7A7A\u8ABF\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: FS
+        <name>k__BackingField: "\u6D88\u9632\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: PS
+        <name>k__BackingField: "\u7D66\u6392\u6C34\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: WE
+        <name>k__BackingField: "\u5F31\u96FB\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCR
+        <name>k__BackingField: "\u6A5F\u6AC3\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCS
+        <name>k__BackingField: "\u4F3A\u670D\u5668\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCN
+        <name>k__BackingField: "\u7DB2\u901A\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCP
+        <name>k__BackingField: "\u6A5F\u623F\u96FB\u529B"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCE
+        <name>k__BackingField: "\u6A5F\u623F\u74B0\u63A7"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      <mustChangePassword>k__BackingField: 0
+    <step>k__BackingField: Captcha
+  webApiAuthorization: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+--- !u!1 &1897680975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1897680976}
+  - component: {fileID: 1897680977}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1897680976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897680975}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 530473187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1897680977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897680975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadResultEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1087436629}
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_LoginUser, Assembly-CSharp
+        m_MethodName: ParseJson
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+  onFailedMsgEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumFilePath: 0
+  filePath: TGL\TGL_RTRH.json
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 755239395}
+  - {fileID: 1263134557}
+  - {fileID: 722863280}
+  - {fileID: 530473187}
