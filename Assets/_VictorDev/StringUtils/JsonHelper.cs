@@ -2,47 +2,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using VzDev.DebugUtils;
+using UnityEngine;
 
 namespace VzDev.StringUtils
 {
-    /// <summary>
-    /// JSON資料解析 (使用static)
-    /// <para>+ 不可被實例化</para>
-    /// </summary>
     public abstract class JsonHelper
     {
-        /// <summary>
-        /// 自訂的JSON解析操作，取消JsonConvert.DeserializeObject的操作而直接給string到變數上
-        /// <para> + 在變數上加上Tag  [JsonConverter(typeof(PageDataConverter))] </para>
-        /// </summary>
-        /* 範例
-           [Serializable]
-        public class DataPages
+        public static string GetJsonFromNode(string json, string nodeName)
         {
-            public int currentPageIndex;
-            public int totalPage;
-            [JsonConverter(typeof(JsonStringConverter))]
-            public string pageData; //此變數就不會被JsonConvert.DeserializeObject進行解析，而直接將原jsontString給此變數
-        }
-        */
-        public class CustomDeserializeConverter : JsonConverter
-        {
-            public override bool CanConvert(Type objectType)
+            try
             {
-                return objectType == typeof(string);
+                JObject root = JObject.Parse(json);
+                string result = root[nodeName]?.ToString();
+                return result;   
             }
-
-            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            catch (Exception ex)
             {
-                // 將當前 JSON 區段轉為字串
-                return JToken.ReadFrom(reader).ToString(Formatting.Indented);
-            }
-
-            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-            {
-                // 寫回 JSON 時保留原始格式
-                writer.WriteRawValue(value.ToString());
+                Debug.LogError($"JsonHelper.GetJsonFromNode() - Error: {ex.Message}");
+                return null;
             }
         }
 

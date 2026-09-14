@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c91bcf716f7586c44913f8a3debdd246, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_ConfigParser
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_Config
   config:
     <isDemo>k__BackingField: 0
     <httpType>k__BackingField: http
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 1087436628}
   - component: {fileID: 1087436629}
   m_Layer: 0
-  m_Name: TGL_LoginUser
+  m_Name: TGL_RtRhHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,126 +455,1343 @@ MonoBehaviour:
   m_GameObject: {fileID: 1087436627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf9ce24a8de7a24aa6203ba31097896, type: 3}
+  m_Script: {fileID: 11500000, guid: e73ee1886b286a244874d71d3df24d19, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_LoginUser
-  loginUserData:
-    <accessToken>k__BackingField: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGUzYWEyZC02ZDYzLTQ4YzYtOTg1NS04MzVhMDViODE1YjciLCJlbWFpbCI6ImNodW5nZGFyLnlhbmdAaHdhY29tLmNvbSIsImFjY291bnQiOiJhZG1pbiIsIm5hbWUiOiLns7vntbHnrqHnkIblk6EiLCJqdGkiOiIzMjlmYWI1OC1lNDhhLTQ0OGYtOTdhZC04OWM0Njc0ZjhkYTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTdXBlckFkbWluIiwibmJmIjoxNzg5MTA5NTI2LCJleHAiOjE3ODkxMzgzMjYsImlzcyI6IkRDSU06VEdMIiwiYXVkIjoiRENJTUNsaWVudHM6VEdMIn0.fOU6LVShgEe3f77qVm9qwKvd8I-h0TnIm9tlnXBCq8Y
-    <accessTokenExpiresAt>k__BackingField: 2026-09-11T14:52:06.6304491Z
-    <refreshToken>k__BackingField: Gs57MtpZY79iwL1q8qAjHxjF+nCK9gckeY0TDz8WyGVisBjY6Vko97gtPQ/WIpPEg9nFZbOS1EE4M4FCWRh3yA==
-    <refreshTokenExpiresAt>k__BackingField: 2026-09-18T06:52:06.4844977Z
-    <user>k__BackingField:
-      <userId>k__BackingField: ede3aa2d-6d63-48c6-9855-835a05b815b7
-      <account>k__BackingField: admin
-      <name>k__BackingField: "\u7CFB\u7D71\u7BA1\u7406\u54E1"
-      <isFirstLogin>k__BackingField: 0
-      <roles>k__BackingField:
-      - SuperAdmin
-      <permissions>k__BackingField:
-      - ACS:Create
-      - ACS:Delete
-      - ACS:Edit
-      - ACS:Query
-      - ACS:View
-      - Alarm:Ack
-      - Alarm:Config
-      - Alarm:Export
-      - Alarm:View
-      - Building:Create
-      - Building:Delete
-      - Building:Edit
-      - Building:View
-      - CCTV:Edit
-      - CCTV:View
-      - Chiller:Control
-      - Chiller:View
-      - DataSource:Manage
-      - Department:Create
-      - Department:Delete
-      - Department:Edit
-      - Doc:Create
-      - Doc:Delete
-      - Doc:Edit
-      - Doc:View
-      - Energy:Edit
-      - Energy:View
-      - ENV:View
-      - FAS:View
-      - HLM:Edit
-      - HLM:Export
-      - HLM:Query
-      - HLM:View
-      - ICT:Create
-      - ICT:Delete
-      - ICT:Edit
-      - ICT:Query
-      - ICT:View
-      - Notify:Create
-      - Notify:Delete
-      - Notify:Edit
-      - Notify:View
-      - Rack:Create
-      - Rack:Delete
-      - Rack:Edit
-      - Rack:Export
-      - Rack:Query
-      - Rack:View
-      - Role:Create
-      - Role:Delete
-      - Role:Edit
-      - Role:View
-      - Sys:Edit
-      - Sys:Export
-      - Sys:View
-      - User:Create
-      - User:Delete
-      - User:Edit
-      - User:Manage
-      - User:View
-      <deviceSystems>k__BackingField:
-      - <code>k__BackingField: EE
-        <name>k__BackingField: "\u96FB\u529B\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: HVAC
-        <name>k__BackingField: "\u7A7A\u8ABF\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: FS
-        <name>k__BackingField: "\u6D88\u9632\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: PS
-        <name>k__BackingField: "\u7D66\u6392\u6C34\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: WE
-        <name>k__BackingField: "\u5F31\u96FB\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: DCR
-        <name>k__BackingField: "\u6A5F\u6AC3\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: DCS
-        <name>k__BackingField: "\u4F3A\u670D\u5668\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: DCN
-        <name>k__BackingField: "\u7DB2\u901A\u7CFB\u7D71"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: DCP
-        <name>k__BackingField: "\u6A5F\u623F\u96FB\u529B"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      - <code>k__BackingField: DCE
-        <name>k__BackingField: "\u6A5F\u623F\u74B0\u63A7"
-        <canView>k__BackingField: 1
-        <canControl>k__BackingField: 1
-      <mustChangePassword>k__BackingField: 0
-    <step>k__BackingField: Captcha
-  webApiAuthorization: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_RtRhHandler
+  tgl_RtRhData:
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_001:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_001:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 45.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_002
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-2"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_002:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_002:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 49.8
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_003
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-3"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_003:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 44.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_003:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_004
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-4"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_004:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 40
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_004:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_005
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-5"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_005:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_005:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 49.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_006
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-6"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_006:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_006:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_007
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-7"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_007:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 47.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_007:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_008
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-8"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_008:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 42.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_008:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_009
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-9"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_009:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_009:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 45.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_010
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-10"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_010:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 40.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_010:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_011
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-11"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_011:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 49.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_011:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_012
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-12"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_012:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_012:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 44.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
+      <localTimestamp>k__BackingField: 2026-09-14T16:45:06
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  rtRhAssets:
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 24.9
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 45.7
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_002
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-2"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 24.1
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 49.8
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_003
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-3"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 24.7
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 44.7
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_004
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-4"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 23.1
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 40
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_005
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-5"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 22
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 49.5
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_006
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-6"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 23.1
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 41.9
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_007
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-7"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 23.2
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 47.9
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_008
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-8"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 24.5
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 42.2
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_009
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-9"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 23.5
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 45.5
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_010
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-10"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 24.2
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 40.4
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_011
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-11"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 22.3
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 49.2
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_012
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-12"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    timeStampData:
+      timeStamp: 
+    category: 5
+    system: 4
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rtTag:
+      title: "\u74B0\u5883\u6EAB\u5EA6"
+      value: 23.2
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
+    rhTag:
+      title: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      value: 44.4
+      localTimestamp: 2026-09-14 16:45:06
+      alert:
+        alertLevel: 0
+        message: 
+        severity: 
 --- !u!1 &1263134556
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +2037,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1087436629}
-        m_TargetAssemblyTypeName: VzDev.TGL.TGL_LoginUser, Assembly-CSharp
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_RtRhHandler, Assembly-CSharp
         m_MethodName: ParseJson
         m_Mode: 0
         m_Arguments:
@@ -830,7 +2047,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 1
   onFailedMsgEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -2,9 +2,8 @@ using System;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
-using VictorDev.Net;
-using VictorDev.Net.WebAPI;
 using VzDev.Frameworks;
+using VzDev.NetUtils;
 
 namespace VzDev.TGL
 {
