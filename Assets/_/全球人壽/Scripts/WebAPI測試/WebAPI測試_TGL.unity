@@ -414,6 +414,5442 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &946960562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946960563}
+  - component: {fileID: 946960564}
+  m_Layer: 0
+  m_Name: TGL_StockEquipmentHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946960563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946960562}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1734679690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &946960564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946960562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68029c83edba69741b1914f583e690e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_StockEquipmentHandler
+  tgl_StockEquipmentData:
+  - <modelName>k__BackingField: "Blockbox-Server-\u767D-1U"
+    <brand>k__BackingField: Blockbox
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 450
+    <weight>k__BackingField: 15
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: "Blockbox-Server-\u767D-2U"
+    <brand>k__BackingField: Blockbox
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 650
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: "Blockbox-Server-\u767D-3U"
+    <brand>k__BackingField: Blockbox
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 850
+    <weight>k__BackingField: 32
+    <heightU>k__BackingField: 3
+  - <modelName>k__BackingField: "Blockbox-Server-\u767D-4U"
+    <brand>k__BackingField: Blockbox
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1200
+    <weight>k__BackingField: 40
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: "Blockbox-Server-\u767D-6U"
+    <brand>k__BackingField: Blockbox
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1800
+    <weight>k__BackingField: 55
+    <heightU>k__BackingField: 6
+  - <modelName>k__BackingField: BlueCat-GEN4-2000-Server-1U
+    <brand>k__BackingField: BlueCat
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 250
+    <weight>k__BackingField: 12
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Brocade-G720-Switch-1U
+    <brand>k__BackingField: Brocade
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 250
+    <weight>k__BackingField: 9
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Cisco-Catalyst_8200-Router-1U
+    <brand>k__BackingField: Cisco
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 8
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: DELL-DD3300-Storage-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 24
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: DELL-Data_Domain_9400-Storage-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 750
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: DELL-PowerEdge_R430-Server-1U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 550
+    <weight>k__BackingField: 14
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: DELL-PowerStore_3200T-All-Flash_Storage-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 700
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: DELL-PowerStore_EXP-SAN-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 300
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: DELL-VxRail_V670F-Server-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Dell-EMC_MD1400-DAS-2U
+    <brand>k__BackingField: Dell EMC
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 500
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Dell-EMC_Unity_EXP-SAN-2U
+    <brand>k__BackingField: Dell EMC
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 24
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Dell-EMC_Unity_XT480F-SAN-2U
+    <brand>k__BackingField: Dell EMC
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 600
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: "Dell-PowerEdge\u7CFB\u5217-R650-Server-1U"
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 16
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: "Dell-PowerEdge\u7CFB\u5217-R740-Server-2U"
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 750
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: "Dell-PowerEdge\u7CFB\u5217-R750-Server-2U"
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 29
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: "Dell-PowerVault\u7CFB\u5217-MD2412-DAS-2U"
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 500
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Dell_-PowerEdge_R760-Server-2U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 29
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Entrust-nShield_HSM-Server-1U
+    <brand>k__BackingField: Entrust
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 60
+    <weight>k__BackingField: 7
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: HPE-DL360_G10-Server-1U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 500
+    <weight>k__BackingField: 16
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: HPE-DL380_G9-Server-2U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 750
+    <weight>k__BackingField: 27
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: HPE-DL380_G10-Server-2U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 29
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: HPE-DL380_G11-Server-2U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: HPE-DL380a_G12-Server-4U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 2200
+    <weight>k__BackingField: 45
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: IBM-7063-CR2-Server-1U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 700
+    <weight>k__BackingField: 20
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IBM-Power9_E950-Server-4U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1600
+    <weight>k__BackingField: 89
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: IBM-Power9_E1050-Server-4U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1800
+    <weight>k__BackingField: 80
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: IBM-Power_750_Express-Server-4U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1400
+    <weight>k__BackingField: 70
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: IBM-Power_S1022-Server-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 900
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM-Power_System_S814-Server-4U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 950
+    <weight>k__BackingField: 50
+    <heightU>k__BackingField: 4
+  - <modelName>k__BackingField: IBM-Power_System_S822-Server-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 900
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM-Power_System_S922-Server-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1200
+    <weight>k__BackingField: 32
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM-Storage_FlashSystem_7200-SAN-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 750
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM-Storage_FlashSystem_7300-SAN-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 800
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM-System_x3550_M4-Server-1U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 550
+    <weight>k__BackingField: 16
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IBM-TS4300_Tape_Library-Server-3U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 50
+    <heightU>k__BackingField: 3
+  - <modelName>k__BackingField: IBM-V5000 (AS400)-SAN-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 500
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: IBM System Storage  SAN Volume Controller-SAN-2U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 450
+    <weight>k__BackingField: 25
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: NetApp-AFF_C30-NAS-2U
+    <brand>k__BackingField: NetApp
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 700
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: NetApp-E2812-SAN-2U
+    <brand>k__BackingField: NetApp
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 500
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: NetApp-E2824-SAN-2U
+    <brand>k__BackingField: NetApp
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 550
+    <weight>k__BackingField: 28
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: ODA-X11-SL-Datasheet-Server-2U
+    <brand>k__BackingField: Oracle
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 900
+    <weight>k__BackingField: 30
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Pure_Storage_FlashArray_C50R4-SAN-3U
+    <brand>k__BackingField: Pure Storage
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 1200
+    <weight>k__BackingField: 35
+    <heightU>k__BackingField: 3
+  - <modelName>k__BackingField: QNAP-451Deu-NAS-1U
+    <brand>k__BackingField: QNAP
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 65
+    <weight>k__BackingField: 9
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: QNAP-TS-469U-SP-1U
+    <brand>k__BackingField: QNAP
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 90
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: QuantaGrid-D54U-Server-3U
+    <brand>k__BackingField: Quanta
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 2000
+    <weight>k__BackingField: 45
+    <heightU>k__BackingField: 3
+  - <modelName>k__BackingField: Synology-FS2500-NAS-1U
+    <brand>k__BackingField: Synology
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 250
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Synology-FS6400-NAS-2U
+    <brand>k__BackingField: Synology
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 18
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Synology-RackStation_RS4021xs+-NAS-3U
+    <brand>k__BackingField: Synology
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 24
+    <heightU>k__BackingField: 3
+  - <modelName>k__BackingField: Synology-RX1217RP-DAS-2U
+    <brand>k__BackingField: Synology
+    <system>k__BackingField: DCS
+    <power>k__BackingField: 300
+    <weight>k__BackingField: 20
+    <heightU>k__BackingField: 2
+  - <modelName>k__BackingField: Brocade-G620-Switch-1U
+    <brand>k__BackingField: Brocade
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 211
+    <weight>k__BackingField: 9.5
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Cisco-C9200-24T-Switch -1U
+    <brand>k__BackingField: Cisco
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 125
+    <weight>k__BackingField: 4
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Cisco-C9300-48T-Switch-1U
+    <brand>k__BackingField: Cisco
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 6.5
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Cisco-WS-C2960G-24TC-Switch-1U
+    <brand>k__BackingField: Cisco
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 50
+    <weight>k__BackingField: 4
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: DELL-DS-7710B-Switch-1U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: DELL-DS-7720B-Switch-1U
+    <brand>k__BackingField: Dell
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 250
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Dell-EMC_DS6510B-Switch-1U
+    <brand>k__BackingField: Dell EMC
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 9.5
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: F5-BIG-IP_i2600-ADC_Appliance-1U
+    <brand>k__BackingField: F5
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 180
+    <weight>k__BackingField: 11
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: F5-r2600-F5-ADC_Appliance-1U
+    <brand>k__BackingField: F5
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 180
+    <weight>k__BackingField: 11
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Forcepoint-V10000_G4R2-FW-1U
+    <brand>k__BackingField: Forcepoint
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 350
+    <weight>k__BackingField: 12
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: FortiGate-91G_Series-Firewall-1U
+    <brand>k__BackingField: Fortinet
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 60
+    <weight>k__BackingField: 4
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: FortiGate-FEX-511G-Router-1U
+    <brand>k__BackingField: Fortinet
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 150
+    <weight>k__BackingField: 8
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Fortinet-FortiGate 400F Series (FG-401F)-Firewall-1U
+    <brand>k__BackingField: Fortinet
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 190
+    <weight>k__BackingField: 9
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Fortinet-FortiGate_901G-Firewall-1U
+    <brand>k__BackingField: Fortinet
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 450
+    <weight>k__BackingField: 13
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: HPE-FlexFabric_5700-Switch-1U
+    <brand>k__BackingField: HPE
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 7
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IBM-2498_b24K_SAN-Switch-1U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 150
+    <weight>k__BackingField: 8
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IBM-8960-P64_SAN64B-7-Switch-1U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 250
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IBM-System_Storage_SAN48B-5-Switch-1U
+    <brand>k__BackingField: IBM
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 9.5
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: IXIA-Vision Edge 10S -NPB-1U
+    <brand>k__BackingField: IXIA
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 150
+    <weight>k__BackingField: 9
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Palo_Alto-PA-3420-firewall-1U
+    <brand>k__BackingField: Palo Alto
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 180
+    <weight>k__BackingField: 8
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: RJ45-UTP-24Panel-1U
+    <brand>k__BackingField: Generic
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 0
+    <weight>k__BackingField: 2
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: Trellix-EX_3600-FW-1U
+    <brand>k__BackingField: Trellix
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 200
+    <weight>k__BackingField: 10
+    <heightU>k__BackingField: 1
+  - <modelName>k__BackingField: WONDERFUL-24-Fiber_Patch_Panel-1U
+    <brand>k__BackingField: WONDERFUL
+    <system>k__BackingField: DCN
+    <power>k__BackingField: 0
+    <weight>k__BackingField: 2
+    <heightU>k__BackingField: 1
+  equipmentAssets:
+  - deviceCode: 
+    deviceName: "Blockbox-Server-\u767D-1U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Blockbox
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Blockbox-Server-\u767D-1U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 450
+      weight_kg: 15
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Blockbox-Server-\u767D-2U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Blockbox
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Blockbox-Server-\u767D-2U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 650
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Blockbox-Server-\u767D-3U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Blockbox
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Blockbox-Server-\u767D-3U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 850
+      weight_kg: 32
+      heightU: 3
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Blockbox-Server-\u767D-4U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Blockbox
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Blockbox-Server-\u767D-4U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1200
+      weight_kg: 40
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Blockbox-Server-\u767D-6U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Blockbox
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Blockbox-Server-\u767D-6U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1800
+      weight_kg: 55
+      heightU: 6
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: BlueCat-GEN4-2000-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: BlueCat
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: BlueCat-GEN4-2000-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 250
+      weight_kg: 12
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Brocade-G720-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Brocade
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Brocade-G720-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 250
+      weight_kg: 9
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Cisco-Catalyst_8200-Router-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Cisco
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Cisco-Catalyst_8200-Router-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 8
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-DD3300-Storage-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-DD3300-Storage-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 24
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-Data_Domain_9400-Storage-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-Data_Domain_9400-Storage-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 750
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-PowerEdge_R430-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-PowerEdge_R430-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 550
+      weight_kg: 14
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-PowerStore_3200T-All-Flash_Storage-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-PowerStore_3200T-All-Flash_Storage-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 700
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-PowerStore_EXP-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-PowerStore_EXP-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 300
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-VxRail_V670F-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-VxRail_V670F-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Dell-EMC_MD1400-DAS-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell EMC
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Dell-EMC_MD1400-DAS-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 500
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Dell-EMC_Unity_EXP-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell EMC
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Dell-EMC_Unity_EXP-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 24
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Dell-EMC_Unity_XT480F-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell EMC
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Dell-EMC_Unity_XT480F-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 600
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Dell-PowerEdge\u7CFB\u5217-R650-Server-1U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Dell-PowerEdge\u7CFB\u5217-R650-Server-1U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 16
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Dell-PowerEdge\u7CFB\u5217-R740-Server-2U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Dell-PowerEdge\u7CFB\u5217-R740-Server-2U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 750
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Dell-PowerEdge\u7CFB\u5217-R750-Server-2U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Dell-PowerEdge\u7CFB\u5217-R750-Server-2U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 29
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: "Dell-PowerVault\u7CFB\u5217-MD2412-DAS-2U"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: "Dell-PowerVault\u7CFB\u5217-MD2412-DAS-2U"
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 500
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Dell_-PowerEdge_R760-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Dell_-PowerEdge_R760-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 29
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Entrust-nShield_HSM-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Entrust
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Entrust-nShield_HSM-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 60
+      weight_kg: 7
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-DL360_G10-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-DL360_G10-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 500
+      weight_kg: 16
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-DL380_G9-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-DL380_G9-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 750
+      weight_kg: 27
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-DL380_G10-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-DL380_G10-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 29
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-DL380_G11-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-DL380_G11-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-DL380a_G12-Server-4U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-DL380a_G12-Server-4U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 2200
+      weight_kg: 45
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-7063-CR2-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-7063-CR2-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 700
+      weight_kg: 20
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power9_E950-Server-4U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power9_E950-Server-4U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1600
+      weight_kg: 89
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power9_E1050-Server-4U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power9_E1050-Server-4U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1800
+      weight_kg: 80
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power_750_Express-Server-4U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power_750_Express-Server-4U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1400
+      weight_kg: 70
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power_S1022-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power_S1022-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 900
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power_System_S814-Server-4U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power_System_S814-Server-4U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 950
+      weight_kg: 50
+      heightU: 4
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power_System_S822-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power_System_S822-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 900
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Power_System_S922-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Power_System_S922-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1200
+      weight_kg: 32
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Storage_FlashSystem_7200-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Storage_FlashSystem_7200-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 750
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-Storage_FlashSystem_7300-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-Storage_FlashSystem_7300-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 800
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-System_x3550_M4-Server-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-System_x3550_M4-Server-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 550
+      weight_kg: 16
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-TS4300_Tape_Library-Server-3U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-TS4300_Tape_Library-Server-3U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 50
+      heightU: 3
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-V5000 (AS400)-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-V5000 (AS400)-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 500
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM System Storage  SAN Volume Controller-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM System Storage  SAN Volume Controller-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 450
+      weight_kg: 25
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: NetApp-AFF_C30-NAS-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: NetApp
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: NetApp-AFF_C30-NAS-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 700
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: NetApp-E2812-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: NetApp
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: NetApp-E2812-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 500
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: NetApp-E2824-SAN-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: NetApp
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: NetApp-E2824-SAN-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 550
+      weight_kg: 28
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: ODA-X11-SL-Datasheet-Server-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Oracle
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: ODA-X11-SL-Datasheet-Server-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 900
+      weight_kg: 30
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Pure_Storage_FlashArray_C50R4-SAN-3U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Pure Storage
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Pure_Storage_FlashArray_C50R4-SAN-3U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 1200
+      weight_kg: 35
+      heightU: 3
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: QNAP-451Deu-NAS-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: QNAP
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: QNAP-451Deu-NAS-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 65
+      weight_kg: 9
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: QNAP-TS-469U-SP-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: QNAP
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: QNAP-TS-469U-SP-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 90
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: QuantaGrid-D54U-Server-3U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Quanta
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: QuantaGrid-D54U-Server-3U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 2000
+      weight_kg: 45
+      heightU: 3
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Synology-FS2500-NAS-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Synology
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Synology-FS2500-NAS-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 250
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Synology-FS6400-NAS-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Synology
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Synology-FS6400-NAS-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 18
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Synology-RackStation_RS4021xs+-NAS-3U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Synology
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Synology-RackStation_RS4021xs+-NAS-3U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 24
+      heightU: 3
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Synology-RX1217RP-DAS-2U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Synology
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Synology-RX1217RP-DAS-2U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 2
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 300
+      weight_kg: 20
+      heightU: 2
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Brocade-G620-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Brocade
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Brocade-G620-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 211
+      weight_kg: 9.5
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Cisco-C9200-24T-Switch -1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Cisco
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Cisco-C9200-24T-Switch -1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 125
+      weight_kg: 4
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Cisco-C9300-48T-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Cisco
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Cisco-C9300-48T-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 6.5
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Cisco-WS-C2960G-24TC-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Cisco
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Cisco-WS-C2960G-24TC-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 50
+      weight_kg: 4
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-DS-7710B-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-DS-7710B-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: DELL-DS-7720B-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: DELL-DS-7720B-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 250
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Dell-EMC_DS6510B-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Dell EMC
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Dell-EMC_DS6510B-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 9.5
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: F5-BIG-IP_i2600-ADC_Appliance-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: F5
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: F5-BIG-IP_i2600-ADC_Appliance-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 180
+      weight_kg: 11
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: F5-r2600-F5-ADC_Appliance-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: F5
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: F5-r2600-F5-ADC_Appliance-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 180
+      weight_kg: 11
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Forcepoint-V10000_G4R2-FW-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Forcepoint
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Forcepoint-V10000_G4R2-FW-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 350
+      weight_kg: 12
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: FortiGate-91G_Series-Firewall-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Fortinet
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: FortiGate-91G_Series-Firewall-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 60
+      weight_kg: 4
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: FortiGate-FEX-511G-Router-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Fortinet
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: FortiGate-FEX-511G-Router-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 150
+      weight_kg: 8
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Fortinet-FortiGate 400F Series (FG-401F)-Firewall-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Fortinet
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Fortinet-FortiGate 400F Series (FG-401F)-Firewall-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 190
+      weight_kg: 9
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Fortinet-FortiGate_901G-Firewall-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Fortinet
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Fortinet-FortiGate_901G-Firewall-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 450
+      weight_kg: 13
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: HPE-FlexFabric_5700-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: HPE
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: HPE-FlexFabric_5700-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 7
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-2498_b24K_SAN-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-2498_b24K_SAN-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 150
+      weight_kg: 8
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-8960-P64_SAN64B-7-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-8960-P64_SAN64B-7-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 250
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IBM-System_Storage_SAN48B-5-Switch-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IBM
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IBM-System_Storage_SAN48B-5-Switch-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 9.5
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: IXIA-Vision Edge 10S -NPB-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: IXIA
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: IXIA-Vision Edge 10S -NPB-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 150
+      weight_kg: 9
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Palo_Alto-PA-3420-firewall-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Palo Alto
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Palo_Alto-PA-3420-firewall-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 180
+      weight_kg: 8
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: RJ45-UTP-24Panel-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Generic
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: RJ45-UTP-24Panel-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 0
+      weight_kg: 2
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: Trellix-EX_3600-FW-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: Trellix
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: Trellix-EX_3600-FW-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 200
+      weight_kg: 10
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
+  - deviceCode: 
+    deviceName: WONDERFUL-24-Fiber_Patch_Panel-1U
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: WONDERFUL
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: WONDERFUL-24-Fiber_Patch_Panel-1U
+    timeStampData:
+      timeStamp: 
+    category: 0
+    system: 3
+    companyPropertyInfo:
+      propertyName: 
+      propertyNumber: 
+      note: 
+    rackDevicePath: 
+    equipmentUsageInfo:
+      power_watt: 0
+      weight_kg: 2
+      heightU: 1
+    deploymentStatus: 1
+    startUIndex: 0
 --- !u!1 &1087436627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +7261,73 @@ Transform:
   - {fileID: 706518888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1345079499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345079500}
+  - component: {fileID: 1345079501}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345079500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345079499}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1734679690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345079501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345079499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadResultEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946960564}
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_StockEquipmentHandler, Assembly-CSharp
+        m_MethodName: ParseJson
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onFailedMsgEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumFilePath: 0
+  filePath: TGL\TGL_StockEquipments.json
 --- !u!1 &1533604644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +7489,39 @@ MonoBehaviour:
       <mustChangePassword>k__BackingField: 0
     <step>k__BackingField: Captcha
   webApiAuthorization: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+--- !u!1 &1734679689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734679690}
+  m_Layer: 0
+  m_Name: "\u5EAB\u5B58\u8A2D\u5B9A"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734679690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734679689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1345079500}
+  - {fileID: 946960563}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897680975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,3 +7597,4 @@ SceneRoots:
   - {fileID: 1263134557}
   - {fileID: 722863280}
   - {fileID: 530473187}
+  - {fileID: 1734679690}
