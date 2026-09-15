@@ -5,27 +5,27 @@ using UnityEngine;
 using VzDev.Frameworks;
 using VzDev.NetUtils;
 
-namespace VzDev.TGL
+namespace VzDev
 {
     /// <summary>
     /// 全球人壽 登入用戶資料
     /// </summary>
-    public class TGL_LoginUser : SingletonMonoBehaviour<TGL_LoginUser>
+    public class WebApiData_LoginUserHandler : SingletonMonoBehaviour<WebApiData_LoginUserHandler>
     {
-        [SerializeField, ReadOnly] private TGL_LoginUserData loginUserData;
+        [SerializeField, ReadOnly] private WebApiData_LoginUserData loginUserData;
         [SerializeField, Expandable] private WebApiAuthorizationSO webApiAuthorization;
 
         public void ParseJson(string json)
         {
             loginUserData = default;
-            loginUserData = JsonConvert.DeserializeObject<TGL_LoginUserData>(json);
+            loginUserData = JsonConvert.DeserializeObject<WebApiData_LoginUserData>(json);
             webApiAuthorization?.SetToken("");
             webApiAuthorization?.SetToken(loginUserData.accessToken);
         }
     }
 
     [Serializable]
-    public struct TGL_LoginUserData
+    public struct WebApiData_LoginUserData
     {
         [JsonProperty]
         [field: SerializeField]

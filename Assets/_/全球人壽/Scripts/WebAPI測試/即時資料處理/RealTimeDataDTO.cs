@@ -1,55 +1,31 @@
 using System;
-using System.Linq;
 using System.Runtime.Serialization;
-using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
-using VzDev.DateTimeUtils;
 using VzDev.DCIMUtils.DataUtils;
-using VzDev.Frameworks;
-using VzDev.StringUtils;
 
-namespace VzDev.TGL
+namespace VzDev
 {
-    /// <summary>
-    /// 全球人壽 登入用戶資料
-    /// </summary>
-    public class TGL_RtRhHandler : SingletonMonoBehaviour<TGL_RtRhHandler>
-    {
-        [SerializeField] private TGL_RtRhDataDTO[] tgl_RtRhData;
-        [SerializeField] private RtRhAsset[] rtRhAssets;
-
-        public void ParseJson(string json)
-        {
-            tgl_RtRhData = new TGL_RtRhDataDTO[0];
-            rtRhAssets = new RtRhAsset[0];
-
-            json = JsonHelper.GetJsonFromNode(json, "devices");
-            tgl_RtRhData = JsonConvert.DeserializeObject<TGL_RtRhDataDTO[]>(json);
-            rtRhAssets = tgl_RtRhData.Select(data => data.ToRtRhAsset()).ToArray();
-        }
-    }
-
     [Serializable]
-    public struct TGL_RtRhDataDTO
+    public struct RealTimeDataDTO
     {
-        public RtRhAsset ToRtRhAsset()
+        /// <summary>
+        /// 將 WebAPI即時資料轉換成指定的RealtimeAsset
+        /// </summary>
+        public T ToAsset<T>() where T : RealtimeAsset, new()
         {
-            RtRhAsset.Tags rtTag = tags.FirstOrDefault(tag => tag.name == "dbt").ToRtRhTag();
-            RtRhAsset.Tags rhTag = tags.FirstOrDefault(tag => tag.name == "rh").ToRtRhTag();
-
-            RtRhAsset asset = new RtRhAsset()
+            T result = new T()
             {
                 deviceCode = deviceCode,
                 deviceName = deviceName,
                 system = Enum.TryParse<DCIM_System>(systemType, out var parsedSystem) ? parsedSystem : DCIM_System.Unknow,
-                category = Enum.TryParse<DCIM_Catetory>(deviceCategory.ToUpper(), out var parsedCategory) ? parsedCategory : DCIM_Catetory.Unknow,
-                rtTag = rtTag,
-                rhTag = rhTag
+                category = Enum.TryParse<DCIM_Category>(deviceCategory.ToUpper(), out var parsedCategory) ? parsedCategory : DCIM_Category.Unknow,
             };
-            return asset;
+            result.SetTags(tags);
+            return result;
         }
 
+        #region Fields
         [JsonProperty]
         [field: SerializeField]
         public string deviceCode { get; private set; }
@@ -62,34 +38,21 @@ namespace VzDev.TGL
         [JsonProperty]
         [field: SerializeField]
         public string deviceCategory { get; private set; }
-
         [JsonProperty]
         [field: SerializeField]
         public string deviceModel { get; private set; }
         [JsonProperty]
         [field: SerializeField]
         public Tags[] tags { get; private set; }
+        #endregion
 
         [Serializable]
         public struct Tags
         {
-            public RtRhAsset.Tags ToRtRhTag()
-            {
-                RtRhAsset.Tags result = new RtRhAsset.Tags()
-                {
-                    title = displayName,
-                    value = value,
-                    localTimestamp = localTimestamp.Replace("T", " "),
-                    alert = new RtRhAsset.Alert()
-                    {
-                        alertLevel = alertLevel,
-                        message = message,
-                        severity = severity
-                    }
-                };
-                return result;
-            }
+            [OnDeserialized]
+            private void OnDeserialized(StreamingContext context) => localTimestamp = localTimestamp.Replace("T", " ");
 
+            #region Fields
             [JsonProperty]
             [field: SerializeField]
             public string tagId { get; private set; }
@@ -98,7 +61,7 @@ namespace VzDev.TGL
             public string name { get; private set; }
             [JsonProperty]
             [field: SerializeField]
-            public float value { get; private set; }
+            public string value { get; private set; }
             [JsonProperty]
             [field: SerializeField]
             public string valueKind { get; private set; }
@@ -138,7 +101,7 @@ namespace VzDev.TGL
             [JsonProperty]
             [field: SerializeField]
             public string valueLabels { get; private set; }
+            #endregion
         }
-
     }
 }

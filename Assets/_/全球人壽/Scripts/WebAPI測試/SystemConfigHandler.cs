@@ -4,36 +4,36 @@ using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.Frameworks;
 using VzDev.NetUtils;
+using VzDev.StringUtils;
 
-namespace VzDev.TGL
+namespace VzDev
 {
     /// <summary>
-    /// 全球人壽 Config設定
+    /// 系統Config設定
     /// </summary>
-    public class TGL_Config : SingletonMonoBehaviour<TGL_Config>
+    public class SystemConfigHandler : SingletonMonoBehaviour<SystemConfigHandler>
     {
-        [SerializeField, ReadOnly] private TGL_ConfigData config;
+        [SerializeField, ReadOnly] private SystemConfig config;
         [SerializeField, Expandable] private IPConfigSO ipConfig;
 
         public void ParseJson(string json)
         {
             config = default;
-            config = JsonConvert.DeserializeObject<TGL_ConfigData>(json);
 
-            ipConfig?.SetConfig("", "", "");
+            json = JsonHelper.GetJsonFromNode(json, "system");
+            config = JsonConvert.DeserializeObject<SystemConfig>(json);
             ipConfig?.SetConfig(config.httpType, config.ip, config.port);
         }
-
-        public static bool IsDemo => Instance.config.isDemo == "1";
+     //   public static bool IsDemo = Instance.config.isDemo;
     }
 
     [Serializable]
-    public struct TGL_ConfigData
+    public struct SystemConfig
     {
         #region JsonProperty
         [JsonProperty]
         [field: SerializeField]
-        public string isDemo { get; private set; }
+        public bool isDemo { get; private set; }
         [JsonProperty]
         [field: SerializeField]
         public string httpType { get; private set; }
@@ -43,6 +43,9 @@ namespace VzDev.TGL
         [JsonProperty]
         [field: SerializeField]
         public string port { get; private set; }
+         [JsonProperty]
+        [field: SerializeField]
+        public string Surfix { get; private set; }
         #endregion
     }
 }
