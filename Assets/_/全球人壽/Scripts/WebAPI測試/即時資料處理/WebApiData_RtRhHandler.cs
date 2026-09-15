@@ -1,27 +1,33 @@
+using System;
 using System.Linq;
-using Newtonsoft.Json;
 using UnityEngine;
-using VzDev.Frameworks;
-using VzDev.StringUtils;
+using static VzDev.RealTimeDataDTO;
 
 namespace VzDev
 {
     /// <summary>
     /// 全球人壽 溫濕度資料
     /// </summary>
-    public class WebApiData_RtRhHandler : SingletonMonoBehaviour<WebApiData_RtRhHandler>
+    public class WebApiData_RtRhHandler : WebApiRealtimeDataHandlerBase<RealtimeAsset_RtRh>
     {
-        [SerializeField] private RealTimeDataDTO[] realTimeData;
-        [SerializeField] private RealtimeAsset_RtRh[] rtRhDatas;
+    }
 
-        public void ParseJson(string json)
+    /// <summary>
+    /// 從WebAPI轉換過來的即時資料格式(溫濕度)
+    /// </summary>
+    [Serializable]
+    public class RealtimeAsset_RtRh : RealtimeAsset
+    {
+        [field: SerializeField]
+        public Tags rtTag { get; private set; }
+        [field: SerializeField]
+        public Tags rhTag { get; private set; }
+
+        public override void SetTags(Tags[] tags)
         {
-            realTimeData = new RealTimeDataDTO[0];
-            rtRhDatas = new RealtimeAsset_RtRh[0];
-
-            json = JsonHelper.GetJsonFromNode(json, "devices");
-            realTimeData = JsonConvert.DeserializeObject<RealTimeDataDTO[]>(json);
-            rtRhDatas = realTimeData.Select(data => data.ToAsset<RealtimeAsset_RtRh>()).ToArray();
+            base.SetTags(tags);
+            rtTag = rawTags.FirstOrDefault(tag => tag.name == "dbt");
+            rhTag = rawTags.FirstOrDefault(tag => tag.name == "rh");
         }
     }
 }

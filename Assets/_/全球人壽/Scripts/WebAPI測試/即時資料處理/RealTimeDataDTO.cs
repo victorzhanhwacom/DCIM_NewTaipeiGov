@@ -7,7 +7,7 @@ using VzDev.DCIMUtils.DataUtils;
 namespace VzDev
 {
     [Serializable]
-    public struct RealTimeDataDTO
+    public class RealTimeDataDTO
     {
         /// <summary>
         /// 將 WebAPI即時資料轉換成指定的RealtimeAsset

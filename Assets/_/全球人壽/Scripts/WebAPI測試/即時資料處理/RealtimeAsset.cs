@@ -8,7 +8,7 @@ namespace VzDev
     /// <summary>
     /// For專案使用的資料格式(從WebAPI取得的即時資料轉換過來)
     /// </summary>
-    public abstract class RealtimeAsset : DCIMAsset
+    public class RealtimeAsset : DCIMAsset
     {
         protected Tags[] rawTags;
         public virtual void SetTags(Tags[] tags) => rawTags = tags;

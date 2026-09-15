@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27167902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27167904}
+  - component: {fileID: 27167903}
+  m_Layer: 0
+  m_Name: '[Singleton] - TaskManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &27167903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27167902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b081caddb960e449686a492f5dc27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VictorDev.Managers.TaskManager
+--- !u!4 &27167904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27167902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217796277
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +214,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enumFilePath: 0
-  filePath: TGL\TGL_Config.json
+  filePath: TGL\TGL_SystemConfig.json
 --- !u!4 &217796279
 Transform:
   m_ObjectHideFlags: 0
@@ -196,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295723020}
   m_Layer: 0
-  m_Name: "\u5373\u6642\u8CC7\u8A0A - \u6F0F\u6C34"
+  m_Name: "\u5373\u6642\u8CC7\u8A0A - \u6F0F\u6C34\u5E36"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &296131369
 Transform:
   m_ObjectHideFlags: 0
@@ -415,12 +459,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91bcf716f7586c44913f8a3debdd246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_Config
-  config:
-    <isDemo>k__BackingField: 1
-    <httpType>k__BackingField: http
-    <ip>k__BackingField: 10.0.34.192
-    <port>k__BackingField: 8001
-    <Surfix>k__BackingField: /api
+  systemConfig:
+    <system>k__BackingField:
+      <isDemo>k__BackingField: 1
+      <logEnabled>k__BackingField: 1
+      <buildingCode>k__BackingField: IDC
+    <webapi>k__BackingField:
+      <httpType>k__BackingField: 0
+      <ip>k__BackingField: 10.0.34.192
+      <port>k__BackingField: 8001
+      <surfix>k__BackingField: /api
   ipConfig: {fileID: 11400000, guid: 33d205db505a86048a6ac645ff8b7e24, type: 2}
 --- !u!4 &706518888
 Transform:
@@ -1175,7 +1223,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_1
-      assetNumber: NTCGO-51226398
+      assetNumber: NTCGO-38980758
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1237,7 +1285,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_10
-      assetNumber: NTCGO-31956842
+      assetNumber: NTCGO-16610576
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1299,7 +1347,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_2
-      assetNumber: NTCGO-37349824
+      assetNumber: NTCGO-13969545
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1361,7 +1409,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_3
-      assetNumber: NTCGO-19957668
+      assetNumber: NTCGO-06231221
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1423,7 +1471,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_4
-      assetNumber: NTCGO-00754410
+      assetNumber: NTCGO-90032185
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1485,7 +1533,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_5
-      assetNumber: NTCGO-30390665
+      assetNumber: NTCGO-62945468
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1547,7 +1595,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_6
-      assetNumber: NTCGO-20393229
+      assetNumber: NTCGO-50654949
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1609,7 +1657,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_7
-      assetNumber: NTCGO-47173160
+      assetNumber: NTCGO-81675394
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1671,7 +1719,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_8
-      assetNumber: NTCGO-06100417
+      assetNumber: NTCGO-20488442
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -1733,7 +1781,7 @@ MonoBehaviour:
     system: 3
     companyAssetInfo:
       assetName: Cisco-C9200-24T-Switch -1U_9
-      assetNumber: NTCGO-43662244
+      assetNumber: NTCGO-53908136
       note: 
     rackDevicePath: 
     equipmentUsageInfo:
@@ -4275,7 +4323,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73ee1886b286a244874d71d3df24d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_RtRhHandler
-  realTimeData:
+  onCallingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onErrorEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  webApiRequestSO: {fileID: 11400000, guid: b44a6e4980d0a3d44a4b67ab895c2494, type: 2}
+  rawData:
   - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
     <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
     <systemType>k__BackingField: DCE
@@ -4284,12 +4339,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_001:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.9
+      <value>k__BackingField: 24.5
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4300,12 +4355,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_001:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 45.7
+      <value>k__BackingField: 42.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4322,12 +4377,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_002:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.1
+      <value>k__BackingField: 22.4
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4338,12 +4393,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_002:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.8
+      <value>k__BackingField: 46.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4360,12 +4415,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_003:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 44.7
+      <value>k__BackingField: 46.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4380,8 +4435,8 @@ MonoBehaviour:
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4398,12 +4453,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_004:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 40
+      <value>k__BackingField: 46.6
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4414,12 +4469,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_004:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.1
+      <value>k__BackingField: 24.8
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4436,12 +4491,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_005:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 22
+      <value>k__BackingField: 23.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4452,12 +4507,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_005:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.5
+      <value>k__BackingField: 46
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4474,12 +4529,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_006:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.1
+      <value>k__BackingField: 24.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4490,12 +4545,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_006:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 41.9
+      <value>k__BackingField: 46.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4512,12 +4567,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_007:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 47.9
+      <value>k__BackingField: 42.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4528,12 +4583,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_007:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.2
+      <value>k__BackingField: 24.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4550,12 +4605,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_008:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 42.2
+      <value>k__BackingField: 48
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4566,12 +4621,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_008:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.5
+      <value>k__BackingField: 24.6
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4588,12 +4643,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_009:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.5
+      <value>k__BackingField: 23.8
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4604,12 +4659,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_009:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 45.5
+      <value>k__BackingField: 46.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4626,12 +4681,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_010:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 40.4
+      <value>k__BackingField: 44.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4642,12 +4697,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_010:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.2
+      <value>k__BackingField: 23.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4664,12 +4719,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_011:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.2
+      <value>k__BackingField: 47.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4680,12 +4735,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_011:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 22.3
+      <value>k__BackingField: 24.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4702,12 +4757,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <tagId>k__BackingField: 0100_ia_012:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.2
+      <value>k__BackingField: 22.2
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4718,12 +4773,12 @@ MonoBehaviour:
       <valueLabels>k__BackingField: 
     - <tagId>k__BackingField: 0100_ia_012:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 44.4
+      <value>k__BackingField: 47.2
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4732,7 +4787,7 @@ MonoBehaviour:
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: 
-  rtRhDatas:
+  assets:
   - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
     deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
     assetPhotoSprite: {fileID: 0}
@@ -4791,12 +4846,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_001:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.9
+      <value>k__BackingField: 24.5
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4808,12 +4863,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_001:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 45.7
+      <value>k__BackingField: 42.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4880,12 +4935,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_002:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.1
+      <value>k__BackingField: 22.4
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4897,12 +4952,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_002:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.8
+      <value>k__BackingField: 46.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4973,8 +5028,8 @@ MonoBehaviour:
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -4986,12 +5041,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_003:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 44.7
+      <value>k__BackingField: 46.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5058,12 +5113,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_004:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.1
+      <value>k__BackingField: 24.8
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5075,12 +5130,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_004:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 40
+      <value>k__BackingField: 46.6
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5147,12 +5202,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_005:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 22
+      <value>k__BackingField: 23.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5164,12 +5219,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_005:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.5
+      <value>k__BackingField: 46
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5236,12 +5291,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_006:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.1
+      <value>k__BackingField: 24.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5253,12 +5308,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_006:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 41.9
+      <value>k__BackingField: 46.1
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5325,12 +5380,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_007:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.2
+      <value>k__BackingField: 24.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5342,12 +5397,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_007:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 47.9
+      <value>k__BackingField: 42.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5414,12 +5469,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_008:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.5
+      <value>k__BackingField: 24.6
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5431,12 +5486,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_008:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 42.2
+      <value>k__BackingField: 48
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5503,12 +5558,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_009:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.5
+      <value>k__BackingField: 23.8
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5520,12 +5575,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_009:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 45.5
+      <value>k__BackingField: 46.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5592,12 +5647,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_010:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 24.2
+      <value>k__BackingField: 23.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5609,12 +5664,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_010:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 40.4
+      <value>k__BackingField: 44.7
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5681,12 +5736,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_011:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 22.3
+      <value>k__BackingField: 24.3
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5698,12 +5753,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_011:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 49.2
+      <value>k__BackingField: 47.9
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5770,12 +5825,12 @@ MonoBehaviour:
     <rtTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_012:dbt
       <name>k__BackingField: dbt
-      <value>k__BackingField: 23.2
+      <value>k__BackingField: 22.2
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: "\u2103"
       <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -5787,12 +5842,12 @@ MonoBehaviour:
     <rhTag>k__BackingField:
       <tagId>k__BackingField: 0100_ia_012:rh
       <name>k__BackingField: rh
-      <value>k__BackingField: 44.4
+      <value>k__BackingField: 47.2
       <valueKind>k__BackingField: Decimal
       <unit>k__BackingField: '%'
       <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
-      <timestamp>k__BackingField: 2026-09-14T08:45:06Z
-      <localTimestamp>k__BackingField: 2026-09-14 16:45:06
+      <timestamp>k__BackingField: 2026-09-15T10:01:47Z
+      <localTimestamp>k__BackingField: 2026-09-15 18:01:47
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -6111,7 +6166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1897680976
 Transform:
   m_ObjectHideFlags: 0
@@ -6172,3 +6227,4 @@ SceneRoots:
   - {fileID: 530473187}
   - {fileID: 295723020}
   - {fileID: 1734679690}
+  - {fileID: 27167904}

@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.Frameworks;
 using VzDev.NetUtils;
-using VzDev.StringUtils;
 
 namespace VzDev
 {
@@ -13,18 +12,20 @@ namespace VzDev
     /// </summary>
     public class SystemConfigHandler : SingletonMonoBehaviour<SystemConfigHandler>
     {
-        [SerializeField, ReadOnly] private SystemConfig config;
+        [SerializeField, ReadOnly] private SystemConfig systemConfig;
         [SerializeField, Expandable] private IPConfigSO ipConfig;
 
         public void ParseJson(string json)
         {
-            config = default;
+            systemConfig = JsonConvert.DeserializeObject<SystemConfig>(json);
+            ipConfig?.SetConfig(systemConfig.webapi.httpType, systemConfig.webapi.ip, systemConfig.webapi.port);
 
-            json = JsonHelper.GetJsonFromNode(json, "system");
-            config = JsonConvert.DeserializeObject<SystemConfig>(json);
-            ipConfig?.SetConfig(config.httpType, config.ip, config.port);
+            Debug.Log($"LogEnabled: {systemConfig.system.logEnabled}");
+            Debug.unityLogger.logEnabled = systemConfig.system.logEnabled;
         }
-     //   public static bool IsDemo = Instance.config.isDemo;
+        public static bool IsDemo => Instance.systemConfig.system.isDemo;
+        public static bool IsLogEnabled => Instance.systemConfig.system.logEnabled;
+        public static string BuildingCode => Instance.systemConfig.system.buildingCode;
     }
 
     [Serializable]
@@ -33,19 +34,42 @@ namespace VzDev
         #region JsonProperty
         [JsonProperty]
         [field: SerializeField]
-        public bool isDemo { get; private set; }
+        public SystemNode system { get; private set; }
+
         [JsonProperty]
         [field: SerializeField]
-        public string httpType { get; private set; }
-        [JsonProperty]
-        [field: SerializeField]
-        public string ip { get; private set; }
-        [JsonProperty]
-        [field: SerializeField]
-        public string port { get; private set; }
-         [JsonProperty]
-        [field: SerializeField]
-        public string Surfix { get; private set; }
+        public WebApiNode webapi { get; private set; }
         #endregion
+
+        [Serializable]
+        public struct SystemNode
+        {
+            [JsonProperty]
+            [field: SerializeField]
+            public bool isDemo { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public bool logEnabled { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public string buildingCode { get; private set; }
+        }
+
+        [Serializable]
+        public struct WebApiNode
+        {
+            [JsonProperty]
+            [field: SerializeField]
+            public EnumHttpType httpType { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public string ip { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public int port { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public string surfix { get; private set; }
+        }
     }
 }
