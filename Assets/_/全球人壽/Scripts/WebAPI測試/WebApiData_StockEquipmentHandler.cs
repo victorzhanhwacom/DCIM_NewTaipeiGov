@@ -1,11 +1,13 @@
 using System;
 using System.Linq;
+using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
+using VzDev.EventUtils;
 using VzDev.Frameworks;
+using VzDev.NetUtils;
 using VzDev.StringUtils;
-using VzDev.UnityAPI.Extensions;
 
 namespace VzDev
 {
@@ -14,8 +16,32 @@ namespace VzDev
     /// </summary>
     public class WebApiData_StockEquipmentHandler : SingletonMonoBehaviour<WebApiData_StockEquipmentHandler>
     {
-        [SerializeField] private StockEquipmentDTO[] StockEquipmentData;
-        [SerializeField] private EquipmentAsset[] equipmentAssets;
+        #region Field
+        [Label("[Events]"), SerializeField] private OnCallbackEvent onCallingEvent;
+        [SerializeField, Expandable] protected WebApiRequestSO webApiRequestSO;
+        [Foldout("[Response]"), SerializeField] private StockEquipmentDTO[] StockEquipmentData;
+        [Foldout("[Response]"), SerializeField] private EquipmentAsset[] equipmentAssets;
+        #endregion
+
+        #region 呼叫行為事件
+        protected bool isHaveRequest => webApiRequestSO != null;
+        protected bool isApiCalling;
+        [Button, ShowIf("isApiCalling")]
+        private void CancelCalling() => isApiCalling = false;
+        [Button, ShowIf("isHaveRequest"), DisableIf("isApiCalling")]
+        public void CallWebAPI()
+        {
+            isApiCalling = true;
+            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            webApiRequestSO.CallAPI(ParseJson, OnFailed);
+        }
+        private void OnFailed(string message)
+        {
+            isApiCalling = false;
+            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent.InvokeOnErrorEvent(message);
+        }
+        #endregion
 
         public void ParseJson(string json)
         {
@@ -28,12 +54,14 @@ namespace VzDev
             OnGetStockeEquipmentListAction?.Invoke(equipmentAssets);
         }
 
+        #region Static 資料存取 / 事件
         /// <summary>
         /// 庫存設備資產列表
         /// </summary>
         public static EquipmentAsset[] GetStockEquipmentAssets() => Instance.equipmentAssets;
 
         public static Action<EquipmentAsset[]> OnGetStockeEquipmentListAction;
+        #endregion
     }
 
     /// <summary>

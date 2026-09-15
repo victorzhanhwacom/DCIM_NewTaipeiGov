@@ -8,7 +8,7 @@ namespace VzDev
     /// <summary>
     /// 全球人壽 溫濕度資料
     /// </summary>
-    public class WebApiData_RtRhHandler : WebApiRealtimeDataHandlerBase<RealtimeAsset_RtRh>
+    public class WebApiRealtimeDataHandler_RtRh : WebApiRealtimeDataHandlerBase<RealtimeAsset_RtRh>
     {
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
@@ -8,7 +9,7 @@ namespace VzDev
     /// <summary>
     /// For專案使用的資料格式(從WebAPI取得的即時資料轉換過來)
     /// </summary>
-    public class RealtimeAsset : DCIMAsset
+    public abstract class RealtimeAsset : DCIMAsset
     {
         protected Tags[] rawTags;
         public virtual void SetTags(Tags[] tags) => rawTags = tags;
@@ -17,7 +18,8 @@ namespace VzDev
     /// <summary>
     /// For只有單一項即時資料的裝置
     /// </summary>
-    public abstract class RealtimeAsset_Single : RealtimeAsset
+    [Serializable]
+    public class RealtimeAsset_SingleTag : RealtimeAsset
     {
         [field: SerializeField]
         public Tags tag { get; private set; }
