@@ -973,7 +973,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 5057c74814fd2234d8a74bc853392611, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!1 &18855624
 GameObject:
@@ -1041,7 +1041,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 9933f31a92bd97a44ae10637574fbe16, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 0}
 --- !u!1 &19569996
 GameObject:
@@ -12869,6 +12869,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77839929}
   m_CullTransparentMesh: 1
+--- !u!1 &77995342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77995344}
+  - component: {fileID: 77995343}
+  m_Layer: 0
+  m_Name: "ToggleGroup-ViewMode\u6A19\u7C64\u6A21\u5F0F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &77995343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77995342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ToggleGroup
+  m_AllowSwitchOff: 1
+--- !u!4 &77995344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77995342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80510991
 GameObject:
   m_ObjectHideFlags: 0
@@ -50381,7 +50426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383750883851233113, guid: 1412311e8b8a292499864497c82f63bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7970676002787719396, guid: 1412311e8b8a292499864497c82f63bd, type: 3}
       propertyPath: m_AnchorMax.y
@@ -50409,7 +50454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8137345606391942126, guid: 1412311e8b8a292499864497c82f63bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8411743503926915335, guid: 1412311e8b8a292499864497c82f63bd, type: 3}
       propertyPath: m_Name
@@ -57463,7 +57508,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 00bcf7f1ba3e2dc468aafdb159dfdc26, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!4 &332717949 stripped
 Transform:
@@ -58023,6 +58068,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4083328707899034360, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &337672009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337672010}
+  - component: {fileID: 337672011}
+  m_Layer: 0
+  m_Name: PointTagGenerator - UPS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337672010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337672009}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 498107328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337672011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337672009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &338096604
 GameObject:
   m_ObjectHideFlags: 0
@@ -65870,6 +65966,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375005296}
   m_CullTransparentMesh: 1
+--- !u!1 &376196365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376196366}
+  m_Layer: 0
+  m_Name: "\u7A7A\u8ABF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &376196366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376196365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1185899679}
+  - {fileID: 697849031}
+  - {fileID: 1018013888}
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &376447529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95563,6 +95693,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496976134}
   m_CullTransparentMesh: 1
+--- !u!1 &498107327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498107328}
+  m_Layer: 0
+  m_Name: "\u80FD\u6E90"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498107328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498107327}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 337672010}
+  - {fileID: 631609230}
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &502662712
 GameObject:
   m_ObjectHideFlags: 1
@@ -109610,7 +109773,6 @@ GameObject:
   - component: {fileID: 629826008}
   - component: {fileID: 629826012}
   - component: {fileID: 629826010}
-  - component: {fileID: 629826009}
   - component: {fileID: 629826011}
   m_Layer: 5
   m_Name: "===== Canvas - \u9EDE\u4F4D\u6A19\u7C64 ====="
@@ -109671,19 +109833,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &629826009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629826006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ToggleGroup
-  m_AllowSwitchOff: 1
 --- !u!114 &629826010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110906,6 +111055,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b878ea6c2a3584cac6d2c4daa062fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.ModelDeleteHandler
+--- !u!1 &631609229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631609230}
+  - component: {fileID: 631609231}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - UPS\u96FB\u6C60"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631609230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631609229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 498107328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631609231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631609229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &633406509
 GameObject:
   m_ObjectHideFlags: 0
@@ -113363,7 +113563,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 4d70f52fe8075a44f83828e0a9181c19, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!1 &660842095
 GameObject:
@@ -121372,6 +121572,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6104361626829440417, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &692625706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692625707}
+  - component: {fileID: 692625708}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - \u98A8\u6A5F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692625707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692625706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342177893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692625708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692625706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &692762075
 GameObject:
   m_ObjectHideFlags: 0
@@ -121526,6 +121777,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695034748}
   m_CullTransparentMesh: 1
+--- !u!1 &697849030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697849031}
+  - component: {fileID: 697849032}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - \u7A7A\u8ABF\u7BB1"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &697849031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697849030}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376196366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697849032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697849030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &697983900
 GameObject:
   m_ObjectHideFlags: 0
@@ -135616,6 +135918,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5805223270942053977, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
   m_PrefabInstance: {fileID: 215577515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &738239863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738239864}
+  m_Layer: 0
+  m_Name: "\u74B0\u63A7"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738239864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738239863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 781461558}
+  - {fileID: 1205204784}
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &739532889
 GameObject:
   m_ObjectHideFlags: 0
@@ -138129,7 +138464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1645530794}
+  m_Father: {fileID: 738239864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &781461559
 MonoBehaviour:
@@ -138148,8 +138483,8 @@ MonoBehaviour:
   pointTags: []
   pointTagPrefab: {fileID: 6813890114237647647, guid: 0bf42c6065af04b4dabc795e1fe78223, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroupDotMode: {fileID: 1645530795}
-  toggleGroupViewMode: {fileID: 629826009}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &782685628
 GameObject:
   m_ObjectHideFlags: 0
@@ -149357,7 +149692,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1405007392972572847, guid: a3e9a0e96954f9a48827c0f00d28a39e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1670477393723994694, guid: a3e9a0e96954f9a48827c0f00d28a39e, type: 3}
       propertyPath: m_Name
@@ -149397,7 +149732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4252979058884191256, guid: a3e9a0e96954f9a48827c0f00d28a39e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6805933175824980079, guid: a3e9a0e96954f9a48827c0f00d28a39e, type: 3}
       propertyPath: m_Pivot.x
@@ -180145,7 +180480,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: a8612b52597c32047b5248661f24c98c, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!4 &925658050
 Transform:
@@ -181843,6 +182178,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4308110124018204137, guid: 739b4d6146f28b740bf819752f8ef953, type: 3}
   m_PrefabInstance: {fileID: 987575859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &952760805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952760807}
+  - component: {fileID: 952760806}
+  m_Layer: 0
+  m_Name: "ToggleGroup-DotMode\u7C21\u6613\u6A21\u5F0F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &952760806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952760805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ToggleGroup
+  m_AllowSwitchOff: 1
+--- !u!4 &952760807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952760805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953237759
 GameObject:
   m_ObjectHideFlags: 0
@@ -187484,6 +187864,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Toggle
+--- !u!1 &1018013887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018013888}
+  - component: {fileID: 1018013889}
+  m_Layer: 0
+  m_Name: PointTagGenerator - InRowCooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1018013888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018013887}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376196366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018013889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018013887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &1018360043
 GameObject:
   m_ObjectHideFlags: 0
@@ -219414,7 +219845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5462343002364657151, guid: 0bf42c6065af04b4dabc795e1fe78223, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5860075410427794515, guid: 0bf42c6065af04b4dabc795e1fe78223, type: 3}
       propertyPath: m_Name
@@ -219446,7 +219877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184419158775501128, guid: 0bf42c6065af04b4dabc795e1fe78223, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7486394046169197473, guid: 0bf42c6065af04b4dabc795e1fe78223, type: 3}
       propertyPath: m_IsActive
@@ -221657,6 +222088,57 @@ MonoBehaviour:
   searchType: 0
   isIncludeInactive: 1
   enumComponentType: 0
+--- !u!1 &1185899678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185899679}
+  - component: {fileID: 1185899680}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - \u6F0F\u6DB2 (\u5C0F\u578B\u7A7A\u8ABF\u7BB1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185899679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185899678}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376196366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185899680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185899678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &1186081005
 GameObject:
   m_ObjectHideFlags: 0
@@ -223322,6 +223804,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205084119}
   m_CullTransparentMesh: 1
+--- !u!1 &1205204783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205204784}
+  - component: {fileID: 1205204785}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - \u6F0F\u6DB2 (\u5730\u9762)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205204784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205204783}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1815.2639, y: 1039.546, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 738239864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205204785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205204783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!224 &1205369286 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1882143132666000732, guid: e7f62b0889c90144090f5f914176ce65, type: 3}
@@ -224987,6 +225520,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2883957510512513480, guid: f0a15089e2e833748939614f3e10cf49, type: 3}
   m_PrefabInstance: {fileID: 1226296366}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1228201350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228201351}
+  - component: {fileID: 1228201352}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - VESDA\u6975\u65E9\u671F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228201351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228201350}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342177893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228201352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228201350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &1228810011
 GameObject:
   m_ObjectHideFlags: 0
@@ -226597,7 +227181,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 8d2240c3bd175034aa1e9e7ad04e72fb, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!4 &1249977826
 Transform:
@@ -247378,6 +247962,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340991349}
   m_CullTransparentMesh: 1
+--- !u!1 &1342177892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342177893}
+  m_Layer: 0
+  m_Name: "\u6D88\u9632"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1342177893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342177892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1228201351}
+  - {fileID: 1580819256}
+  - {fileID: 692625707}
+  m_Father: {fileID: 1645530794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1342998246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249718,7 +250336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379273200608161007, guid: 61b452ac6985b35489c1b2c6c2bc7461, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6689701131183691270, guid: 61b452ac6985b35489c1b2c6c2bc7461, type: 3}
       propertyPath: m_Name
@@ -249754,7 +250372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141857220946100312, guid: 61b452ac6985b35489c1b2c6c2bc7461, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -289344,6 +289962,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580780703}
   m_CullTransparentMesh: 1
+--- !u!1 &1580819255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580819256}
+  - component: {fileID: 1580819257}
+  m_Layer: 0
+  m_Name: "PointTagGenerator - \u92FC\u74F6"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580819256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580819255}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1342177893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580819257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580819255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0ca6254a50e240a58636c114e3f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.LandmarkUtils.PointTagGenerator
+  isDotMode: 0
+  targetModels: []
+  pointTags: []
+  pointTagPrefab: {fileID: 0}
+  pointsContainer: {fileID: 629826007}
+  toggleGroupDotMode: {fileID: 952760806}
+  toggleGroupViewMode: {fileID: 77995343}
 --- !u!1 &1581150063
 GameObject:
   m_ObjectHideFlags: 0
@@ -290766,7 +291435,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: ffd08315a13a33f41886475ebb5b36cb, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!1001 &1602523343
 PrefabInstance:
@@ -298510,7 +299179,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645530794}
-  - component: {fileID: 1645530795}
   m_Layer: 0
   m_Name: PointTagGenerators
   m_TagString: Untagged
@@ -298531,7 +299199,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 781461558}
+  - {fileID: 952760807}
+  - {fileID: 77995344}
+  - {fileID: 738239864}
+  - {fileID: 376196366}
+  - {fileID: 1342177893}
+  - {fileID: 498107328}
   - {fileID: 1601599735}
   - {fileID: 1249977826}
   - {fileID: 18855625}
@@ -298545,19 +299218,6 @@ Transform:
   - {fileID: 2103234936}
   m_Father: {fileID: 1872931864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1645530795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645530793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ToggleGroup
-  m_AllowSwitchOff: 0
 --- !u!1 &1649364914
 GameObject:
   m_ObjectHideFlags: 0
@@ -319348,7 +320008,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 0fc03f0ba9db78b4d9a91e3fc248b49c, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!1 &1797795054
 GameObject:
@@ -320294,7 +320954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4870983039419321798, guid: 83dde5ccb0894ef4a8b461cf9de1a46f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5737840595646686506, guid: 83dde5ccb0894ef4a8b461cf9de1a46f, type: 3}
       propertyPath: m_IsActive
@@ -320346,7 +321006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7774125999621448049, guid: 83dde5ccb0894ef4a8b461cf9de1a46f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8048516345664379800, guid: 83dde5ccb0894ef4a8b461cf9de1a46f, type: 3}
       propertyPath: m_Name
@@ -320511,7 +321171,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 00bcf7f1ba3e2dc468aafdb159dfdc26, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!4 &1813135605
 Transform:
@@ -356453,7 +357113,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: dc5169c39ce078c4f99051e8e72c88b3, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!1001 &2108674451
 PrefabInstance:
@@ -359870,7 +360530,7 @@ MonoBehaviour:
         m_CallState: 2
   pointTagPrefab: {fileID: 5365728412322884136, guid: 4b9c76d54b7c68144b69b6181ca7ee3e, type: 3}
   pointsContainer: {fileID: 629826007}
-  toggleGroup: {fileID: 629826009}
+  toggleGroup: {fileID: 0}
   labelGetter: {fileID: 9085172482592716844, guid: c76bbb105171dba4992836f2b0d4273f, type: 3}
 --- !u!4 &2128878361
 Transform:
@@ -362391,7 +363051,7 @@ PrefabInstance:
       objectReference: {fileID: 629826007}
     - target: {fileID: 4933869164848569924, guid: 6c00421e4574ac64f81e344d3b4d7d32, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7517554926152042522, guid: 6c00421e4574ac64f81e344d3b4d7d32, type: 3}
       propertyPath: m_Name
@@ -362403,7 +363063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782946870033609459, guid: 6c00421e4574ac64f81e344d3b4d7d32, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -366055,7 +366715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255947677227465421, guid: 8910159dbcc9f0b48954f16ecb00f603, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6623973792536245021, guid: 8910159dbcc9f0b48954f16ecb00f603, type: 3}
       propertyPath: m_AnchorMax.y
@@ -366083,7 +366743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6956631770036213370, guid: 8910159dbcc9f0b48954f16ecb00f603, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7267621423016062099, guid: 8910159dbcc9f0b48954f16ecb00f603, type: 3}
       propertyPath: m_Name
@@ -389215,7 +389875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360082828912876771, guid: 41af7344c62ebdf46a61a78a2b1fa324, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6634542445004154378, guid: 41af7344c62ebdf46a61a78a2b1fa324, type: 3}
       propertyPath: m_Name
@@ -389275,7 +389935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086642553089421396, guid: 41af7344c62ebdf46a61a78a2b1fa324, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8688801723478959539, guid: 41af7344c62ebdf46a61a78a2b1fa324, type: 3}
       propertyPath: m_SizeDelta.x
@@ -390386,7 +391046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5634256136781185473, guid: acec127ded0795c4da65645584d06e2e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6347482349046259617, guid: acec127ded0795c4da65645584d06e2e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -390418,6 +391078,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042562711429364852, guid: acec127ded0795c4da65645584d06e2e, type: 3}
       propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084181068666300781, guid: acec127ded0795c4da65645584d06e2e, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
