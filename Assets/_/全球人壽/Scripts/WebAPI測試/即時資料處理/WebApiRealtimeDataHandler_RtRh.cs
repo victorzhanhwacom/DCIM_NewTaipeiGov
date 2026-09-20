@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using static VzDev.RealTimeDataDTO;
 
-namespace VzDev
+namespace VzDev.DCIMUtils.EnviornmentUtils
 {
     /// <summary>
     /// 全球人壽 溫濕度資料
