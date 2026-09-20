@@ -23,6 +23,8 @@ namespace VzDev
         [Foldout("[Response]"), SerializeField] protected RealTimeDataDTO[] rawData;
         [Foldout("[Response]"), SerializeField] protected TAsset[] assets;
 
+        public static TAsset[] RealtimeAssets => Instance.assets;
+
         #endregion
 
         #region 呼叫行為事件
@@ -30,6 +32,13 @@ namespace VzDev
         protected bool isApiCalling;
         [Button, ShowIf("isApiCalling")]
         private void CancelCalling() => isApiCalling = false;
+
+        public void StopCallApi()
+        {
+            isApiCalling = false;
+            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            webApiRequestSO.StopCallApi();
+        }
 
         [Button, ShowIf("isHaveRequest"), DisableIf("isApiCalling")]
         public void CallWebAPI()
@@ -56,6 +65,7 @@ namespace VzDev
 
             isApiCalling = false;
             onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent.InvokeOnSuccessEvent();
             OnGetRealtimeAssetAction?.Invoke(assets);
         }
 

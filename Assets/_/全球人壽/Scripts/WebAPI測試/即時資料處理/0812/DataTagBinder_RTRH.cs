@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using VzDev.ObjectUtils;
@@ -19,6 +20,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         [Foldout("[Events]-Value")] public UnityEvent<string> onRtValueChangedEvent, onRhValueChangedEvent;
         [Foldout("[Events]")] public UnityEvent<bool> OnRtModeEvent, onRhModeEvent;
         [Foldout("[Components]"), SerializeField] private UIAnchorFollower uiAnchorFollower;
+        [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName, txtCategory;
         private DataModelBinder_RTRH dataModelBinder_RTRH;
         #endregion
 
@@ -36,6 +38,8 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         /// </summary>
         private void ValueHandler()
         {
+            txtDeviceName?.SetText(rtrhData.deviceName);
+            txtCategory?.SetText(rtrhData.category.ToString());
             onRtValueChangedEvent?.Invoke(rtrhData.rtTag.value);
             onRhValueChangedEvent?.Invoke(rtrhData.rhTag.value);
         }

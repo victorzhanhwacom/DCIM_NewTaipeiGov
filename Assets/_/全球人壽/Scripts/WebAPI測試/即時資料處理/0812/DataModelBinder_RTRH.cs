@@ -64,6 +64,11 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
                 Debug.LogWarning($"DataModelBinder_RTRH: No matching data found for deviceCode in the list.", this);
                 return;
             }
+            rtrhData.modelInfo = new DataUtils.ModelInfo
+            {
+                modelTarget = transform.parent,
+                modelName = transform.parent.name,
+            };
             OnRtRhDataChangedAction?.Invoke(rtrhData);
             UpdateHeatSource();
         }
