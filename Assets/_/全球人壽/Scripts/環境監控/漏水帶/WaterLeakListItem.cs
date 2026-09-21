@@ -1,7 +1,7 @@
-using System;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using VzDev.DOTweenUtils;
 using VzDev.InteractiveUtils.ModelMouseEvent;
@@ -13,19 +13,20 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     /// </summary>
     public class WaterLeakListItem : MonoBehaviour
     {
-        [Foldout("[Data]"), SerializeField] private RealtimeAsset_RtRh rtrhData;
+        [Foldout("[Data]"), SerializeField] private RealtimeAsset_WaterLeak waterLeakData;
+        [Foldout("[Events]")] public UnityEvent<int> onAlertLevelChanged;
         [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtDeviceName;
-        [Foldout("[Component]"), SerializeField] private DOTweenText txtRt, txtRh;
+        [Foldout("[Component]"), SerializeField] private DOTweenText txtValue;
         [Foldout("[Component]"), SerializeField] private Toggle toggle;
 
-        public RealtimeAsset_RtRh RtRhData => rtrhData;
+        public RealtimeAsset_WaterLeak WaterLeakData => waterLeakData;
 
-        public void SetRtRhData(RealtimeAsset_RtRh data)
+        public void SetWaterLeakData(RealtimeAsset_WaterLeak data)
         {
-            rtrhData = data;
+            waterLeakData = data;
             txtDeviceName.text = data.deviceName;
-            txtRt.text = rtrhData.rtTag.value;
-            txtRh.text = rtrhData.rhTag.value;
+            txtValue.text = waterLeakData.status;
+            onAlertLevelChanged?.Invoke(waterLeakData.alertStatus);
         }
 
         public void SetToggleGroup(ToggleGroup group) => toggle.group = group;
@@ -41,7 +42,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
 
         private void OnToggleValueChanged(bool isOn)
         {
-            if (isOn) ColliderInteractionSystem.SimulateClick(rtrhData.modelInfo.modelTarget.gameObject, ColliderInteractionSystem.ClickModelTrigger.byJsCall);
+            if (isOn) ColliderInteractionSystem.SimulateClick(waterLeakData.modelInfo.modelTarget.gameObject, ColliderInteractionSystem.ClickModelTrigger.byJsCall);
             //else if (toggle.group != null && toggle.group.AnyTogglesOn() == false) ColliderInteractionSystem.SimulateClickEmpty();
         }
     }
