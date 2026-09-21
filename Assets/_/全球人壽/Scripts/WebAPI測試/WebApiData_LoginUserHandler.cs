@@ -21,6 +21,7 @@ namespace VzDev
             loginUserData = JsonConvert.DeserializeObject<WebApiData_LoginUserData>(json);
             webApiAuthorization?.SetToken("");
             webApiAuthorization?.SetToken(loginUserData.accessToken);
+            Debug.Log($"loginUserData.accessToken: {loginUserData.accessToken}");
         }
     }
 

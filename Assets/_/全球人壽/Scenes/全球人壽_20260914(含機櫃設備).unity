@@ -13409,6 +13409,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1900850073421336902, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &83060738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1410015149532535297, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+  m_PrefabInstance: {fileID: 2146996271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
 --- !u!1 &84454111
 GameObject:
   m_ObjectHideFlags: 1
@@ -21147,7 +21158,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1133101013}
+        - m_Target: {fileID: 679993920}
           m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
           m_MethodName: StartTimer
           m_Mode: 1
@@ -34824,7 +34835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: VzDev::VzDev.ParamSender
   paramType: 0
   stringValue: "{\n \t\taction: \"SwitchSystemMenu\",\n\t\tpayload: {\n\t\t\tsystemMenu:
-    \"HVAC\"\n\t\t}\n}"
+    \"RT\"\n\t\t}\n}"
   intValue: 0
   floatValue: 0
   boolValue: 0
@@ -98200,7 +98211,6 @@ Transform:
   m_Children:
   - {fileID: 318196748}
   - {fileID: 1133101011}
-  - {fileID: 495271647}
   m_Father: {fileID: 573378567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &464091127 stripped
@@ -99766,399 +99776,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -5858516291103138413, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &495271646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 495271647}
-  - component: {fileID: 495271649}
-  - component: {fileID: 495271648}
-  - component: {fileID: 495271650}
-  m_Layer: 0
-  m_Name: RtRhDataManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &495271647
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495271646}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 460708681}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &495271648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495271646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f602936e7e51642be3f531ecfebd6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.MediatorUtils.BoolLogicGate
-  boolLogics:
-  - boolGateType: 1
-    onResultEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 781461559}
-          m_TargetAssemblyTypeName: VzDev.LandmarkUtils.PointTagGenerator, VzDev
-          m_MethodName: SetTagVisible
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1836758270}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1169351951}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onTrueEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1526849417}
-          m_TargetAssemblyTypeName: VzDev.FileUtils.TextFileLoader, VzDev
-          m_MethodName: LoadFile
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 679993920}
-          m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-          m_MethodName: StartTimer
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 679993919}
-          m_TargetAssemblyTypeName: VzDev.DCIMUtils.EnviornmentUtils.WebApiRealtimeDataHandler_RtRh,
-            Assembly-CSharp
-          m_MethodName: CallWebAPI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 0
-    onFalseEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 679993920}
-          m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-          m_MethodName: StopTimer
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 679993921}
-          m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-          m_MethodName: StopTimer
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 679993919}
-          m_TargetAssemblyTypeName: VzDev.DCIMUtils.EnviornmentUtils.WebApiRealtimeDataHandler_RtRh,
-            Assembly-CSharp
-          m_MethodName: StopCallApi
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  toggles:
-  - {fileID: 1203082179}
-  - {fileID: 783306803}
---- !u!114 &495271649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495271646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c4b757d53f6f14fb10f527095bbc27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.RtRhDataManager
-  onRtModeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 495271648}
-        m_TargetAssemblyTypeName: VzDev.MediatorUtils.BoolLogicGate, VzDev
-        m_MethodName: SetBoolValue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2078898026}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onRhModeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 495271648}
-        m_TargetAssemblyTypeName: VzDev.MediatorUtils.BoolLogicGate, VzDev
-        m_MethodName: SetBoolValue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1543823913}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onWaterLeakModeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205204785}
-        m_TargetAssemblyTypeName: VzDev.LandmarkUtils.PointTagGenerator, VzDev
-        m_MethodName: SetTagVisible
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 516919474}
-        m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelVisibleHandler, VzDev
-        m_MethodName: SetVisible
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1193067419}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 691158966}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 495271650}
-        m_TargetAssemblyTypeName: VzDev.MediatorUtils.BoolValueMediator, VzDev
-        m_MethodName: SetBoolValue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  currentMode: 1
---- !u!114 &495271650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495271646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81f2d8683297ae4fa5ae2903f17095f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.MediatorUtils.BoolValueMediator
-  onReversedChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onTrueTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 318196747}
-        m_TargetAssemblyTypeName: VzDev.FileUtils.TextFileLoader, VzDev
-        m_MethodName: LoadFile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1133101013}
-        m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-        m_MethodName: StartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1133101014}
-        m_TargetAssemblyTypeName: VzDev.WebApiRealtimeDataHandler_WLK, Assembly-CSharp
-        m_MethodName: CallWebAPI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
-  onFalseTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1133101013}
-        m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-        m_MethodName: StopTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1133101012}
-        m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
-        m_MethodName: StopTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1133101014}
-        m_TargetAssemblyTypeName: VzDev.WebApiRealtimeDataHandler_WLK, Assembly-CSharp
-        m_MethodName: CallWebAPI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &495452630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5294991165008976593, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
@@ -107885,6 +107502,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2146996272}
+  - {fileID: 1395150249}
   - {fileID: 192136842}
   - {fileID: 1920076581}
   - {fileID: 453908854}
@@ -127933,8 +127552,1532 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   webApiRequestSO: {fileID: 11400000, guid: b44a6e4980d0a3d44a4b67ab895c2494, type: 2}
-  rawData: []
-  assets: []
+  rawData:
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_001:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_001:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 42.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_002
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-2"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_002:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_002:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_003
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-3"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_003:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 43.6
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_003:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_004
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-4"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_004:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_004:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22.8
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_005
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-5"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_005:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_005:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 50
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_006
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-6"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_006:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_006:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.6
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_007
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-7"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_007:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_007:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_008
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-8"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_008:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_008:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.8
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_009
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-9"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_009:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_009:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_010
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-10"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_010:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 40
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_010:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_011
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-11"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_011:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 43.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_011:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - <deviceCode>k__BackingField: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_012
+    <deviceName>k__BackingField: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-12"
+    <systemType>k__BackingField: DCE
+    <deviceCategory>k__BackingField: ia
+    <deviceModel>k__BackingField: ia
+    <tags>k__BackingField:
+    - <tagId>k__BackingField: 0100_ia_012:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    - <tagId>k__BackingField: 0100_ia_012:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 48.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  assets:
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_001
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-1"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_001:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_001:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 42.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_002
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-2"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_002:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_002:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.2
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_003
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-3"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_003:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_003:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 43.6
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_004
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-4"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_004:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22.8
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_004:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.5
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_005
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-5"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_005:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_005:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 50
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_006
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-6"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_006:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.3
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_006:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.6
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_007
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-7"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_007:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_007:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_008
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-8"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_008:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.8
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_008:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 41.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_009
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-9"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_009:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_009:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 46.4
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_010
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-10"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_010:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 22.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_010:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 40
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_011
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-11"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_011:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 23.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_011:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 43.9
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+  - deviceCode: TGL+TPE+IDC+08F+DCE+ia+ia+0100_ia_012
+    deviceName: "8F\u8CC7\u8A0A\u6A5F\u623F\u51B7\u901A\u9053-12"
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 5
+    system: 4
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_012:dbt
+      <name>k__BackingField: dbt
+      <value>k__BackingField: 24.1
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: "\u2103"
+      <displayName>k__BackingField: "\u74B0\u5883\u6EAB\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 0100_ia_012:rh
+      <name>k__BackingField: rh
+      <value>k__BackingField: 48.7
+      <valueKind>k__BackingField: Decimal
+      <unit>k__BackingField: '%'
+      <displayName>k__BackingField: "\u74B0\u5883\u76F8\u5C0D\u6FD5\u5EA6"
+      <timestamp>k__BackingField: 2026-09-21T06:19:37Z
+      <localTimestamp>k__BackingField: 2026-09-21 14:19:37
+      <sourceType>k__BackingField: Mqtt
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
 --- !u!114 &679993920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128665,7 +129808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &691158967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -262852,6 +263995,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3617073561524780621, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1353196405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 573378567}
+    m_Modifications:
+    - target: {fileID: 1967906496071101172, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_Name
+      value: "\u7528\u6236\u767B\u5165"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
 --- !u!1 &1353770775
 GameObject:
   m_ObjectHideFlags: 0
@@ -266476,6 +267676,16 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3064624487714147663, guid: 36f8a4e1e8dcee949809c80ec60bd6a9, type: 3}
   m_PrefabInstance: {fileID: 891580346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1395150248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967906496071101172, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+  m_PrefabInstance: {fileID: 1353196405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1395150249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6564514416807355354, guid: bd3f9c003b109ac48846f16e0f728352, type: 3}
+  m_PrefabInstance: {fileID: 1353196405}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1396351768
 GameObject:
@@ -280093,6 +281303,10 @@ MonoBehaviour:
     _prefab: "Packages/com.vz.dev/Runtime/Prefabs/Canvas-Tooltip\u529F\u80FD.prefab"
   - _gameObject: {fileID: 991838237}
     _prefab: "Packages/com.vz.dev/Runtime/Prefabs/ModelInteractMediator\u9EDE\u64CA\u529F\u80FD.prefab"
+  - _gameObject: {fileID: 2146996273}
+    _prefab: "Assets/_/\u5168\u7403\u4EBA\u58FD/Scripts/WebAPI\u6E2C\u8A66/Config\u8A2D\u5B9A\u6A94.prefab"
+  - _gameObject: {fileID: 1395150248}
+    _prefab: "Assets/_/\u5168\u7403\u4EBA\u58FD/Scripts/WebAPI\u6E2C\u8A66/\u7528\u6236\u767B\u5165.prefab"
   - _gameObject: {fileID: 192136841}
     _prefab: Packages/com.vz.dev/Runtime/Scripts/WebUtils/UnityToJS/WebGLBridge.prefab
   - _gameObject: {fileID: 1921950487}
@@ -339251,7 +340465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1836758271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -350665,6 +351879,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 516919474}
+        m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelVisibleHandler, VzDev
+        m_MethodName: SetVisible
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 700407472}
+        m_TargetAssemblyTypeName: VzDev.ObjectUtils.ModelVisibleHandler, VzDev
+        m_MethodName: SetVisible
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1169351951}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEnableEvent:
     m_PersistentCalls:
       m_Calls:
@@ -350721,6 +351971,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1205204785}
+        m_TargetAssemblyTypeName: VzDev.LandmarkUtils.PointTagGenerator, VzDev
+        m_MethodName: SetTagVisible
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 679993920}
         m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
         m_MethodName: StopTimer
@@ -350748,6 +352010,42 @@ MonoBehaviour:
       - m_Target: {fileID: 679993919}
         m_TargetAssemblyTypeName: VzDev.DCIMUtils.EnviornmentUtils.WebApiRealtimeDataHandler_RtRh,
           Assembly-CSharp
+        m_MethodName: StopCallApi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1133101013}
+        m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
+        m_MethodName: StopTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1133101012}
+        m_TargetAssemblyTypeName: VzDev.DateTimeUtils.TimerController, VzDev
+        m_MethodName: StopTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1133101014}
+        m_TargetAssemblyTypeName: VzDev.WebApiRealtimeDataHandler_WLK, Assembly-CSharp
         m_MethodName: StopCallApi
         m_Mode: 1
         m_Arguments:
@@ -378931,6 +380229,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: VzDev::VzDev.WebGLUtils.JsPayloadParser
   OnReceiveUserTokenEvent:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+        m_TargetAssemblyTypeName: VzDev.NetUtils.WebApiAuthorizationSO, VzDev
+        m_MethodName: SetToken
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnReceiveUserPermissionsEvent:
+    m_PersistentCalls:
       m_Calls: []
   OnReceiveSwitchSystemMenuEvent:
     m_PersistentCalls:
@@ -381286,6 +382599,122 @@ RectTransform:
   m_AnchoredPosition: {x: 370, y: -12}
   m_SizeDelta: {x: 160, y: 24}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!1001 &2146996271
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 573378567}
+    m_Modifications:
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668439360906538501, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      propertyPath: m_Name
+      value: "Config\u8A2D\u5B9A\u6A94"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8668439360906538501, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2146996274}
+  m_SourcePrefab: {fileID: 100100000, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+--- !u!4 &2146996272 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3641897582316908785, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+  m_PrefabInstance: {fileID: 2146996271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2146996273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8668439360906538501, guid: b281dfd57f7d23e4f9e52050ffe9e11c, type: 3}
+  m_PrefabInstance: {fileID: 2146996271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2146996274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146996273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d51d4674bb6b6f4a95cdfa1ac08ce60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.Frameworks.LifecycleUtils.LifecycleInstance
+  onAwakeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 83060738}
+        m_TargetAssemblyTypeName: VzDev.FileUtils.TextFileLoader, VzDev
+        m_MethodName: LoadFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDisableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enableUpdateEvent: 0
+  onUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &15472085129683703
 PrefabInstance:
   m_ObjectHideFlags: 0

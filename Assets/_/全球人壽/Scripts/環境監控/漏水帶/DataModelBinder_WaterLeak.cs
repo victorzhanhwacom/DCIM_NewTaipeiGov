@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
@@ -20,13 +21,18 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         [SerializeField, ReadOnly] private EnumRtRhMode rtRhMode = EnumRtRhMode.Unselect;
         [SerializeField, ReadOnly] private RealtimeAsset_WaterLeak waterLeakData;
 
+        [Foldout("[Settings]"), SerializeField] private Material[] levelMaterials;
+        [SerializeField] private LineRenderer lineRenderer;
+
         public RealtimeAsset_WaterLeak WaterLeakData => waterLeakData;
         #endregion
-        
+
+        private void Start() => lineRenderer = transform.parent.GetComponent<LineRenderer>();
+
         /// <summary>
         /// WebAPI回傳即時資料時
         /// </summary>
-        private void OnGetRealtimeAssetAction(RealtimeAsset_WaterLeak[] list)
+        private void OnGetRealtimeAssetAction(List<RealtimeAsset_WaterLeak> list)
         {
             string deviceCode = transform.parent.GetModelDeviceCode();
             waterLeakData = list.FirstOrDefault(data => data.deviceCode == deviceCode);
@@ -41,9 +47,11 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
                 modelName = transform.parent.name,
             };
             OnWaterLeakDataChangedAction?.Invoke(waterLeakData);
+
+            lineRenderer.material = levelMaterials[waterLeakData.alertStatus == 0 ? 0 : 1];
         }
 
-     
+
         #region Event Listeners
         private void OnEnable()
         {

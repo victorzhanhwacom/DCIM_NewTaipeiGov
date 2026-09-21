@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using NaughtyAttributes;
 using Newtonsoft.Json;
@@ -21,9 +22,9 @@ namespace VzDev
 
         [SerializeField, Expandable] protected WebApiRequestSO webApiRequestSO;
         [Foldout("[Response]"), SerializeField] protected RealTimeDataDTO[] rawData;
-        [Foldout("[Response]"), SerializeField] protected TAsset[] assets;
+        [Foldout("[Response]"), SerializeField] protected List<TAsset> assets;
 
-        public static TAsset[] RealtimeAssets => Instance.assets;
+        public static List<TAsset> RealtimeAssets => Instance.assets;
 
         #endregion
 
@@ -58,10 +59,10 @@ namespace VzDev
         public void ParseJson(string json)
         {
             rawData = new RealTimeDataDTO[0];
-            assets = new TAsset[0];
+            assets = new List<TAsset>();
             json = JsonHelper.GetJsonFromNode(json, "devices");
             rawData = JsonConvert.DeserializeObject<RealTimeDataDTO[]>(json);
-            assets = rawData.Select(data => data.ToAsset<TAsset>()).ToArray();
+            assets = rawData.Select(data => data.ToAsset<TAsset>()).ToList();
 
             isApiCalling = false;
             onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
@@ -69,15 +70,10 @@ namespace VzDev
             OnGetRealtimeAssetAction?.Invoke(assets);
         }
 
-        #region Static 資料存取 / 事件
-        /// <summary>
-        /// 即時資料列表
-        /// </summary>
-        public static TAsset[] RealtimeAsset() => Instance.assets;
-        /// <summary>
+        #region Static 事件
         /// 即時資料列表取得事件
         /// </summary>
-        public static Action<TAsset[]> OnGetRealtimeAssetAction;
+        public static Action<List<TAsset>> OnGetRealtimeAssetAction;
         #endregion
     }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
@@ -44,10 +45,16 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             switch (rtRhMode)
             {
                 case EnumRtRhMode.Rt:
-                    heatSource.SetTemperature(float.Parse(rtrhData.rtTag.value));
+                    if (!string.IsNullOrEmpty(rtrhData.rtTag.value))
+                    {
+                        heatSource.SetTemperature(float.Parse(rtrhData.rtTag.value));
+                    }
                     break;
                 case EnumRtRhMode.Rh:
-                    heatSource.SetTemperature(float.Parse(rtrhData.rhTag.value));
+                    if (!string.IsNullOrEmpty(rtrhData.rhTag.value))
+                    {
+                        heatSource.SetTemperature(float.Parse(rtrhData.rhTag.value));
+                    }
                     break;
             }
         }
@@ -55,7 +62,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         /// <summary>
         /// WebAPI回傳即時資料時
         /// </summary>
-        private void OnGetRealtimeAssetAction(RealtimeAsset_RtRh[] list)
+        private void OnGetRealtimeAssetAction(List<RealtimeAsset_RtRh> list)
         {
             string deviceCode = transform.parent.GetModelDeviceCode();
             rtrhData = list.FirstOrDefault(data => data.deviceCode == deviceCode);

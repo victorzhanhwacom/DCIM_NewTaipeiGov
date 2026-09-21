@@ -33,27 +33,27 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_RtRh.RealtimeAssets);
         }
 
-        private void OnGetRealtimeAssetAction(RealtimeAsset_RtRh[] data)
+        private void OnGetRealtimeAssetAction(List<RealtimeAsset_RtRh> data)
         {
-            rtrhData = new List<RealtimeAsset_RtRh>(data);
+            rtrhData = data;
             txtRtRhDataCount.SetText($"共 {rtrhData.Count} 筆資料");
 
             ///檢查目前的listItems中是否已經有相同的deviceCode，若沒有則移除該listItem
             listItems.RemoveAll(item => rtrhData.Exists(data => data.deviceCode == item.RtRhData.deviceCode) == false);
 
-            rtrhData.ForEach(data =>
+            rtrhData.ForEach(d =>
             {
                 ///檢查目前的listItems中是否已經有相同的deviceCode，若有則不再新增，直接更新該listItem的資料
-                RtRhListItem existingItem = listItems.Find(item => item.RtRhData.deviceCode == data.deviceCode);
+                RtRhListItem existingItem = listItems.Find(item => item.RtRhData.deviceCode == d.deviceCode);
                 if (existingItem != null)
                 {
-                    existingItem.SetRtRhData(data);
+                    existingItem.SetRtRhData(d);
                     return;
                 }
 
                 RtRhListItem listItem = Instantiate(listItemPrefab, scRtRhList.content);
-                listItem.name += $"-{data.deviceCode}";
-                listItem.SetRtRhData(data);
+                listItem.name += $"-{d.deviceCode}";
+                listItem.SetRtRhData(d);
                 listItem.SetToggleGroup(tgRtRhList);
                 listItems.Add(listItem);
             });

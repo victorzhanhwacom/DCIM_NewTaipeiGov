@@ -46,12 +46,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: VzDev::VzDev.DCIMUtils.DataUtils.PointModelDataHandler
   rtRhMode: 0
-  pointModelData:
+  rtrhData:
     deviceCode: 
-    timeStampData:
-      timeStamp: 
-    rtValue: 19.5
-    rhValue: 48
+    deviceName: 
+    assetPhotoSprite: {fileID: 0}
+    cobieInfo:
+      component_description: 
+      component_assetIdentifier: 
+      component_serialNumber: 
+      component_installationDate: 
+      component_tagName: 
+      component_warrantyDurationPart: 
+      component_warrantyDurationUnit: 
+      component_warrantyGuarantorLabor: 
+      component_warrantyStartDate: 
+      component_warrantyEndDate: 
+      document_inspection: 
+      document_handout: 
+      document_drawing: 
+      contact_company: 
+      contact_department: 
+      contact_email: 
+      contact_familyName: 
+      contact_givenName: 
+      contact_phone: 
+      contact_street: 
+      facility_name: 
+      facility_projectName: 
+      facility_siteName: 
+      equipment_supplier: 
+      floor_name: 
+      space_name: 
+      space_roomTag: 
+      system_category: 
+      system_name: 
+      type_category: 
+      type_expectedLife: 
+      type_manufacturer: 
+      type_modelNumber: 
+      type_name: 
+      type_replacementCost: 
+      type_accessibilityPerformance: 
+      type_shape: 
+      type_size: 
+      type_color: 
+      type_finish: 
+      type_grade: 
+      type_material: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    category: 0
+    system: 0
+    companyAssetInfo:
+      assetName: 
+      assetNumber: 
+      note: 
+    <rtTag>k__BackingField:
+      <tagId>k__BackingField: 
+      <name>k__BackingField: 
+      <value>k__BackingField: 
+      <valueKind>k__BackingField: 
+      <unit>k__BackingField: 
+      <displayName>k__BackingField: 
+      <timestamp>k__BackingField: 
+      <localTimestamp>k__BackingField: 
+      <sourceType>k__BackingField: 
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
+    <rhTag>k__BackingField:
+      <tagId>k__BackingField: 
+      <name>k__BackingField: 
+      <value>k__BackingField: 
+      <valueKind>k__BackingField: 
+      <unit>k__BackingField: 
+      <displayName>k__BackingField: 
+      <timestamp>k__BackingField: 
+      <localTimestamp>k__BackingField: 
+      <sourceType>k__BackingField: 
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: 
   heatSource: {fileID: 3584964313199474745}
 --- !u!114 &3584964313199474745
 MonoBehaviour:
@@ -65,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6170d2d33d1952747ac675f97768d6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VzDev::HeatSource
-  temperature: 48
+  temperature: 24
   radius: 2
   falloff: 2
   showGizmo: 1

@@ -38,6 +38,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             if (isOn == false) return;
             currentMode = EnumRtRhMode.Rt;
             OnRtRhModeChangedAction?.Invoke(currentMode);
+            ToWaterLeakMode(false);
         }
 
         public void ToRhMode(bool isOn)
@@ -46,6 +47,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             if (isOn == false) return;
             currentMode = EnumRtRhMode.Rh;
             OnRtRhModeChangedAction?.Invoke(currentMode);
+            ToWaterLeakMode(false);
         }
 
         public void ToWaterLeakMode(bool isOn)

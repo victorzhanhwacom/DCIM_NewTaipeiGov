@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1211642493740093769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2851149574307418933}
+  - component: {fileID: 2174772345487438520}
+  m_Layer: 0
+  m_Name: TextFileLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2851149574307418933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211642493740093769}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6564514416807355354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2174772345487438520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211642493740093769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5056b1bfb09c4614680427e1520708de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.FileUtils.TextFileLoader
+  onLoadingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadResultEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1435168102485632164}
+        m_TargetAssemblyTypeName: VzDev.TGL.TGL_LoginUser, Assembly-CSharp
+        m_MethodName: ParseJson
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onFailedMsgEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enumFilePath: 0
+  filePath: TGL\TGL_User.json
+--- !u!1 &1967906496071101172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6564514416807355354}
+  m_Layer: 0
+  m_Name: "\u7528\u6236\u767B\u5165"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6564514416807355354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967906496071101172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2851149574307418933}
+  - {fileID: 545803002995309640}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3253861676162660191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545803002995309640}
+  - component: {fileID: 1435168102485632164}
+  m_Layer: 0
+  m_Name: WebApiData_LoginUserHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545803002995309640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253861676162660191}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6564514416807355354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435168102485632164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253861676162660191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf9ce24a8de7a24aa6203ba31097896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.TGL.TGL_LoginUser
+  loginUserData:
+    <accessToken>k__BackingField: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGUzYWEyZC02ZDYzLTQ4YzYtOTg1NS04MzVhMDViODE1YjciLCJlbWFpbCI6ImNodW5nZGFyLnlhbmdAaHdhY29tLmNvbSIsImFjY291bnQiOiJhZG1pbiIsIm5hbWUiOiLns7vntbHnrqHnkIblk6EiLCJqdGkiOiIzMjlmYWI1OC1lNDhhLTQ0OGYtOTdhZC04OWM0Njc0ZjhkYTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTdXBlckFkbWluIiwibmJmIjoxNzg5MTA5NTI2LCJleHAiOjE3ODkxMzgzMjYsImlzcyI6IkRDSU06VEdMIiwiYXVkIjoiRENJTUNsaWVudHM6VEdMIn0.fOU6LVShgEe3f77qVm9qwKvd8I-h0TnIm9tlnXBCq8Y
+    <accessTokenExpiresAt>k__BackingField: 2026-09-11T14:52:06.6304491Z
+    <refreshToken>k__BackingField: Gs57MtpZY79iwL1q8qAjHxjF+nCK9gckeY0TDz8WyGVisBjY6Vko97gtPQ/WIpPEg9nFZbOS1EE4M4FCWRh3yA==
+    <refreshTokenExpiresAt>k__BackingField: 2026-09-18T06:52:06.4844977Z
+    <user>k__BackingField:
+      <userId>k__BackingField: ede3aa2d-6d63-48c6-9855-835a05b815b7
+      <account>k__BackingField: admin
+      <name>k__BackingField: "\u7CFB\u7D71\u7BA1\u7406\u54E1"
+      <isFirstLogin>k__BackingField: 0
+      <roles>k__BackingField:
+      - SuperAdmin
+      <permissions>k__BackingField:
+      - ACS:Create
+      - ACS:Delete
+      - ACS:Edit
+      - ACS:Query
+      - ACS:View
+      - Alarm:Ack
+      - Alarm:Config
+      - Alarm:Export
+      - Alarm:View
+      - Building:Create
+      - Building:Delete
+      - Building:Edit
+      - Building:View
+      - CCTV:Edit
+      - CCTV:View
+      - Chiller:Control
+      - Chiller:View
+      - DataSource:Manage
+      - Department:Create
+      - Department:Delete
+      - Department:Edit
+      - Doc:Create
+      - Doc:Delete
+      - Doc:Edit
+      - Doc:View
+      - Energy:Edit
+      - Energy:View
+      - ENV:View
+      - FAS:View
+      - HLM:Edit
+      - HLM:Export
+      - HLM:Query
+      - HLM:View
+      - ICT:Create
+      - ICT:Delete
+      - ICT:Edit
+      - ICT:Query
+      - ICT:View
+      - Notify:Create
+      - Notify:Delete
+      - Notify:Edit
+      - Notify:View
+      - Rack:Create
+      - Rack:Delete
+      - Rack:Edit
+      - Rack:Export
+      - Rack:Query
+      - Rack:View
+      - Role:Create
+      - Role:Delete
+      - Role:Edit
+      - Role:View
+      - Sys:Edit
+      - Sys:Export
+      - Sys:View
+      - User:Create
+      - User:Delete
+      - User:Edit
+      - User:Manage
+      - User:View
+      <deviceSystems>k__BackingField:
+      - <code>k__BackingField: EE
+        <name>k__BackingField: "\u96FB\u529B\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: HVAC
+        <name>k__BackingField: "\u7A7A\u8ABF\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: FS
+        <name>k__BackingField: "\u6D88\u9632\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: PS
+        <name>k__BackingField: "\u7D66\u6392\u6C34\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: WE
+        <name>k__BackingField: "\u5F31\u96FB\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCR
+        <name>k__BackingField: "\u6A5F\u6AC3\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCS
+        <name>k__BackingField: "\u4F3A\u670D\u5668\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCN
+        <name>k__BackingField: "\u7DB2\u901A\u7CFB\u7D71"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCP
+        <name>k__BackingField: "\u6A5F\u623F\u96FB\u529B"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      - <code>k__BackingField: DCE
+        <name>k__BackingField: "\u6A5F\u623F\u74B0\u63A7"
+        <canView>k__BackingField: 1
+        <canControl>k__BackingField: 1
+      <mustChangePassword>k__BackingField: 0
+    <step>k__BackingField: Captcha
+  webApiAuthorization: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}

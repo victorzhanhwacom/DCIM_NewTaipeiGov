@@ -33,7 +33,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_WLK.RealtimeAssets);
         }
 
-        private void OnGetRealtimeAssetAction(RealtimeAsset_WaterLeak[] data)
+        private void OnGetRealtimeAssetAction(List<RealtimeAsset_WaterLeak> data)
         {
             waterleakData = new List<RealtimeAsset_WaterLeak>(data);
             txtWaterLeakDataCount.SetText($"共 {waterleakData.Count} 筆資料");
