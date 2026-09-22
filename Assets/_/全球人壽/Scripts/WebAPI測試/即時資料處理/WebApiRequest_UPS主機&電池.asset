@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546068e2c1e61c74eaccec7b6a517d6a, type: 3}
+  m_Name: "WebApiRequest_UPS\u4E3B\u6A5F&\u96FB\u6C60"
+  m_EditorClassIdentifier: VzDev::VzDev.NetUtils.WebApiRequestSO
+  ipConfigSo: {fileID: 11400000, guid: 33d205db505a86048a6ac645ff8b7e24, type: 2}
+  extendApiURL: /Device/realtime
+  authorizationSo: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
+  httpType: 0
+  fullApiURL: 
+  enumHttpMethod: 1
+  responseDataType: 0
+  isQueryParams: 0
+  queryParams: []
+  bodyType: 2
+  formData: []
+  rawJson: "{\r\n  \"deviceCodes\": [\r\n    \"TGL+TPE+IDC+08F+4+DCP+UPS+GVL200K500DS:
+    Schneider-GVL200K500DS+898\",\r\n    \"TGL+TPE+IDC+08F+4+DCP+UPS+GVL200K500DS:
+    Schneider-GVL200K500DS+853\",\r\n    \"TGL+TPE+IDC+08F+4+DCP+UPS+UPS_MBC_A: UPS_MBC_A+2\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP+UPS+UPS_MBC_A: UPS_MBC_A+1\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+1\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+2\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+3\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+4\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+5\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+6\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+7\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+8\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+9\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+10\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+11\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+12\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+13\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+14\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+15\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+16\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+17\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+18\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+19\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+20\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+21\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+22\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+23\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+24\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+25\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+26\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+27\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+28\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+29\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+30\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+31\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+32\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+33\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+34\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+35\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+36\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+37\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+38\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+39\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+40\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+41\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+42\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+43\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+44\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+45\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+46\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+47\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+48\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+49\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+50\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+51\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+52\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+53\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+54\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+55\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+56\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+57\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+58\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+59\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+60\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+61\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+62\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+63\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+64\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+65\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+66\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+67\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+68\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+69\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+70\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+71\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+72\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+73\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+74\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+75\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+76\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+77\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+78\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+79\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+80\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+81\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+82\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+83\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+84\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+85\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+86\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+87\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+88\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+89\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+90\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+91\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+92\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+93\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+94\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+95\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+96\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+97\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+98\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+99\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+100\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+101\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+102\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+103\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+104\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+105\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60:
+    \u96FB\u6C60+106\",\r\n    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+107\",\r\n   
+    \"TGL+TPE+IDC+08F+4+DCP++\u96FB\u6C60: \u96FB\u6C60+108\"\r\n]\r\n}"

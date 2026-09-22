@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 546068e2c1e61c74eaccec7b6a517d6a, type: 3}
-  m_Name: "\u53D6\u5F97\u5373\u6642\u6578\u64DA - \u6F0F\u6C34\u5E36"
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.Net.WebAPI.WebApiRequestSO
+  m_Name: "WebApiRequest_\u6D88\u9632\u8B66\u5831"
+  m_EditorClassIdentifier: VzDev::VzDev.NetUtils.WebApiRequestSO
   ipConfigSo: {fileID: 11400000, guid: 33d205db505a86048a6ac645ff8b7e24, type: 2}
-  extendApiURL: 
+  extendApiURL: /Device/realtime
   authorizationSo: {fileID: 11400000, guid: b5a329fffdc264a4ab6e553091c27ce7, type: 2}
   httpType: 0
   fullApiURL: 
@@ -23,4 +23,5 @@ MonoBehaviour:
   queryParams: []
   bodyType: 2
   formData: []
-  rawJson: 
+  rawJson: "{\r\n  \"deviceCodes\": [\r\n     \"TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_001\",\r\n   
+    \"TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_002\",\r\n    \"TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_003\"]\r\n}"
