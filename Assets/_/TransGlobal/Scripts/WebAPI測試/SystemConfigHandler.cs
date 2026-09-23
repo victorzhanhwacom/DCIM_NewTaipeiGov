@@ -18,7 +18,8 @@ namespace VzDev
         public void ParseJson(string json)
         {
             systemConfig = JsonConvert.DeserializeObject<SystemConfig>(json);
-            ipConfig?.SetConfig(systemConfig.webapi.httpType, systemConfig.webapi.ip, systemConfig.webapi.port);
+            ipConfig?.SetConfig(systemConfig.webapi.httpType, systemConfig.webapi.ip, systemConfig.webapi.port, systemConfig.webapi.surfix
+            , systemConfig.webapi.usingProxyURL);
 
             Debug.Log($"LogEnabled: {systemConfig.system.logEnabled}");
             Debug.unityLogger.logEnabled = systemConfig.system.logEnabled;
@@ -70,6 +71,9 @@ namespace VzDev
             [JsonProperty]
             [field: SerializeField]
             public string surfix { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public bool usingProxyURL { get; private set; }
         }
     }
 }

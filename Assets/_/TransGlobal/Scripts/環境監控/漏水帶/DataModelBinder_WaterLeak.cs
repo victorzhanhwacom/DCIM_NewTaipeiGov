@@ -48,6 +48,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             };
             OnWaterLeakDataChangedAction?.Invoke(waterLeakData);
 
+            lineRenderer = transform.parent.GetComponent<LineRenderer>();
             lineRenderer.material = levelMaterials[waterLeakData.alertStatus == 0 ? 0 : 1];
         }
 
