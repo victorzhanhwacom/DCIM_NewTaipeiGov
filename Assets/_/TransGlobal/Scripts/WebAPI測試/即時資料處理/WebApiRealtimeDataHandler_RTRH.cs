@@ -5,17 +5,17 @@ namespace VzDev
     /// <summary>
     /// 全球人壽 能源資料
     /// </summary>
-    public class WebApiRealtimeDataHandler_Power : WebApiRealtimeDataHandlerBase<RealtimeAsset_UpsBattery>
+    public class WebApiRealtimeDataHandler_RTRH : WebApiRealtimeDataHandlerBase<RealtimeAsset_UpsBattery>
     {
     }
 
-    /// <summary>
+    /* /// <summary>
     /// 從WebAPI轉換過來的即時資料格式(UPS電池)
     /// </summary>
     [Serializable]
-    public class RealtimeAsset_UpsBattery : WebApi_RealtimeData
+    public class RealtimeAsset_UpsBattery : RealtimeAsset
     {
 
-    }
+    } */
 
 }

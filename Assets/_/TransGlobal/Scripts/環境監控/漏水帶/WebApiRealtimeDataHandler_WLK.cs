@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using static VzDev.RealTimeDataDTO;
+using static VzDev.WebApi_RealtimeDataDTO;
 
 namespace VzDev
 {
@@ -15,7 +15,7 @@ namespace VzDev
     /// 從WebAPI轉換過來的即時資料格式(漏水帶)
     /// </summary>
     [Serializable]
-    public class RealtimeAsset_WaterLeak : RealtimeAsset
+    public class RealtimeAsset_WaterLeak : WebApi_RealtimeData
     {
         [field: SerializeField]
         public bool isLeak { get; private set; }

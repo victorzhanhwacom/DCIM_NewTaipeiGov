@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
-using static VzDev.RealTimeDataDTO;
+using static VzDev.WebApi_RealtimeDataDTO;
 
 namespace VzDev.DCIMUtils.EnviornmentUtils
 {
@@ -16,7 +16,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     /// 從WebAPI轉換過來的即時資料格式(溫濕度)
     /// </summary>
     [Serializable]
-    public class RealtimeAsset_RtRh : RealtimeAsset
+    public class RealtimeAsset_RtRh : WebApi_RealtimeData
     {
         [field: SerializeField]
         public Tags rtTag { get; private set; }

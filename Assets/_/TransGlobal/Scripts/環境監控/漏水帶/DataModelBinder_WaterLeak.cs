@@ -56,12 +56,12 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         #region Event Listeners
         private void OnEnable()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetRealtimeAssetAction += OnGetRealtimeAssetAction;
+            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
         }
 
         private void OnDisable()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetRealtimeAssetAction -= OnGetRealtimeAssetAction;
+            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction -= OnGetRealtimeAssetAction;
         }
         #endregion
     }

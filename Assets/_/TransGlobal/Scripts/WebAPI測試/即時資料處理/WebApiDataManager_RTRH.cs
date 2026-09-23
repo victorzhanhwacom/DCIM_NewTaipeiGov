@@ -1,31 +1,34 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
+using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
+using VzDev.EventUtils;
+using VzDev.Frameworks;
+using VzDev.InterfaceUtils;
+using VzDev.NetUtils;
+using VzDev.StringUtils;
 
 namespace VzDev
 {
-    [Serializable]
-    public class RealTimeDataDTO
+    /// <summary>
+    /// WebAPI原始資料基底類別
+    /// <para> + 轉換成資料對像 </para>
+    /// </summary>
+    public class WebApiDataManager_RTRH : WebApiDataManagerBase
+            <WebAPI_RawData_Realtime<WebApiData_RTRH>, WebApiData_RTRH>
     {
-        /// <summary>
-        /// 將 WebAPI即時資料轉換成指定的RealtimeAsset
-        /// </summary>
-        public T ToAsset<T>() where T : RealtimeAsset, new()
-        {
-            T result = new T()
-            {
-                deviceCode = deviceCode,
-                deviceName = deviceName,
-                system = Enum.TryParse<DCIM_System>(systemType, out var parsedSystem) ? parsedSystem : DCIM_System.Unknow,
-                category = Enum.TryParse<DCIM_Category>(deviceCategory.ToUpper(), out var parsedCategory) ? parsedCategory : DCIM_Category.Unknow,
-            };
-            result.SetTags(tags);
-            return result;
-        }
+    }
 
-        #region Fields
+    [Serializable]
+    public class WebAPI_RawData_Realtime<T> : WebAPI_RawDataBase<T>
+    {
+        public override T Convert() => default;
+
+         #region Fields
         [JsonProperty]
         [field: SerializeField]
         public string deviceCode { get; private set; }
@@ -50,7 +53,8 @@ namespace VzDev
         public struct Tags
         {
             [OnDeserialized]
-            private void OnDeserialized(StreamingContext context) => localTimestamp = localTimestamp.Replace("T", " ");
+            private void OnDeserialized(StreamingContext context)
+            => localTimestamp = localTimestamp.Replace("T", " ");
 
             #region Fields
             [JsonProperty]
@@ -103,5 +107,23 @@ namespace VzDev
             public string valueLabels { get; private set; }
             #endregion
         }
+    }
+
+
+    [Serializable]
+    public class WebAPI_RawData_RTRH : WebAPI_RawDataBase<WebApiData_RTRH>
+    {
+        public override WebApiData_RTRH Convert()
+        {
+            return new WebApiData_RTRH()
+            {
+
+            };
+        }
+    }
+
+    [Serializable]
+    public class WebApiData_RTRH : DCIMAsset
+    {
     }
 }

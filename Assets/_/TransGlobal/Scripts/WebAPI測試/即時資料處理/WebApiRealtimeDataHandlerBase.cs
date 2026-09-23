@@ -12,68 +12,96 @@ using VzDev.StringUtils;
 namespace VzDev
 {
     /// <summary>
-    /// WebAPI 即時資料處理基底類別
+    /// WebAPI 資料呼叫與處理基底類別
     /// </summary>
-    public abstract class WebApiRealtimeDataHandlerBase<TAsset> : SingletonMonoBehaviour<WebApiRealtimeDataHandlerBase<TAsset>>
-        where TAsset : RealtimeAsset, new()
+    public abstract class WebApiRealtimeDataHandlerBase<TData> : SingletonMonoBehaviour<WebApiRealtimeDataHandlerBase<TData>>
+        where TData : WebApi_RealtimeData, new()
     {
         #region Field
         [Label("[Events]"), SerializeField] protected OnCallbackEvent onCallingEvent = new OnCallbackEvent();
-
         [SerializeField, Expandable] protected WebApiRequestSO webApiRequestSO;
-        [Foldout("[Response]"), SerializeField] protected RealTimeDataDTO[] rawData;
-        [Foldout("[Response]"), SerializeField] protected List<TAsset> assets;
+        [Foldout("[Data]"), SerializeField] protected WebApi_RealtimeDataDTO[] rawDataDTO = new WebApi_RealtimeDataDTO[0];
+        [Foldout("[Data]"), SerializeField] protected List<TData> webapiData = new List<TData>();
 
-        public static List<TAsset> RealtimeAssets => Instance.assets;
+        /// <summary>
+        /// 即時資料
+        /// </summary>
+        public static List<TData> WebApiData => Instance.webapiData;
+
+        protected bool isHaveRequest => webApiRequestSO != null;
+        protected bool isApiCalling;
 
         #endregion
 
-        #region 呼叫行為事件
-        protected bool isHaveRequest => webApiRequestSO != null;
-        protected bool isApiCalling;
-        [Button, ShowIf("isApiCalling")]
-        private void CancelCalling() => isApiCalling = false;
+        #region 呼叫WebAPI取得即時資料
+        /// <summary>
+        /// 呼叫WebAPI取得即時資料
+        /// </summary>
+        public static void CallWebAPI_Static(Action<string> onSuccess, Action<string> onFailure)
+            => Instance.CallWebAPI(onSuccess, onFailure);
+        /// <summary>
+        /// 呼叫WebAPI取得即時資料
+        /// </summary>
+        [Button, ShowIf("isHaveRequest"), DisableIf("isApiCalling")]
+        public void CallWebAPI() => CallWebAPI(OnSuccess, OnFailed);
+        /// <summary>
+        /// 呼叫WebAPI取得即時資料
+        /// </summary>
+        public void CallWebAPI(Action<string> onSuccess, Action<string> onFailure)
+        {
+            isApiCalling = true;
+            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            webApiRequestSO.CallAPI(onSuccess, onFailure);
+        }
+        #endregion
 
+        #region 取消呼叫WebAPI
+        /// <summary>
+        /// 取消呼叫WebAPI
+        /// </summary>
+        public static void StopCallApi_Static() => Instance.StopCallApi();
+        /// <summary>
+        /// 取消呼叫WebAPI
+        /// </summary>
+        [Button, ShowIf("isApiCalling")]
         public void StopCallApi()
         {
             isApiCalling = false;
             onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
             webApiRequestSO.StopCallApi();
         }
+        #endregion
 
-        [Button, ShowIf("isHaveRequest"), DisableIf("isApiCalling")]
-        public void CallWebAPI()
+        private void OnSuccess(string json)
         {
-            isApiCalling = true;
+            isApiCalling = false;
+            ParseJson(json);
             onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
-            webApiRequestSO.CallAPI(ParseJson, OnFailed);
+            onCallingEvent?.InvokeOnSuccessEvent();
+            OnGetWebApiDataAction?.Invoke(webapiData);
         }
+
         private void OnFailed(string message)
         {
             isApiCalling = false;
             onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
-            onCallingEvent.InvokeOnErrorEvent(message);
+            onCallingEvent?.InvokeOnErrorEvent(message);
         }
-        #endregion
+
 
         public void ParseJson(string json)
         {
-            rawData = new RealTimeDataDTO[0];
-            assets = new List<TAsset>();
+            rawDataDTO = new WebApi_RealtimeDataDTO[0];
+            webapiData = new List<TData>();
             json = JsonHelper.GetJsonFromNode(json, "devices");
-            rawData = JsonConvert.DeserializeObject<RealTimeDataDTO[]>(json);
-            assets = rawData.Select(data => data.ToAsset<TAsset>()).ToList();
-
-            isApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
-            onCallingEvent.InvokeOnSuccessEvent();
-            OnGetRealtimeAssetAction?.Invoke(assets);
+            rawDataDTO = JsonConvert.DeserializeObject<WebApi_RealtimeDataDTO[]>(json);
+            webapiData = rawDataDTO.Select(data => data.Convert<TData>()).ToList();
         }
 
         #region Static 事件
-        /// 即時資料列表取得事件
+        /// 取得WebApiData資料時
         /// </summary>
-        public static Action<List<TAsset>> OnGetRealtimeAssetAction;
+        public static Action<List<TData>> OnGetWebApiDataAction;
         #endregion
     }
 

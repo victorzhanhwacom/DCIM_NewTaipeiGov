@@ -29,8 +29,8 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
 
         private void Awake()
         {
-            WebApiRealtimeDataHandler_RtRh.OnGetRealtimeAssetAction += OnGetRealtimeAssetAction;
-            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_RtRh.RealtimeAssets);
+            WebApiRealtimeDataHandler_RtRh.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
+            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_RtRh.WebApiData);
         }
 
         private void OnGetRealtimeAssetAction(List<RealtimeAsset_RtRh> data)

@@ -8,13 +8,18 @@ namespace VzDev.StringUtils
 {
     public abstract class JsonHelper
     {
+        /// <summary>
+        /// 取得指定節點的Json字串資料
+        /// <para>+ 支援 "node1.node2" 這種路徑</para>
+        /// <para>+ 支援 "node1.list[0].name" 這種陣列路徑</para>
+        /// </summary>
         public static string GetJsonFromNode(string json, string nodeName)
         {
             try
             {
                 JObject root = JObject.Parse(json);
-                string result = root[nodeName]?.ToString();
-                return result;   
+                JToken token = root.SelectToken(nodeName); // 支援 "node1.node2" 這種路徑
+                return token?.ToString();
             }
             catch (Exception ex)
             {

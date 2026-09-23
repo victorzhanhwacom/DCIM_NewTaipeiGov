@@ -29,8 +29,8 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
 
         private void Awake()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetRealtimeAssetAction += OnGetRealtimeAssetAction;
-            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_WLK.RealtimeAssets);
+            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
+            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_WLK.WebApiData);
         }
 
         private void OnGetRealtimeAssetAction(List<RealtimeAsset_WaterLeak> data)
