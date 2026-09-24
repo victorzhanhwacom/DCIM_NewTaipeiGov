@@ -227,7 +227,7 @@ namespace VzDev.CameraUtils
         {
             if (boundsCollider != null)
             {
-                moveBounds = boundsCollider.bounds;
+                moveBounds = boundsCollider.bounds; 
                 currentTargetPosition.x = Mathf.Clamp(currentTargetPosition.x, moveBounds.min.x, moveBounds.max.x);
                 currentTargetPosition.y = Mathf.Clamp(currentTargetPosition.y, moveBounds.min.y, moveBounds.max.y);
                 currentTargetPosition.z = Mathf.Clamp(currentTargetPosition.z, moveBounds.min.z, moveBounds.max.z);
@@ -257,7 +257,9 @@ namespace VzDev.CameraUtils
 
         public void FlyToPosition(Transform target)
         {
-            if (target.TryGetComponent(out Renderer render))
+            bool result = target.TryGetComponent(out Renderer render) && render is not LineRenderer;
+            Debug.Log($"Result:{result}");
+            if (result)
                 FlyToPosition(render.bounds.center, defaultFlyDistance);
             else
                 FlyToPosition(target.position, defaultFlyDistance);
