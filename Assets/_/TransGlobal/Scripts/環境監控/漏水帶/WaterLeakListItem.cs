@@ -24,8 +24,8 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         public void SetWaterLeakData(RealtimeAsset_WaterLeak data)
         {
             waterLeakData = data;
-            txtDeviceName.text = data.deviceName;
-            txtValue.text = waterLeakData.status;
+            txtDeviceName.SetText(data.deviceName);
+            txtValue?.SetText(waterLeakData.status);
             onAlertLevelChanged?.Invoke(waterLeakData.alertStatus);
         }
 

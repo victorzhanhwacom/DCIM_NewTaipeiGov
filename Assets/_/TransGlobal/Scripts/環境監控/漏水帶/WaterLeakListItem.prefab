@@ -385,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.51886785
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor.g
@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.51886785
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontSizeBase
@@ -401,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4286906244
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_VerticalAlignment
@@ -698,9 +698,6 @@ PrefabInstance:
       addedObject: {fileID: 6159153394020874094}
     - targetCorrespondingSourceObject: {fileID: 5869922965839507093, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7661793067305434513}
-    - targetCorrespondingSourceObject: {fileID: 5869922965839507093, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7531869221977358077}
   m_SourcePrefab: {fileID: 100100000, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
 --- !u!1 &1929306073630611720 stripped
@@ -794,58 +791,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7661793067305434513}
-        m_TargetAssemblyTypeName: VzDev.ColorUtils.GraphicColorChanger, VzDev
-        m_MethodName: ChangeColor
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   txtDeviceName: {fileID: 1000435443825179146}
   txtValue: {fileID: 8020466130296278423}
   toggle: {fileID: 7531869221977358077}
---- !u!114 &7661793067305434513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929306073630611720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d3e2772a150dc74f86c4f6f4347eb2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VzDev::VzDev.ColorUtils.GraphicColorChanger
-  currentIndex: -1
-  colorIndices:
-  - index: 0
-    colorItems:
-    - color: {r: 0.50628924, g: 1, b: 0.50628924, a: 1}
-      graphicTargets:
-      - {fileID: 8168988376280098372}
-  - index: 3
-    colorItems:
-    - color: {r: 1, g: 0.81618565, b: 0.5058824, a: 1}
-      graphicTargets:
-      - {fileID: 8168988376280098372}
-  - index: 3
-    colorItems:
-    - color: {r: 1, g: 0.52609175, b: 0.5058824, a: 1}
-      graphicTargets:
-      - {fileID: 8168988376280098372}
-  - index: 3
-    colorItems:
-    - color: {r: 1, g: 0.52609175, b: 0.5058824, a: 1}
-      graphicTargets:
-      - {fileID: 8168988376280098372}
-  duration: 0.3
-  delay: 0
-  ease: 6
 --- !u!114 &7531869221977358077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,21 +891,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4209958247550112991, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4790900833450033758, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -969,15 +921,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1009,11 +961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420741433601800745, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

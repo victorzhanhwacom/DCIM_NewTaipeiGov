@@ -25,6 +25,9 @@ namespace VzDev
         [field: SerializeField]
         public int alertStatus { get; private set; }
 
+         [field: SerializeField]
+        public string displayName { get; private set; }
+
         public override void SetTags(Tags[] tags)
         {
             base.SetTags(tags);
@@ -32,6 +35,7 @@ namespace VzDev
             status = tags[0].value;
 
             alertStatus = tags[0].value == "警報" ? 2 : 0;
+            displayName = tags[0].displayName;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         [Foldout("[Events]-Value")] public UnityEvent<string> onWaterLeakValueChangedEvent;
         [Foldout("[Events]-AlertLevel")] public UnityEvent<int> onAlertLevelChanged;
         [Foldout("[Components]"), SerializeField] private UIAnchorFollower uiAnchorFollower;
-        [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName, txtCategory;
+        [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName, txtCategory, txtDisplayName;
         private DataModelBinder_WaterLeak dataModelBinder_WaterLeak;
         #endregion
 
@@ -39,6 +39,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         {
             txtDeviceName?.SetText(waterLeakData.deviceName);
             txtCategory?.SetText(waterLeakData.category.ToString());
+            txtDisplayName?.SetText(waterLeakData.displayName);
             onWaterLeakValueChangedEvent?.Invoke(waterLeakData.status);
             onAlertLevelChanged?.Invoke(waterLeakData.alertStatus);
         }
