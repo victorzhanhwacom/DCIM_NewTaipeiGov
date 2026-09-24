@@ -139,64 +139,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919955262819126542, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &92404417
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
-    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
-    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
-    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
-    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
-    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &107878146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7199011858525842485, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
@@ -212,64 +154,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 613016202492485252, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &141021480
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
-    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
-    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
-    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
-    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
-    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &142653338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2963617697482568842, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -290,64 +174,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8140516983773539526, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &231589209
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &246226098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7405986214690799839, guid: 529c2d81740739e458bda975d6f088d0, type: 3}
@@ -383,7 +209,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1402606568}
-  - {fileID: 1188329500}
   m_Father: {fileID: 812717111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &279228370 stripped
@@ -406,64 +231,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4527482299852467678, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
   m_PrefabInstance: {fileID: 8356939981684032035}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &306089188
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
-    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
-    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
-    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
-    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
-    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +411,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7270709189213034005, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &335928088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335928090}
+  - component: {fileID: 335928089}
+  m_Layer: 0
+  m_Name: '[Singleton] - TaskManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &335928089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335928088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b081caddb960e449686a492f5dc27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VictorDev.Managers.TaskManager
+--- !u!4 &335928090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335928088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344363730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8637627527025559332, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -674,64 +485,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2659533798517423810, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &393866596
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +617,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1145309862963867352, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
   m_PrefabInstance: {fileID: 8356939981684032035}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &453373705
+--- !u!21 &497583834
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -911,15 +664,15 @@ Material:
     - _TempStop6: 0.88
     - _TempStop7: 1
     m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
+    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
+    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
+    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
+    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
+    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
+    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
+    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!1 &525378620 stripped
@@ -1002,7 +755,7 @@ MonoBehaviour:
   onLoadResultEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1260111904}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VzDev.WebApiRealtimeDataHandler_Power, Assembly-CSharp
         m_MethodName: ParseJson
         m_Mode: 0
@@ -1024,64 +777,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 913387651999076845, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
   m_PrefabInstance: {fileID: 8356939981684032035}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &585142071
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &586266745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1866919335084954124, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -1092,122 +787,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3185889395224413009, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &645354509
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
---- !u!21 &675102467
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &699931974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7035886092759530771, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
@@ -1218,64 +797,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5401913342267237888, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &753161207
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &810825833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1424207991761345368, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -1314,64 +835,6 @@ Transform:
   - {fileID: 1312673651}
   m_Father: {fileID: 2120144882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &816823642
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +952,64 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4002048377010144845, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &971891637
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeatmapVolume_Mat
+  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _ActiveStops: 6
+    - _AlphaThreshold: 0.01
+    - _Density: 1
+    - _EdgeBand: 0.4
+    - _FlowOctaves: 3
+    - _FlowScale: 2
+    - _FlowSpeed: 0.6
+    - _FlowStrength: 0.35
+    - _FlowTime: 0
+    - _StepCount: 64
+    - _StepSize: 0.02
+    - _TempMax: 100
+    - _TempMin: 0
+    - _TempStop0: 0
+    - _TempStop1: 0.15
+    - _TempStop2: 0.3
+    - _TempStop3: 0.45
+    - _TempStop4: 0.6
+    - _TempStop5: 0.75
+    - _TempStop6: 0.88
+    - _TempStop7: 1
+    m_Colors:
+    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
+    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1024676825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 537800399412628899, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -1519,7 +1040,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 966434740858022394, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1080248767
+--- !u!1 &1122952823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7622433175454499367, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
+  m_PrefabInstance: {fileID: 5409463576325208442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1154791930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2322632343608601116, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
+  m_PrefabInstance: {fileID: 5409463576325208442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1160720368
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1577,85 +1108,7 @@ Material:
     - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!1 &1122952823 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7622433175454499367, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
-  m_PrefabInstance: {fileID: 5409463576325208442}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1154791930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2322632343608601116, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
-  m_PrefabInstance: {fileID: 5409463576325208442}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1186111809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 991765258326579361, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
-  m_PrefabInstance: {fileID: 8356939981684032035}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1188329499
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1188329500}
-  - component: {fileID: 1188329501}
-  m_Layer: 0
-  m_Name: WebApiRealtimeDataHandler_Power
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1188329500
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188329499}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.04524, y: 4.96596, z: -3.31728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 278339338}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1188329501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188329499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5e7fdc825273b4c83b5a26a79d42ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.WebApiRealtimeDataHandler_Power
-  onCallingEvent:
-    onCallingBoolEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onCallingStartEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onCallingEndEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onSuccessEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onErrorEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  webApiRequestSO: {fileID: 11400000, guid: b9fc7619448b0614f93b916aae5f84dc, type: 2}
-  rawDataDTO: []
-  webapiData: []
---- !u!21 &1208009741
+--- !u!21 &1183949421
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1704,6 +1157,69 @@ Material:
     m_Colors:
     - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
     - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
+    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!1 &1186111809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 991765258326579361, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
+  m_PrefabInstance: {fileID: 8356939981684032035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1211486114
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeatmapVolume_Mat
+  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _ActiveStops: 6
+    - _AlphaThreshold: 0.01
+    - _Density: 1
+    - _EdgeBand: 0.4
+    - _FlowOctaves: 3
+    - _FlowScale: 2
+    - _FlowSpeed: 0.6
+    - _FlowStrength: 0.35
+    - _FlowTime: 0
+    - _StepCount: 64
+    - _StepSize: 0.02
+    - _TempMax: 100
+    - _TempMin: 0
+    - _TempStop0: 0
+    - _TempStop1: 0.15
+    - _TempStop2: 0.3
+    - _TempStop3: 0.45
+    - _TempStop4: 0.6
+    - _TempStop5: 0.75
+    - _TempStop6: 0.88
+    - _TempStop7: 1
+    m_Colors:
+    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
     - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
     - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
     - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
@@ -1718,7 +1234,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7589049268403806693, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
   m_PrefabInstance: {fileID: 8356939981684032035}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1247526900
+--- !u!1 &1267990695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2270548421671729886, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
+  m_PrefabInstance: {fileID: 5409463576325208442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1274747846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4859966470088793207, guid: 529c2d81740739e458bda975d6f088d0, type: 3}
+  m_PrefabInstance: {fileID: 649548679129105673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1281325257
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1776,79 +1302,6 @@ Material:
     - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!1 &1260111902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1260111903}
-  - component: {fileID: 1260111904}
-  m_Layer: 0
-  m_Name: WebApiRealtimeDataHandler_Power
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1260111903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260111902}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1312673651}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1260111904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260111902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5e7fdc825273b4c83b5a26a79d42ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VzDev.WebApiRealtimeDataHandler_Power
-  onCallingEvent:
-    onCallingBoolEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onCallingStartEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onCallingEndEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onSuccessEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    onErrorEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  webApiRequestSO: {fileID: 11400000, guid: b9fc7619448b0614f93b916aae5f84dc, type: 2}
-  rawDataDTO: []
-  webapiData: []
---- !u!1 &1267990695 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2270548421671729886, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
-  m_PrefabInstance: {fileID: 5409463576325208442}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1274747846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4859966470088793207, guid: 529c2d81740739e458bda975d6f088d0, type: 3}
-  m_PrefabInstance: {fileID: 649548679129105673}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1301376951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4347609331998364295, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
@@ -1889,9 +1342,66 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 550264918}
-  - {fileID: 1260111903}
   m_Father: {fileID: 812717111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1321132466
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeatmapVolume_Mat
+  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _ActiveStops: 6
+    - _AlphaThreshold: 0.01
+    - _Density: 1
+    - _EdgeBand: 0.4
+    - _FlowOctaves: 3
+    - _FlowScale: 2
+    - _FlowSpeed: 0.6
+    - _FlowStrength: 0.35
+    - _FlowTime: 0
+    - _StepCount: 64
+    - _StepSize: 0.02
+    - _TempMax: 100
+    - _TempMin: 0
+    - _TempStop0: 0
+    - _TempStop1: 0.15
+    - _TempStop2: 0.3
+    - _TempStop3: 0.45
+    - _TempStop4: 0.6
+    - _TempStop5: 0.75
+    - _TempStop6: 0.88
+    - _TempStop7: 1
+    m_Colors:
+    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
+    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1330616061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2753050435363970868, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -1972,64 +1482,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1713325576250274825, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
   m_PrefabInstance: {fileID: 8356939981684032035}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1434056527
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1465698166
 GameObject:
   m_ObjectHideFlags: 11
@@ -2399,122 +1851,6 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1716760424
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
---- !u!21 &1719992357
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1746343988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8157610547998222265, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
@@ -2530,122 +1866,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3647509766817299801, guid: 529c2d81740739e458bda975d6f088d0, type: 3}
   m_PrefabInstance: {fileID: 649548679129105673}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1814701926
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
-    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
-    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
-    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
-    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
-    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
---- !u!21 &1845343592
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: HeatmapVolume_Mat
-  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _ActiveStops: 6
-    - _AlphaThreshold: 0.01
-    - _Density: 1
-    - _EdgeBand: 0.4
-    - _FlowOctaves: 3
-    - _FlowScale: 2
-    - _FlowSpeed: 0.6
-    - _FlowStrength: 0.35
-    - _FlowTime: 0
-    - _StepCount: 64
-    - _StepSize: 0.02
-    - _TempMax: 100
-    - _TempMin: 0
-    - _TempStop0: 0
-    - _TempStop1: 0.15
-    - _TempStop2: 0.3
-    - _TempStop3: 0.45
-    - _TempStop4: 0.6
-    - _TempStop5: 0.75
-    - _TempStop6: 0.88
-    - _TempStop7: 1
-    m_Colors:
-    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _TempColor0: {r: 0.6, g: 0.9, b: 1, a: 1}
-    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1846217040 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8711913205866036369, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -2813,6 +2033,64 @@ Transform:
   - {fileID: 1024676826}
   m_Father: {fileID: 1933291707}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1960390246
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeatmapVolume_Mat
+  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _ActiveStops: 6
+    - _AlphaThreshold: 0.01
+    - _Density: 1
+    - _EdgeBand: 0.4
+    - _FlowOctaves: 3
+    - _FlowScale: 2
+    - _FlowSpeed: 0.6
+    - _FlowStrength: 0.35
+    - _FlowTime: 0
+    - _StepCount: 64
+    - _StepSize: 0.02
+    - _TempMax: 100
+    - _TempMin: 0
+    - _TempStop0: 0
+    - _TempStop1: 0.15
+    - _TempStop2: 0.3
+    - _TempStop3: 0.45
+    - _TempStop4: 0.6
+    - _TempStop5: 0.75
+    - _TempStop6: 0.88
+    - _TempStop7: 1
+    m_Colors:
+    - _FlowDirection: {r: 0.2, g: 1, b: 0.1, a: 0}
+    - _TempColor0: {r: 0, g: 0.52963686, b: 0.52963686, a: 1}
+    - _TempColor1: {r: 0, g: 0.5, b: 0, a: 1}
+    - _TempColor2: {r: 0.6145422, g: 1.4142135, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 1.4495744, b: 0, a: 1}
+    - _TempColor4: {r: 2.9960785, g: 0.63838345, b: 0, a: 1}
+    - _TempColor5: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
+    - _TempColor6: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
+    - _TempColor7: {r: 11.984315, g: 1.1294118, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1979431863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5973976883518004166, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
@@ -2828,12 +2106,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4094250987630440425, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
   m_PrefabInstance: {fileID: 5409463576325208442}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &2063994567
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeatmapVolume_Mat
+  m_Shader: {fileID: 4800000, guid: d6fb87503a14b0c4daad869a93784ea1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _ActiveStops: 6
+    - _AlphaThreshold: 0.01
+    - _Density: 1
+    - _EdgeBand: 0.4
+    - _FlowOctaves: 3
+    - _FlowScale: 2
+    - _FlowSpeed: 0.6
+    - _FlowStrength: 0.35
+    - _FlowTime: 0
+    - _StepCount: 64
+    - _StepSize: 0.02
+    - _TempMax: 100
+    - _TempMin: 0
+    - _TempStop0: 0
+    - _TempStop1: 0.15
+    - _TempStop2: 0.3
+    - _TempStop3: 0.45
+    - _TempStop4: 0.6
+    - _TempStop5: 0.75
+    - _TempStop6: 0.88
+    - _TempStop7: 1
+    m_Colors:
+    - _FlowDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _TempColor0: {r: 0.61138463, g: 1, b: 0.6, a: 1}
+    - _TempColor1: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor2: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor3: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor4: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor5: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor6: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+    - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &2074146953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1914398271292335366, guid: 529c2d81740739e458bda975d6f088d0, type: 3}
   m_PrefabInstance: {fileID: 649548679129105673}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &2080624589
+--- !u!1 &2086329474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4631441748411630864, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
+  m_PrefabInstance: {fileID: 8356939981684032035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2088880369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1497762099201202097, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
+  m_PrefabInstance: {fileID: 8356939981684032035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2120144881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120144882}
+  m_Layer: 0
+  m_Name: ===== WebAPI =====
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2120144882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120144881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 812717111}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2132914480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2948409458601028127, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
+  m_PrefabInstance: {fileID: 5409463576325208442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &2140893021
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -2891,53 +2274,6 @@ Material:
     - _TempColor7: {r: 1.4980392, g: 0.6413363, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!1 &2086329474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4631441748411630864, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
-  m_PrefabInstance: {fileID: 8356939981684032035}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2088880369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1497762099201202097, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
-  m_PrefabInstance: {fileID: 8356939981684032035}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2120144881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2120144882}
-  m_Layer: 0
-  m_Name: ===== WebAPI =====
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2120144882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120144881}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 812717111}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2132914480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2948409458601028127, guid: f72ce0656c4b57e47b1cd2b5626265b6, type: 3}
-  m_PrefabInstance: {fileID: 5409463576325208442}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142849711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4614703246955531521, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
@@ -3146,11 +2482,11 @@ PrefabInstance:
     - target: {fileID: 217548342792263168, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 393866596}
+      objectReference: {fileID: 971891637}
     - target: {fileID: 1286133551211978124, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1814701926}
+      objectReference: {fileID: 497583834}
     - target: {fileID: 1713325576250274825, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3194,35 +2530,35 @@ PrefabInstance:
     - target: {fileID: 1925308957229265536, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 585142071}
+      objectReference: {fileID: 2063994567}
     - target: {fileID: 2834638254386679202, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 675102467}
+      objectReference: {fileID: 1183949421}
     - target: {fileID: 3031895282477658869, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1716760424}
+      objectReference: {fileID: 2140893021}
     - target: {fileID: 3619764513241447608, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 231589209}
+      objectReference: {fileID: 1160720368}
     - target: {fileID: 4735783754084211863, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1719992357}
+      objectReference: {fileID: 1211486114}
     - target: {fileID: 5648792824248656702, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 92404417}
+      objectReference: {fileID: 1960390246}
     - target: {fileID: 6089291259328666171, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1208009741}
+      objectReference: {fileID: 1321132466}
     - target: {fileID: 7419779563936032264, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1845343592}
+      objectReference: {fileID: 1281325257}
     - target: {fileID: 7535818372664479162, guid: 9b7ff7e0a0e862e47980cf291ad33fe9, type: 3}
       propertyPath: m_Name
       value: "\u5340\u57DF\u8272\u584A"
@@ -3255,3 +2591,4 @@ SceneRoots:
   - {fileID: 894010730}
   - {fileID: 1465698168}
   - {fileID: 2120144882}
+  - {fileID: 335928090}
