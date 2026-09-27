@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.Events;
 using VzDev.EventUtils;
 using VzDev.Frameworks;
 using VzDev.StringUtils;
@@ -10,37 +11,31 @@ using VzDev.StringUtils;
 namespace VzDev.NetUtils.WebAPI
 {
     /// <summary>
-    /// WebAPI原始資料基底類別
+    /// WebAPI 資料呼叫 抽像基底類別
+    /// <para> + TData: WebAPI資料類別  </para>
     /// </summary>
-    public abstract class WebAPI_RawDataBase
-    {
-    }
-
-    /// <summary>
-    /// WebAPI 資料呼叫
-    /// <para> + TRawData: 自建的WebAPI原始資料類別(繼承WebAPI_RawDataBase<TData>) </para>
-    /// </summary>
-    public abstract class WebAPI_CallerBase<TRawData> : SingletonMonoBehaviour<WebAPI_CallerBase<TRawData>>
-        where TRawData : WebAPI_RawDataBase
+    public abstract class WebAPI_CallerBase<TData> : SingletonMonoBehaviour<WebAPI_CallerBase<TData>>
+        where TData : class
     {
         #region Event
         /// <summary>
         /// 取得WebApiData資料時
         /// </summary>
-        public static Action<List<TRawData>> OnGetRawDataAction;
+        public static Action<List<TData>> OnGetDataAction;
+        [Foldout("[Data Event]")] public UnityEvent<List<TData>> OnGetDataEvent;
         [Label("[Events]"), SerializeField] protected OnCallbackEvent onCallingEvent = new OnCallbackEvent();
         #endregion
 
         #region Field
         [SerializeField, Expandable] protected WebApiRequestSO webApiRequestSO;
-        [Foldout("[Data]"), SerializeField] protected List<TRawData> webapi_rawData = new List<TRawData>();
-        [Foldout("[Settings]"), SerializeField, Tooltip("是否只從Json節點中取得資料")] protected bool getJsonFromNode = false;
+        [SerializeField] protected List<TData> webapiData = new List<TData>();
+        [Foldout("[Settings]"), SerializeField, Tooltip("是否只從Json節點中取得資料")] protected bool getJsonFromNode = true;
         [Foldout("[Settings]"), SerializeField, ShowIf("getJsonFromNode")] protected string jsonNodePath = "devices";
 
         /// <summary>
         /// WebAPI轉換後的資料
         /// </summary>
-        public static List<TRawData> WebAPI_RawData => Instance.webapi_rawData;
+        public static List<TData> WebAPI_RawData => Instance.webapiData;
         protected bool isHaveRequest => webApiRequestSO != null;
         protected bool isWebApiCalling;
         #endregion
@@ -49,7 +44,7 @@ namespace VzDev.NetUtils.WebAPI
         /// <summary>
         /// 呼叫WebAPI取得即時資料
         /// </summary>
-        [Button, ShowIf("isHaveRequest"), DisableIf("isApiCalling")]
+        [Button, ShowIf("isHaveRequest"), DisableIf("isWebApiCalling")]
         public void CallWebAPI() => CallWebAPI(OnSuccess, OnFailure);
         /// <summary>
         /// 呼叫WebAPI取得即時資料
@@ -62,6 +57,8 @@ namespace VzDev.NetUtils.WebAPI
         public void CallWebAPI(Action<string> onSuccess, Action<string> onFailure)
         {
             isWebApiCalling = true;
+            webapiData?.Clear();
+            webapiData ??= new List<TData>();
             onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
             webApiRequestSO.CallAPI(onSuccess, onFailure);
         }
@@ -75,7 +72,7 @@ namespace VzDev.NetUtils.WebAPI
         /// <summary>
         /// 取消呼叫WebAPI
         /// </summary>
-        [Button, ShowIf("isApiCalling")]
+        [Button, ShowIf("isWebApiCalling")]
         public void StopCallApi()
         {
             isWebApiCalling = false;
@@ -92,7 +89,11 @@ namespace VzDev.NetUtils.WebAPI
         /// <summary>
         /// 發送WebApiData資料給訂閱者
         /// </summary>
-        public void InvokeData() => OnGetRawDataAction?.Invoke(webapi_rawData);
+        public virtual void InvokeData()
+        {
+            OnGetDataAction?.Invoke(webapiData);
+            OnGetDataEvent?.Invoke(webapiData);
+        }
         #endregion
 
         /// <summary>
@@ -101,7 +102,7 @@ namespace VzDev.NetUtils.WebAPI
         public void ParseJson(string json)
         {
             if (getJsonFromNode) json = JsonHelper.GetJsonFromNode(json, jsonNodePath);
-            webapi_rawData = JsonConvert.DeserializeObject<List<TRawData>>(json);
+            webapiData = JsonConvert.DeserializeObject<List<TData>>(json);
         }
 
         #region WebAPI呼叫時的回調
@@ -111,7 +112,7 @@ namespace VzDev.NetUtils.WebAPI
         protected void OnSuccess(string json)
         {
             isWebApiCalling = false;
-            webapi_rawData = new List<TRawData>();
+            webapiData = new List<TData>();
             ParseJson(json);
             onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
             onCallingEvent?.InvokeOnSuccessEvent();
