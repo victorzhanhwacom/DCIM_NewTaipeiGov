@@ -99,11 +99,16 @@ namespace VzDev.NetUtils.WebAPI
         /// <summary>
         /// 解析Json字串資料
         /// </summary>
-        public void ParseJson(string json)
+        public virtual void ParseJson(string json)
         {
             if (getJsonFromNode) json = JsonHelper.GetJsonFromNode(json, jsonNodePath);
             webapiData = JsonConvert.DeserializeObject<List<TData>>(json);
         }
+
+        /// <summary>
+        /// 設定Body Json內容
+        /// </summary>
+        public void SetBodyJson(string bodyJson) => webApiRequestSO.SetBodyRawJson(bodyJson);
 
         #region WebAPI呼叫時的回調
         /// <summary>

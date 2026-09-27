@@ -121,10 +121,12 @@ namespace VzDev
         public string space { get; private set; }
         [JsonProperty]
         [field: SerializeField]
-        public DCIM_System systemType { get; private set; }
+        public string systemType { get; private set; }
+        // public DCIM_System systemType { get; private set; }
         [JsonProperty]
         [field: SerializeField]
-        public DCIM_Category deviceCategory { get; private set; }
+        public string deviceCategory { get; private set; }
+        // public DCIM_Category deviceCategory { get; private set; }
         [JsonProperty]
         [field: SerializeField]
         public string deviceModel { get; private set; }

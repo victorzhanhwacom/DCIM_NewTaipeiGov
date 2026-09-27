@@ -20,8 +20,11 @@ namespace VzDev
             {
                 deviceCode = deviceCode,
                 deviceName = deviceName,
+                system = systemType,
+                category = deviceCategory,
+                /* 
                 system = Enum.TryParse<DCIM_System>(systemType, out var parsedSystem) ? parsedSystem : DCIM_System.Unknow,
-                category = Enum.TryParse<DCIM_Category>(deviceCategory.ToUpper(), out var parsedCategory) ? parsedCategory : DCIM_Category.Unknow,
+                category = Enum.TryParse<DCIM_Category>(deviceCategory.ToUpper(), out var parsedCategory) ? parsedCategory : DCIM_Category.Unknow, */
             };
             //result.SetTags(tags);
             return result;
