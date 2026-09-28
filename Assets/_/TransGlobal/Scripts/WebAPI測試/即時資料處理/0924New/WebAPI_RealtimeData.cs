@@ -2,6 +2,7 @@ using System;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
+using VzDev.DCIMUtils.DataUtils;
 
 namespace VzDev.DCIMUtils
 {
@@ -31,7 +32,8 @@ namespace VzDev.DCIMUtils
                 systemType = systemType,
                 deviceCategory = deviceCategory,
                 deviceModel = deviceModel,
-                tags = tags
+                tags = tags,
+                modelInfo = modelInfo
             };
         }
 
@@ -42,6 +44,8 @@ namespace VzDev.DCIMUtils
             Alert,
             Disconnect = 99
         }
+
+        public ModelInfo modelInfo;
 
         #region Fields
         [JsonProperty]
@@ -76,6 +80,11 @@ namespace VzDev.DCIMUtils
                 if (!string.IsNullOrEmpty(localTimestamp))
                 {
                     localTimestamp = localTimestamp.Replace("T", " ");
+                }
+
+                if (string.IsNullOrEmpty(value))
+                {
+                    value = "---";
                 }
             }
 

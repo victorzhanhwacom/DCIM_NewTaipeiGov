@@ -20,12 +20,12 @@ namespace VzDev
         [field: SerializeField]
         public bool isLeak { get; private set; }
         [field: SerializeField]
-        public string status{ get; private set; }
+        public string status { get; private set; }
 
         [field: SerializeField]
         public int alertStatus { get; private set; }
 
-         [field: SerializeField]
+        [field: SerializeField]
         public string displayName { get; private set; }
 
         public override void SetTags(Tags[] tags)
@@ -34,7 +34,9 @@ namespace VzDev
             isLeak = tags[0].alertLevel != 0;
             status = tags[0].value;
 
-            alertStatus = tags[0].value == "警報" ? 2 : 0;
+            if (tags[0].alertLevel == 0) alertStatus = 0;
+            else if (tags[0].alertLevel >= 99) alertStatus = 2;
+            else alertStatus = 1;
             displayName = tags[0].displayName;
         }
     }

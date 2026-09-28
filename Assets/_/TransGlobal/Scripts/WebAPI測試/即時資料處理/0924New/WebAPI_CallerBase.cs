@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Events;
+using VzDev.DCIMUtils;
 using VzDev.EventUtils;
 using VzDev.Frameworks;
 using VzDev.StringUtils;
@@ -39,6 +41,14 @@ namespace VzDev.NetUtils.WebAPI
         protected bool isHaveRequest => webApiRequestSO != null;
         protected bool isWebApiCalling;
         #endregion
+
+        public void ToCallWebAPI(bool isCall)
+        {
+            if(isCall) CallWebAPI();
+            else StopCallApi();
+        }
+
+        public void RecallWebAPI() => CallWebAPI(OnSuccess, OnFailure);
 
         #region 呼叫WebAPI取得即時資料
         /// <summary>
