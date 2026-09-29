@@ -11,6 +11,32 @@ namespace VzDev.DCIMUtils
     /// </summary>
     public class WebAPI_CallerBase_DeviceControl : WebAPI_CallerBase<DeviceControlResult>
     {
+        public void SetDeviceControl(string tagId, bool isOn, Action<bool> onSuccess, Action<string> onError)
+        {
+            var deviceControl = new DeviceControl(tagId, isOn);
+            var itemsWrapper = new ItemsWrapper { items = new DeviceControl[] { deviceControl } };
+            string jsonData = JsonConvert.SerializeObject(itemsWrapper);
+
+            Debug.Log($"[WebAPI_CallerBase_DeviceControl] SetDeviceControl: {jsonData}");
+
+            webApiRequestSO.SetBodyRawJson(jsonData);
+            webApiRequestSO.CallAPI((response) =>
+            {
+                
+            }, onError);
+        }
+
+        private bool OnCallAPISuccess(string response)
+        {
+            Debug.Log($"[WebAPI_CallerBase_DeviceControl] OnCallAPISuccess: {response}");
+            var result = JsonConvert.DeserializeObject<DeviceControlResult[]>(response);
+            if (result != null && result.Length > 0)
+            {
+               
+            }
+            return false;
+        }
+        
     }
 
     [Serializable]
