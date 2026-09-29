@@ -45,12 +45,11 @@ namespace VzDev.DCIMUtils
             Disconnect = 99
         }
 
-        public ModelInfo modelInfo;
-
         #region Fields
         [JsonProperty]
         [field: SerializeField]
         public string deviceName { get; protected set; }
+        public ModelInfo modelInfo;
         [JsonProperty]
         [field: SerializeField]
         public string deviceId { get; protected set; }

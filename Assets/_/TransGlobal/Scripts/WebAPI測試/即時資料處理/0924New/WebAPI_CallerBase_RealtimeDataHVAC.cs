@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using VzDev.NetUtils.WebAPI;
 using VzDev.UnityAPI.Extensions;
 
@@ -10,6 +12,25 @@ namespace VzDev.DCIMUtils
     /// </summary>
     public class WebAPI_CallerBase_RealtimeDataHVAC : WebAPI_CallerBase<WebAPI_RealtimeData>
     {
+        public static Action<List<WebAPI_RealtimeData_CRAC>> OnGetCRACDataAction;
+        public static Action<List<WebAPI_RealtimeData_InRowCooler>> OnGetInRowCoolerDataAction;
+        [field: SerializeField] public List<WebAPI_RealtimeData_CRAC> WebAPI_CRACData { get; private set; }
+        [field: SerializeField] public List<WebAPI_RealtimeData_InRowCooler> WebAPI_InRowCoolerData { get; private set; }
+
+        public override void ParseJson(string json)
+        {
+            base.ParseJson(json);
+            WebAPI_CRACData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fcu"))
+                .Select(data => data.ToCRAC()).ToList();
+            WebAPI_InRowCoolerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("inr"))
+                .Select(data => data.ToInRowCooler()).ToList();
+        }
+        public override void InvokeData()
+        {
+            base.InvokeData();
+            OnGetCRACDataAction?.Invoke(WebAPI_CRACData);
+            OnGetInRowCoolerDataAction?.Invoke(WebAPI_InRowCoolerData);
+        }
     }
 
     /// <summary>
