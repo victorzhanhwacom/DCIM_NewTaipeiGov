@@ -1,8 +1,12 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
+using VzDev.Frameworks.ScrollRectUtils;
+using VzDev.MathUtils;
 
 namespace VzDev.DCIMUtils
 {
@@ -10,7 +14,7 @@ namespace VzDev.DCIMUtils
     /// WebAPI即時資料格式
     /// </summary>
     [Serializable]
-    public class WebAPI_RealtimeData
+    public class WebAPI_RealtimeData: IDataID
     {
         public WebAPI_RealtimeData_UPSHost ToUPSHost() => CloneAs<WebAPI_RealtimeData_UPSHost>();
         public WebAPI_RealtimeData_UPSBattery ToUPSBattery() => CloneAs<WebAPI_RealtimeData_UPSBattery>();
@@ -18,6 +22,25 @@ namespace VzDev.DCIMUtils
         public WebAPI_RealtimeData_CRAC ToCRAC() => CloneAs<WebAPI_RealtimeData_CRAC>();
         public WebAPI_RealtimeData_InRowCooler ToInRowCooler() => CloneAs<WebAPI_RealtimeData_InRowCooler>();
 
+        public string dataID => deviceCode;
+
+        /// <summary>
+        /// 0: 正常, 1: 告警, 2: 離線
+        /// </summary>
+        public virtual int TotalAlertLevelStatus { get;}
+
+        /// <summary>
+        /// 計算多個Tag的總告警等級
+        /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
+        /// </summary>
+        protected int GetTotalAlertLevelStatus(params Tags[] tags)
+        {
+            if (tags == null || tags.Length == 0)
+                return 0;
+
+            List<int> alertLevels = tags.Select(tag => tag.alertLevelStatus).ToList();
+            return MathHelper.Max(alertLevels);
+        }
 
         /// <summary>
         /// 轉型並複製資料
@@ -88,9 +111,20 @@ namespace VzDev.DCIMUtils
             }
 
             /// <summary>
-            /// 告警狀態： 0: 正常, 1~98: 告警, 99: 離線
+            /// 告警狀態： 0: 正常, 1: 告警, 2: 離線
             /// </summary>
-            public EnumRealtimeAlertLevel alertLevelStatus => (EnumRealtimeAlertLevel)alertLevel;
+            public int alertLevelStatus
+            {
+                get
+                {
+                    switch (alertLevel)
+                    {
+                        case 0: return 0; // 正常
+                        case 99: return 2; // 離線
+                        default: return 1; // 告警
+                    }
+                }
+            }
 
             #region Fields
             [JsonProperty]
@@ -123,6 +157,9 @@ namespace VzDev.DCIMUtils
             [JsonProperty]
             [field: SerializeField]
             public bool isOfflineStatusTag { get; private set; }
+            /// <summary>
+            /// 告警狀態： 0: 正常, 1~98: 告警, 99: 離線
+            /// </summary>
             [JsonProperty]
             [field: SerializeField]
             public int alertLevel { get; private set; }

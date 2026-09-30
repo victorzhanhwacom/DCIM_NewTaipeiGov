@@ -14,8 +14,8 @@ namespace VzDev.DCIMUtils
     {
         public static Action<List<WebAPI_RealtimeData_CRAC>> OnGetCRACDataAction;
         public static Action<List<WebAPI_RealtimeData_InRowCooler>> OnGetInRowCoolerDataAction;
-        [field: SerializeField] public List<WebAPI_RealtimeData_CRAC> WebAPI_CRACData { get; private set; }
-        [field: SerializeField] public List<WebAPI_RealtimeData_InRowCooler> WebAPI_InRowCoolerData { get; private set; }
+        [field: SerializeField] public static List<WebAPI_RealtimeData_CRAC> WebAPI_CRACData { get; private set; }
+        [field: SerializeField] public static List<WebAPI_RealtimeData_InRowCooler> WebAPI_InRowCoolerData { get; private set; }
 
         public override void ParseJson(string json)
         {
@@ -68,12 +68,14 @@ namespace VzDev.DCIMUtils
     public class WebAPI_RealtimeData_InRowCooler : WebAPI_RealtimeData
     {
         /// <summary>
+        /// 回風溫度
+        /// </summary>
+        public Tags inTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ai002"));
+        /// <summary>
         /// 出風溫度
         /// </summary>
         public Tags outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ai001"));
-        /// <summary>
-        /// 回風溫度
-        /// </summary>
-        public Tags returnTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ai002"));
+
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(inTempTag, outTempTag);
     }
 }
