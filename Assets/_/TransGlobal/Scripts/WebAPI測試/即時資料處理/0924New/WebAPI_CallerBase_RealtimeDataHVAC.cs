@@ -12,10 +12,14 @@ namespace VzDev.DCIMUtils
     /// </summary>
     public class WebAPI_CallerBase_RealtimeDataHVAC : WebAPI_CallerBase<WebAPI_RealtimeData>
     {
+        #region Static Event
         public static Action<List<WebAPI_RealtimeData_CRAC>> OnGetCRACDataAction;
         public static Action<List<WebAPI_RealtimeData_InRowCooler>> OnGetInRowCoolerDataAction;
+        #endregion
+        #region Field
         [field: SerializeField] public static List<WebAPI_RealtimeData_CRAC> WebAPI_CRACData { get; private set; }
         [field: SerializeField] public static List<WebAPI_RealtimeData_InRowCooler> WebAPI_InRowCoolerData { get; private set; }
+        #endregion
 
         public override void ParseJson(string json)
         {

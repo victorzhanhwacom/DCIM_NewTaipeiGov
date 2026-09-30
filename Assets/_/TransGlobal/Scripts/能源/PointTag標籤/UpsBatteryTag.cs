@@ -31,11 +31,11 @@ namespace VzDev
 
         private void OnEnable()
         {
-            OnGetDataAction(WebAPI_CallerBase_RealtimeDataUpsBattery.WebAPI_RawData);
-            WebAPI_CallerBase_RealtimeDataUpsBattery.OnGetDataAction += OnGetDataAction;
+            OnGetDataAction(WebAPI_CallerBase_RealtimeDataPower.WebAPI_UpsBatteryData);
+            WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction += OnGetDataAction;
         }
 
-        private void OnDisable() => WebAPI_CallerBase_RealtimeDataUpsBattery.OnGetDataAction -= OnGetDataAction;
+        private void OnDisable() => WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction -= OnGetDataAction;
 
         private void OnGetDataAction(List<WebAPI_RealtimeData_UPSBattery> list)
         {

@@ -40,13 +40,13 @@ public class UPS_BatteryListItem : MonoBehaviour
 
     private void OnEnable()
     {
-        WebAPI_CallerBase_RealtimeDataUpsBattery.OnGetDataAction += OnGetDataAction;
+        WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction += OnGetDataAction;
         toggle.onValueChanged.AddListener(OnToggleValueChanged);
     }
 
     private void OnDisable()
     {
-        WebAPI_CallerBase_RealtimeDataUpsBattery.OnGetDataAction -= OnGetDataAction;
+        WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction -= OnGetDataAction;
         toggle.onValueChanged.RemoveListener(OnToggleValueChanged);
     }
 
