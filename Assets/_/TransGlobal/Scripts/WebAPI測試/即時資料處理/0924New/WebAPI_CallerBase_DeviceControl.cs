@@ -48,12 +48,18 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class DeviceControl
     {
-        public string tagId;
-        public string value;
+        public string _tagId;
+        public string _value;
         public DeviceControl(string tagId, bool isOn)
         {
-            this.tagId = tagId;
-            value = isOn ? "1" : "0";
+            _tagId = tagId;
+            _value = isOn ? "1" : "0";
+        }
+
+         public DeviceControl(string tagId, float value)
+        {
+            _tagId = tagId;
+            _value = value.ToString();
         }
     }
 

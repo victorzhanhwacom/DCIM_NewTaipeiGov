@@ -2,6 +2,7 @@ using System;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using VzDev.DCIMUtils;
 using VzDev.DOTweenUtils;
@@ -9,12 +10,19 @@ using VzDev.Frameworks.ScrollRectUtils;
 
 public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
 {
+    #region UnityEvent
+    [Foldout("[Event]-設定溫度"), SerializeField] private UnityEvent setTempValueEvent;
+    [Foldout("[Event]-設定溫度"), SerializeField] private UnityEvent onClickTempControlButtonEvent;
+    #endregion
+    #region Fields
     [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName, txtTempSet;
     [Foldout("[Components]"), SerializeField] private DOTweenText txtRoomTemp;
     [Foldout("[Components]"), SerializeField] private Toggle toggleManualControl;
     [Foldout("[Components]"), SerializeField] private Button btnTempIncrease, btnTempDecrease;
-
     private float? tempSetValue;
+
+    public string bodyJson_SetTemp;
+    #endregion
 
     #region Event Listener
     protected override void OnEnable()
@@ -41,9 +49,17 @@ public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
         tempSetValue ??= string.IsNullOrEmpty(data.tempSetTag.value) ? float.Parse(data.rtTag.value) : float.Parse(data.tempSetTag.value);
         tempSetValue += adjustValue;
         txtTempSet.SetText(tempSetValue?.ToString("0.##"));
+
+        DeviceControl deviceControl = new DeviceControl(data.tempSetTag.tagId, tempSetValue ?? 0f);
+
+        setTempValueEvent?.Invoke();
+        onClickTempControlButtonEvent?.Invoke();
     }
     #endregion
 
+    /// <summary>
+    /// 手動控制開關值改變事件
+    /// </summary>
     private void OnToggleManualControlValueChanged(bool isOn)
     {
     }
