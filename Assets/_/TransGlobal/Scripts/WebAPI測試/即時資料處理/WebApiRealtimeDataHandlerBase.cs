@@ -50,7 +50,7 @@ namespace VzDev
         public void CallWebAPI(Action<string> onSuccess, Action<string> onFailure)
         {
             isApiCalling = true;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             webApiRequestSO.CallAPI(onSuccess, onFailure);
         }
         #endregion
@@ -67,7 +67,7 @@ namespace VzDev
         public void StopCallApi()
         {
             isApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             webApiRequestSO.StopCallApi();
         }
         #endregion
@@ -76,7 +76,7 @@ namespace VzDev
         {
             isApiCalling = false;
             ParseJson(json);
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             onCallingEvent?.InvokeOnSuccessEvent();
             OnGetWebApiDataAction?.Invoke(webapiData);
         }
@@ -84,7 +84,7 @@ namespace VzDev
         private void OnFailed(string message)
         {
             isApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             onCallingEvent?.InvokeOnErrorEvent(message);
         }
 

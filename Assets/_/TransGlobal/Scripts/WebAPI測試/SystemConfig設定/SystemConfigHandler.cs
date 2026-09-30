@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
+using VzDev.DateTimeUtils;
 using VzDev.Frameworks;
 using VzDev.NetUtils;
 
@@ -12,14 +14,20 @@ namespace VzDev
     /// </summary>
     public class SystemConfigHandler : SingletonMonoBehaviour<SystemConfigHandler>
     {
+        #region Fields
         [SerializeField, ReadOnly] private SystemConfig systemConfig;
         [SerializeField, Expandable] private IPConfigSO ipConfig;
+        [SerializeField] private List<TimerController> timeoutTimer, timeIntervalTimer;
+        #endregion
 
         public void ParseJson(string json)
         {
             systemConfig = JsonConvert.DeserializeObject<SystemConfig>(json);
             ipConfig?.SetConfig(systemConfig.webapi.httpType, systemConfig.webapi.ip, systemConfig.webapi.port, systemConfig.webapi.surfix
             , systemConfig.webapi.usingProxyURL);
+
+            timeoutTimer?.ForEach(timer => timer.SetTimeValue(systemConfig.webapi.requestTimeoutSec));
+            timeIntervalTimer?.ForEach(timer => timer.SetTimeValue(systemConfig.webapi.requestIntervalSec));
 
             Debug.Log($"LogEnabled: {systemConfig.system.logEnabled}");
             Debug.unityLogger.logEnabled = systemConfig.system.logEnabled;
@@ -74,6 +82,13 @@ namespace VzDev
             [JsonProperty]
             [field: SerializeField]
             public bool usingProxyURL { get; private set; }
+
+            [JsonProperty]
+            [field: SerializeField]
+            public float requestTimeoutSec { get; private set; }
+            [JsonProperty]
+            [field: SerializeField]
+            public float requestIntervalSec { get; private set; }
         }
     }
 }

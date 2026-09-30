@@ -69,7 +69,7 @@ namespace VzDev.NetUtils.WebAPI
             isWebApiCalling = true;
             webapiData?.Clear();
             webapiData ??= new List<TData>();
-            onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
             webApiRequestSO.CallAPI(onSuccess, onFailure);
         }
         #endregion
@@ -86,7 +86,7 @@ namespace VzDev.NetUtils.WebAPI
         public void StopCallApi()
         {
             isWebApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
             webApiRequestSO.StopCallApi();
         }
         #endregion
@@ -129,7 +129,7 @@ namespace VzDev.NetUtils.WebAPI
             isWebApiCalling = false;
             webapiData = new List<TData>();
             ParseJson(json);
-            onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
             onCallingEvent?.InvokeOnSuccessEvent();
             InvokeData();
         }
@@ -139,9 +139,17 @@ namespace VzDev.NetUtils.WebAPI
         protected void OnFailure(string errorMsg)
         {
             isWebApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isWebApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
             onCallingEvent?.InvokeOnErrorEvent(errorMsg);
         }
         #endregion
+
+        /// <summary>
+        /// 呼叫逾時處理
+        /// </summary>
+        public void OnTimeout()
+        {
+            
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace VzDev.DCIMUtils
     /// WebAPI即時資料格式
     /// </summary>
     [Serializable]
-    public class WebAPI_RealtimeData: IDataID
+    public class WebAPI_RealtimeData: IDataKeyID
     {
         public WebAPI_RealtimeData_UPSHost ToUPSHost() => CloneAs<WebAPI_RealtimeData_UPSHost>();
         public WebAPI_RealtimeData_UPSBattery ToUPSBattery() => CloneAs<WebAPI_RealtimeData_UPSBattery>();
@@ -22,7 +22,7 @@ namespace VzDev.DCIMUtils
         public WebAPI_RealtimeData_CRAC ToCRAC() => CloneAs<WebAPI_RealtimeData_CRAC>();
         public WebAPI_RealtimeData_InRowCooler ToInRowCooler() => CloneAs<WebAPI_RealtimeData_InRowCooler>();
 
-        public string dataID => deviceCode;
+        public string dataKeyID => deviceCode;
 
         /// <summary>
         /// 0: 正常, 1: 告警, 2: 離線

@@ -32,13 +32,13 @@ namespace VzDev
         public void CallWebAPI()
         {
             isApiCalling = true;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             webApiRequestSO.CallAPI(ParseJson, OnFailed);
         }
         private void OnFailed(string message)
         {
             isApiCalling = false;
-            onCallingEvent?.InvokeOnCallingEvent(isApiCalling);
+            onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
             onCallingEvent.InvokeOnErrorEvent(message);
         }
         #endregion
