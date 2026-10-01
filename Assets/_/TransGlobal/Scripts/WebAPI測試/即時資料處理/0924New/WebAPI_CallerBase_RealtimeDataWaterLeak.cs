@@ -38,6 +38,7 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_WaterLeak : WebAPI_RealtimeData
     {
+        public string title => alarmTag?.displayName;
         public string value => alarmTag?.value;
         public string severity => alarmTag.severity;
         /// <summary>

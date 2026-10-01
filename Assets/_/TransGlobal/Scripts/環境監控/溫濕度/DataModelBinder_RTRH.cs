@@ -15,16 +15,16 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     public class DataModelBinder_RTRH : MonoBehaviour
     {
         #region Events
-        public Action<RealtimeAsset_RtRh> OnRtRhDataChangedAction;
+        public Action<WebAPI_RealtimeData_RtRh> OnRtRhDataChangedAction;
         public Action<EnumRtRhMode> OnRtRhTypeChangedAction;
         #endregion
 
         #region Fields
         [SerializeField, ReadOnly] private EnumRtRhMode rtRhMode = EnumRtRhMode.Unselect;
-        [SerializeField, ReadOnly] private RealtimeAsset_RtRh rtrhData;
+        [SerializeField, ReadOnly] private WebAPI_RealtimeData_RtRh rtrhData;
         [Foldout("[Components]"), SerializeField] private HeatSource heatSource;
 
-        public RealtimeAsset_RtRh RtRhData => rtrhData;
+        public WebAPI_RealtimeData_RtRh RtRhData => rtrhData;
         public EnumRtRhMode RtRhMode => rtRhMode;
         #endregion
 
@@ -42,16 +42,17 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         private void UpdateHeatSource()
         {
             if (heatSource == null && transform.TryGetComponentAndLog(out heatSource) == false) return;
+            if (rtrhData == null) return;
             switch (rtRhMode)
             {
                 case EnumRtRhMode.Rt:
-                    if (!string.IsNullOrEmpty(rtrhData.rtTag.value))
+                    if (rtrhData.rtTag != null && !string.IsNullOrEmpty(rtrhData.rtTag.value))
                     {
                         heatSource.SetTemperature(float.Parse(rtrhData.rtTag.value));
                     }
                     break;
                 case EnumRtRhMode.Rh:
-                    if (!string.IsNullOrEmpty(rtrhData.rhTag.value))
+                    if (rtrhData.rhTag != null && !string.IsNullOrEmpty(rtrhData.rhTag.value))
                     {
                         heatSource.SetTemperature(float.Parse(rtrhData.rhTag.value));
                     }
@@ -62,7 +63,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         /// <summary>
         /// WebAPI回傳即時資料時
         /// </summary>
-        private void OnGetRealtimeAssetAction(List<RealtimeAsset_RtRh> list)
+        private void OnGetRtRhDataAction(List<WebAPI_RealtimeData_RtRh> list)
         {
             string deviceCode = transform.parent.GetModelDeviceCode();
             rtrhData = list.FirstOrDefault(data => data.deviceCode == deviceCode);
@@ -98,13 +99,13 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         #region Event Listeners
         private void OnEnable()
         {
-            WebApiRealtimeDataHandler_RtRh.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
+            WebAPI_CallerBase_RealtimeDataRTRH.OnGetRtRhDataAction += OnGetRtRhDataAction;
             RtRhDataManager.OnRtRhModeChangedAction += OnRtRhTypeChanged;
         }
 
         private void OnDisable()
         {
-            WebApiRealtimeDataHandler_RtRh.OnGetWebApiDataAction -= OnGetRealtimeAssetAction;
+            WebAPI_CallerBase_RealtimeDataRTRH.OnGetRtRhDataAction -= OnGetRtRhDataAction;
             RtRhDataManager.OnRtRhModeChangedAction -= OnRtRhTypeChanged;
         }
         #endregion

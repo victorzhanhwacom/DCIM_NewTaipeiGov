@@ -1,47 +1,35 @@
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 using VzDev.DOTweenUtils;
-using VzDev.InteractiveUtils.ModelMouseEvent;
+using VzDev.Frameworks.ScrollRectUtils;
 
 namespace VzDev.DCIMUtils.EnviornmentUtils
 {
     /// <summary>
     /// 溫濕度數據綁定器：列表項目
     /// </summary>
-    public class RtRhListItem : MonoBehaviour
+    public class RtRhListItem : ScrollRectListItemBase<WebAPI_RealtimeData_RtRh>
     {
-        [Foldout("[Data]"), SerializeField] private WebAPI_RealtimeData_RtRh rtrhData;
-        [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtDeviceName;
-        [Foldout("[Component]"), SerializeField] private DOTweenText txtRt, txtRh;
-        [Foldout("[Component]"), SerializeField] private Toggle toggle;
+        #region UnityEvent
+        [Foldout("[Event]"), SerializeField] private UnityEvent<int> totalAlertLevelStatusEvent;
+        [Foldout("[Event]"), SerializeField] private UnityEvent<int> rtAlertLevelStatusEvent;
+        [Foldout("[Event]"), SerializeField] private UnityEvent<int> rhAlertLevelStatusEvent;
+        #endregion
+        #region Fields
+        [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName;
+        [Foldout("[Components]"), SerializeField] private DOTweenText txtRT, txtRH;
+        #endregion
 
-        public WebAPI_RealtimeData_RtRh RtRhData => rtrhData;
-
-        public void SetRtRhData(WebAPI_RealtimeData_RtRh data)
+        protected override void UpdateUI(WebAPI_RealtimeData_RtRh data)
         {
-            rtrhData = data;
-            txtDeviceName.text = data.deviceName;
-            txtRt.text = rtrhData.rtTag.value;
-            txtRh.text = rtrhData.rhTag.value;
-        }
-
-        public void SetToggleGroup(ToggleGroup group) => toggle.group = group;
-
-        public void OnEnable()
-        {
-            if (toggle != null) toggle.onValueChanged.AddListener(OnToggleValueChanged);
-        }
-        public void OnDisable()
-        {
-            if (toggle != null) toggle.onValueChanged.RemoveListener(OnToggleValueChanged);
-        }
-
-        private void OnToggleValueChanged(bool isOn)
-        {
-            if (isOn) ColliderInteractionSystem.SimulateClick(rtrhData.modelInfo.modelTarget.gameObject, ColliderInteractionSystem.ClickModelTrigger.byJsCall);
-            //else if (toggle.group != null && toggle.group.AnyTogglesOn() == false) ColliderInteractionSystem.SimulateClickEmpty();
+            txtDeviceName.SetText(data.deviceName);
+            txtRT.SetText($"{data.rtTag.value} {data.rtTag.unit}");
+            txtRH.SetText($"{data.rhTag.value} {data.rhTag.unit}");
+            totalAlertLevelStatusEvent?.Invoke(data.TotalAlertLevelStatus);
+            rtAlertLevelStatusEvent?.Invoke(data.rtTag.alertLevelStatus);
+            rhAlertLevelStatusEvent?.Invoke(data.rhTag.alertLevelStatus);
         }
     }
 }

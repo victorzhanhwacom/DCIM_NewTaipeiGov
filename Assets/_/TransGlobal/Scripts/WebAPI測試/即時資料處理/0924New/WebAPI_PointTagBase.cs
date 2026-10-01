@@ -16,7 +16,7 @@ namespace VzDev.DCIMUtils
     public abstract class WebAPI_PointTagBase<TData> : MonoBehaviour where TData : WebAPI_RealtimeData
     {
         #region UnityEvents
-        [Foldout("[Event]"), SerializeField, Tooltip("告警等級狀態事件")] private UnityEvent<int> alertLevelStatusEvent;
+        [Foldout("[Event]"), SerializeField, Tooltip("告警等級狀態事件")] private UnityEvent<int> totalAlertLevelStatusEvent;
         #endregion
 
         #region Fields
@@ -50,7 +50,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 觸發事件
         /// </summary>
-        protected virtual void InvokeEvent() => alertLevelStatusEvent?.Invoke(data.TotalAlertLevelStatus);
+        protected virtual void InvokeEvent() => totalAlertLevelStatusEvent?.Invoke(data.TotalAlertLevelStatus);
 
         /// <summary>
         /// 從UIAnchorFollower的Target3DObject取得DeviceCode

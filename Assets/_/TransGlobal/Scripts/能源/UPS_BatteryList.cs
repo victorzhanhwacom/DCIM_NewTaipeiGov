@@ -1,44 +1,20 @@
-using System.Collections.Generic;
-using NaughtyAttributes;
-using UnityEngine;
-using UnityEngine.UI;
-using VzDev.ApiExtensions;
-using VzDev.DCIMUtils;
-using VzDev.DOTweenUtils;
+using VzDev.Frameworks.ScrollRectUtils;
+using VzDev.InteractiveUtils.ModelMouseEvent;
 
-public class UPS_BatteryList : MonoBehaviour
+namespace VzDev.DCIMUtils
 {
-    #region Fields
-    [Foldout("[Components]"), SerializeField] private UPS_BatteryListItem listItemPrefab;
-    [Foldout("[Components]"), SerializeField] private DOTweenText txtTotalCount, txtTotalCountSearch;
-    [Foldout("[Components]"), SerializeField] private ScrollRect scrollRect, scrollRectSearch;
-    [Foldout("[Components]"), SerializeField] private ToggleGroup toggleGroup, toggleGroupSearch;
-
-    private List<WebAPI_RealtimeData_UPSBattery> upsbatteryDataList;
-    private List<WebAPI_RealtimeData_UPSBattery> filteredDataList;
-    #endregion
-
-    private void OnEnable()
+    public class UPS_BatteryList : ScrollRectListBase<WebAPI_RealtimeData_UPSBattery>
     {
-        scrollRect.content.RemoveAllChildren();
-        scrollRectSearch.content.RemoveAllChildren();
-        OnGetDataAction(WebAPI_CallerBase_RealtimeDataPower.WebAPI_UpsBatteryData);
-        WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction += OnGetDataAction;
-    }
 
-    private void OnDisable() => WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction -= OnGetDataAction;
-
-    private void OnGetDataAction(List<WebAPI_RealtimeData_UPSBattery> list)
-    {
-        upsbatteryDataList = list;
-        txtTotalCount.SetText($"共{upsbatteryDataList.Count}筆");
-        if (upsbatteryDataList.Count == 0) return;
-
-        upsbatteryDataList.ForEach(data =>
+        override protected void OnEnable()
         {
-            var listItem = Instantiate(listItemPrefab, scrollRect.content);
-            listItem.SetData(data);
-            listItem.SetToggleGroup(toggleGroup);
-        });
+            base.OnEnable();
+            WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction += SetDataList;
+        }
+
+        private void OnDisable() => WebAPI_CallerBase_RealtimeDataPower.OnGetUpsBatteryDataAction -= SetDataList;
+
+        override protected void OnSelectedItem(ScrollRectListItemBase<WebAPI_RealtimeData_UPSBattery> selectedItem) => ColliderInteractionSystem.SimulateClick(selectedItem.Data.modelInfo.modelTarget.gameObject);
+        override protected void OnSelectEmpty() => ColliderInteractionSystem.SimulateClickEmpty();
     }
 }

@@ -14,17 +14,17 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     public class DataModelBinder_WaterLeak : MonoBehaviour
     {
         #region Events
-        public Action<RealtimeAsset_WaterLeak> OnWaterLeakDataChangedAction;
+        public Action<WebAPI_RealtimeData_WaterLeak> OnWaterLeakDataChangedAction;
         #endregion
 
         #region Fields
         [SerializeField, ReadOnly] private EnumRtRhMode rtRhMode = EnumRtRhMode.Unselect;
-        [SerializeField, ReadOnly] private RealtimeAsset_WaterLeak waterLeakData;
+        [SerializeField, ReadOnly] private WebAPI_RealtimeData_WaterLeak waterLeakData;
 
         [Foldout("[Settings]"), SerializeField] private Material[] levelMaterials;
         [SerializeField] private LineRenderer lineRenderer;
 
-        public RealtimeAsset_WaterLeak WaterLeakData => waterLeakData;
+        public WebAPI_RealtimeData_WaterLeak WaterLeakData => waterLeakData;
         #endregion
 
         private void Start() => lineRenderer = transform.parent.GetComponent<LineRenderer>();
@@ -32,7 +32,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         /// <summary>
         /// WebAPI回傳即時資料時
         /// </summary>
-        private void OnGetRealtimeAssetAction(List<RealtimeAsset_WaterLeak> list)
+        private void OnGetRealtimeAssetAction(List<WebAPI_RealtimeData_WaterLeak> list)
         {
             string deviceCode = transform.parent.GetModelDeviceCode();
             waterLeakData = list.FirstOrDefault(data => data.deviceCode == deviceCode);
@@ -49,19 +49,19 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             OnWaterLeakDataChangedAction?.Invoke(waterLeakData);
 
             lineRenderer = transform.parent.GetComponent<LineRenderer>();
-            lineRenderer.material = levelMaterials[waterLeakData.alertStatus == 0 ? 0 : 1];
+            lineRenderer.material = levelMaterials[waterLeakData.TotalAlertLevelStatus == 0 ? 0 : 1];
         }
 
 
         #region Event Listeners
         private void OnEnable()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
+            WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction += OnGetRealtimeAssetAction;
         }
 
         private void OnDisable()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction -= OnGetRealtimeAssetAction;
+            WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction -= OnGetRealtimeAssetAction;
         }
         #endregion
     }

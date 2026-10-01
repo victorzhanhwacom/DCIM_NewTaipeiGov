@@ -1,96 +1,22 @@
-using System;
-using System.Collections.Generic;
-using NaughtyAttributes;
-using TMPro;
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-using VzDev.ApiExtensions;
-namespace VzDev.DCIMUtils.EnviornmentUtils
+using VzDev.Frameworks.ScrollRectUtils;
+using VzDev.InteractiveUtils.ModelMouseEvent;
+namespace VzDev.DCIMUtils
 {
     /// <summary>
     /// 漏水帶數據綁定器：列表
     /// </summary>
-    public class WaterLeakList : MonoBehaviour
+    public class WaterLeakList : ScrollRectListBase<WebAPI_RealtimeData_WaterLeak>
     {
 
-        #region UnityEvents
-        [Foldout("[Events]")] public UnityEvent<WebAPI_RealtimeData_WaterLeak> onListItemSelectedEvent;
-        #endregion
-        #region Fields
-        [Foldout("[Data]"), SerializeField, ReadOnly] private List<WebAPI_RealtimeData_WaterLeak> waterleakData;
-        [Foldout("[Component]"), SerializeField] private WaterLeakListItem listItemPrefab;
-        [Foldout("[Component]"), SerializeField] private ScrollRect scWaterLeakList, scSearchList;
-        [Foldout("[Component]"), SerializeField] private ToggleGroup tgWaterLeakList, tgSearchList;
-        [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtWaterLeakDataCount, txtSearchResultCount;
-
-        private List<WaterLeakListItem> listItems = new List<WaterLeakListItem>();
-        #endregion
-
-        private void Awake()
+        override protected void OnEnable()
         {
-            WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction += OnGetWaterLeakDataAction;
-            OnGetWaterLeakDataAction(WebAPI_CallerBase_RealtimeDataWaterLeak.WebAPI_WaterLeakData);
+            base.OnEnable();
+            WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction += SetDataList;
         }
 
-        private void OnGetWaterLeakDataAction(List<WebAPI_RealtimeData_WaterLeak> data)
-        {
-            if(data == null || data.Count == 0) return;
+        private void OnDisable() => WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction -= SetDataList;
 
-            waterleakData = new List<WebAPI_RealtimeData_WaterLeak>(data);
-            txtWaterLeakDataCount.SetText($"共 {waterleakData.Count} 筆資料");
-
-            ///檢查目前的listItems中是否已經有相同的deviceCode，若沒有則移除該listItem
-            listItems.RemoveAll(item => waterleakData.Exists(data => data.deviceCode == item.WaterLeakData.deviceCode) == false);
-
-            waterleakData.ForEach(data =>
-            {
-                ///檢查目前的listItems中是否已經有相同的deviceCode，若有則不再新增，直接更新該listItem的資料
-                WaterLeakListItem existingItem = listItems.Find(item => item.WaterLeakData.deviceCode == data.deviceCode);
-                if (existingItem != null)
-                {
-                    existingItem.SetWaterLeakData(data);
-                    return;
-                }
-
-                WaterLeakListItem listItem = Instantiate(listItemPrefab, scWaterLeakList.content);
-                listItem.name += $"-{data.deviceCode}";
-                listItem.SetWaterLeakData(data);
-                listItem.SetToggleGroup(tgWaterLeakList);
-                listItems.Add(listItem);
-            });
-        }
-
-        private void ClearListItem()
-        {
-            scWaterLeakList.content.RemoveAllChildren();
-            scWaterLeakList.verticalNormalizedPosition = 1f;
-        }
-
-        public void Search(string keyword)
-        {
-            if (string.IsNullOrEmpty(keyword)) return;
-            ClearSearchResult();
-
-            //先以deviceName搜尋，若找不到，再以資產編號搜尋
-            var result = waterleakData.FindAll(item => item.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
-            if (result.Count == 0) result = waterleakData.FindAll(item => 
-                string.IsNullOrEmpty(item.deviceName) == false &&
-                item.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
-            txtSearchResultCount.SetText($"搜尋結果：共 {result.Count} 筆資料");
-            result.ForEach(item =>
-            {
-                WaterLeakListItem listItem = Instantiate(listItemPrefab, scSearchList.content);
-                listItem.name += $"-{item.deviceCode}";
-                listItem.SetToggleGroup(tgSearchList);
-                listItem.SetWaterLeakData(item);
-            });
-        }
-
-        public void ClearSearchResult()
-        {
-            scSearchList.content.RemoveAllChildren();
-            scSearchList.verticalNormalizedPosition = 1f;
-        }
+        override protected void OnSelectedItem(ScrollRectListItemBase<WebAPI_RealtimeData_WaterLeak> selectedItem) => ColliderInteractionSystem.SimulateClick(selectedItem.Data.modelInfo.modelTarget.gameObject);
+        override protected void OnSelectEmpty() => ColliderInteractionSystem.SimulateClickEmpty();
     }
 }
