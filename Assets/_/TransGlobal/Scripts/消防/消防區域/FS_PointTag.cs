@@ -37,6 +37,12 @@ namespace VzDev.DCIMUtils
             levelValue2Event?.Invoke(data.level2Tag.value);
             vesdaValueEvent?.Invoke(data.vesdaTag.value);
             vesdaDeviceValueEvent?.Invoke(data.vesdaDeviceTag.value);
+
+            controlBoardAlertStatusEvent?.Invoke(data.controlBoardTag.alertLevelStatus);
+            levelValue1AlertStatusEvent?.Invoke(data.level1Tag.alertLevelStatus);
+            levelValue2AlertStatusEvent?.Invoke(data.level2Tag.alertLevelStatus);
+            vesdaAlertStatusEvent?.Invoke(data.vesdaTag.alertLevelStatus);
+            vesdaDeviceAlertStatusEvent?.Invoke(data.vesdaDeviceTag.alertLevelStatus);
         }
     }
 }
