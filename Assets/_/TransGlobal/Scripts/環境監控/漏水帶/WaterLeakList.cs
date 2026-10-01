@@ -15,10 +15,10 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     {
 
         #region UnityEvents
-        [Foldout("[Events]")] public UnityEvent<RealtimeAsset_WaterLeak> onListItemSelectedEvent;
+        [Foldout("[Events]")] public UnityEvent<WebAPI_RealtimeData_WaterLeak> onListItemSelectedEvent;
         #endregion
         #region Fields
-        [Foldout("[Data]"), SerializeField, ReadOnly] private List<RealtimeAsset_WaterLeak> waterleakData;
+        [Foldout("[Data]"), SerializeField, ReadOnly] private List<WebAPI_RealtimeData_WaterLeak> waterleakData;
         [Foldout("[Component]"), SerializeField] private WaterLeakListItem listItemPrefab;
         [Foldout("[Component]"), SerializeField] private ScrollRect scWaterLeakList, scSearchList;
         [Foldout("[Component]"), SerializeField] private ToggleGroup tgWaterLeakList, tgSearchList;
@@ -29,13 +29,15 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
 
         private void Awake()
         {
-            WebApiRealtimeDataHandler_WLK.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
-            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_WLK.WebApiData);
+            WebAPI_CallerBase_RealtimeDataWaterLeak.OnGetWaterLeakDataAction += OnGetWaterLeakDataAction;
+            OnGetWaterLeakDataAction(WebAPI_CallerBase_RealtimeDataWaterLeak.WebAPI_WaterLeakData);
         }
 
-        private void OnGetRealtimeAssetAction(List<RealtimeAsset_WaterLeak> data)
+        private void OnGetWaterLeakDataAction(List<WebAPI_RealtimeData_WaterLeak> data)
         {
-            waterleakData = new List<RealtimeAsset_WaterLeak>(data);
+            if(data == null || data.Count == 0) return;
+
+            waterleakData = new List<WebAPI_RealtimeData_WaterLeak>(data);
             txtWaterLeakDataCount.SetText($"共 {waterleakData.Count} 筆資料");
 
             ///檢查目前的listItems中是否已經有相同的deviceCode，若沒有則移除該listItem
@@ -73,8 +75,8 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             //先以deviceName搜尋，若找不到，再以資產編號搜尋
             var result = waterleakData.FindAll(item => item.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
             if (result.Count == 0) result = waterleakData.FindAll(item => 
-                string.IsNullOrEmpty(item.companyAssetInfo.assetNumber) == false &&
-                item.companyAssetInfo.assetNumber.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+                string.IsNullOrEmpty(item.deviceName) == false &&
+                item.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
             txtSearchResultCount.SetText($"搜尋結果：共 {result.Count} 筆資料");
             result.ForEach(item =>
             {

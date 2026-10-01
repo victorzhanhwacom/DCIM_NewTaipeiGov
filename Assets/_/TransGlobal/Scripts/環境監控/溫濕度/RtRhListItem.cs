@@ -1,4 +1,3 @@
-using System;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -13,14 +12,14 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     /// </summary>
     public class RtRhListItem : MonoBehaviour
     {
-        [Foldout("[Data]"), SerializeField] private RealtimeAsset_RtRh rtrhData;
+        [Foldout("[Data]"), SerializeField] private WebAPI_RealtimeData_RtRh rtrhData;
         [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtDeviceName;
         [Foldout("[Component]"), SerializeField] private DOTweenText txtRt, txtRh;
         [Foldout("[Component]"), SerializeField] private Toggle toggle;
 
-        public RealtimeAsset_RtRh RtRhData => rtrhData;
+        public WebAPI_RealtimeData_RtRh RtRhData => rtrhData;
 
-        public void SetRtRhData(RealtimeAsset_RtRh data)
+        public void SetRtRhData(WebAPI_RealtimeData_RtRh data)
         {
             rtrhData = data;
             txtDeviceName.text = data.deviceName;

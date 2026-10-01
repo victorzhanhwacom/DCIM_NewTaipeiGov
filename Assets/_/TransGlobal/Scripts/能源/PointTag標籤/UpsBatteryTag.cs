@@ -39,7 +39,7 @@ namespace VzDev
 
         private void OnGetDataAction(List<WebAPI_RealtimeData_UPSBattery> list)
         {
-            if (list.Count == 0) return;
+            if (list == null || list.Count == 0) return;
 
             CheckDeviceCode();
             upsbatteryData = list?.FirstOrDefault(data => data.deviceCode == deviceCode);
@@ -60,7 +60,7 @@ namespace VzDev
             txtVoltage.SetText($"{upsbatteryData.voltageTag.value} {upsbatteryData.voltageTag.unit}");
             txtIR.SetText($"{upsbatteryData.irTag.value} {upsbatteryData.irTag.unit}");
 
-            alertLevelEvent?.Invoke(upsbatteryData.alertLevel);
+            alertLevelEvent?.Invoke(upsbatteryData.TotalAlertLevelStatus);
         }
 
         private void CheckDeviceCode()

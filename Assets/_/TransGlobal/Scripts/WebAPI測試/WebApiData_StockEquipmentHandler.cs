@@ -39,7 +39,7 @@ namespace VzDev
         {
             isApiCalling = false;
             onCallingEvent?.InvokeCallingStatusEvent(isApiCalling);
-            onCallingEvent.InvokeOnErrorEvent(message);
+            onCallingEvent.InvokeOnFaliureEvent(message);
         }
         #endregion
 

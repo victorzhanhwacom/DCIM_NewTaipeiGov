@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using NaughtyAttributes;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Events;
-using VzDev.DCIMUtils;
 using VzDev.EventUtils;
 using VzDev.Frameworks;
 using VzDev.StringUtils;
@@ -25,7 +23,7 @@ namespace VzDev.NetUtils.WebAPI
         /// </summary>
         public static Action<List<TData>> OnGetDataAction;
         [Foldout("[Data Event]")] public UnityEvent<List<TData>> OnGetDataEvent;
-        [Label("[Events]"), SerializeField] protected OnCallbackEvent onCallingEvent = new OnCallbackEvent();
+        [Label("[Events]")] public OnCallbackEvent onCallingEvent = new OnCallbackEvent();
         #endregion
 
         #region Field
@@ -69,7 +67,7 @@ namespace VzDev.NetUtils.WebAPI
             isWebApiCalling = true;
             webapiData?.Clear();
             webapiData ??= new List<TData>();
-            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
+            onCallingEvent?.InvokeStartEvent();
             webApiRequestSO.CallAPI(onSuccess, onFailure);
         }
         #endregion
@@ -86,7 +84,7 @@ namespace VzDev.NetUtils.WebAPI
         public void StopCallApi()
         {
             isWebApiCalling = false;
-            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
+            onCallingEvent?.InvokeStopCallEvent();
             webApiRequestSO.StopCallApi();
         }
         #endregion
@@ -129,7 +127,6 @@ namespace VzDev.NetUtils.WebAPI
             isWebApiCalling = false;
             webapiData = new List<TData>();
             ParseJson(json);
-            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
             onCallingEvent?.InvokeOnSuccessEvent();
             InvokeData();
         }
@@ -139,8 +136,7 @@ namespace VzDev.NetUtils.WebAPI
         protected void OnFailure(string errorMsg)
         {
             isWebApiCalling = false;
-            onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
-            onCallingEvent?.InvokeOnErrorEvent(errorMsg);
+            onCallingEvent?.InvokeOnFaliureEvent(errorMsg);
         }
         #endregion
 

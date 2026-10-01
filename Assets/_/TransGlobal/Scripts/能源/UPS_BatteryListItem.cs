@@ -33,7 +33,7 @@ public class UPS_BatteryListItem : MonoBehaviour
         txtDeviceName.SetText(upsbatteryData.deviceName);
         txtVoltage.SetText($"{upsbatteryData.voltageTag.value} {upsbatteryData.voltageTag.unit}");
         txtIR.SetText($"{upsbatteryData.irTag.value} {upsbatteryData.irTag.unit}");
-        alertLevelEvent?.Invoke(upsbatteryData.alertLevel);
+        alertLevelEvent?.Invoke(upsbatteryData.TotalAlertLevelStatus);
     }
 
     public void SetToggleGroup(ToggleGroup group) => toggle.group = group;

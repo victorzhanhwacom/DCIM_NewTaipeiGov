@@ -14,20 +14,27 @@ namespace VzDev.DCIMUtils
     /// WebAPI即時資料格式
     /// </summary>
     [Serializable]
-    public class WebAPI_RealtimeData: IDataKeyID
+    public class WebAPI_RealtimeData : IDataKeyID
     {
         public WebAPI_RealtimeData_UPSHost ToUPSHost() => CloneAs<WebAPI_RealtimeData_UPSHost>();
         public WebAPI_RealtimeData_UPSBattery ToUPSBattery() => CloneAs<WebAPI_RealtimeData_UPSBattery>();
         public WebAPI_RealtimeData_RtRh ToRtRh() => CloneAs<WebAPI_RealtimeData_RtRh>();
+        public WebAPI_RealtimeData_WaterLeak ToWaterLeak() => CloneAs<WebAPI_RealtimeData_WaterLeak>();
         public WebAPI_RealtimeData_CRAC ToCRAC() => CloneAs<WebAPI_RealtimeData_CRAC>();
         public WebAPI_RealtimeData_InRowCooler ToInRowCooler() => CloneAs<WebAPI_RealtimeData_InRowCooler>();
+        public WebAPI_RealtimeData_FS ToFS() => CloneAs<WebAPI_RealtimeData_FS>();
+        public WebAPI_RealtimeData_GasCylinder ToGasCylinder() => CloneAs<WebAPI_RealtimeData_GasCylinder>();
+        public WebAPI_RealtimeData_CCTV ToCCTV() => CloneAs<WebAPI_RealtimeData_CCTV>();
+        public WebAPI_RealtimeData_Door ToDoor() => CloneAs<WebAPI_RealtimeData_Door>();
+        public WebAPI_RealtimeData_RackDoor ToRackDoor() => CloneAs<WebAPI_RealtimeData_RackDoor>();
 
         public string dataKeyID => deviceCode;
 
         /// <summary>
-        /// 0: 正常, 1: 告警, 2: 離線
+        /// 所有Tag的alertLevel總告警等級
+        /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
         /// </summary>
-        public virtual int TotalAlertLevelStatus { get;}
+        public virtual int TotalAlertLevelStatus => 0;
 
         /// <summary>
         /// 計算多個Tag的總告警等級
@@ -59,7 +66,6 @@ namespace VzDev.DCIMUtils
                 modelInfo = modelInfo
             };
         }
-
 
         public enum EnumRealtimeAlertLevel
         {

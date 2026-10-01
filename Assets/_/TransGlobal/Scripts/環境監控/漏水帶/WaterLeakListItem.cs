@@ -13,20 +13,20 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
     /// </summary>
     public class WaterLeakListItem : MonoBehaviour
     {
-        [Foldout("[Data]"), SerializeField] private RealtimeAsset_WaterLeak waterLeakData;
+        [Foldout("[Data]"), SerializeField] private WebAPI_RealtimeData_WaterLeak waterLeakData;
         [Foldout("[Events]")] public UnityEvent<int> onAlertLevelChanged;
         [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtDeviceName;
         [Foldout("[Component]"), SerializeField] private DOTweenText txtValue;
         [Foldout("[Component]"), SerializeField] private Toggle toggle;
 
-        public RealtimeAsset_WaterLeak WaterLeakData => waterLeakData;
+        public WebAPI_RealtimeData_WaterLeak WaterLeakData => waterLeakData;
 
-        public void SetWaterLeakData(RealtimeAsset_WaterLeak data)
+        public void SetWaterLeakData(WebAPI_RealtimeData_WaterLeak data)
         {
             waterLeakData = data;
-            txtDeviceName.SetText(data.deviceName);
-            txtValue?.SetText(waterLeakData.status);
-            onAlertLevelChanged?.Invoke(waterLeakData.alertStatus);
+            txtDeviceName.SetText(waterLeakData.deviceName);
+            txtValue?.SetText(waterLeakData.value);
+            onAlertLevelChanged?.Invoke(waterLeakData.TotalAlertLevelStatus);
         }
 
         public void SetToggleGroup(ToggleGroup group) => toggle.group = group;

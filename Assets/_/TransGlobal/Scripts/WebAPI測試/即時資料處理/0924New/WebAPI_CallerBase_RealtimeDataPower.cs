@@ -24,9 +24,9 @@ namespace VzDev.DCIMUtils
         public override void ParseJson(string json)
         {
             base.ParseJson(json);
-            WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fcu"))
+            WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ups"))
                 .Select(data => data.ToUPSHost()).ToList();
-            WebAPI_UpsBatteryData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("inr"))
+            WebAPI_UpsBatteryData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("bat"))
                 .Select(data => data.ToUPSBattery()).ToList();
         }
         public override void InvokeData()
@@ -43,6 +43,13 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_UPSHost : WebAPI_RealtimeData
     {
+        /// <summary>
+        /// 電池無法運作
+        /// </summary>
+        public Tags BatteryStatusTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":di002"));
+
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(BatteryStatusTag);
+        
     }
 
     /// <summary>
@@ -52,30 +59,18 @@ namespace VzDev.DCIMUtils
     public class WebAPI_RealtimeData_UPSBattery : WebAPI_RealtimeData
     {
         /// <summary>
-        /// 單體電壓
-        /// </summary>
-        public Tags voltageTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("indv"));
-        /// <summary>
         /// 單體內阻
         /// </summary>
-        public Tags irTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("minr"));
+        public Tags irTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":minr"));
+        /// <summary>
+        /// 單體電壓
+        /// </summary>
+        public Tags voltageTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":indv"));
         /// <summary>
         /// 單體告警
         /// </summary>
-        public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("indalm"));
+        public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":indalm"));
 
-        /// <summary>
-        /// 即時告警 0:正常 1:告警 99:斷線
-        /// </summary>
-        public int alertLevel
-        {
-            get
-            {
-                float result = Mathf.Max(voltageTag.alertLevel, irTag.alertLevel, alarmTag.alertLevel);
-                if (result == 0) return 0;
-                else if (result == 99) return 2;
-                else return 1;
-            }
-        }
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
     }
 }

@@ -117,7 +117,7 @@ namespace VzDev
         {
             isWebApiCalling = false;
             onCallingEvent?.InvokeCallingStatusEvent(isWebApiCalling);
-            onCallingEvent?.InvokeOnErrorEvent(errorMsg);
+            onCallingEvent?.InvokeOnFaliureEvent(errorMsg);
         }
 
         /// <summary>

@@ -44,25 +44,27 @@ namespace VzDev.DCIMUtils
     public class WebAPI_RealtimeData_CRAC : WebAPI_RealtimeData
     {
         /// <summary>
-        /// 手動操控Tag
+        /// 室溫
         /// </summary>
-        public Tags controlTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("onf"));
+        public Tags rtTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ts"));
+        /// <summary>
+        /// 手動啟動
+        /// </summary>
+        public Tags controlTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":onf"));
         /// <summary>
         /// 電源狀態Tag: 關機, 開機
         /// </summary>
-        public Tags statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("run"));
-        /// <summary>
-        /// 告警狀態Tag
-        /// </summary>
-        public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("trip"));
-        /// <summary>
-        /// 室溫Tag
-        /// </summary>
-        public Tags rtTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ts"));
+        public Tags statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":run"));
         /// <summary>
         /// 設定溫度Tag
         /// </summary>
-        public Tags tempSetTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("tss"));
+        public Tags tempSetTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":tss"));
+        /// <summary>
+        /// 告警狀態Tag
+        /// </summary>
+        public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
+        
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, statusTag, tempSetTag, alarmTag);
     }
 
     /// <summary>
@@ -74,11 +76,11 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 回風溫度
         /// </summary>
-        public Tags inTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ai002"));
+        public Tags inTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai002"));
         /// <summary>
         /// 出風溫度
         /// </summary>
-        public Tags outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword("ai001"));
+        public Tags outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai001"));
 
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(inTempTag, outTempTag);
     }

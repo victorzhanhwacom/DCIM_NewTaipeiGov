@@ -18,7 +18,7 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
         [Foldout("[Events]")] public UnityEvent<RealtimeAsset_RtRh> onListItemSelectedEvent;
         #endregion
         #region Fields
-        [Foldout("[Data]"), SerializeField, ReadOnly] private List<RealtimeAsset_RtRh> rtrhData;
+        [Foldout("[Data]"), SerializeField, ReadOnly] private List<WebAPI_RealtimeData_RtRh> rtrhData;
         [Foldout("[Component]"), SerializeField] private RtRhListItem listItemPrefab;
         [Foldout("[Component]"), SerializeField] private ScrollRect scRtRhList, scSearchList;
         [Foldout("[Component]"), SerializeField] private ToggleGroup tgRtRhList, tgSearchList;
@@ -29,12 +29,13 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
 
         private void Awake()
         {
-            WebApiRealtimeDataHandler_RtRh.OnGetWebApiDataAction += OnGetRealtimeAssetAction;
-            OnGetRealtimeAssetAction(WebApiRealtimeDataHandler_RtRh.WebApiData);
+            WebAPI_CallerBase_RealtimeDataRTRH.OnGetRtRhDataAction += OnGetRtRhDataAction;
+            OnGetRtRhDataAction(WebAPI_CallerBase_RealtimeDataRTRH.WebAPI_RtRhData);
         }
 
-        private void OnGetRealtimeAssetAction(List<RealtimeAsset_RtRh> data)
+        private void OnGetRtRhDataAction(List<WebAPI_RealtimeData_RtRh> data)
         {
+            if(data == null || data.Count == 0) return;
             rtrhData = data;
             txtRtRhDataCount.SetText($"共 {rtrhData.Count} 筆資料");
 
@@ -71,17 +72,17 @@ namespace VzDev.DCIMUtils.EnviornmentUtils
             ClearSearchResult();
 
             //先以deviceName搜尋，若找不到，再以資產編號搜尋
-            var result = rtrhData.FindAll(item => item.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
-            if (result.Count == 0) result = rtrhData.FindAll(item => 
-                string.IsNullOrEmpty(item.companyAssetInfo.assetNumber) == false &&
-                item.companyAssetInfo.assetNumber.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+            var result = rtrhData.FindAll(d => d.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+            if (result.Count == 0) result = rtrhData.FindAll(d => 
+                string.IsNullOrEmpty(d.deviceName) == false &&
+                d.deviceName.Contains(keyword, StringComparison.OrdinalIgnoreCase));
             txtSearchResultCount.SetText($"搜尋結果：共 {result.Count} 筆資料");
-            result.ForEach(item =>
+            result.ForEach(d =>
             {
                 RtRhListItem listItem = Instantiate(listItemPrefab, scSearchList.content);
-                listItem.name += $"-{item.deviceCode}";
+                listItem.name += $"-{d.deviceCode}";
                 listItem.SetToggleGroup(tgSearchList);
-                listItem.SetRtRhData(item);
+                listItem.SetRtRhData(d);
             });
         }
 
