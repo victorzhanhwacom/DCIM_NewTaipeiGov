@@ -54,7 +54,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 電源狀態Tag: 關機, 開機
         /// </summary>
-        public Tags statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":run"));
+        public Tags powerStatusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":run"));
         /// <summary>
         /// 設定溫度Tag
         /// </summary>
@@ -64,7 +64,7 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
         
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, statusTag, tempSetTag, alarmTag);
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, powerStatusTag, tempSetTag, alarmTag);
     }
 
     /// <summary>

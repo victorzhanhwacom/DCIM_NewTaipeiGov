@@ -50,11 +50,11 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 消防第一階段警報
         /// </summary>
-        public Tags firstAlarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p1alm"));
+        public Tags level1Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p1alm"));
         /// <summary>
         /// 消防第二階段警報
         /// </summary>
-        public Tags secondAlarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p2alm"));
+        public Tags level2Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p2alm"));
         /// <summary>
         /// 極早期Tag
         /// </summary>
@@ -64,7 +64,7 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tags vesdaDeviceTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vedalm"));
 
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(controlBoardTag, firstAlarmTag, secondAlarmTag, vesdaTag, vesdaDeviceTag);
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(controlBoardTag, level1Tag, level2Tag, vesdaTag, vesdaDeviceTag);
     }
 
     /// <summary>
