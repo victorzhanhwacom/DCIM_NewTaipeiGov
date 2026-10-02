@@ -24,10 +24,10 @@ namespace VzDev.DCIMUtils
                 targetCaller.onCallingEvent.onStartEvent.AddListener(noResponseCall.StartTimer);
                 // 呼叫完成時
                 targetCaller.onCallingEvent.callingStatusEvent.AddListener(OnCallingStatusEvent);
-                targetCaller.onCallingEvent.callingStatusEvent.AddListener(OnCallingStatusEvent);
                 // 停止呼叫時
-                targetCaller.onCallingEvent.onStopEvent.AddListener(noResponseCall.StopTimer);
-                targetCaller.onCallingEvent.onStopEvent.AddListener(loopCall.StopTimer);
+                targetCaller.onCallingEvent.onStopEvent.AddListener(OnStopCallingEventHandler);
+
+                targetCaller.onCallingEvent.onFailureEvent.AddListener(OnFailureEventHandler);
                 // 逾時未回應時
                 noResponseCall.onTimerEnd.AddListener(targetCaller.RecallWebAPI);
                 // 時間間隔時呼叫
@@ -37,13 +37,20 @@ namespace VzDev.DCIMUtils
             {
                 targetCaller.onCallingEvent.onStartEvent.RemoveListener(noResponseCall.StartTimer);
                 targetCaller.onCallingEvent.callingStatusEvent.RemoveListener(OnCallingStatusEvent);
-                targetCaller.onCallingEvent.callingStatusEvent.RemoveListener(OnCallingStatusEvent);
-                targetCaller.onCallingEvent.onStopEvent.RemoveListener(noResponseCall.StopTimer);
-                targetCaller.onCallingEvent.onStopEvent.RemoveListener(loopCall.StopTimer);
+                targetCaller.onCallingEvent.onStopEvent.RemoveListener(OnStopCallingEventHandler);
+                targetCaller.onCallingEvent.onFailureEvent.RemoveListener(OnFailureEventHandler);
                 noResponseCall.onTimerEnd.RemoveListener(targetCaller.RecallWebAPI);
                 loopCall.onTimerEnd.RemoveListener(targetCaller.CallWebAPI);
             }
         }
+
+        private void OnStopCallingEventHandler()
+        {
+            noResponseCall.StopTimer();
+            loopCall.StopTimer();
+        }
+
+        private void OnFailureEventHandler(string errorMessage) => OnStopCallingEventHandler();
 
         private void OnCallingStatusEvent(bool isCalling)
         {
