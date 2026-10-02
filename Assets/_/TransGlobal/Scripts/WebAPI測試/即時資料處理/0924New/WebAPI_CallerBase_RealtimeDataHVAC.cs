@@ -64,6 +64,15 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
         
+        /// <summary>
+        /// 手動啟動狀態: 啟動(true), 停止(false)
+        /// </summary>
+        public bool manualControlStatus => controlTag.value == "啟動";
+         /// <summary>
+        /// 電源狀態: 開機(true), 關機(false)
+        /// </summary>
+        public bool powerStatus => powerStatusTag.value == "開機";
+
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, powerStatusTag, tempSetTag, alarmTag);
     }
 

@@ -108,11 +108,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1012865440933671020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -20}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 100, y: 20}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &9148894370577632117
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: -115, y: -20}
   m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &201351545788484824
@@ -734,8 +734,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5347497318890353856}
-  - {fileID: 1992095581188962622}
   - {fileID: 5917939042552254821}
+  - {fileID: 1992095581188962622}
   m_Father: {fileID: 7509831488553345128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -793,7 +793,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e7e3b261d310c43a7312e8af0d6e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UPS_BatteryListItem
-  alertLevelEvent:
+  data:
+    <deviceName>k__BackingField: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    <deviceId>k__BackingField: 
+    <deviceCode>k__BackingField: 
+    <systemType>k__BackingField: 
+    <deviceCategory>k__BackingField: 
+    <deviceModel>k__BackingField: 
+    <tags>k__BackingField: []
+  toggle: {fileID: 4104442725906847507}
+  alertLevelStatusEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1163154745836888421}
@@ -808,21 +820,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  upsbatteryData:
-    modelInfo:
-      modelTarget: {fileID: 0}
-      modelName: 
-    <deviceName>k__BackingField: 
-    <deviceId>k__BackingField: 
-    <deviceCode>k__BackingField: 
-    <systemType>k__BackingField: 
-    <deviceCategory>k__BackingField: 
-    <deviceModel>k__BackingField: 
-    <tags>k__BackingField: []
+  inVoltageAlertLevelStatusEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  outIRAlertLevelStatusEvent:
+    m_PersistentCalls:
+      m_Calls: []
   txtDeviceName: {fileID: 7817317208752324590}
   txtVoltage: {fileID: 4026243802257289357}
   txtIR: {fileID: 2288426255546176674}
-  toggle: {fileID: 4104442725906847507}
 --- !u!114 &4104442725906847507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,7 +1133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 992751350847166331, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1384101466635153007, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1159,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2789295403258465697, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: receiveValue
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2793443274525776980, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
@@ -1191,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4790900833450033758, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5042798194835937350, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_AnchoredPosition.x

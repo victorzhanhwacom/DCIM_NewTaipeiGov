@@ -717,67 +717,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb42c5f76df7f0b44b2b36d238751470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VzDev.DCIMUtils.EnviornmentUtils.WaterLeakListItem
-  waterLeakData:
-    deviceName: 
-    deviceCode: 
-    assetPhotoSprite: {fileID: 0}
-    cobieInfo:
-      component_description: 
-      component_assetIdentifier: 
-      component_serialNumber: 
-      component_installationDate: 
-      component_tagName: 
-      component_warrantyDurationPart: 
-      component_warrantyDurationUnit: 
-      component_warrantyGuarantorLabor: 
-      component_warrantyStartDate: 
-      component_warrantyEndDate: 
-      document_inspection: 
-      document_handout: 
-      document_drawing: 
-      contact_company: 
-      contact_department: 
-      contact_email: 
-      contact_familyName: 
-      contact_givenName: 
-      contact_phone: 
-      contact_street: 
-      facility_name: 
-      facility_projectName: 
-      facility_siteName: 
-      equipment_supplier: 
-      floor_name: 
-      space_name: 
-      space_roomTag: 
-      system_category: 
-      system_name: 
-      type_category: 
-      type_expectedLife: 
-      type_manufacturer: 
-      type_modelNumber: 
-      type_name: 
-      type_replacementCost: 
-      type_accessibilityPerformance: 
-      type_shape: 
-      type_size: 
-      type_color: 
-      type_finish: 
-      type_grade: 
-      type_material: 
+  data:
+    <deviceName>k__BackingField: 
     modelInfo:
       modelTarget: {fileID: 0}
       modelName: 
-    category: 0
-    system: 0
-    companyAssetInfo:
-      assetName: 
-      assetNumber: 
-      note: 
-    <isLeak>k__BackingField: 0
-    <status>k__BackingField: 
-    <alertStatus>k__BackingField: 0
-    <displayName>k__BackingField: 
-  onAlertLevelChanged:
+    <deviceId>k__BackingField: 
+    <deviceCode>k__BackingField: 
+    <systemType>k__BackingField: 
+    <deviceCategory>k__BackingField: 
+    <deviceModel>k__BackingField: 
+    <tags>k__BackingField: []
+  toggle: {fileID: 7531869221977358077}
+  totalAlertLevelStatusEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9106191315418595897}
@@ -794,7 +746,6 @@ MonoBehaviour:
         m_CallState: 2
   txtDeviceName: {fileID: 1000435443825179146}
   txtValue: {fileID: 8020466130296278423}
-  toggle: {fileID: 7531869221977358077}
 --- !u!114 &7531869221977358077
 MonoBehaviour:
   m_ObjectHideFlags: 0
