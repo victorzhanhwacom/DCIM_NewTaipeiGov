@@ -41,11 +41,11 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 即時溫度
         /// </summary>
-        public Tags rtTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":dbt"));
+        public Tag rtTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":dbt"));
         /// <summary>
         /// 即時濕度
         /// </summary>
-        public Tags rhTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":rh"));
+        public Tag rhTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":rh"));
 
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, rhTag);
     }

@@ -18,6 +18,7 @@ namespace VzDev.DCIMUtils
     {
         public WebAPI_RealtimeData_UPSHost ToUPSHost() => CloneAs<WebAPI_RealtimeData_UPSHost>();
         public WebAPI_RealtimeData_UPSBattery ToUPSBattery() => CloneAs<WebAPI_RealtimeData_UPSBattery>();
+        public WebAPI_RealtimeData_PowerPanel ToPowerPanel() => CloneAs<WebAPI_RealtimeData_PowerPanel>();
         public WebAPI_RealtimeData_RtRh ToRtRh() => CloneAs<WebAPI_RealtimeData_RtRh>();
         public WebAPI_RealtimeData_WaterLeak ToWaterLeak() => CloneAs<WebAPI_RealtimeData_WaterLeak>();
         public WebAPI_RealtimeData_CRAC ToCRAC() => CloneAs<WebAPI_RealtimeData_CRAC>();
@@ -34,25 +35,33 @@ namespace VzDev.DCIMUtils
         /// 所有Tag的alertLevel總告警等級
         /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
         /// </summary>
-        public virtual int TotalAlertLevelStatus => 0;
+        public virtual int TotalAlertLevelStatus => GetTotalAlertLevelStatus(tags);
 
         /// <summary>
         /// 計算多個Tag的總告警等級
         /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
         /// </summary>
-        protected int GetTotalAlertLevelStatus(params Tags[] tags)
+        protected int GetTotalAlertLevelStatus(params Tag[] tags) => GetTotalAlertLevelStatus((IReadOnlyList<Tag>)tags);
+        // 給已經有 List 的呼叫端，避免 ToArray() 產生額外配置
+        protected int GetTotalAlertLevelStatus(IReadOnlyList<Tag> tags)
         {
-            if (tags == null || tags.Length == 0)
-                return 0;
+            if (tags == null || tags.Count == 0) return 0;
+            int maxAlertLevelStatus = 0;
 
-            List<int> alertLevels = tags.Select(tag => tag.alertLevelStatus).ToList();
-            return MathHelper.Max(alertLevels);
+            for (int i = 0; i < tags.Count; i++)
+            {
+                if (tags[i].alertLevelStatus > maxAlertLevelStatus)
+                {
+                    maxAlertLevelStatus = tags[i].alertLevelStatus;
+                }
+            }
+            return maxAlertLevelStatus;
         }
 
         /// <summary>
         /// 轉型並複製資料
         /// </summary>
-        protected T CloneAs<T>() where T : WebAPI_RealtimeData, new()
+        public T CloneAs<T>() where T : WebAPI_RealtimeData, new()
         {
             return new T()
             {
@@ -72,6 +81,15 @@ namespace VzDev.DCIMUtils
             Normal = 0,
             Alert,
             Disconnect = 99
+        }
+
+        [OnDeserialized]
+        protected void OnDeserialized(StreamingContext context)
+        {
+#if UNITY_EDITOR
+            // 將tag依照tagId排序，方便後續使用
+            tags?.Sort((a, b) => a.tagId.CompareTo(b.tagId));
+#endif
         }
 
         #region Fields
@@ -96,11 +114,11 @@ namespace VzDev.DCIMUtils
         public string deviceModel { get; protected set; }
         [JsonProperty]
         [field: SerializeField]
-        public Tags[] tags { get; protected set; }
+        public List<Tag> tags { get; protected set; }
         #endregion
 
         [Serializable]
-        public class Tags
+        public class Tag
         {
             [OnDeserialized]
             protected void OnDeserialized(StreamingContext context)

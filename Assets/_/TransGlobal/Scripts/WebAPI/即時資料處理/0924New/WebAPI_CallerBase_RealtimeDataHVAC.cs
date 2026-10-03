@@ -46,23 +46,23 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 室溫
         /// </summary>
-        public Tags rtTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ts"));
+        public Tag rtTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ts"));
         /// <summary>
         /// 手動啟動
         /// </summary>
-        public Tags controlTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":onf"));
+        public Tag controlTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":onf"));
         /// <summary>
         /// 電源狀態Tag: 關機, 開機
         /// </summary>
-        public Tags powerStatusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":run"));
+        public Tag powerStatusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":run"));
         /// <summary>
         /// 設定溫度Tag
         /// </summary>
-        public Tags tempSetTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":tss"));
+        public Tag tempSetTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":tss"));
         /// <summary>
         /// 告警狀態Tag
         /// </summary>
-        public Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
+        public Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
         
         /// <summary>
         /// 手動啟動狀態: 啟動(true), 停止(false)
@@ -85,11 +85,11 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 回風溫度
         /// </summary>
-        public Tags inTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai002"));
+        public Tag inTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai002"));
         /// <summary>
         /// 出風溫度
         /// </summary>
-        public Tags outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai001"));
+        public Tag outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai001"));
 
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(inTempTag, outTempTag);
     }

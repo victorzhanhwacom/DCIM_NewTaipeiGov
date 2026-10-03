@@ -44,7 +44,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 漏水警報
         /// </summary>
-        private Tags alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":alarm"));
+        private Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":alarm"));
 
         override public int TotalAlertLevelStatus => alarmTag?.alertLevelStatus ?? 0;
     }

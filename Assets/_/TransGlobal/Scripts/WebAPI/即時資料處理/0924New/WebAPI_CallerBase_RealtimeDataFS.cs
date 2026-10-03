@@ -46,23 +46,23 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 控制盤故障警報
         /// </summary>
-        public Tags controlBoardTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":conalm"));
+        public Tag controlBoardTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":conalm"));
         /// <summary>
         /// 消防第一階段警報
         /// </summary>
-        public Tags level1Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p1alm"));
+        public Tag level1Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p1alm"));
         /// <summary>
         /// 消防第二階段警報
         /// </summary>
-        public Tags level2Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p2alm"));
+        public Tag level2Tag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":p2alm"));
         /// <summary>
         /// 極早期Tag
         /// </summary>
-        public Tags vesdaTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vealm"));
+        public Tag vesdaTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vealm"));
           /// <summary>
         /// 極早期設備故障警報
         /// </summary>
-        public Tags vesdaDeviceTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vedalm"));
+        public Tag vesdaDeviceTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vedalm"));
 
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(controlBoardTag, level1Tag, level2Tag, vesdaTag, vesdaDeviceTag);
     }

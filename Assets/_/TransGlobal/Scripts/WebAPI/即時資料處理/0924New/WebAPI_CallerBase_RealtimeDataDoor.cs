@@ -48,7 +48,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 即時狀態Tag
         /// </summary>
-        private Tags statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
+        private Tag statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
         override public int TotalAlertLevelStatus => statusTag?.alertLevelStatus ?? 0;
 
     }
@@ -64,7 +64,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 即時狀態Tag
         /// </summary>
-        private Tags statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
+        private Tag statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
         
         override public int TotalAlertLevelStatus => statusTag?.alertLevelStatus ?? 0;
     }
