@@ -26,18 +26,14 @@ namespace VzDev.DCIMUtils
         public override void ParseJson(string json)
         {
             base.ParseJson(json);
+             webapiData?.Sort((a, b) => a.deviceName.CompareTo(b.deviceName));
+
             /* WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ups"))
                 .Select(data => data.ToUPSHost()).ToList(); */
             WebAPI_UpsBatteryData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("bat"))
                 .Select(data => data.ToUPSBattery()).ToList();
             WebAPI_PowerPanelData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("pm"))
                 .Select(data => data.CloneAs<WebAPI_RealtimeData_PowerPanel>()).ToList();
-
-            Debug.Log(WebAPI_PowerPanelData);
-#if UNITY_EDITOR
-            //依deviceName排序，其tag依照tagId排序
-            webapiData?.Sort((a, b) => a.deviceName.CompareTo(b.deviceName));
-#endif
         }
         public override void InvokeData()
         {

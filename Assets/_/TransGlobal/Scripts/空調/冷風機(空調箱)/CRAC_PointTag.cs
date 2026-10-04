@@ -8,7 +8,8 @@ namespace VzDev.DCIMUtils
     {
         #region UnityEvents
         [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> rtValueEvent, tempSetValueEvent;
-        [Foldout("[Event]-Value"), SerializeField] private UnityEvent<bool> powerStatusEvent;
+        [Foldout("[Event]-手動狀態"), SerializeField] private UnityEvent<bool> powerStatusEvent;
+        [Foldout("[Event]-AlertStatus"), SerializeField] private UnityEvent<int> rtAlertStatusEvent;
         #endregion
 
         private void OnEnable()
@@ -25,6 +26,7 @@ namespace VzDev.DCIMUtils
             rtValueEvent?.Invoke($"{data.rtTag.value} {data.rtTag.unit}");
             tempSetValueEvent?.Invoke($"{data.tempSetTag.value} {data.tempSetTag.unit}");
             powerStatusEvent?.Invoke(data.powerStatusTag.value == "開機");
+            rtAlertStatusEvent?.Invoke(data.rtTag.alertLevel);
         }
     }
 }
