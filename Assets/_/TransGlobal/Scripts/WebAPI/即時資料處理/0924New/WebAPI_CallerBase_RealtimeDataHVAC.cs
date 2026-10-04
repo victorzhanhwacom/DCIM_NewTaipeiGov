@@ -26,8 +26,15 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
             WebAPI_CRACData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fcu"))
                 .Select(data => data.ToCRAC()).ToList();
+
+            // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
+            WebAPI_CRACData = WebAPI_CRACData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
+
             WebAPI_InRowCoolerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("inr"))
                 .Select(data => data.ToInRowCooler()).ToList();
+
+            // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
+            WebAPI_InRowCoolerData = WebAPI_InRowCoolerData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
         }
         public override void InvokeData()
         {

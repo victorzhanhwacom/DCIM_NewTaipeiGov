@@ -3789,6 +3789,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3728564238466610968, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3858680891955628648, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_text
       value: '{txtDeviceName}'
@@ -3796,6 +3800,10 @@ PrefabInstance:
     - target: {fileID: 3858680891955628648, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_fontSize
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402759178425956129, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4528915921412283349, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_Sprite
@@ -3816,6 +3824,10 @@ PrefabInstance:
     - target: {fileID: 4594221235192042211, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_Name
       value: "Item\u5373\u6642\u6578\u64DA-\u76EE\u524D\u72C0\u614B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595021410169217073, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4823668757776558120, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -3876,6 +3888,14 @@ PrefabInstance:
     - target: {fileID: 6149222950643857018, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270834069563468050, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302689698006874343, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: receiveValue
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6914534267784210812, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_Name
@@ -3953,6 +3973,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8936480450166628925, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9026100530452494027, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_Color.b
       value: 0.62352943
@@ -4003,7 +4027,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 708619101915996553, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3899779868564186582}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7665337182268484084, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -7968130427689168250}
   m_SourcePrefab: {fileID: 100100000, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
 --- !u!224 &991941548745340558 stripped
 RectTransform:
@@ -4020,6 +4047,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 376394385800609207, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
   m_PrefabInstance: {fileID: 2223717924826749171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3121261139102388891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3858680891955628648, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+  m_PrefabInstance: {fileID: 2223717924826749171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &4413152421139824423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2585788657529399252, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+  m_PrefabInstance: {fileID: 2223717924826749171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411743503926915335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787aca439a1ce9040a10a72406393337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.UIAnchorFollower
 --- !u!224 &4459045601344379694 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2539341838860534749, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
@@ -4030,6 +4079,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6810579557794969365, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
   m_PrefabInstance: {fileID: 2223717924826749171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5308509521012924436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6302689698006874343, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+  m_PrefabInstance: {fileID: 2223717924826749171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea4639ed5d1e54b84ccbb5f4ace77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.Mediator.ChildrenSwitcher
 --- !u!224 &5886809962314233941 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5723544969215467686, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
@@ -4046,6 +4106,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Toggle
+--- !u!114 &6759201341041066881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4832848819977673586, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+  m_PrefabInstance: {fileID: 2223717924826749171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea4639ed5d1e54b84ccbb5f4ace77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.Mediator.ChildrenSwitcher
+--- !u!1 &8411743503926915335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7665337182268484084, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+  m_PrefabInstance: {fileID: 2223717924826749171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7968130427689168250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411743503926915335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b314c48c2ea3d43854547098ac028b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.DCIMUtils.UpsHost_PointTag
+  totalAlertLevelStatusEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5308509521012924436}
+        m_TargetAssemblyTypeName: VzDev.MediatorUtils.ChildrenSwitcher, VzDev
+        m_MethodName: SetValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6759201341041066881}
+        m_TargetAssemblyTypeName: VzDev.MediatorUtils.ChildrenSwitcher, VzDev
+        m_MethodName: SetValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  data:
+    <deviceName>k__BackingField: 
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    <deviceId>k__BackingField: 
+    <deviceCode>k__BackingField: 
+    <systemType>k__BackingField: 
+    <deviceCategory>k__BackingField: 
+    <deviceModel>k__BackingField: 
+    <tags>k__BackingField: []
+  uiAnchorFollower: {fileID: 4413152421139824423}
+  txtDeviceName: {fileID: 3121261139102388891}
 --- !u!1001 &4263636548524228462
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ namespace VzDev.DCIMUtils
                 .Select(data => data.ToUPSHost()).ToList(); */
             WebAPI_UpsBatteryData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("bat"))
                 .Select(data => data.ToUPSBattery()).ToList();
+
             WebAPI_PowerPanelData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("pm"))
                 .Select(data => data.CloneAs<WebAPI_RealtimeData_PowerPanel>()).ToList();
         }
@@ -87,7 +88,17 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":indalm"));
 
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
+        //override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
+        override public int TotalAlertLevelStatus
+        {
+            get
+            {
+                rnd ??= GetRandomTotalAlertLevelStatus();
+                return rnd.Value;
+            }
+        }
+        private int? rnd;
+
     }
 
     /*

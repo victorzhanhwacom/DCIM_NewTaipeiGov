@@ -37,6 +37,14 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public virtual int TotalAlertLevelStatus => GetTotalAlertLevelStatus(tags);
 
+        protected int GetRandomTotalAlertLevelStatus()
+        {
+            float result = UnityEngine.Random.Range(0f, 1f); 
+            if (result < 0.9f) return 0;
+            if (result < 0.95f) return 1;
+            return 2;
+        }
+
         /// <summary>
         /// 計算多個Tag的總告警等級
         /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
