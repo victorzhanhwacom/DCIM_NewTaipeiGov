@@ -26,6 +26,12 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public static void SetDeviceControl(string tagId, bool isOn, Action<List<DeviceControlResult>> onSuccess, Action<string> onError)
             => SetDeviceControl(new List<DeviceControl> { new DeviceControl(tagId, isOn) }, onSuccess, onError);
+             /// <summary>
+        /// 設定設備控制
+        /// </summary>
+        public static void SetDeviceControl(string tagId, float value, Action<List<DeviceControlResult>> onSuccess, Action<string> onError)
+            => SetDeviceControl(new List<DeviceControl> { new DeviceControl(tagId, value) }, onSuccess, onError);
+        /// <summary>
         /// <summary>
         /// 設定設備控制
         /// </summary>

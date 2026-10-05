@@ -7,6 +7,7 @@ using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
 using VzDev.Frameworks.ScrollRectUtils;
 using VzDev.MathUtils;
+using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.DCIMUtils
 {
@@ -140,6 +141,12 @@ namespace VzDev.DCIMUtils
                 {
                     value = "---";
                 }
+
+                // 如果value為float型態時，將其四捨五入到小數點後一位
+                if (float.TryParse(value, out float floatValue))
+                {
+                    value = floatValue.RoundToDecimals(1).ToString();
+                }
             }
 
             /// <summary>
@@ -157,6 +164,8 @@ namespace VzDev.DCIMUtils
                     }
                 }
             }
+
+            public void SetValue(string newValue) => value = newValue;
 
             #region Fields
             [JsonProperty]

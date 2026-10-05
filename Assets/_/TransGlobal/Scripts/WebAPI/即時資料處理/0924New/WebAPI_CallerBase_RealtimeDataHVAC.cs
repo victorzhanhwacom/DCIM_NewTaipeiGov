@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using UnityEngine;
 using VzDev.NetUtils.WebAPI;
 using VzDev.UnityAPI.Extensions;
@@ -29,6 +30,15 @@ namespace VzDev.DCIMUtils
 
             // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
             WebAPI_CRACData = WebAPI_CRACData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
+
+            // 若tempSetTag.value為"---"，則將tempSetTag.value設為rtTag.value
+            foreach (var cracData in WebAPI_CRACData)
+            {
+                if (cracData.tempSetTag.value == "---")
+                {
+                    cracData.tempSetTag.SetValue(cracData.rtTag.value);
+                }
+            }
 
             WebAPI_InRowCoolerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("inr"))
                 .Select(data => data.ToInRowCooler()).ToList();
@@ -70,15 +80,32 @@ namespace VzDev.DCIMUtils
         /// 告警狀態Tag
         /// </summary>
         public Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":trip"));
-        
+
         /// <summary>
         /// 手動啟動狀態: 啟動(true), 停止(false)
         /// </summary>
         public bool manualControlStatus => controlTag.value == "啟動";
-         /// <summary>
+        /// <summary>
         /// 電源狀態: 開機(true), 關機(false)
         /// </summary>
         public bool powerStatus => powerStatusTag.value == "開機";
+        /// <summary>
+        /// 告警狀態: 0:無告警,1:高溫告警,2:感溫器故障,4:記憶體故障
+        /// </summary>
+        public int AlarmStatus
+        {
+            get
+            {
+                switch (alarmTag.value)
+                {
+                    case "無告警": return 0;
+                    case "高溫告警": return 1;
+                    case "感溫器故障": return 2;
+                    case "記憶體故障": return 4;
+                    default: return 0;
+                }
+            }
+        }
 
         override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, powerStatusTag, tempSetTag, alarmTag);
     }
