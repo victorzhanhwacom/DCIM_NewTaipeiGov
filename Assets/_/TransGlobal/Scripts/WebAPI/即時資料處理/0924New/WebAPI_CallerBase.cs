@@ -40,9 +40,11 @@ namespace VzDev.NetUtils.WebAPI
         protected bool isWebApiCalling;
         #endregion
 
+        public void SetBodyRawJson(string bodyJson) => webApiRequestSO.SetBodyRawJson(bodyJson);
+
         public void ToCallWebAPI(bool isCall)
         {
-            if(isCall) CallWebAPI();
+            if (isCall) CallWebAPI();
             else StopCallApi();
         }
 
@@ -145,7 +147,7 @@ namespace VzDev.NetUtils.WebAPI
         /// </summary>
         public void OnTimeout()
         {
-            
+
         }
     }
 }
