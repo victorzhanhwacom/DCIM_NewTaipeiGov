@@ -679,13 +679,13 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6082798417147877749, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1427771065598195121}
-    - targetCorrespondingSourceObject: {fileID: 6082798417147877749, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5537155240671696757}
     - targetCorrespondingSourceObject: {fileID: 6082798417147877749, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5451611933716452236}
+    - targetCorrespondingSourceObject: {fileID: 6082798417147877749, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1427771065598195121}
     - targetCorrespondingSourceObject: {fileID: 6082798417147877749, guid: 30f228210e69d3f458f1df32b579fbe7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2426410982158891769}
@@ -809,7 +809,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 992751350847166331, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1267165435513567292, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
@@ -817,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2789295403258465697, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: receiveValue
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2789295403258465697, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: 'children.Array.data[2]'
@@ -934,6 +934,10 @@ PrefabInstance:
     - target: {fileID: 5538171497442706023, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622458432467244407, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6026958527691302666, guid: 63114b3fb5797804db26ef234a8b4d6e, type: 3}
       propertyPath: m_fontColor32.rgba

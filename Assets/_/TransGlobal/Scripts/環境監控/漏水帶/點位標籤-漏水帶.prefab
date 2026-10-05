@@ -123,12 +123,12 @@ MonoBehaviour:
   colorIndices:
   - index: 0
     colorItems:
-    - color: {r: 0.3490566, g: 1, b: 0.3490566, a: 1}
+    - color: {r: 0.5518868, g: 1, b: 0.5518868, a: 1}
       graphicTargets:
       - {fileID: 230103934665189571}
   - index: 3
     colorItems:
-    - color: {r: 1, g: 0.2471698, b: 0.37102455, a: 1}
+    - color: {r: 1, g: 0.48584908, b: 0.5715411, a: 1}
       graphicTargets:
       - {fileID: 230103934665189571}
   - index: 4
@@ -927,6 +927,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8728022290688196738, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8917207144682792228, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4284507391
@@ -1100,6 +1104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2107790843113241079}
+        m_TargetAssemblyTypeName: VzDev.ColorUtils.GraphicColorChanger, VzDev
+        m_MethodName: ChangeColor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   data:
     <deviceName>k__BackingField: 
     modelInfo:
@@ -1197,11 +1213,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontSizeBase
@@ -1209,7 +1229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278255360
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5181061595926067212, guid: 5edd9f5c6e69348488329c9dd258e1ec, type: 3}
       propertyPath: m_VerticalAlignment
