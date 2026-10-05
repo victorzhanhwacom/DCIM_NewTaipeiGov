@@ -14,6 +14,9 @@ namespace VzDev.DCIMUtils
         [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> controlBoardValueEvent, levelValue1Event, levelValue2Event, vesdaValueEvent, vesdaDeviceValueEvent;
         [Foldout("[Event]-AlertStatus"), SerializeField] private UnityEvent<int> controlBoardAlertStatusEvent, levelValue1AlertStatusEvent, levelValue2AlertStatusEvent, vesdaAlertStatusEvent, vesdaDeviceAlertStatusEvent;
         [Foldout("[Components]"), SerializeField] private TextMeshProUGUI titleControlBoard, titleLevel1, titleLevel2, titleVesda, titleVesdaDevice;
+        [Foldout("[Settings]"), SerializeField] private Material matNormal, matAlert;
+        private LineRenderer lineRenderer;
+        private HeatmapVolumeRenderer heatmapVolumeRenderer;
         #endregion
 
         private void OnEnable()
@@ -23,9 +26,23 @@ namespace VzDev.DCIMUtils
         }
         private void OnDisable() => WebAPI_CallerBase_RealtimeDataFS.OnGetFSDataAction -= OnGetDataAction;
 
+        /// <summary>
+        /// 改變消防區域顏色
+        /// </summary>
+        private void ChangeAreaColor()
+        {
+            int alertLevelStatus = data.TotalAlertLevelStatus;
+            lineRenderer ??= target3DObject?.GetComponent<LineRenderer>();
+            lineRenderer.material = alertLevelStatus > 0 ? matAlert : matNormal;
+            heatmapVolumeRenderer ??= target3DObject?.GetComponentInChildren<HeatmapVolumeRenderer>();
+            heatmapVolumeRenderer.SetBaseTemperature(alertLevelStatus > 0 ? 100 : 0);
+        }
+
         override protected void InvokeEvent()
         {
             base.InvokeEvent();
+            ChangeAreaColor();
+
             titleControlBoard.SetText(data.controlBoardTag.displayName);
             titleLevel1.SetText(data.level1Tag.displayName);
             titleLevel2.SetText(data.level2Tag.displayName);

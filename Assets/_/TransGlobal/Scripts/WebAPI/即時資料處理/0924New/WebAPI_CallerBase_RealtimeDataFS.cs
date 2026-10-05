@@ -26,13 +26,18 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
             WebAPI_FSData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fir"))
                 .Select(data => data.ToFS()).ToList();
-            WebAPI_GasCylinderData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("gas"))
-                .Select(data => data.ToGasCylinder()).ToList();
+            /*  WebAPI_GasCylinderData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("gas"))
+                 .Select(data => data.ToGasCylinder()).ToList(); */
         }
         public override void InvokeData()
         {
             base.InvokeData();
             OnGetFSDataAction?.Invoke(WebAPI_FSData);
+        }
+
+        public static void SetGasCylinderData(List<WebAPI_RealtimeData_GasCylinder> gasCylinderData)
+        {
+            WebAPI_GasCylinderData = gasCylinderData;
             OnGetGasCylinderDataAction?.Invoke(WebAPI_GasCylinderData);
         }
     }
@@ -59,7 +64,7 @@ namespace VzDev.DCIMUtils
         /// 極早期Tag
         /// </summary>
         public Tag vesdaTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vealm"));
-          /// <summary>
+        /// <summary>
         /// 極早期設備故障警報
         /// </summary>
         public Tag vesdaDeviceTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vedalm"));
@@ -73,6 +78,7 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_GasCylinder : WebAPI_RealtimeData
     {
-        override public int TotalAlertLevelStatus => 0;
+        public string displayName => tags[0].displayName;
+        public string message => tags[0].message;
     }
 }

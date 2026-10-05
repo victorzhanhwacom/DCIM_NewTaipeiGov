@@ -49,7 +49,7 @@ namespace VzDev.DCIMUtils
         /// 即時狀態Tag
         /// </summary>
         private Tag statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
-        override public int TotalAlertLevelStatus => statusTag?.alertLevelStatus ?? 0;
+        override public int TotalAlertLevelStatus => statusTag?.alertLevelStatus ?? 2;
 
     }
 
@@ -59,6 +59,5 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_RackDoor : WebAPI_RealtimeData
     {
-        override public int TotalAlertLevelStatus => GetRandomTotalAlertLevelStatus();
     }
 }

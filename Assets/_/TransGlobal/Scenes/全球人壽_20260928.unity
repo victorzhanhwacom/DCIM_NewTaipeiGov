@@ -16951,7 +16951,7 @@ GameObject:
   - component: {fileID: 126760143}
   - component: {fileID: 126760146}
   m_Layer: 0
-  m_Name: "\u92FC\u74F6\u4F4E\u58D3\u529B\u8B66\u5831"
+  m_Name: "\u92FC\u74F6\u4F4E\u58D3\u529B\u8B66\u5831 [TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_004]"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20149,6 +20149,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148332829}
   m_CullTransparentMesh: 1
+--- !u!1001 &148467238
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1333887637}
+    m_Modifications:
+    - target: {fileID: 644558908767354419, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_Name
+      value: LoopTimerEventBinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271574592292606459, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: loopCall
+      value: 
+      objectReference: {fileID: 148467240}
+    - target: {fileID: 3271574592292606459, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: targetCaller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271574592292606459, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: noResponseCall
+      value: 
+      objectReference: {fileID: 148467241}
+    - target: {fileID: 3271574592292606459, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::VzDev.DCIMUtils.WebAPI_CallerBase_TimerEventBinder
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+--- !u!4 &148467239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1647204528789373649, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+  m_PrefabInstance: {fileID: 148467238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &148467240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2353259481627635174, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+  m_PrefabInstance: {fileID: 148467238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f518ddb4eb2eba74e8b1a4c3aabc7b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DateTimeUtils.TimerController
+--- !u!114 &148467241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4460150997782643301, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+  m_PrefabInstance: {fileID: 148467238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f518ddb4eb2eba74e8b1a4c3aabc7b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VzDev::VzDev.DateTimeUtils.TimerController
+--- !u!1 &148467242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 644558908767354419, guid: 7c1ff8d28d43df842bf23cdadb4bbe31, type: 3}
+  m_PrefabInstance: {fileID: 148467238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &149316482
 GameObject:
   m_ObjectHideFlags: 0
@@ -123917,44 +124022,28 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <displayName>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_001:conalm
-      <name>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
+      <name>k__BackingField: conalm
+      <value>k__BackingField: "\u6B63\u5E38"
+      <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
+      <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
-    - <displayName>k__BackingField: "\u8B66\u5831"
-      <tagId>k__BackingField: 0101_fir_001:cylalm
-      <name>k__BackingField: "\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
-      <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
-      <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
-      <triggeredAt>k__BackingField: 
-      <direction>k__BackingField: 0
-      <valueLabels>k__BackingField: "0:\u8B66\u5831,1:\u6B63\u5E38"
     - <displayName>k__BackingField: "\u6D88\u9632\u7B2C\u4E00\u968E\u6BB5\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_001:p1alm
       <name>k__BackingField: p1alm
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -123969,8 +124058,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -123985,8 +124074,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -123997,17 +124086,17 @@ MonoBehaviour:
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
     - <displayName>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_001:vedalm
-      <name>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
+      <name>k__BackingField: vedalm
+      <value>k__BackingField: "\u6B63\u5E38"
+      <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
+      <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
@@ -124023,17 +124112,17 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <displayName>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_002:conalm
-      <name>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
+      <name>k__BackingField: conalm
+      <value>k__BackingField: "\u6B63\u5E38"
+      <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
+      <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
@@ -124043,8 +124132,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124059,8 +124148,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124075,8 +124164,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124087,17 +124176,17 @@ MonoBehaviour:
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
     - <displayName>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_002:vedalm
-      <name>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
+      <name>k__BackingField: vedalm
+      <value>k__BackingField: "\u6B63\u5E38"
+      <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
+      <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
@@ -124113,28 +124202,12 @@ MonoBehaviour:
     <tags>k__BackingField:
     - <displayName>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_003:conalm
-      <name>k__BackingField: "\u63A7\u5236\u76E4\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
-      <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
-      <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
-      <triggeredAt>k__BackingField: 
-      <direction>k__BackingField: 0
-      <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
-    - <displayName>k__BackingField: "\u6D88\u9632\u6C23\u9AD4\u5674\u767C\u8B66\u5831"
-      <tagId>k__BackingField: 0101_fir_003:fgealm
-      <name>k__BackingField: fgealm
+      <name>k__BackingField: conalm
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124149,8 +124222,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124165,8 +124238,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124181,8 +124254,8 @@ MonoBehaviour:
       <value>k__BackingField: "\u6B63\u5E38"
       <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 2026-10-01T02:09:21Z
-      <localTimestamp>k__BackingField: 2026-10-01 10:09:21
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
       <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
       <alertLevel>k__BackingField: 0
@@ -124193,20 +124266,46 @@ MonoBehaviour:
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
     - <displayName>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
       <tagId>k__BackingField: 0101_fir_003:vedalm
-      <name>k__BackingField: "\u6975\u65E9\u671F\u8A2D\u5099\u6545\u969C\u8B66\u5831"
-      <value>k__BackingField: ---
-      <valueKind>k__BackingField: 
+      <name>k__BackingField: vedalm
+      <value>k__BackingField: "\u6B63\u5E38"
+      <valueKind>k__BackingField: Text
       <unit>k__BackingField: 
-      <timestamp>k__BackingField: 
-      <localTimestamp>k__BackingField: 
-      <sourceType>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:01:57Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:01:57
+      <sourceType>k__BackingField: Mqtt
       <isOfflineStatusTag>k__BackingField: 0
-      <alertLevel>k__BackingField: 99
-      <severity>k__BackingField: Offline
-      <message>k__BackingField: "\u96E2\u7DDA"
+      <alertLevel>k__BackingField: 0
+      <severity>k__BackingField: 
+      <message>k__BackingField: 
       <triggeredAt>k__BackingField: 
       <direction>k__BackingField: 0
       <valueLabels>k__BackingField: "0:\u6B63\u5E38,1:\u8B66\u5831"
+  - <deviceName>k__BackingField: "\u6D88\u9632\u5BA4"
+    modelInfo:
+      modelTarget: {fileID: 0}
+      modelName: 
+    <deviceId>k__BackingField: 12160732-1ba0-48a3-a22c-f1d52b16b6ee
+    <deviceCode>k__BackingField: TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_004
+    <systemType>k__BackingField: FS
+    <deviceCategory>k__BackingField: fir
+    <deviceModel>k__BackingField: fir
+    <tags>k__BackingField:
+    - <displayName>k__BackingField: "\u92FC\u74F6\u4F4E\u58D3\u529B\u8B66\u5831"
+      <tagId>k__BackingField: 0101_fir_004:cylalm
+      <name>k__BackingField: cylalm
+      <value>k__BackingField: ---
+      <valueKind>k__BackingField: 
+      <unit>k__BackingField: 
+      <timestamp>k__BackingField: 2026-10-05T02:02:00Z
+      <localTimestamp>k__BackingField: 2026-10-05 10:02:00
+      <sourceType>k__BackingField: Entek
+      <isOfflineStatusTag>k__BackingField: 0
+      <alertLevel>k__BackingField: 99
+      <severity>k__BackingField: Offline
+      <message>k__BackingField: "Entek API \u547C\u53EB\u5931\u6557"
+      <triggeredAt>k__BackingField: 
+      <direction>k__BackingField: 0
+      <valueLabels>k__BackingField: "0:\u8B66\u5831,1:\u6B63\u5E38"
   getJsonFromNode: 1
   jsonNodePath: devices
 --- !u!4 &657543181 stripped
@@ -147463,6 +147562,32 @@ MonoBehaviour:
   isEnableEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 657508206}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.WebAPI_CallerBase_RealtimeDataFS,
+          Assembly-CSharp
+        m_MethodName: ToCallWebAPI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1333887638}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.WebAPI_CallerBase_RealtimeDataFS_GasCylinder,
+          Assembly-CSharp
+        m_MethodName: ToCallWebAPI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2002123210}
         m_TargetAssemblyTypeName: VzDev.ObjectUtils.MaterialReplacer, VzDev
         m_MethodName: ToReplaceMaterial
@@ -147514,19 +147639,6 @@ MonoBehaviour:
       - m_Target: {fileID: 692625708}
         m_TargetAssemblyTypeName: VzDev.LandmarkUtils.PointTagGenerator, VzDev
         m_MethodName: SetTagVisible
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 657508206}
-        m_TargetAssemblyTypeName: VzDev.DCIMUtils.WebAPI_CallerBase_RealtimeDataFS,
-          Assembly-CSharp
-        m_MethodName: ToCallWebAPI
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -190377,6 +190489,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1482320737}
+        m_TargetAssemblyTypeName: VzDev.DCIMUtils.WebAPI_CallerBase_RealtimeDataUPSHost,
+          Assembly-CSharp
+        m_MethodName: ToCallWebAPI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 851574775}
         m_TargetAssemblyTypeName: VzDev.ObjectUtils.MaterialReplacer, VzDev
         m_MethodName: ToReplaceMaterial
@@ -198416,6 +198541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 657508205}
+  - {fileID: 1333887637}
   m_Father: {fileID: 653507683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &984694773 stripped
@@ -265264,6 +265390,74 @@ MonoBehaviour:
   excludeModels:
   - {fileID: 0}
   replaceMaterial: {fileID: 2100000, guid: dc00ae5ff046d8a43ba94a9815b3c831, type: 2}
+--- !u!1 &1333887636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333887637}
+  - component: {fileID: 1333887638}
+  m_Layer: 0
+  m_Name: WebAPI_CallerBase_RealtimeDataGasCylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333887637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333887636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 148467239}
+  m_Father: {fileID: 984501280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333887638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333887636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50350f049c32d744395a2f830e29d1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VzDev.DCIMUtils.WebAPI_CallerBase_RealtimeDataFS_GasCylinder
+  OnGetDataEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onCallingEvent:
+    onStartEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    onStopEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    onSuccessEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    onFailureEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    callingStatusEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  webApiRequestSO: {fileID: 11400000, guid: 9120cb7f3a5b43c48b09ff9c66f058dc, type: 2}
+  webapiData: []
+  getJsonFromNode: 1
+  jsonNodePath: devices
 --- !u!1 &1335500023
 GameObject:
   m_ObjectHideFlags: 0
@@ -285936,6 +286130,8 @@ MonoBehaviour:
   - _gameObject: {fileID: 1410547036}
     _prefab: "Assets/_/TransGlobal/Scripts/WebAPI/\u5373\u6642\u8CC7\u6599\u8655\u7406/0924New/LoopTimerEventBinder.prefab"
   - _gameObject: {fileID: 1643040125}
+    _prefab: "Assets/_/TransGlobal/Scripts/WebAPI/\u5373\u6642\u8CC7\u6599\u8655\u7406/0924New/LoopTimerEventBinder.prefab"
+  - _gameObject: {fileID: 148467242}
     _prefab: "Assets/_/TransGlobal/Scripts/WebAPI/\u5373\u6642\u8CC7\u6599\u8655\u7406/0924New/LoopTimerEventBinder.prefab"
   - _gameObject: {fileID: 1101845720}
     _prefab: "Assets/_/TransGlobal/Scripts/WebAPI/\u5373\u6642\u8CC7\u6599\u8655\u7406/0924New/LoopTimerEventBinder.prefab"
@@ -345771,7 +345967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: VzDev::VzDev.ObjectUtils.ModelFinder
   logEnabled: 0
   keywords:
-  - "\u92FC\u74F6\u4F4E\u58D3\u529B\u8B66\u5831"
+  - TGL+TPE+IDC+08F+FS+fir+fir+0101_fir_004
   keyModels: []
   foundModels:
   - {fileID: 126760142}

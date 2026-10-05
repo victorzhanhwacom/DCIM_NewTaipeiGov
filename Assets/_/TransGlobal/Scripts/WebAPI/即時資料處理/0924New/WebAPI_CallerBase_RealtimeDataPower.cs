@@ -88,17 +88,7 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":indalm"));
 
-        //override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
-        override public int TotalAlertLevelStatus
-        {
-            get
-            {
-                rnd ??= GetRandomTotalAlertLevelStatus();
-                return rnd.Value;
-            }
-        }
-        private int? rnd;
-
+        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
     }
 
     /*

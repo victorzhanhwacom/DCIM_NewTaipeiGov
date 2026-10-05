@@ -24,6 +24,7 @@ namespace VzDev.DCIMUtils
         [Foldout("[Components]"), SerializeField] private UIAnchorFollower uiAnchorFollower;
         [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName;
         protected string deviceCode { get; private set; }
+        protected Transform target3DObject => uiAnchorFollower?.Target3DObject;
         #endregion
 
         protected virtual void Start() => GetDeviceCode();
@@ -38,7 +39,7 @@ namespace VzDev.DCIMUtils
             data = list.FirstOrDefault(data => data.deviceCode == deviceCode);
             if (data == null)
             {
-                Debug.LogWarning($"InRowCooler_Tag: 找不到對應的資料, DeviceCode: {deviceCode}");
+                Debug.LogWarning($"PointTag: 找不到對應的資料, DeviceCode: {deviceCode}");
                 return;
             }
             data.modelInfo ??= new ModelInfo();
