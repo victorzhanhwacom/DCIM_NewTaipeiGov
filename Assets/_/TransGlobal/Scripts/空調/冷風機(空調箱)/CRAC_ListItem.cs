@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -10,79 +11,147 @@ using VzDev.Frameworks.ScrollRectUtils;
 public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
 {
     #region UnityEvent
-    [Foldout("[Event]"), SerializeField] private UnityEvent<int> totalAlertLevelStatusEvent;
-    /// <summary>
-    /// 手動控制狀態事件: 啟動(true), 停止(false)
-    /// </summary>
-    [Foldout("[Event]"), SerializeField, Tooltip("手動控制狀態事件")] private UnityEvent<bool> manualStatusEvent;
+    [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> powerValueEvent, manualControlValueEvent;
+    [Foldout("[Event]-Status"), SerializeField] private UnityEvent<bool> powerStatusEvent, manualControlStatusEvent;
+    [Foldout("[Event]-AlertLevelStatus"), SerializeField] private UnityEvent<int> rtAlertLevelStatusEvent, alarmStatusEvent;
     #endregion
-    #region Fields
-    [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtDeviceName, txtTempSet;
-    [Foldout("[Components]"), SerializeField] private DOTweenText txtRoomTemp;
-    [Foldout("[Components]-手動啟動"), SerializeField] private Button btnManualToOn, btnManualToOff;
-    [Foldout("[Components]-設定溫度"), SerializeField] private Button btnTempIncrease, btnTempDecrease;
-    private float? tempSetValue;
 
-    public string bodyJson_SetTemp;
+    #region Fields
+    [Foldout("[Component]"), SerializeField] private DOTweenText dotRt;
+    [Foldout("[Component]"), SerializeField] private TextMeshProUGUI txtTempSet, txtDeviceName;
+    [Foldout("[Component]"), SerializeField] private Button btnDecreaseTemp, btnIncreaseTemp, btnManualControl;
+    [Foldout("[Component]"), SerializeField] private GameObject manualControlLoadingBar;
+    private float tempMin = 16f, tempMax = 30f;
+    private float invokeTempSetAfterSeconds = 2f;
+    private float currentTempSet;
     #endregion
 
     #region Event Listener
     protected override void OnEnable()
     {
         base.OnEnable();
-        btnManualToOn.onClick.AddListener(OnClickManualToOn);
-        btnManualToOff.onClick.AddListener(OnClickManualToOff);
-        btnTempIncrease.onClick.AddListener(OnBtnTempSetIncrease);
-        btnTempDecrease.onClick.AddListener(OnBtnTempSetDecrease);
+        btnIncreaseTemp.onClick.AddListener(IncreaseTemp);
+        btnDecreaseTemp.onClick.AddListener(DecreaseTemp);
+        btnManualControl.onClick.AddListener(ToggleManualControl);
     }
     protected override void OnDisable()
     {
         base.OnDisable();
-        btnTempIncrease.onClick.RemoveListener(OnBtnTempSetIncrease);
-        btnTempDecrease.onClick.RemoveListener(OnBtnTempSetDecrease);
-    }
-    #endregion
-
-    #region 手動啟動 / 關閉
-    private void OnClickManualToOn() => SetManualControlValue(true);
-    private void OnClickManualToOff() => SetManualControlValue(false);
-    private void SetManualControlValue(bool isOn)
-    {
-        Debug.Log($"SetManualControlValue: {isOn}");
-        manualStatusEvent?.Invoke(isOn);
+        btnIncreaseTemp.onClick.RemoveListener(IncreaseTemp);
+        btnDecreaseTemp.onClick.RemoveListener(DecreaseTemp);
+        btnManualControl.onClick.RemoveListener(ToggleManualControl);
     }
     #endregion
 
     #region 設定溫度
-    private void OnBtnTempSetIncrease() => SetTempValue(0.1f);
-    private void OnBtnTempSetDecrease() => SetTempValue(-0.1f);
-    private void SetTempValue(float adjustValue)
+    public void IncreaseTemp() => SetTemp(0.5f);
+    public void DecreaseTemp() => SetTemp(-0.5f);
+    private void SetTemp(float adjustValue)
     {
-        tempSetValue ??= data.tempSetTag.value == "---" ? float.Parse(data.rtTag.value) : float.Parse(data.tempSetTag.value);
-        tempSetValue += adjustValue;
-        txtTempSet.SetText(tempSetValue?.ToString("0.##"));
+        if (data == null) return;
+        if (data.tempSetTag == null) return;
 
-        // 隔2秒後才將最終的溫度值送出，避免使用者連續點擊造成頻繁送出，過程中若使用者再次點擊則會重新計算2秒後送出
-        DeviceControl deviceControl = new DeviceControl(data.tempSetTag.tagId, tempSetValue ?? 0f);
+        currentTempSet += adjustValue;
 
+        // 限制溫度範圍
+        currentTempSet = Mathf.Clamp(currentTempSet, tempMin, tempMax);
+        txtTempSet.SetText($"{currentTempSet} {data.tempSetTag.unit}");
+
+        btnIncreaseTemp.interactable = currentTempSet < tempMax;
+        btnDecreaseTemp.interactable = currentTempSet > tempMin;
+
+        //在設定完之後，延遲一段時間再呼叫API，避免連續快速點擊造成API過度呼叫
+        CancelInvoke(nameof(InvokeSetTemp));
+        Invoke(nameof(InvokeSetTemp), invokeTempSetAfterSeconds);
+    }
+
+    /// <summary>
+    /// 呼叫API設定新的溫度
+    /// </summary>
+    private void InvokeSetTemp()
+    {
+        void OnError(string error)
+        {
+            Debug.LogError($"[CRAC_PointTag] InvokeSetTemp Error: {error}");
+        }
+        void OnSuccess(List<DeviceControlResult> list)
+        {
+            if (list == null || list.Count == 0)
+            {
+                Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp OnSuccess: list is null or empty.");
+                return;
+            }
+            var result = list[0];
+            if (result.IsSuccess)
+            {
+                Debug.Log($"[CRAC_PointTag] 設定溫度成功: {currentTempSet}");
+                data.tempSetTag.SetValue(currentTempSet.ToString());
+                DOTweenHelper.ToBlink(txtTempSet, $"{data.tempSetTag.value} {data.tempSetTag.unit}");
+            }
+            else
+                Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp Error:\ntagId={result.tagId}\nstatus={result.status}\nerror={result.error}");
+        }
+
+        // 呼叫API設定新的溫度e
+        WebAPI_CallerBase_DeviceControl.SetDeviceControl(data.controlTag.tagId, currentTempSet, OnSuccess, OnError);
     }
     #endregion
 
-    /// <summary>
-    /// 手動控制開關值改變事件
-    /// </summary>
-    private void OnToggleManualControlValueChanged(bool isOn)
+    #region 手動啟動/關閉
+    private void ToggleManualControl()
     {
-        Debug.Log($"OnToggleManualControlValueChanged: {isOn}");
+        if (data == null) return;
+        if (data.controlTag == null) return;
+
+        bool newManualControlStatus = !data.manualControlStatus;
+
+        void OnError(string error)
+        {
+            manualControlLoadingBar.SetActive(false);
+            Debug.LogError($"[CRAC_PointTag] ToggleManualControl Error: {error}");
+        }
+        void OnSuccess(List<DeviceControlResult> list)
+        {
+            manualControlLoadingBar.SetActive(false);
+            if (list == null || list.Count == 0)
+            {
+                Debug.LogWarning($"[CRAC_PointTag] ToggleManualControl OnSuccess: list is null or empty.");
+                return;
+            }
+            var result = list[0];
+            if (result.IsSuccess)
+            {
+                Debug.Log($"[CRAC_PointTag] 設定手動啟動狀態成功");
+                data.controlTag.SetValue(newManualControlStatus ? "啟動" : "停止");
+                manualControlValueEvent?.Invoke(data.controlTag.value);
+                manualControlStatusEvent?.Invoke(data.manualControlStatus);
+            }
+            else
+                Debug.LogWarning($"[CRAC_PointTag] ToggleManualControl Error:\ntagId={result.tagId}\nstatus={result.status}\nerror={result.error}");
+        }
+
+        manualControlLoadingBar.SetActive(true);
+        // 呼叫API設定新的手動啟動狀態
+        WebAPI_CallerBase_DeviceControl.SetDeviceControl(data.controlTag.tagId, newManualControlStatus, OnSuccess, OnError);
     }
+    #endregion
 
     protected override void UpdateUI(WebAPI_RealtimeData_CRAC data)
     {
-        txtDeviceName.SetText(data.deviceName);
-        txtTempSet.SetText($"{data.tempSetTag.value} {data.tempSetTag.unit}");
-        txtRoomTemp.SetText($"{data.rtTag.value} {data.rtTag.unit}");
+        currentTempSet = float.Parse(data.tempSetTag.value);
 
-        totalAlertLevelStatusEvent?.Invoke(data.TotalAlertLevelStatus);
-        manualStatusEvent?.Invoke(data.manualControlStatus);
+        powerValueEvent?.Invoke(data.powerStatusTag.value);
+        powerStatusEvent?.Invoke(data.powerStatus);
+
+        txtDeviceName.SetText(data.deviceName);
+        dotRt.SetText($"{data.rtTag.value} {data.rtTag.unit}");
+        rtAlertLevelStatusEvent?.Invoke(data.rtTag.alertLevel);
+
+        txtTempSet.SetText($"{data.tempSetTag.value} {data.tempSetTag.unit}");
+
+        alarmStatusEvent?.Invoke(data.AlarmStatus);
+
+        manualControlValueEvent?.Invoke(data.controlTag.value);
+        manualControlStatusEvent?.Invoke(data.manualControlStatus);
     }
 }

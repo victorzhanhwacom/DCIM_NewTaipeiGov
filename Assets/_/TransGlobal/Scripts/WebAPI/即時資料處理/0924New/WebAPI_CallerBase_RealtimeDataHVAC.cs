@@ -90,7 +90,7 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public bool powerStatus => powerStatusTag.value == "開機";
         /// <summary>
-        /// 告警狀態: 0:無告警,1:高溫告警,2:感溫器故障,4:記憶體故障
+        /// 告警狀態: 0:無告警,1:高溫告警,2:感溫器故障,3:記憶體故障
         /// </summary>
         public int AlarmStatus
         {
@@ -101,7 +101,7 @@ namespace VzDev.DCIMUtils
                     case "無告警": return 0;
                     case "高溫告警": return 1;
                     case "感溫器故障": return 2;
-                    case "記憶體故障": return 4;
+                    case "記憶體故障": return 3;
                     default: return 0;
                 }
             }

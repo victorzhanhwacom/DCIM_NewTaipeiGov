@@ -36,6 +36,67 @@ namespace VzDev.DCIMUtils
             btnDecreaseTemp.onClick.AddListener(DecreaseTemp);
             btnManualControl.onClick.AddListener(ToggleManualControl);
         }
+        private void OnDisable()
+        {
+            WebAPI_CallerBase_RealtimeDataHVAC.OnGetCRACDataAction -= OnGetDataAction;
+            btnIncreaseTemp.onClick.RemoveListener(IncreaseTemp);
+            btnDecreaseTemp.onClick.RemoveListener(DecreaseTemp);
+            btnManualControl.onClick.RemoveListener(ToggleManualControl);
+        }
+
+        #region 設定溫度
+        public void IncreaseTemp() => SetTemp(0.5f);
+        public void DecreaseTemp() => SetTemp(-0.5f);
+        private void SetTemp(float adjustValue)
+        {
+            if (data == null) return;
+            if (data.tempSetTag == null) return;
+
+            currentTempSet += adjustValue;
+
+            // 限制溫度範圍
+            currentTempSet = Mathf.Clamp(currentTempSet, tempMin, tempMax);
+            txtTempSet.SetText($"{currentTempSet} {data.tempSetTag.unit}");
+
+            btnIncreaseTemp.interactable = currentTempSet < tempMax;
+            btnDecreaseTemp.interactable = currentTempSet > tempMin;
+
+            //在設定完之後，延遲一段時間再呼叫API，避免連續快速點擊造成API過度呼叫
+            CancelInvoke(nameof(InvokeSetTemp));
+            Invoke(nameof(InvokeSetTemp), invokeTempSetAfterSeconds);
+        }
+
+        /// <summary>
+        /// 呼叫API設定新的溫度
+        /// </summary>
+        private void InvokeSetTemp()
+        {
+            void OnError(string error)
+            {
+                Debug.LogError($"[CRAC_PointTag] InvokeSetTemp Error: {error}");
+            }
+            void OnSuccess(List<DeviceControlResult> list)
+            {
+                if (list == null || list.Count == 0)
+                {
+                    Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp OnSuccess: list is null or empty.");
+                    return;
+                }
+                var result = list[0];
+                if (result.IsSuccess)
+                {
+                    Debug.Log($"[CRAC_PointTag] 設定溫度成功: {currentTempSet}");
+                    data.tempSetTag.SetValue(currentTempSet.ToString());
+                    DOTweenHelper.ToBlink(txtTempSet, $"{data.tempSetTag.value} {data.tempSetTag.unit}");
+                }
+                else
+                    Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp Error:\ntagId={result.tagId}\nstatus={result.status}\nerror={result.error}");
+            }
+
+            // 呼叫API設定新的溫度e
+            WebAPI_CallerBase_DeviceControl.SetDeviceControl(data.controlTag.tagId, currentTempSet, OnSuccess, OnError);
+        }
+        #endregion
 
         #region 手動啟動/關閉
         private void ToggleManualControl()
@@ -75,63 +136,6 @@ namespace VzDev.DCIMUtils
             WebAPI_CallerBase_DeviceControl.SetDeviceControl(data.controlTag.tagId, newManualControlStatus, OnSuccess, OnError);
         }
         #endregion
-
-        #region 設定溫度
-        private void IncreaseTemp() => SetTemp(0.5f);
-        private void DecreaseTemp() => SetTemp(-0.5f);
-        private void SetTemp(float adjustValue)
-        {
-            if (data == null) return;
-            if (data.tempSetTag == null) return;
-
-            currentTempSet += adjustValue;
-
-            // 限制溫度範圍
-            currentTempSet = Mathf.Clamp(currentTempSet, tempMin, tempMax);
-            txtTempSet.SetText($"{currentTempSet} {data.tempSetTag.unit}");
-
-            btnIncreaseTemp.interactable = currentTempSet < tempMax;
-            btnDecreaseTemp.interactable = currentTempSet > tempMin;
-
-            //在設定完之後，延遲一段時間再呼叫API，避免連續快速點擊造成API過度呼叫
-            CancelInvoke(nameof(InvokeSetTemp));
-            Invoke(nameof(InvokeSetTemp), invokeTempSetAfterSeconds);
-        }
-
-
-        /// <summary>
-        /// 呼叫API設定新的溫度
-        /// </summary>
-        private void InvokeSetTemp()
-        {
-            void OnError(string error)
-            {
-                Debug.LogError($"[CRAC_PointTag] InvokeSetTemp Error: {error}");
-            }
-            void OnSuccess(List<DeviceControlResult> list)
-            {
-                if (list == null || list.Count == 0)
-                {
-                    Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp OnSuccess: list is null or empty.");
-                    return;
-                }
-                var result = list[0];
-                if (result.IsSuccess)
-                {
-                    Debug.Log($"[CRAC_PointTag] 設定溫度成功: {currentTempSet}");
-                    data.tempSetTag.SetValue(currentTempSet.ToString());
-                    DOTweenHelper.ToBlink(txtTempSet, $"{data.tempSetTag.value} {data.tempSetTag.unit}");
-                }
-                else
-                    Debug.LogWarning($"[CRAC_PointTag] InvokeSetTemp Error:\ntagId={result.tagId}\nstatus={result.status}\nerror={result.error}");
-            }
-
-            // 呼叫API設定新的溫度e
-            WebAPI_CallerBase_DeviceControl.SetDeviceControl(data.controlTag.tagId, currentTempSet, OnSuccess, OnError);
-        }
-        #endregion
-
-        private void OnDisable() => WebAPI_CallerBase_RealtimeDataHVAC.OnGetCRACDataAction -= OnGetDataAction;
 
         override protected void InvokeEvent()
         {
