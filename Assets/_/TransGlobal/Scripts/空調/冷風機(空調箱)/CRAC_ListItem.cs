@@ -14,6 +14,8 @@ public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
     [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> powerValueEvent, manualControlValueEvent;
     [Foldout("[Event]-Status"), SerializeField] private UnityEvent<bool> powerStatusEvent, manualControlStatusEvent;
     [Foldout("[Event]-AlertLevelStatus"), SerializeField] private UnityEvent<int> rtAlertLevelStatusEvent, alarmStatusEvent;
+    [Foldout("[Event]-MainControl"), SerializeField] private UnityEvent<bool> isAutoControlEvent;
+
     #endregion
 
     #region Fields
@@ -33,6 +35,13 @@ public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
         btnIncreaseTemp.onClick.AddListener(IncreaseTemp);
         btnDecreaseTemp.onClick.AddListener(DecreaseTemp);
         btnManualControl.onClick.AddListener(ToggleManualControl);
+        CRAC_MainController.OnManualControlStatusChangedAction += OnManualControlStatusChanged;
+    }
+    private void OnManualControlStatusChanged(string controlRoom, bool isAutoControlMode)
+    {
+        if (data == null) return;
+        if (data.controllRoom != controlRoom) return;
+        isAutoControlEvent?.Invoke(isAutoControlMode);
     }
     protected override void OnDisable()
     {
@@ -40,6 +49,7 @@ public class CRAC_ListItem : ScrollRectListItemBase<WebAPI_RealtimeData_CRAC>
         btnIncreaseTemp.onClick.RemoveListener(IncreaseTemp);
         btnDecreaseTemp.onClick.RemoveListener(DecreaseTemp);
         btnManualControl.onClick.RemoveListener(ToggleManualControl);
+        CRAC_MainController.OnManualControlStatusChangedAction -= OnManualControlStatusChanged;
     }
     #endregion
 

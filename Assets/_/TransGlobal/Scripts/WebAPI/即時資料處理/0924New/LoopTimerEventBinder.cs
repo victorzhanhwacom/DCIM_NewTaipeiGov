@@ -47,7 +47,7 @@ namespace VzDev.DCIMUtils
         private void OnStopCallingEventHandler()
         {
             noResponseCall.StopTimer();
-            loopCall.StopTimer();
+            loopCall.StartTimer();
         }
 
         private void OnFailureEventHandler(string errorMessage) => OnStopCallingEventHandler();

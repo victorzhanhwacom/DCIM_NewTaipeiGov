@@ -13,10 +13,12 @@ namespace VzDev.DCIMUtils
     public class WebAPI_CallerBase_RealtimeDataHVAC : WebAPI_CallerBase<WebAPI_RealtimeData>
     {
         #region Static Event
+        public static Action<List<WebAPI_RealtimeData_CRAC_MainController>> OnGetCRAC_MainControllerDataAction;
         public static Action<List<WebAPI_RealtimeData_CRAC>> OnGetCRACDataAction;
         public static Action<List<WebAPI_RealtimeData_InRowCooler>> OnGetInRowCoolerDataAction;
         #endregion
         #region Field
+        [field: SerializeField] public static List<WebAPI_RealtimeData_CRAC_MainController> WebAPI_CRAC_MainControllerData { get; private set; }
         [field: SerializeField] public static List<WebAPI_RealtimeData_CRAC> WebAPI_CRACData { get; private set; }
         [field: SerializeField] public static List<WebAPI_RealtimeData_InRowCooler> WebAPI_InRowCoolerData { get; private set; }
         #endregion
@@ -24,13 +26,34 @@ namespace VzDev.DCIMUtils
         public override void ParseJson(string json)
         {
             base.ParseJson(json);
-            WebAPI_CRACData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fcu"))
-                .Select(data => data.ToCRAC()).ToList();
 
+            WebAPI_CRAC_MainControllerData = webapiData?.Where(data => data.deviceCategory == "fcu_s")
+               .Select(data => data.CloneAs<WebAPI_RealtimeData_CRAC_MainController>()).ToList();
+
+            //若deviceName包含"UPS機房"，則將UPS機房取代為電力室
+            foreach (var data in WebAPI_CRAC_MainControllerData)
+            {
+                if (data.deviceName.Contains("UPS機房"))
+                {
+                    data.SetDeviceName(data.deviceName.Replace("UPS機房", "電力室"));
+                }
+            }
+
+            WebAPI_CRACData = webapiData?.Where(data => data.deviceCategory == "fcu")
+                .Select(data => data.CloneAs<WebAPI_RealtimeData_CRAC>()).ToList();
             // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
             WebAPI_CRACData = WebAPI_CRACData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
 
             // 若tempSetTag.value為"---"，則將tempSetTag.value設為rtTag.value
+            CheckAndSet_CRAC_TempSet();
+
+            WebAPI_InRowCoolerData = webapiData?.Where(data => data.deviceCategory == "inr")
+                .Select(data => data.CloneAs<WebAPI_RealtimeData_InRowCooler>()).ToList();
+            // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
+            WebAPI_InRowCoolerData = WebAPI_InRowCoolerData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
+        }
+        private void CheckAndSet_CRAC_TempSet()
+        {
             foreach (var cracData in WebAPI_CRACData)
             {
                 if (cracData.tempSetTag.value == "---")
@@ -42,18 +65,36 @@ namespace VzDev.DCIMUtils
                     }
                 }
             }
-
-            WebAPI_InRowCoolerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("inr"))
-                .Select(data => data.ToInRowCooler()).ToList();
-
-            // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
-            WebAPI_InRowCoolerData = WebAPI_InRowCoolerData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
         }
+
         public override void InvokeData()
         {
             base.InvokeData();
+            OnGetCRAC_MainControllerDataAction?.Invoke(WebAPI_CRAC_MainControllerData);
             OnGetCRACDataAction?.Invoke(WebAPI_CRACData);
             OnGetInRowCoolerDataAction?.Invoke(WebAPI_InRowCoolerData);
+        }
+    }
+
+    /// <summary>
+    /// WebAPI即時資料 - 空調箱 中控總開關
+    /// </summary>
+    [Serializable]
+    public class WebAPI_RealtimeData_CRAC_MainController : WebAPI_RealtimeData
+    {
+        public string controllRoom => deviceName.Split("_")[0];
+        public bool IsAutoControlMode => tags[0]?.value == "自動模式";
+
+        /// <summary>
+        /// 中控控制對像: 空調箱CRAC列表
+        /// </summary>
+        public List<WebAPI_RealtimeData_CRAC> cracList {get; private set;} = new List<WebAPI_RealtimeData_CRAC>();
+
+        public void AddCRAC(WebAPI_RealtimeData_CRAC crac)
+        {
+            if (crac == null) return;
+            if (cracList == null) cracList = new List<WebAPI_RealtimeData_CRAC>();
+            cracList.Add(crac);
         }
     }
 
@@ -63,6 +104,7 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_CRAC : WebAPI_RealtimeData
     {
+        public string controllRoom => deviceName.Split("_")[0];
         /// <summary>
         /// 室溫
         /// </summary>

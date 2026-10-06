@@ -19,11 +19,8 @@ namespace VzDev.DCIMUtils
     {
         public WebAPI_RealtimeData_UPSHost ToUPSHost() => CloneAs<WebAPI_RealtimeData_UPSHost>();
         public WebAPI_RealtimeData_UPSBattery ToUPSBattery() => CloneAs<WebAPI_RealtimeData_UPSBattery>();
-        public WebAPI_RealtimeData_PowerPanel ToPowerPanel() => CloneAs<WebAPI_RealtimeData_PowerPanel>();
         public WebAPI_RealtimeData_RtRh ToRtRh() => CloneAs<WebAPI_RealtimeData_RtRh>();
         public WebAPI_RealtimeData_WaterLeak ToWaterLeak() => CloneAs<WebAPI_RealtimeData_WaterLeak>();
-        public WebAPI_RealtimeData_CRAC ToCRAC() => CloneAs<WebAPI_RealtimeData_CRAC>();
-        public WebAPI_RealtimeData_InRowCooler ToInRowCooler() => CloneAs<WebAPI_RealtimeData_InRowCooler>();
         public WebAPI_RealtimeData_FS ToFS() => CloneAs<WebAPI_RealtimeData_FS>();
         public WebAPI_RealtimeData_GasCylinder ToGasCylinder() => CloneAs<WebAPI_RealtimeData_GasCylinder>();
         public WebAPI_RealtimeData_CCTV ToCCTV() => CloneAs<WebAPI_RealtimeData_CCTV>();
@@ -105,6 +102,7 @@ namespace VzDev.DCIMUtils
         [JsonProperty]
         [field: SerializeField]
         public string deviceName { get; protected set; }
+        public void SetDeviceName(string newDeviceName) => deviceName = newDeviceName;
         public ModelInfo modelInfo;
         [JsonProperty]
         [field: SerializeField]

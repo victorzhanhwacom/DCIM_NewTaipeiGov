@@ -15,6 +15,7 @@ namespace VzDev.DCIMUtils
         [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> powerValueEvent, manualControlValueEvent;
         [Foldout("[Event]-Status"), SerializeField] private UnityEvent<bool> powerStatusEvent, manualControlStatusEvent;
         [Foldout("[Event]-AlertLevelStatus"), SerializeField] private UnityEvent<int> rtAlertLevelStatusEvent, alarmStatusEvent;
+        [Foldout("[Event]-MainControl"), SerializeField] private UnityEvent<bool> isAutoControlEvent;
         #endregion
 
         #region Fields
@@ -35,13 +36,24 @@ namespace VzDev.DCIMUtils
             btnIncreaseTemp.onClick.AddListener(IncreaseTemp);
             btnDecreaseTemp.onClick.AddListener(DecreaseTemp);
             btnManualControl.onClick.AddListener(ToggleManualControl);
+            CRAC_MainController.OnManualControlStatusChangedAction += OnManualControlStatusChanged;
         }
+
+        private void OnManualControlStatusChanged(string controlRoom, bool isAutoControlMode)
+        {
+            if (data == null) return;
+            Debug.Log($"[CRAC_PointTag] data.controllRoom={data.controllRoom}, controlRoom={controlRoom}, isAutoControlMode={isAutoControlMode}");
+            if (data.controllRoom != controlRoom) return;
+            isAutoControlEvent?.Invoke(isAutoControlMode);
+        }
+
         private void OnDisable()
         {
             WebAPI_CallerBase_RealtimeDataHVAC.OnGetCRACDataAction -= OnGetDataAction;
             btnIncreaseTemp.onClick.RemoveListener(IncreaseTemp);
             btnDecreaseTemp.onClick.RemoveListener(DecreaseTemp);
             btnManualControl.onClick.RemoveListener(ToggleManualControl);
+            CRAC_MainController.OnManualControlStatusChangedAction -= OnManualControlStatusChanged;
         }
 
         #region 設定溫度
