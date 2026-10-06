@@ -13,6 +13,8 @@ namespace VzDev.DCIMUtils
     public class InRowCooler_Tag : WebAPI_PointTagBase<WebAPI_RealtimeData_InRowCooler>
     {
         #region UnityEvents
+          public static Action<WebAPI_RealtimeData_InRowCooler, Toggle> OnSelectInRowCoolerDataAction;
+        public static Action OnDeselectInRowCoolerAction;
         [Foldout("[Event]"), SerializeField] private UnityEvent<int> inTempAlertLevelStatusEvent, outTempAlertLevelStatusEvent;
         [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> inTempValueEvent, outTempValueEvent;
         [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtInTempTitle, txtOutTempTitle;
@@ -47,7 +49,6 @@ namespace VzDev.DCIMUtils
             else OnDeselectInRowCoolerAction?.Invoke();
         }
 
-        public static Action<WebAPI_RealtimeData_InRowCooler, Toggle> OnSelectInRowCoolerDataAction;
-        public static Action OnDeselectInRowCoolerAction;
+      
     }
 }

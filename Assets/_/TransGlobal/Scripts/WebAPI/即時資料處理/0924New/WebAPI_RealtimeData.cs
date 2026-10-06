@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
 using VzDev.DCIMUtils.DataUtils;
 using VzDev.Frameworks.ScrollRectUtils;
-using VzDev.MathUtils;
 using VzDev.UnityAPI.Extensions;
 
 namespace VzDev.DCIMUtils
@@ -179,6 +177,7 @@ namespace VzDev.DCIMUtils
             [JsonProperty]
             [field: SerializeField]
             public string value { get; private set; }
+            public string valueWithUnit => string.IsNullOrEmpty(unit) ? value : $"{value} {unit}";  
             [JsonProperty]
             [field: SerializeField]
             public string valueKind { get; private set; }

@@ -16,17 +16,19 @@ namespace VzDev.DCIMUtils
         public static Action<List<WebAPI_RealtimeData_UPSHost>> OnGetUpsHostDataAction;
         public static Action<List<WebAPI_RealtimeData_UPSBattery>> OnGetUpsBatteryDataAction;
         public static Action<List<WebAPI_RealtimeData_PowerPanel>> OnGetPowerPanelDataAction;
+        public static Action<List<WebAPI_RealtimeData_RackPower>> OnGetRackPowerDataAction;
         #endregion
         #region Field
         [field: SerializeField] public static List<WebAPI_RealtimeData_UPSHost> WebAPI_UpsHostData { get; private set; }
         [field: SerializeField] public static List<WebAPI_RealtimeData_UPSBattery> WebAPI_UpsBatteryData { get; private set; }
         [field: SerializeField] public static List<WebAPI_RealtimeData_PowerPanel> WebAPI_PowerPanelData { get; private set; }
+        [field: SerializeField] public static List<WebAPI_RealtimeData_RackPower> WebAPI_RackPowerData { get; private set; }
         #endregion
 
         public override void ParseJson(string json)
         {
             base.ParseJson(json);
-             webapiData?.Sort((a, b) => a.deviceName.CompareTo(b.deviceName));
+            webapiData?.Sort((a, b) => a.deviceName.CompareTo(b.deviceName));
 
             WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ups"))
                 .Select(data => data.ToUPSHost()).ToList();
@@ -35,6 +37,9 @@ namespace VzDev.DCIMUtils
 
             WebAPI_PowerPanelData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("pm"))
                 .Select(data => data.CloneAs<WebAPI_RealtimeData_PowerPanel>()).ToList();
+
+            WebAPI_RackPowerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ecm"))
+                .Select(data => data.CloneAs<WebAPI_RealtimeData_RackPower>()).ToList();
         }
         public override void InvokeData()
         {
@@ -42,34 +47,25 @@ namespace VzDev.DCIMUtils
             OnGetUpsHostDataAction?.Invoke(WebAPI_UpsHostData);
             OnGetUpsBatteryDataAction?.Invoke(WebAPI_UpsBatteryData);
             OnGetPowerPanelDataAction?.Invoke(WebAPI_PowerPanelData);
+            OnGetRackPowerDataAction?.Invoke(WebAPI_RackPowerData);
         }
     }
-   
+
     /// <summary>
     /// WebAPI即時資料 - 即時UPS主機狀態
     /// </summary>
     [Serializable]
     public class WebAPI_RealtimeData_UPSHost : WebAPI_RealtimeData
     {
-        private Dictionary<string, Tag> tagDict = new Dictionary<string, Tag>();
-
-        /// <summary>
-        /// 初始化操作狀態 (UPS模式)
-        /// </summary>
-        public Tag UpsModeTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:di006"));
         /// <summary>
         /// 目前三相總實際輸出功率 (總輸出功率)
         /// </summary>
-        public Tag OutputWattTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:ai014"));
-        /// <summary>
-        /// 逆變器待機狀態 (系統模式)
-        /// </summary>
-        public Tag InverterStandbyTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:di014"));
+        public Tag OutputTotalWattTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":ai014"));
 
         /// <summary>
-        /// 電池無法運作
+        /// 運行模式-電池模式
         /// </summary>
-        public Tag BatteryStatusTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":di002"));
+        public Tag BatteryModeTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":di001"));
     }
 
     /// <summary>
@@ -145,5 +141,13 @@ namespace VzDev.DCIMUtils
         /// 平均電壓
         /// </summary>
         public Tag vavgTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":vavg"));
+    }
+
+    /// <summary>
+    /// WebAPI即時資料 - 機櫃電源
+    /// </summary>
+    [Serializable]
+    public class WebAPI_RealtimeData_RackPower : WebAPI_RealtimeData
+    {
     }
 }
