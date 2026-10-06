@@ -25,7 +25,7 @@ namespace VzDev.DCIMUtils
 
         private float tempMin = 16f, tempMax = 30f;
         private float invokeTempSetAfterSeconds = 2f;
-        private float currentTempSet;
+        private float currentTempSet, sourceTempSet;
         #endregion
 
         private void OnEnable()
@@ -87,6 +87,7 @@ namespace VzDev.DCIMUtils
                 {
                     Debug.Log($"[CRAC_PointTag] 設定溫度成功: {currentTempSet}");
                     data.tempSetTag.SetValue(currentTempSet.ToString());
+                    sourceTempSet = currentTempSet;
                     DOTweenHelper.ToBlink(txtTempSet, $"{data.tempSetTag.value} {data.tempSetTag.unit}");
                 }
                 else
@@ -141,7 +142,11 @@ namespace VzDev.DCIMUtils
         {
             base.InvokeEvent();
 
-            currentTempSet = float.Parse(data.tempSetTag.value);
+            if(sourceTempSet != float.Parse(data.tempSetTag.value))
+            {
+                sourceTempSet = float.Parse(data.tempSetTag.value);
+                currentTempSet = sourceTempSet;
+            }
 
             powerValueEvent?.Invoke(data.powerStatusTag.value);
             powerStatusEvent?.Invoke(data.powerStatus);

@@ -60,13 +60,25 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_UPSHost : WebAPI_RealtimeData
     {
+        private Dictionary<string, Tag> tagDict = new Dictionary<string, Tag>();
+
+        /// <summary>
+        /// 初始化操作狀態 (UPS模式)
+        /// </summary>
+        public Tag UpsModeTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:di006"));
+        /// <summary>
+        /// 目前三相總實際輸出功率 (總輸出功率)
+        /// </summary>
+        public Tag OutputWattTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:ai014"));
+        /// <summary>
+        /// 逆變器待機狀態 (系統模式)
+        /// </summary>
+        public Tag InverterStandbyTag => tags?.FirstOrDefault(tag => tag.tagId.Contains("0301_ups_001:di014"));
+
         /// <summary>
         /// 電池無法運作
         /// </summary>
         public Tag BatteryStatusTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":di002"));
-
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(BatteryStatusTag);
-
     }
 
     /// <summary>
@@ -87,8 +99,6 @@ namespace VzDev.DCIMUtils
         /// 單體告警
         /// </summary>
         public Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":indalm"));
-
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(irTag, voltageTag, alarmTag);
     }
 
     /*

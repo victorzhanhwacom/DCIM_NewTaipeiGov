@@ -68,8 +68,6 @@ namespace VzDev.DCIMUtils
         /// 極早期設備故障警報
         /// </summary>
         public Tag vesdaDeviceTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":vedalm"));
-
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(controlBoardTag, level1Tag, level2Tag, vesdaTag, vesdaDeviceTag);
     }
 
     /// <summary>

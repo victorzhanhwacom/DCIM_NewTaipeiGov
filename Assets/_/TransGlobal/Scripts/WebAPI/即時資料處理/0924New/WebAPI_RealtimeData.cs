@@ -36,7 +36,7 @@ namespace VzDev.DCIMUtils
         /// 所有Tag的alertLevel總告警等級
         /// <para>+ 0: 正常, 1: 告警, 2: 離線</para>
         /// </summary>
-        public virtual int TotalAlertLevelStatus => GetTotalAlertLevelStatus(tags);
+        public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(tags);
 
         protected int GetRandomTotalAlertLevelStatus()
         {

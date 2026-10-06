@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using UnityEngine;
 using VzDev.NetUtils.WebAPI;
 using VzDev.UnityAPI.Extensions;
@@ -36,7 +35,11 @@ namespace VzDev.DCIMUtils
             {
                 if (cracData.tempSetTag.value == "---")
                 {
-                    cracData.tempSetTag.SetValue(cracData.rtTag.value);
+                    // 將cracData.rtTag.value浮點數為string轉為int，並將其設為cracData.tempSetTag.value
+                    if (float.TryParse(cracData.rtTag.value, out float rtValue))
+                    {
+                        cracData.tempSetTag.SetValue(Mathf.RoundToInt(rtValue).ToString());
+                    }
                 }
             }
 
@@ -106,8 +109,6 @@ namespace VzDev.DCIMUtils
                 }
             }
         }
-
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, controlTag, powerStatusTag, tempSetTag, alarmTag);
     }
 
     /// <summary>
@@ -125,6 +126,5 @@ namespace VzDev.DCIMUtils
         /// </summary>
         public Tag outTempTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":ai001"));
 
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(inTempTag, outTempTag);
     }
 }

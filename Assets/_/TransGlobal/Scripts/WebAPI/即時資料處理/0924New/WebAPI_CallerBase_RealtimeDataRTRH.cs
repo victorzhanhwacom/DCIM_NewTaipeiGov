@@ -24,6 +24,9 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
             WebAPI_RtRhData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ia"))
                 .Select(data => data.ToRtRh()).ToList();
+
+                // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
+            WebAPI_RtRhData = WebAPI_RtRhData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
         }
         public override void InvokeData()
         {
@@ -46,7 +49,5 @@ namespace VzDev.DCIMUtils
         /// 即時濕度
         /// </summary>
         public Tag rhTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":rh"));
-
-        override public int TotalAlertLevelStatus => GetTotalAlertLevelStatus(rtTag, rhTag);
     }
 }

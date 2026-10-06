@@ -45,6 +45,5 @@ namespace VzDev.DCIMUtils
         /// </summary>
         private Tag statusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":Status"));
 
-        override public int TotalAlertLevelStatus => statusTag?.alertLevelStatus ?? 0;
     }
 }

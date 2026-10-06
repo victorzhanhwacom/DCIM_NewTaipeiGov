@@ -24,6 +24,9 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
             WebAPI_WaterLeakData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("lea"))
                 .Select(data => data.ToWaterLeak()).ToList();
+
+            // 以TotalAlertLevelStatus排序，將有告警的設備排在前面
+            WebAPI_WaterLeakData = WebAPI_WaterLeakData?.OrderByDescending(data => data.TotalAlertLevelStatus).ToList();
         }
         public override void InvokeData()
         {
@@ -45,7 +48,5 @@ namespace VzDev.DCIMUtils
         /// 漏水警報
         /// </summary>
         private Tag alarmTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":alarm"));
-
-        override public int TotalAlertLevelStatus => alarmTag?.alertLevelStatus ?? 0;
     }
 }
