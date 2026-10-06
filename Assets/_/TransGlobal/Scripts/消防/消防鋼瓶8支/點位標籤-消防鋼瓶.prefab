@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 8040377478223574899}
   - component: {fileID: 3953146624863637162}
   m_Layer: 5
-  m_Name: txtValue (1)
+  m_Name: txtValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,6 +1335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Item\u5373\u6642\u6578\u64DA-\u7B2C\u4E00\u968E\u6BB5\u8B66\u5831"
       objectReference: {fileID: 0}
+    - target: {fileID: 4595021410169217073, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4615697258044853764, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_SizeDelta.x
       value: -57
@@ -1409,7 +1413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6302689698006874343, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: receiveValue
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6432340611683472348, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_text
@@ -1569,7 +1573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936480450166628925, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9026100530452494027, guid: 42d7a7a80dd99844283a7ee9a765b886, type: 3}
       propertyPath: m_Color.b
@@ -1725,7 +1729,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  messageEvent:
+  valueEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3953146624863637162}

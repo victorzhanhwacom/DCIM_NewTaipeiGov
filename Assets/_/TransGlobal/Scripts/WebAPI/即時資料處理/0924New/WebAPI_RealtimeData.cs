@@ -132,6 +132,7 @@ namespace VzDev.DCIMUtils
             [OnDeserialized]
             protected void OnDeserialized(StreamingContext context)
             {
+                value = value?.Trim();
                 if (!string.IsNullOrEmpty(localTimestamp))
                 {
                     localTimestamp = localTimestamp.Replace("T", " ");

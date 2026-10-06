@@ -1,7 +1,9 @@
+using System;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace VzDev.DCIMUtils
 {
@@ -14,6 +16,7 @@ namespace VzDev.DCIMUtils
         [Foldout("[Event]"), SerializeField] private UnityEvent<int> inTempAlertLevelStatusEvent, outTempAlertLevelStatusEvent;
         [Foldout("[Event]-Value"), SerializeField] private UnityEvent<string> inTempValueEvent, outTempValueEvent;
         [Foldout("[Components]"), SerializeField] private TextMeshProUGUI txtInTempTitle, txtOutTempTitle;
+        [Foldout("[Components]"), SerializeField] private Toggle toggle;
         #endregion
 
         private void OnEnable()
@@ -21,7 +24,11 @@ namespace VzDev.DCIMUtils
             OnGetDataAction(WebAPI_CallerBase_RealtimeDataHVAC.WebAPI_InRowCoolerData);
             WebAPI_CallerBase_RealtimeDataHVAC.OnGetInRowCoolerDataAction += OnGetDataAction;
         }
-        private void OnDisable() => WebAPI_CallerBase_RealtimeDataHVAC.OnGetInRowCoolerDataAction -= OnGetDataAction;
+
+        private void OnDisable()
+        {
+            WebAPI_CallerBase_RealtimeDataHVAC.OnGetInRowCoolerDataAction -= OnGetDataAction;
+        }
 
         override protected void InvokeEvent()
         {
@@ -33,5 +40,14 @@ namespace VzDev.DCIMUtils
             inTempValueEvent?.Invoke($"{data.inTempTag.value} {data.inTempTag.unit}");
             outTempValueEvent?.Invoke($"{data.outTempTag.value} {data.outTempTag.unit}");
         }
+
+        public void ToSelected(bool isOn)
+        {
+            if(isOn) OnSelectInRowCoolerDataAction?.Invoke(data, toggle);
+            else OnDeselectInRowCoolerAction?.Invoke();
+        }
+
+        public static Action<WebAPI_RealtimeData_InRowCooler, Toggle> OnSelectInRowCoolerDataAction;
+        public static Action OnDeselectInRowCoolerAction;
     }
 }

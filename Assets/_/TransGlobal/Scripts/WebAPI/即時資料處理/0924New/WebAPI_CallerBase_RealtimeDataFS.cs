@@ -26,18 +26,13 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
             WebAPI_FSData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("fir"))
                 .Select(data => data.ToFS()).ToList();
-            /*  WebAPI_GasCylinderData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("gas"))
-                 .Select(data => data.ToGasCylinder()).ToList(); */
+            WebAPI_GasCylinderData = webapiData?.Where(data => data.tags[0].tagId.ContainKeyword("0101_fir_004:cylalm"))
+                .Select(data => data.ToGasCylinder()).ToList();
         }
         public override void InvokeData()
         {
             base.InvokeData();
             OnGetFSDataAction?.Invoke(WebAPI_FSData);
-        }
-
-        public static void SetGasCylinderData(List<WebAPI_RealtimeData_GasCylinder> gasCylinderData)
-        {
-            WebAPI_GasCylinderData = gasCylinderData;
             OnGetGasCylinderDataAction?.Invoke(WebAPI_GasCylinderData);
         }
     }
@@ -77,6 +72,6 @@ namespace VzDev.DCIMUtils
     public class WebAPI_RealtimeData_GasCylinder : WebAPI_RealtimeData
     {
         public string displayName => tags[0].displayName;
-        public string message => tags[0].message;
+        public string value => tags[0].value;
     }
 }

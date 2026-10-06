@@ -28,8 +28,8 @@ namespace VzDev.DCIMUtils
             base.ParseJson(json);
              webapiData?.Sort((a, b) => a.deviceName.CompareTo(b.deviceName));
 
-            /* WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ups"))
-                .Select(data => data.ToUPSHost()).ToList(); */
+            WebAPI_UpsHostData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ups"))
+                .Select(data => data.ToUPSHost()).ToList();
             WebAPI_UpsBatteryData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("bat"))
                 .Select(data => data.ToUPSBattery()).ToList();
 
@@ -39,18 +39,9 @@ namespace VzDev.DCIMUtils
         public override void InvokeData()
         {
             base.InvokeData();
-            //OnGetUpsHostDataAction?.Invoke(WebAPI_UpsHostData);
+            OnGetUpsHostDataAction?.Invoke(WebAPI_UpsHostData);
             OnGetUpsBatteryDataAction?.Invoke(WebAPI_UpsBatteryData);
             OnGetPowerPanelDataAction?.Invoke(WebAPI_PowerPanelData);
-        }
-
-        /// <summary>
-        /// 由外部設置UPS主機即時資料，並觸發OnGetUpsHostDataAction事件
-        /// </summary>
-        public static void SetUPSHostData(List<WebAPI_RealtimeData_UPSHost> upsHostData)
-        {
-            WebAPI_UpsHostData = upsHostData;
-            OnGetUpsHostDataAction?.Invoke(WebAPI_UpsHostData);
         }
     }
    

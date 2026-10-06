@@ -43,7 +43,8 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_Door : WebAPI_RealtimeData
     {
-        public string severity => statusTag?.severity ?? "Offline";
+
+        public string value => statusTag?.value;
 
         /// <summary>
         /// 即時狀態Tag

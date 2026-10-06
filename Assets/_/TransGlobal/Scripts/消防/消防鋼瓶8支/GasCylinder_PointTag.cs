@@ -11,7 +11,7 @@ namespace VzDev.DCIMUtils
     {
         #region Event
         [Foldout("[Event]"), SerializeField] private UnityEvent<string> displayNameEvent;
-        [Foldout("[Event]"), SerializeField] private UnityEvent<string> messageEvent;
+        [Foldout("[Event]"), SerializeField] private UnityEvent<string> valueEvent;
         #endregion
 
         private void OnEnable()
@@ -25,7 +25,7 @@ namespace VzDev.DCIMUtils
         {
             base.InvokeEvent();
             displayNameEvent?.Invoke(data.displayName);
-            messageEvent?.Invoke(data.message);
+            valueEvent?.Invoke(data.value);
         }
     }
 }
