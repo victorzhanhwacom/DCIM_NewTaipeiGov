@@ -40,6 +40,8 @@ namespace VzDev.DCIMUtils
 
             WebAPI_RackPowerData = webapiData?.Where(data => data.deviceCategory.ContainKeyword("ecm"))
                 .Select(data => data.CloneAs<WebAPI_RealtimeData_RackPower>()).ToList();
+
+            Debug.Log($"ecm: {WebAPI_RackPowerData?.Count}");
         }
         public override void InvokeData()
         {
@@ -149,5 +151,62 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_RackPower : WebAPI_RealtimeData
     {
+        public Tag[] GetTags()
+        {
+            Tag[] result = new Tag[6];
+            bool isDeviceA = deviceCode == "TGL+TPE+IDC+08F+1+EE++分電箱: RPMM-A+4";
+            result[0] = kw1Tag;
+            result[1] = kw2Tag;
+            if (isDeviceA)
+            {
+                result[2] = i081Tag;
+                result[3] = i082Tag;
+                result[4] = i083Tag;
+                result[5] = i084Tag;
+            }
+            else
+            {
+                result[2] = kw082Tag;
+                result[3] = kw083Tag;
+                result[4] = kw084Tag;
+                result[5] = null;
+            }
+
+            return result;
+        }
+
+        #region 電表_機櫃電源A
+        /// <summary>
+        /// RPDC-A-總KW
+        /// </summary>
+        private Tag kw1Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw1"));
+        /// <summary>
+        /// RPDC-B-總KW
+        /// </summary>
+        private Tag kw2Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw2"));
+        /// <summary>
+        /// RPDC-A-門禁系統專用
+        /// </summary>
+        private Tag i081Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":i081"));
+        /// <summary>
+        /// RPDC-A-RF-電流
+        /// </summary>
+        private Tag i082Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":i082"));
+        /// <summary>
+        /// RPDC-A-PLC-電流
+        /// </summary>
+        private Tag i083Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":i083"));
+        /// <summary>
+        /// RPDC-A-5KVA-電流
+        /// </summary>
+        private Tag i084Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":i084"));
+        #endregion
+
+        #region 電表_機櫃電源B
+        private Tag kw082Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw082"));
+        private Tag kw083Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw083"));
+        private Tag kw084Tag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw084"));
+
+        #endregion
     }
 }

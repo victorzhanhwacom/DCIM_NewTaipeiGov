@@ -23,10 +23,8 @@ namespace VzDev.DCIMUtils
         #endregion
 
         #region UnityEvents
-        [Foldout("[Event]"), SerializeField]
-        private UnityEvent<string> kwValueEvent;
-        [Foldout("[Event]-AlertStatus"), SerializeField]
-        private UnityEvent<int>
+        [Foldout("[Event]"), SerializeField] private UnityEvent<string> kwValueEvent, deviceNameEvent;
+        [Foldout("[Event]-AlertStatus"), SerializeField] private UnityEvent<int>
       kwAlertStatusEvent, kWHAlertStatusEvent, vavgAlertStatusEvent
       , irAlertStatusEvent, isAlertStatusEvent, itAlertStatusEvent
       , pf_rAlertStatusEvent, pf_sAlertStatusEvent, pf_tAlertStatusEvent;
@@ -43,6 +41,8 @@ namespace VzDev.DCIMUtils
         override protected void InvokeEvent()
         {
             base.InvokeEvent();
+            deviceNameEvent?.Invoke(data?.deviceName);
+
             titleText_kW?.SetText(data?.kWTag?.displayName);
             titleText_kWH?.SetText(data?.kWHTag?.displayName);
             titleText_vavg?.SetText(data?.vavgTag?.displayName);
