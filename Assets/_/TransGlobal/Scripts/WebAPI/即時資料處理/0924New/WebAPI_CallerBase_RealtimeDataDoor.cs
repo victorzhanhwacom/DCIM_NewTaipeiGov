@@ -78,6 +78,9 @@ namespace VzDev.DCIMUtils
     {
         [SerializeField] private WebAPI_RealtimeData_RackDoor frontDoorData, backDoorData;
 
+        public WebAPI_RealtimeData_RackDoor FrontDoorData => frontDoorData;
+        public WebAPI_RealtimeData_RackDoor BackDoorData => backDoorData;
+
         public void FindRackDoorData(List<WebAPI_RealtimeData_RackDoor> rackDoorDataList)
         {
             //根據機櫃deviceCode，向RackDoorMap取得對應的RackDoorDeviceCodeInfo，以取得前門與後門的deviceCode，再從WebAPI_RackDoorData中找出對應的資料
@@ -91,26 +94,128 @@ namespace VzDev.DCIMUtils
     }
 
     /// <summary>
-    /// WebAPI即時資料 - 機櫃門禁
+    /// WebAPI即時資料 - 機櫃門禁 (前門/後門)
     /// </summary>
     [Serializable]
     public class WebAPI_RealtimeData_RackDoor : WebAPI_RealtimeData
     {
-        public bool isConnect => connectStatusTag?.value == "連線";
+        public string DisplayName
+        {
+            get
+            {
+                return "機櫃門";
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = doorStatusTag.displayName.Substring(0, 4);
+                }
+                return displayName;
+            }
+        }
+        private string displayName = null;
+
+        public bool isConnect => ConnectStatusTag?.value == "連線";
         public bool isDoorLock => LockStatusTag?.value == "上鎖";
-        public bool isDoorOpen => doorStatusTag?.value == "開門";
+        public bool isDoorOpen => doorStatusTag?.value == "開門"; 
+
+        public int doorAlertLevelStatus => doorStatusTag?.alertLevelStatus ?? 2;
 
         /// <summary>
         /// 連線狀態
         /// </summary>
-        private Tag connectStatusTag => tags?.FirstOrDefault(tag => tag.tagId.ContainKeyword(":CSA"));
+        public Tag ConnectStatusTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("連線狀態"));
+
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = result.displayName.Substring(0, 4);
+                }
+
+                string[] str = result.displayName.Split('-');
+                result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
+
         /// <summary>
         /// 解鎖狀態
         /// </summary>
-        private Tag LockStatusTag => tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("解鎖狀態"));
+        public Tag LockStatusTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("解鎖狀態"));
+
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = result.displayName.Substring(0, 4);
+                }
+
+                string[] str = result.displayName.Split('-');
+                result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
         /// <summary>
         /// 磁簧開關狀態
         /// </summary>
-        private Tag doorStatusTag => tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("磁簧開關狀態"));
+        public Tag doorStatusTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("磁簧開關狀態"));
+
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = result.displayName.Substring(0, 4);
+                }
+
+                string[] str = result.displayName.Split('-');
+                result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// 門把狀態
+        /// </summary>
+        public Tag doorHandlerTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("門把狀態"));
+
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = result.displayName.Substring(0, 4);
+                }
+
+                string[] str = result.displayName.Split('-');
+                result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// 最後卡號
+        /// </summary>
+        public Tag lastCardTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("最後卡號"));
+
+                if (string.IsNullOrEmpty(displayName))
+                {
+                    displayName = result.displayName.Substring(0, 4);
+                }
+
+                string[] str = result.displayName.Split('-');
+                result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
     }
 }

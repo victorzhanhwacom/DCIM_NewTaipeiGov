@@ -168,6 +168,7 @@ namespace VzDev.DCIMUtils
             [JsonProperty]
             [field: SerializeField]
             public string displayName { get; private set; }
+            public void SetDisplayName(string newDisplayName) => displayName = newDisplayName;
             [JsonProperty]
             [field: SerializeField]
             public string tagId { get; private set; }
