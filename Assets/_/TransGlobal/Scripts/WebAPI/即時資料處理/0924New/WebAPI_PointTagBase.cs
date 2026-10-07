@@ -42,10 +42,15 @@ namespace VzDev.DCIMUtils
                 Debug.LogWarning($"PointTag: 找不到對應的資料, DeviceCode: {deviceCode}");
                 return;
             }
+            SetModelAndDeviceName();
+            InvokeEvent();
+        }
+
+        protected void SetModelAndDeviceName()
+        {
             data.modelInfo ??= new ModelInfo();
             data.modelInfo.modelTarget = uiAnchorFollower?.Target3DObject;
             txtDeviceName.SetText(data.deviceName);
-            InvokeEvent();
         }
 
         /// <summary>
@@ -56,7 +61,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 從UIAnchorFollower的Target3DObject取得DeviceCode
         /// </summary>
-        private void GetDeviceCode()
+        protected void GetDeviceCode()
         {
             if (uiAnchorFollower == null) TryGetComponent(out uiAnchorFollower);
             if (string.IsNullOrEmpty(deviceCode) && uiAnchorFollower.Target3DObject != null)
