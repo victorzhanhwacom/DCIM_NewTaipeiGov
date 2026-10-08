@@ -7,8 +7,8 @@ namespace VzDev.DCIMUtils
     public class RackDoor_PointTag : WebAPI_PointTagBase<WebAPI_RealtimeData_RackDeviceCode>
     {
         public UnityEvent<string> doorNameEvent;
-        public UnityEvent<int> isDoorOpenEvent;
-        public UnityEvent<string> doorStatusValueEvent;
+        public UnityEvent<int> isDoorOpenFrontEvent, isDoorOpenBackEvent;
+        public UnityEvent<string> frontdoorStatusValueEvent, backdoorStatusValueEvent;
         public List<DetailListItem> detailListItemsFrontDoor;
         public List<DetailListItem> detailListItemsBackDoor;
 
@@ -38,10 +38,11 @@ namespace VzDev.DCIMUtils
             detailListItemsFrontDoor[4].SetData(data.FrontDoorData.lastCardTag);
             detailListItemsBackDoor[4].SetData(data.BackDoorData.lastCardTag);
 
-            bool isDoorOpen = data.FrontDoorData.isDoorOpen || data.BackDoorData.isDoorOpen;
-            isDoorOpenEvent?.Invoke(isDoorOpen ? 1 : 0);
+            isDoorOpenFrontEvent?.Invoke(data.FrontDoorData.isDoorOpen ? 1 : 0);
+            isDoorOpenBackEvent?.Invoke(data.BackDoorData.isDoorOpen ? 1 : 0);
 
-            doorStatusValueEvent?.Invoke(isDoorOpen? "開門":"關門");
+            frontdoorStatusValueEvent?.Invoke(data.FrontDoorData.isDoorOpen ? "開門" : "關門");
+            backdoorStatusValueEvent?.Invoke(data.BackDoorData.isDoorOpen ? "開門" : "關門");
         }
     }
 }

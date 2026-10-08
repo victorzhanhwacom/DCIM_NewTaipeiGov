@@ -7,6 +7,8 @@ namespace VzDev.DCIMUtils
 {
     public class Door_PointTag : WebAPI_PointTagBase<WebAPI_RealtimeData_Door>
     {
+        [Foldout("[Events]"), SerializeField] private UnityEvent<bool> isDoorOpenEvent;
+        [Foldout("[Events]"), SerializeField] private UnityEvent<string> deviceNameEvent;
         [Foldout("[Events]"), SerializeField] private UnityEvent<string> valueEvent;
         private string value = null;
 
@@ -20,9 +22,12 @@ namespace VzDev.DCIMUtils
         override protected void InvokeEvent()
         {
             base.InvokeEvent();
-            if(string.IsNullOrEmpty(value) || value != data.value)
+            if (string.IsNullOrEmpty(value) || value != data.value)
                 valueEvent?.Invoke(data.value);
             value = data.value;
+
+            deviceNameEvent?.Invoke(data.deviceName);
+            isDoorOpenEvent?.Invoke(data.isDoorOpen);
         }
     }
 }

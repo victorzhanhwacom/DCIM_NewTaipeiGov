@@ -63,6 +63,7 @@ namespace VzDev.DCIMUtils
     [Serializable]
     public class WebAPI_RealtimeData_Door : WebAPI_RealtimeData
     {
+        public bool isDoorOpen => statusTag?.value == "開門";
         public string value => statusTag?.value;
         /// <summary>
         /// 即時狀態Tag
