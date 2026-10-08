@@ -103,10 +103,9 @@ namespace VzDev.DCIMUtils
         {
             get
             {
-                return "機櫃門";
                 if (string.IsNullOrEmpty(displayName))
                 {
-                    displayName = doorStatusTag.displayName.Substring(0, 4);
+                    displayName = unlockResultTag?.displayName.Substring(0, 4);
                 }
                 return displayName;
             }
@@ -115,7 +114,7 @@ namespace VzDev.DCIMUtils
 
         public bool isConnect => ConnectStatusTag?.value == "連線";
         public bool isDoorLock => LockStatusTag?.value == "上鎖";
-        public bool isDoorOpen => doorStatusTag?.value == "開門"; 
+        public bool isDoorOpen => doorStatusTag?.value == "開門";
 
         public int doorAlertLevelStatus => doorStatusTag?.alertLevelStatus ?? 2;
 
@@ -127,12 +126,6 @@ namespace VzDev.DCIMUtils
             get
             {
                 var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("連線狀態"));
-
-                if (string.IsNullOrEmpty(displayName))
-                {
-                    displayName = result.displayName.Substring(0, 4);
-                }
-
                 string[] str = result.displayName.Split('-');
                 result.SetDisplayName(str[str.Length - 1]);
                 return result;
@@ -147,12 +140,6 @@ namespace VzDev.DCIMUtils
             get
             {
                 var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("解鎖狀態"));
-
-                if (string.IsNullOrEmpty(displayName))
-                {
-                    displayName = result.displayName.Substring(0, 4);
-                }
-
                 string[] str = result.displayName.Split('-');
                 result.SetDisplayName(str[str.Length - 1]);
                 return result;
@@ -166,12 +153,6 @@ namespace VzDev.DCIMUtils
             get
             {
                 var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("磁簧開關狀態"));
-
-                if (string.IsNullOrEmpty(displayName))
-                {
-                    displayName = result.displayName.Substring(0, 4);
-                }
-
                 string[] str = result.displayName.Split('-');
                 result.SetDisplayName(str[str.Length - 1]);
                 return result;
@@ -186,12 +167,6 @@ namespace VzDev.DCIMUtils
             get
             {
                 var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("門把狀態"));
-
-                if (string.IsNullOrEmpty(displayName))
-                {
-                    displayName = result.displayName.Substring(0, 4);
-                }
-
                 string[] str = result.displayName.Split('-');
                 result.SetDisplayName(str[str.Length - 1]);
                 return result;
@@ -206,14 +181,20 @@ namespace VzDev.DCIMUtils
             get
             {
                 var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("最後卡號"));
-
-                if (string.IsNullOrEmpty(displayName))
-                {
-                    displayName = result.displayName.Substring(0, 4);
-                }
-
                 string[] str = result.displayName.Split('-');
                 result.SetDisplayName(str[str.Length - 1]);
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// 開鎖結果
+        /// </summary>
+        public Tag unlockResultTag
+        {
+            get
+            {
+                var result = tags?.FirstOrDefault(tag => tag.displayName.ContainKeyword("開鎖結果"));
                 return result;
             }
         }

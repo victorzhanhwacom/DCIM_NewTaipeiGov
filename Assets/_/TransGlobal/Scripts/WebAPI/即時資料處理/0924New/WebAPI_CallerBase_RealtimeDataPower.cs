@@ -65,9 +65,9 @@ namespace VzDev.DCIMUtils
         public Tag OutputTotalWattTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":ai014"));
 
         /// <summary>
-        /// 運行模式-電池模式
+        /// 目前三相總實際輸出功率 (總輸入功率)
         /// </summary>
-        public Tag BatteryModeTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":di001"));
+        public Tag BatteryModeTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":ai019"));
     }
 
     /// <summary>
@@ -122,7 +122,7 @@ namespace VzDev.DCIMUtils
         /// <summary>
         /// 有效功率
         /// </summary>
-        public Tag kWTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw"));
+        public Tag kWTag => tags?.FirstOrDefault(tag => tag.tagId.Contains(":kw") && !tag.tagId.Contains(":kwh"));
         /// <summary>
         /// 累積電能
         /// </summary>
